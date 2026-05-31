@@ -25,6 +25,9 @@ academia, deportes, hogar y aficiones.
 
 ## Cómo usar este curso
 
+Si no tienes experiencia con GitHub, o quieres ir rápido, escarga el fichero
+[cursoIntroOpenCode.zip](https://github.com/palazon/ocCursoIntro/blob/main/cursoIntroOpenCode.zip).
+Descomprime el fichero en tu disco duro.
 Carga en tu navegador favorito el fichero `index.html`.
 Sigue los ejercicios paso a paso con OpenCode abierto a su lado.
 
@@ -37,6 +40,8 @@ OpenCode para manejarlo como un proyecto propio.
 - Una cuenta gratuita de OpenCode Zen (viene activada por defecto)
 - Un navegador web para ver los HTML generados
 - Quarto (opcional, para regenerar los HTML)
+
+\ 
 
 \ 
 
