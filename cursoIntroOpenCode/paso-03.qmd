@@ -1,0 +1,168 @@
+---
+title: "3. Primeros diálogos con OpenCode"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## Objetivo
+
+Aprender a conversar con OpenCode para tareas de documentación,
+alternando entre los modos Plan y Build según lo que necesites.
+
+Duración estimada: **25 minutos**
+
+---
+
+## Plan o Build, ¿cuál uso?
+
+En el paso anterior viste que OpenCode tiene dos modos. Aquí tienes
+claro cuándo usar cada uno:
+
+| Modo | Sirve para | ¿Hace cambios? |
+|------|-----------|:---:|
+| **Plan** | Pensar, diseñar, analizar, opinar | No |
+| **Build** | Ejecutar, crear, modificar archivos | Sí |
+
+Cuando estés en **Plan** puedes preguntar, pedir opiniones, diseñar
+estructuras, explorar — nada de lo que digas modificará tus archivos.
+Cuando pases a **Build**, todo lo que pidas se ejecutará realmente.
+
+Pulsa ![Tab](tab-key.svg) para alternar entre ellos. El modo activo
+se ve en la esquina inferior derecha.
+
+---
+
+## Escribir un buen prompt
+
+Para que OpenCode te entienda bien, sé específico:
+
+- **Da contexto:** qué eres, para qué necesitas el documento
+- **Define el tono:** formal, divulgativo, técnico, para niños
+- **Pide formato concreto:** párrafos, lista, tabla, secciones
+
+Ejemplo de un prompt claro:
+
+> *Soy profesor de secundaria. Necesito un texto divulgativo sobre la
+> teoría de la evolución para alumnos de 12 años. Debe tener 3
+> secciones: qué es, cómo funciona, por qué es importante.*
+
+Cuanto más claro seas, mejor será el resultado.
+
+---
+
+## Referenciar archivos con @
+
+Puedes pedirle a OpenCode que lea cualquier archivo de tu proyecto
+anteponiendo `@` al nombre.
+
+Por ejemplo, para trabajar sobre el documento que creaste en el paso
+anterior:
+
+> *@darwin-evolucion.md Léete este documento y dime qué te parece.*
+
+OpenCode buscará el archivo, lo leerá y lo incorporará a la
+conversación. Puedes referenciar cualquier archivo `.md`, `.txt`,
+`.pdf` o incluso imágenes con texto.
+
+---
+
+## Manos a la obra
+
+Trabajaremos en la misma carpeta del proyecto, con el archivo
+`darwin-evolucion.md` que generaste en el paso anterior.
+
+### Ejercicio 1 — Analizar (Plan)
+
+Pulsa ![Tab](tab-key.svg) hasta que el indicador muestre **Plan**.
+
+> @darwin-evolucion.md Léete este documento y dime qué opinas.
+> ¿El tono es adecuado para estudiantes de secundaria? ¿Qué
+> mejorarías?
+
+OpenCode leerá el archivo y te dará su opinión. Como estás en **Plan**,
+no modificará nada. Puedes pedir más análisis sin riesgo:
+
+> ¿Crees que falta algún concepto importante?
+
+### Ejercicio 2 — Mejorar (Build)
+
+Pulsa ![Tab](tab-key.svg) para cambiar a **Build**.
+
+> Aplica las mejoras que sugeriste. Actualiza darwin-evolucion.md
+> con los cambios.
+
+OpenCode modificará el archivo. Puedes comprobar los cambios:
+
+```bash
+cat darwin-evolucion.md
+```
+
+### Ejercicio 3 — Pensar antes de hacer (Plan + Build)
+
+Ahora vas a añadir una sección nueva al documento. Primero la
+diseñas en Plan, luego la ejecutas en Build.
+
+**Paso A — Plan:**
+
+> Se me ocurre añadir una sección sobre el contexto histórico de
+> Darwin. ¿Dónde la pondrías y qué contenido incluirías?
+
+Revisa la respuesta. Si quieres ajustar algo, pídelo. Por ejemplo:
+
+> Me gusta, pero acórtala un poco. Que tenga solo 3 párrafos.
+
+**Paso B — Build:**
+
+Una vez conforme con el plan, pasa a Build:
+
+> Genial, ahora añade esa sección al archivo.
+
+### Ejercicio 4 — Transformar el documento
+
+Sin salir de Build, prueba a pedir transformaciones sobre el mismo
+archivo. Cada vez que pidas algo, OpenCode modificará el documento.
+
+> @darwin-evolucion.md Ahora dime:
+>
+> 1. Haz un resumen ejecutivo de este documento en 3 párrafos
+> 2. Guarda el resumen en un archivo llamado resumen-darwin.md
+> 3. Convierte el resumen a un tono apto para niños de 10 años
+>    y guárdalo como darwin-infantil.md
+
+Observa que con una sola instrucción has creado dos archivos nuevos.
+
+---
+
+## Reflexión sobre Plan y Build
+
+Después de estos ejercicios probablemente hayas notado:
+
+- En **Plan** puedes pedir opiniones y análisis **sin miedo** a que
+  se modifique nada. Es ideal para explorar ideas.
+- En **Build** todo lo que pides se ejecuta. Es para actuar.
+- Puedes **alternar** libremente entre ambos según lo que necesites
+  en cada momento.
+
+Esta es una de las habilidades más importantes al usar OpenCode:
+saber cuándo pensar y cuándo hacer.
+
+---
+
+## Resumen del paso
+
+- ✅ Distingues cuándo usar Plan y cuándo usar Build
+- ✅ Escribes prompts claros con contexto y tono
+- ✅ Sabes referenciar archivos con @
+- ✅ Has analizado, mejorado, ampliado y transformado documentos
+- ✅ Entiendes el valor de Plan para explorar sin riesgos
+
+En el próximo paso veremos cómo subir documentos externos (PDFs,
+imágenes) y trabajar con contenido que no está en tu proyecto.
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

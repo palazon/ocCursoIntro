@@ -1,0 +1,88 @@
+---
+title: "0. ¿Qué es OpenCode?"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## Objetivo
+
+Entender qué es OpenCode, qué problema resuelve y cómo encaja en el trabajo
+de una persona que crea documentación o contenidos.
+
+Duración estimada: **10 minutos**
+
+---
+
+## Concepto
+
+OpenCode es un **asistente de inteligencia artificial** que trabaja contigo
+en tu ordenador. Piensa en él como un compañero de equipo que:
+
+- **Lee** archivos (documentos Word, PDFs, textos planos, imágenes con texto)
+- **Escribe** y **edita** documentos siguiendo tus instrucciones
+- **Busca** información actualizada en internet
+- **Responde preguntas** sobre el contenido que le muestras
+
+A diferencia de ChatGPT o Gemini, OpenCode **trabaja directamente sobre tus
+archivos locales**. No tienes que copiar y pegar texto de un lado a otro:
+él abre, lee, modifica y guarda los documentos en tu propio ordenador.
+
+> 💡 **Idea clave:** OpenCode no es solo para programadores. Cualquier persona
+> que trabaje con textos y documentos puede usarlo como asistente de
+> redacción, revisión e investigación.
+
+---
+
+## ¿Qué NO es OpenCode?
+
+- No es un buscador como Google (aunque puede buscar en internet)
+- No es un editor como Word (aunque puede escribir documentos)
+- No es un chat web como ChatGPT (aunque funciona conversando)
+- No es mágico: cuanto mejor le expliques lo que necesitas, mejores
+  resultados obtienes
+
+---
+
+## Manos a la obra
+
+No vamos a instalarlo todavía. En este paso solo reflexionamos sobre
+posibles usos.
+
+**Ejercicio:** Piensa en tu trabajo diario y responde mentalmente:
+
+1. ¿Qué tipo de documentos creas habitualmente? (manuales, informes, guías,
+   FAQs, actas, plantillas...)
+2. ¿Qué tareas repetitivas haces con ellos? (revisar ortografía, cambiar
+   formato, traducir, resumir...)
+3. ¿Qué tareas te gustaría delegar a un asistente?
+
+Anótalo mentalmente o en un papel. En los próximos pasos verás cómo
+OpenCode puede ayudarte con esas tareas.
+
+---
+
+## Resumen del paso
+
+- ✅ Sabes qué es OpenCode y para qué sirve
+- ✅ Entiendes que trabaja sobre tus archivos locales
+- ✅ Tienes claro que no solo sirve para programar
+- ✅ Has identificado tareas de tu día a día donde podría ayudarte
+
+En el próximo paso veremos qué son los archivos y directorios,
+los comandos básicos para manejarlos y cómo visualizar los
+documentos que iremos creando.
+
+---
+
+## Para profundizar
+
+- [Página oficial de OpenCode](https://opencode.ai)
+- [Documentación oficial](https://opencode.ai/docs)
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

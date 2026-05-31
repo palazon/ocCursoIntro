@@ -1,0 +1,90 @@
+---
+title: "5. Investigar con OpenCode"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## Objetivo
+
+Aprender a usar OpenCode para buscar información actualizada en
+internet y enriquecer documentos con datos recientes.
+
+Duración estimada: **20 minutos**
+
+---
+
+## OpenCode como asistente de investigación
+
+OpenCode puede buscar en la web por ti. Esto es útil cuando:
+
+- Necesitas datos actualizados que el modelo no conoce
+- Quieres comparar varias fuentes sobre un tema
+- Tienes un documento propio y quieres verificar o complementar
+  su información con fuentes externas
+
+Cuando pides una búsqueda, OpenCode consulta internet y te devuelve
+un resumen con los hallazgos.
+
+---
+
+## Manos a la obra
+
+### Ejercicio 1 — Primera búsqueda
+
+Cambia a **Plan** ![Tab](tab-key.svg) `Plan`.
+
+> Busca información actual sobre los beneficios del teletrabajo y
+> resúmelo en 3 puntos principales.
+
+OpenCode buscará en internet y te dará un resumen. **Al estar en Plan,
+no se modifica ningún archivo.** Puedes pedir más detalles:
+
+> ¿Qué fuentes has consultado? Dime las URLs.
+
+### Ejercicio 2 — Comparar fuentes
+
+Siguiendo en Plan:
+
+> Busca 3 fuentes diferentes sobre los efectos del cambio climático
+> en la agricultura y dime en qué coinciden y en qué difieren.
+
+### Ejercicio 3 — Enriquecer un documento propio
+
+Pasa a **Build** ![Tab](tab-key.svg) `Build`.
+
+Ahora vas a complementar el documento sobre Darwin que creaste en
+el Paso 1 con información actual. Escribe:
+
+> @darwin-evolucion.md Busca en internet descubrimientos recientes
+> sobre evolución que confirmen las ideas de Darwin. Añade una
+> sección al final del archivo con esa información.
+
+OpenCode buscará datos actuales y los añadirá al archivo.
+
+### Ejercicio 4 — Verificar datos (opcional)
+
+Si tienes un informe o artículo con datos concretos, pásaselo a
+OpenCode para que verifique:
+
+> @mi-documento.md Los datos de este artículo, ¿siguen siendo
+> correctos hoy? Busca información actual para confirmarlos.
+
+---
+
+## Resumen del paso
+
+- ✅ Has pedido búsquedas en internet desde OpenCode
+- ✅ Has comparado fuentes y extraído coincidencias
+- ✅ Has enriquecido un documento propio con datos actuales
+- ✅ Puedes verificar información externa con ayuda del asistente
+
+En el próximo paso veremos cómo reestructurar documentos:
+dividir, fusionar y reorganizar contenido.
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

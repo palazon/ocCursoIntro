@@ -1,0 +1,169 @@
+---
+title: "01. Agentes a medida"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## Objetivo
+
+Aprender a crear asistentes especializados para tareas concretas
+de documentación, como un revisor de estilo o un normalizador de
+formato.
+
+Duración estimada: **25 minutos**
+
+---
+
+## ¿Qué es un agente personalizado?
+
+Un agente personalizado es como un especialista al que llamas
+cuando lo necesitas. Mientras que el modo Build sirve para todo,
+un agente puede estar limitado a una tarea concreta:
+
+- **Revisor de estilo** — solo lee y opina, no puede modificar
+- **Generador de actas** — toma notas y las estructura
+- **Normalizador** — aplica un formato corporativo estándar
+- **Traductor corporativo** — traduce con vocabulario específico
+
+Los agentes se definen en archivos Markdown dentro de la carpeta
+`.opencode/agents/`. Cada archivo es un agente. El nombre del
+archivo es el nombre del agente.
+
+---
+
+## Cómo se crea un agente
+
+Un agente se define con muy pocas líneas:
+
+```markdown
+---
+description: Revisa el estilo y tono sin modificar el documento
+mode: subagent
+permission:
+  edit: deny
+---
+
+Revisa el documento que te pase el usuario. Señala problemas de
+estilo, tono, claridad y coherencia. NO hagas cambios directos.
+```
+
+Campos clave:
+
+- **description** — qué hace el agente (aparece en el menú de
+  autocompletado con @)
+- **mode** — `subagent` para que pueda invocarse desde el chat
+- **permission** — controlas qué puede y qué no puede hacer
+
+Para invocarlo, escribes `@nombre-del-agente` seguido de tu
+petición.
+
+---
+
+## Manos a la obra
+
+### Ejercicio 1 — Crear la carpeta de agentes
+
+```bash
+mkdir -p .opencode/agents
+```
+
+### Ejercicio 2 — Crear un revisor de estilo
+
+Crea el archivo `.opencode/agents/revisor-estilo.md`:
+
+```markdown
+---
+description: Revisa estilo, tono y claridad sin modificar nada
+mode: subagent
+permission:
+  edit: deny
+---
+
+Eres un revisor de estilo. Revisa el documento que te pase el
+usuario y señala:
+
+1. Problemas de redacción o claridad
+2. Incoherencias de tono
+3. Errores ortográficos o gramaticales
+4. Sugerencias de mejora
+
+NO hagas cambios directos sobre el archivo.
+```
+
+### Ejercicio 3 — Probar el agente
+
+Desde OpenCode, escribe:
+
+> @revisor-estilo @darwin-evolucion.md Revísame este documento
+
+OpenCode invocará al agente revisor, que analizará el documento
+y te dará su opinión. Como tiene `edit: deny`, no podrá modificar
+nada aunque se lo pidas.
+
+### Ejercicio 4 — Crear un normalizador de formato
+
+Crea `.opencode/agents/normalizador.md`:
+
+```markdown
+---
+description: Aplica el formato corporativo estándar a cualquier documento
+mode: subagent
+permission:
+  bash: deny
+---
+
+Aplica el siguiente formato estándar al documento:
+
+1. Título principal con # al inicio
+2. Secciones con ##
+3. Subsecciones con ###
+4. Párrafos cortos, máximo 5 líneas
+5. Listas con viñetas para enumeraciones
+6. Sin negritas ni cursivas excesivas
+```
+
+Pruébalo:
+
+> @normalizador @trabajo-equipo.md Aplica el formato estándar a
+> este documento
+
+### Ejercicio 5 — Agentes en Plan y Build
+
+Los agentes heredan el modo en el que los invocas:
+
+- Si invocas `@revisor-estilo` en **Plan**, solo analiza
+- Si invocas `@normalizador` en **Build**, aplica cambios
+
+Pruébalo: cambia a Plan, invoca al normalizador y comprueba que
+no hace cambios. Luego cambia a Build y vuelve a invocarlo.
+
+---
+
+## Ideas para tus propios agentes
+
+| Agente | Para qué sirve |
+|--------|---------------|
+| `@revisor-ortografia` | Corrige solo faltas, sin cambiar el estilo |
+| `@generar-actas` | Toma notas sueltas y las estructura como acta |
+| `@traducir-corporativo` | Traduce usando el glosario de la empresa |
+| `@resumir-ejecutivo` | Reduce cualquier texto a un párrafo ejecutivo |
+| `@faq` | Convierte un texto continuo en preguntas frecuentes |
+
+---
+
+## Resumen del paso
+
+- ✅ Has creado un agente revisor de estilo con permisos limitados
+- ✅ Has creado un normalizador de formato corporativo
+- ✅ Has invocado agentes con @ desde el chat
+- ✅ Has visto cómo los agentes se comportan según el modo
+- ✅ Tienes ideas para crear tus propios agentes
+
+En el próximo paso veremos cómo crear skills reutilizables para
+tareas de documentación.

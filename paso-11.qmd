@@ -1,0 +1,119 @@
+---
+title: "11. Compartir y entregar documentos"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## Objetivo
+
+Aprender a compartir sesiones con colegas, exportar conversaciones
+y organizar los documentos generados para su entrega final.
+
+Duración estimada: **20 minutos**
+
+---
+
+## De la conversación al documento final
+
+Durante este curso has generado varios documentos trabajando con
+OpenCode. Ahora toca cerrar el ciclo: compartir, exportar y dejar
+todo listo para su uso o entrega.
+
+OpenCode ofrece dos herramientas útiles:
+
+- `/share` — genera un enlace a la conversación para compartir
+  con compañeros
+- `/export` — exporta la conversación a un archivo Markdown
+
+---
+
+## Manos a la obra
+
+### Ejercicio 1 — Compartir una sesión
+
+Desde OpenCode, en cualquier sesión escribe:
+
+> /share
+
+Se generará un enlace. Puedes enviarlo a un compañero para que
+vea toda la conversación: lo que pediste, cómo respondió
+OpenCode, los archivos que se crearon.
+
+El enlace es útil para:
+
+- Enseñar a un colega cómo conseguiste un resultado
+- Pedir opinión sobre el proceso seguido
+- Guardar una referencia de una sesión importante
+
+### Ejercicio 2 — Exportar una conversación
+
+> /export
+
+Esto descarga la conversación completa como archivo Markdown.
+Puedes abrirlo en cualquier editor para repasar lo que hiciste.
+
+### Ejercicio 3 — Organizar los archivos del curso
+
+Durante los pasos anteriores has creado varios archivos. Es buen
+momento para revisarlos y decidir cuáles conservar.
+
+```bash
+ls *.md
+```
+
+Verás archivos como:
+- `darwin-evolucion.md`
+- `trabajo-equipo.md`
+- `resumen-darwin.md`
+- `teoria.md` y `ejemplos.md`
+- `plantilla-informe.md`
+- Y otros que hayas ido generando
+
+Si quieres, puedes pedirle a OpenCode que los revise y te
+recomiende una estructura de carpetas para organizarlos.
+
+**Plan** ![Tab](tab-key.svg) `Plan`.
+
+> En mi carpeta de trabajo tengo varios archivos .md generados
+> durante un curso. ¿Cómo me recomiendas organizarlos en
+> carpetas?
+
+### Ejercicio 4 — Preparar un documento para entrega (opcional)
+
+Si tienes un documento que quieras entregar o publicar:
+
+> @mi-documento.md Prepara este documento para su entrega final:
+> ponle un título profesional, asegúrate de que el formato es
+> correcto y añade una nota final con la fecha y el autor.
+
+---
+
+## Resumen del curso
+
+Hasta aquí los 12 pasos del curso. Has aprendido a:
+
+| Paso | Lo que lograste |
+|------|----------------|
+| 0 | Entender qué es OpenCode |
+| 1 | Usar la terminal y comandos básicos del sistema |
+| 2 | Instalarlo y crear tu primer documento |
+| 3 | Alternar entre Plan y Build |
+| 4 | Trabajar con contenido externo |
+| 5 | Investigar en internet |
+| 6 | Reestructurar documentos |
+| 7 | Traducir y adaptar audiencias |
+| 8 | Crear tablas, índices y plantillas |
+| 9 | Automatizar con comandos |
+| 10 | Revisar documentos como un segundo par de ojos |
+| 11 | Compartir, exportar y entregar |
+
+OpenCode es una herramienta versátil. Cuanto más lo uses, más
+formas encontrarás de integrarlo en tu trabajo diario.
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

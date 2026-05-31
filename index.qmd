@@ -1,0 +1,160 @@
+---
+title: "OpenCode 101 — Curso básico para creadores de contenido"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## ¿Por qué OpenCode para documentación?
+
+OpenCode es un asistente de inteligencia artificial que trabaja
+directamente sobre tus archivos locales. Aunque nació como
+herramienta para desarrolladores, es igualmente útil para cualquier
+persona que trabaje con textos y documentos.
+
+**¿Qué hace OpenCode por ti?**
+
+- Lee y escribe documentos Word, Markdown, PDFs y texto plano
+- Mejora la redacción, el tono y la claridad de tus textos
+- Traduce documentos manteniendo el formato original
+- Busca información actualizada en internet
+- Reestructura, resume y transforma contenido sin que tengas
+  que copiar y pegar manualmente
+
+A diferencia de ChatGPT o Gemini, OpenCode **trabaja en tu propio
+ordenador, sobre tus propios archivos**. No subes información a
+una web: el asistente abre, lee, modifica y guarda los documentos
+directamente en tu disco.
+
+---
+
+## Estructura del curso
+
+El curso tiene **12 pasos** (0 al 11) organizados en tres bloques:
+
+### Bloque I — Fundamentos (pasos 0 a 3)
+
+| Paso | Título | Qué aprenderás |
+|------|--------|---------------|
+| [0](paso-00.html) | [¿Qué es OpenCode?](paso-00.html) | Concepto, utilidad para documentación |
+| [1](paso-01.html) | [El sistema de archivos](paso-01.html) | Archivos, directorios, comandos básicos, visualización HTML |
+| [2](paso-02.html) | [Primeros minutos](paso-02.html) | Instalación, interfaz, primer documento |
+| [3](paso-03.html) | [Primeros diálogos](paso-03.html) | Plan vs Build, escribir prompts, referenciar archivos |
+
+### Bloque II — El taller de documentos (pasos 4 a 8)
+
+| Paso | Título | Qué aprenderás |
+|------|--------|---------------|
+| [4](paso-04.html) | [Contenido externo](paso-04.html) | Pegar textos, imágenes, PDFs |
+| [5](paso-05.html) | [Investigar](paso-05.html) | Búsquedas en internet, comparar fuentes |
+| [6](paso-06.html) | [Reestructurar](paso-06.html) | Dividir, fusionar, reordenar documentos |
+| [7](paso-07.html) | [Traducir y adaptar](paso-07.html) | Cambiar tono, audiencia, idioma |
+| [8](paso-08.html) | [Documentos estructurados](paso-08.html) | Tablas, índices, glosarios, plantillas |
+
+### Bloque III — Productividad y cierre (pasos 9 a 11)
+
+| Paso | Título | Qué aprenderás |
+|------|--------|---------------|
+| [9](paso-09.html) | [Comandos personalizados](paso-09.html) | Atajos para tareas repetitivas |
+| [10](paso-10.html) | [Revisión asistida](paso-10.html) | OpenCode como revisor de textos |
+| [11](paso-11.html) | [Compartir y entregar](paso-11.html) | Exportar, compartir, organizar archivos |
+
+---
+
+## Mapa de capacidades
+
+| Capacidad | Dónde se aprende |
+|-----------|:----------:|
+| Navegar por el sistema de archivos | [Paso 1](paso-01.html) |
+| Instalar y configurar OpenCode | [Paso 2](paso-02.html) |
+| Alternar entre Plan y Build | [Pasos 2](paso-02.html), [3](paso-03.html) |
+| Escribir prompts eficaces | [Paso 3](paso-03.html) |
+| Referenciar archivos con @ | [Pasos 3](paso-03.html), [4](paso-04.html) |
+| Trabajar con contenido externo | [Paso 4](paso-04.html) |
+| Investigar en internet | [Paso 5](paso-05.html) |
+| Dividir y fusionar documentos | [Paso 6](paso-06.html) |
+| Traducir a otros idiomas | [Paso 7](paso-07.html) |
+| Adaptar el tono a distintas audiencias | [Paso 7](paso-07.html) |
+| Crear tablas, índices y glosarios | [Paso 8](paso-08.html) |
+| Generar plantillas reutilizables | [Paso 8](paso-08.html) |
+| Crear comandos personalizados | [Paso 9](paso-09.html) |
+| Revisar documentos automáticamente | [Paso 10](paso-10.html) |
+| Compartir y exportar sesiones | [Paso 11](paso-11.html) |
+
+---
+
+## Ideas y ejemplos
+
+Además de los pasos, hemos recopilado
+[ideas para usar OpenCode en distintos ámbitos](ideas101.html):
+empresa, academia y hogar. Cada idea incluye variantes y sugerencias
+de prompts para que puedas adaptarlas a tu situación.
+
+---
+
+## Cómo usar este curso
+
+1. **Abre un paso** — Cada paso está en un archivo `.qmd`. Léelo
+   tranquilamente.
+
+2. **Ejecuta los ejercicios** — Ten OpenCode abierto en la misma
+   carpeta del curso mientras lees. Cada ejercicio está diseñado
+   para que lo hagas en ese momento.
+
+3. **Sigue el orden** — Los pasos están ordenados de menor a mayor
+   complejidad. Cada uno se apoya en lo aprendido anteriormente.
+
+4. **Acumula archivos** — Los documentos que generes en un paso se
+   reutilizan en pasos posteriores. No los borres.
+
+5. **Plan para pensar, Build para hacer** — Usa Plan cuando quieras
+   explorar ideas sin riesgo de modificar nada. Usa Build cuando
+   quieras ejecutar cambios sobre tus archivos.
+
+Para ver un paso en HTML:
+
+```bash
+quarto render paso-00.qmd
+```
+
+---
+
+## Público y requisitos
+
+**¿Para quién es este curso?**
+
+- Docentes que preparan materiales didácticos
+- Redactores técnicos que escriben manuales, guías o informes
+- Personal de administración que genera documentación
+- Cualquier persona que trabaje con textos de forma habitual
+
+**No se necesita saber programar.** Todo se hace mediante
+instrucciones en lenguaje natural.
+
+**Requisitos técnicos:**
+
+- OpenCode instalado (se explica en el [Paso 2](paso-02.html))
+- Una cuenta gratuita en OpenCode Zen (viene activada por defecto)
+- Un navegador web para ver los HTML generados
+- Quarto (opcional, para regenerar los HTML si se desea)
+
+---
+
+## Sobre este documento
+
+Este `index.qmd` es la puerta de entrada al curso. Puedes
+generar su versión HTML con:
+
+```bash
+quarto render index.qmd
+```
+
+---
+
+*Curso OpenCode 101 · Idea original de JA Palazón*
+*Elaborado con OpenCode — Modelo deepseek-v4-flash-free · Mayo 2026*

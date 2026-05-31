@@ -1,0 +1,172 @@
+---
+title: "9. Comandos personalizados"
+author: "JA Palazón Ferrando"
+date: "2026-05-30"
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+---
+
+## Objetivo
+
+Aprender a crear atajos para tareas repetitivas de documentación
+usando comandos personalizados.
+
+Duración estimada: **25 minutos**
+
+---
+
+## ¿Qué es un comando personalizado?
+
+Un comando personalizado es un atajo que le enseñas a OpenCode
+para que ejecute una tarea con solo escribir `/`. Por ejemplo,
+podrías tener:
+
+- `/faq` — transforma cualquier documento en preguntas frecuentes
+- `/plantilla` — genera un informe con la estructura que uses
+  siempre
+- `/revisar` — pide a OpenCode que revise el documento activo
+
+En lugar de escribir cada vez toda la instrucción, creas el
+comando una vez y lo reutilizas.
+
+---
+
+## Cómo se crea
+
+Los comandos se definen en un archivo de texto dentro de la carpeta
+`.opencode/commands/` de tu proyecto. Cada comando es un archivo
+`.md` con una estructura muy sencilla.
+
+> 💡 La carpeta `.opencode/` es el **directorio de configuración
+> de OpenCode para este proyecto**. Es donde OpenCode guarda sus
+> ajustes (comandos, reglas, skills...), igual que otros programas
+> guardan preferencias en una carpeta de configuración. Cuando creas
+> comandos aquí, estás personalizando OpenCode para este proyecto,
+> no creando un documento normal.
+
+No te preocupes por los detalles técnicos ahora. En este paso
+crearemos comandos útiles para documentación siguiendo una
+plantilla.
+
+---
+
+## Manos a la obra
+
+### Ejercicio 1 — Crear la carpeta de comandos
+
+Primero, crea la carpeta donde irán los comandos:
+
+```bash
+mkdir -p .opencode/commands
+```
+
+> 💡 **Alternativa:** también puedes pedirle a OpenCode que cree
+> el comando directamente. Por ejemplo, escribe en el chat:
+>
+> > Crea un comando personalizado /faq que convierta cualquier
+> > documento en preguntas frecuentes. Instálalo en la carpeta de
+> > comandos de OpenCode.
+>
+> OpenCode intentará escribir en `.opencode/commands/` y **te
+> pedirá permiso** la primera vez, ya que es el directorio de
+> configuración del proyecto. Confirma el permiso y OpenCode creará
+> el archivo por ti.
+
+### Ejercicio 2 — Comando /faq
+
+Crea un archivo llamado `.opencode/commands/faq.md` con este
+contenido:
+
+```markdown
+---
+description: Convierte cualquier documento en preguntas frecuentes
+---
+
+Convierte el documento $ARGUMENTS en una lista de preguntas frecuentes
+(FAQ) con sus respuestas. Usa un tono claro y directo.
+```
+
+Ahora, desde OpenCode, prueba a escribir:
+
+> /faq darwin-evolucion.md
+
+OpenCode ejecutará la instrucción que definiste en el comando.
+
+### Ejercicio 3 — Comando /plantilla
+
+Crea `.opencode/commands/plantilla.md`:
+
+```markdown
+---
+description: Genera un informe con la estructura estándar
+---
+
+Crea un documento con la siguiente estructura de informe:
+1. Título del informe
+2. Resumen ejecutivo (3 líneas)
+3. Objetivos
+4. Desarrollo
+5. Conclusiones
+6. Próximos pasos
+
+El tema del informe es: $ARGUMENTS
+```
+
+Pruébalo con:
+
+> /plantilla Beneficios del reciclaje en la oficina
+
+### Ejercicio 4 — Comando /revisar
+
+Crea `.opencode/commands/revisar.md`:
+
+```markdown
+---
+description: Revisa el documento en busca de errores y mejoras
+---
+
+Revisa el documento $ARGUMENTS y dime:
+1. ¿Hay errores ortográficos o gramaticales?
+2. ¿El tono es coherente en todo el texto?
+3. ¿Hay secciones que deberían reordenarse?
+4. ¿Falta información importante?
+```
+
+Pruébalo con:
+
+> /revisar darwin-evolucion.md
+
+---
+
+## Tus comandos, tus reglas
+
+Puedes crear tantos comandos como quieras. Cada uno vive en su
+propio archivo dentro de `.opencode/commands/`. El nombre del
+archivo (sin la extensión) es el nombre del comando.
+
+Algunas ideas para comandos que puedes crearte:
+
+| Comando | Para qué sirve |
+|---------|---------------|
+| `/resumir` | Resumir un documento en 3 líneas |
+| `/traducir` | Traducir un documento al inglés |
+| `/glosario` | Extraer términos y crear definiciones |
+| `/check` | Verificar que un documento tiene todas las secciones necesarias |
+
+---
+
+## Resumen del paso
+
+- ✅ Entiendes qué son los comandos personalizados
+- ✅ Has creado un comando /faq, /plantilla y /revisar
+- ✅ Los has probado con documentos del proyecto
+- ✅ Puedes crear tus propios comandos para tareas repetitivas
+
+En el próximo paso veremos cómo usar OpenCode como revisor
+asistido de documentos.
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

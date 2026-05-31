@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JA Palazón Ferrando">
+<meta name="dcterms.date" content="2026-05-30">
+
+<title>2. Primeros minutos con OpenCode</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="paso-02_files/libs/clipboard/clipboard.min.js"></script>
+<script src="paso-02_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="paso-02_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="paso-02_files/libs/quarto-html/popper.min.js"></script>
+<script src="paso-02_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="paso-02_files/libs/quarto-html/anchor.min.js"></script>
+<link href="paso-02_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="paso-02_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="paso-02_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="paso-02_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="paso-02_files/libs/bootstrap/bootstrap-ba13d4a16a61746bd6fb80a772d4709f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#instalación-en-windows" id="toc-instalación-en-windows" class="nav-link" data-scroll-target="#instalación-en-windows">Instalación en Windows</a>
+  <ul class="collapse">
+  <li><a href="#instalar-wsl2" id="toc-instalar-wsl2" class="nav-link" data-scroll-target="#instalar-wsl2">1. Instalar WSL2</a></li>
+  <li><a href="#abrir-wsl-y-actualizar-paquetes" id="toc-abrir-wsl-y-actualizar-paquetes" class="nav-link" data-scroll-target="#abrir-wsl-y-actualizar-paquetes">2. Abrir WSL y actualizar paquetes</a></li>
+  <li><a href="#instalar-opencode" id="toc-instalar-opencode" class="nav-link" data-scroll-target="#instalar-opencode">3. Instalar OpenCode</a></li>
+  <li><a href="#verificar-la-instalación" id="toc-verificar-la-instalación" class="nav-link" data-scroll-target="#verificar-la-instalación">4. Verificar la instalación</a></li>
+  </ul></li>
+  <li><a href="#otros-sistemas" id="toc-otros-sistemas" class="nav-link" data-scroll-target="#otros-sistemas">Otros sistemas</a></li>
+  <li><a href="#conocer-la-interfaz-tui" id="toc-conocer-la-interfaz-tui" class="nav-link" data-scroll-target="#conocer-la-interfaz-tui">Conocer la interfaz (TUI)</a></li>
+  <li><a href="#entrar-salir-y-continuar-una-sesión" id="toc-entrar-salir-y-continuar-una-sesión" class="nav-link" data-scroll-target="#entrar-salir-y-continuar-una-sesión">Entrar, salir y continuar una sesión</a></li>
+  <li><a href="#manos-a-la-obra" id="toc-manos-a-la-obra" class="nav-link" data-scroll-target="#manos-a-la-obra">Manos a la obra</a>
+  <ul class="collapse">
+  <li><a href="#ejercicio-1-plan-mode" id="toc-ejercicio-1-plan-mode" class="nav-link" data-scroll-target="#ejercicio-1-plan-mode">Ejercicio 1 — Plan mode</a></li>
+  <li><a href="#ejercicio-2-build-mode" id="toc-ejercicio-2-build-mode" class="nav-link" data-scroll-target="#ejercicio-2-build-mode">Ejercicio 2 — Build mode</a></li>
+  <li><a href="#ejercicio-3-añadir-un-cuestionario" id="toc-ejercicio-3-añadir-un-cuestionario" class="nav-link" data-scroll-target="#ejercicio-3-añadir-un-cuestionario">Ejercicio 3 — Añadir un cuestionario</a></li>
+  <li><a href="#ejercicio-4-convertir-a-word-opcional" id="toc-ejercicio-4-convertir-a-word-opcional" class="nav-link" data-scroll-target="#ejercicio-4-convertir-a-word-opcional">Ejercicio 4 — Convertir a Word (opcional)</a></li>
+  <li><a href="#por-qué-markdown" id="toc-por-qué-markdown" class="nav-link" data-scroll-target="#por-qué-markdown">💡 ¿Por qué Markdown?</a></li>
+  </ul></li>
+  <li><a href="#resumen-del-paso" id="toc-resumen-del-paso" class="nav-link" data-scroll-target="#resumen-del-paso">Resumen del paso</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">2. Primeros minutos con OpenCode</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JA Palazón Ferrando </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 30, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<p>Instalar OpenCode, abrirlo por primera vez, conocer la interfaz básica y crear tu primer documento usando los modos Plan y Build.</p>
+<p>Duración estimada: <strong>30 minutos</strong></p>
+<hr>
+</section>
+<section id="instalación-en-windows" class="level2">
+<h2 class="anchored" data-anchor-id="instalación-en-windows">Instalación en Windows</h2>
+<p>El método recomendado para usar OpenCode en Windows es a través de <strong>WSL2</strong> (Windows Subsystem for Linux). WSL2 te permite ejecutar un entorno Linux dentro de Windows de forma fluida.</p>
+<section id="instalar-wsl2" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-wsl2">1. Instalar WSL2</h3>
+<p>Abre <strong>PowerShell como administrador</strong> y ejecuta:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>install</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Esto instala WSL2 con una distribución Ubuntu por defecto. Una vez terminado, reinicia el equipo si se te pide.</p>
+<blockquote class="blockquote">
+<p>Si quieres más detalles, Microsoft tiene una <a href="https://learn.microsoft.com/es-es/windows/wsl/install">guía oficial de instalación de WSL</a>.</p>
+</blockquote>
+</section>
+<section id="abrir-wsl-y-actualizar-paquetes" class="level3">
+<h3 class="anchored" data-anchor-id="abrir-wsl-y-actualizar-paquetes">2. Abrir WSL y actualizar paquetes</h3>
+<p>Abre “Ubuntu” desde el menú de inicio. Se abrirá una terminal Linux. La primera vez te pedirá crear un usuario y contraseña.</p>
+<p>Dentro de WSL, actualiza los paquetes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="instalar-opencode" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-opencode">3. Instalar OpenCode</h3>
+<p>Ejecuta el instalador oficial:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://opencode.ai/install <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Al terminar, cierra y vuelve a abrir la terminal WSL, o ejecuta:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="verificar-la-instalación" class="level3">
+<h3 class="anchored" data-anchor-id="verificar-la-instalación">4. Verificar la instalación</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Deberías ver un número de versión. Si es así, OpenCode está listo.</p>
+<hr>
+</section>
+</section>
+<section id="otros-sistemas" class="level2">
+<h2 class="anchored" data-anchor-id="otros-sistemas">Otros sistemas</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sistema</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>macOS</strong></td>
+<td><code>brew install anomalyco/tap/opencode</code></td>
+</tr>
+<tr class="even">
+<td><strong>Linux</strong></td>
+<td><code>curl -fsSL https://opencode.ai/install \| bash</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Windows (nativo)</strong></td>
+<td><code>npm install -g opencode-ai</code> o <code>choco install opencode</code></td>
+</tr>
+</tbody>
+</table>
+<p>Para más detalles, visita la <a href="https://opencode.ai/docs/#install">documentación oficial de instalación</a>.</p>
+<hr>
+</section>
+<section id="conocer-la-interfaz-tui" class="level2">
+<h2 class="anchored" data-anchor-id="conocer-la-interfaz-tui">Conocer la interfaz (TUI)</h2>
+<p>Desde la terminal WSL, navega hasta la carpeta donde quieras trabajar y ejecuta:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verás una pantalla dividida en dos áreas:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="captura-tui.png" class="img-fluid figure-img"></p>
+<figcaption>Interfaz TUI de OpenCode</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Área superior:</strong> respuestas y acciones del asistente</li>
+<li><strong>Área inferior (chat):</strong> donde tú escribes los mensajes</li>
+<li><strong>Esquina inferior derecha:</strong> indicador del modo activo (Build o Plan)</li>
+</ul>
+<p>Pulsa <img src="tab-key.svg" class="img-fluid" alt="Tab"> para alternar entre los dos modos. Observa cómo cambia el indicador.</p>
+<p>Escribe <code>/help</code> para ver los comandos disponibles.</p>
+<hr>
+</section>
+<section id="entrar-salir-y-continuar-una-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="entrar-salir-y-continuar-una-sesión">Entrar, salir y continuar una sesión</h2>
+<ul>
+<li><strong>Entrar:</strong> <code>opencode</code> desde la terminal</li>
+<li><strong>Salir:</strong> escribe <code>/exit</code> o pulsa <strong>Ctrl+C</strong></li>
+<li><strong>Sesiones:</strong> cada vez que abres OpenCode empiezas una sesión nueva. Los archivos que crees se guardan en tu disco, pero el historial de la conversación no se conserva entre sesiones. Si quieres guardar una conversación, usa <code>/share</code> para compartirla.</li>
+</ul>
+<p>Para este curso trabajaremos siempre en la misma carpeta del proyecto.</p>
+<hr>
+</section>
+<section id="manos-a-la-obra" class="level2">
+<h2 class="anchored" data-anchor-id="manos-a-la-obra">Manos a la obra</h2>
+<p>Vas a crear tu primer documento usando los dos modos de OpenCode: primero <strong>Plan</strong> para diseñar el contenido, luego <strong>Build</strong> para generar el archivo.</p>
+<blockquote class="blockquote">
+<p>⚠️ <strong>Antes de empezar:</strong> mira la esquina inferior derecha de la pantalla. Allí pone <strong>Build</strong> o <strong>Plan</strong>. Usa <img src="tab-key.svg" class="img-fluid" alt="Tab"> para cambiar. Asegúrate de estar en el modo correcto antes de cada ejercicio.</p>
+</blockquote>
+<section id="ejercicio-1-plan-mode" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-1-plan-mode">Ejercicio 1 — Plan mode</h3>
+<blockquote class="blockquote">
+<p><strong>Modo:</strong> <img src="tab-key.svg" class="img-fluid" alt="Tab"> <code>Plan</code> — pulsa Tab para estar en modo Plan</p>
+</blockquote>
+<p>Escribe lo siguiente en el chat:</p>
+<blockquote class="blockquote">
+<p>Soy profesor de secundaria. Necesito crear un documento que explique los fundamentos de la teoría de la evolución de Darwin para estudiantes de 14-15 años. Hazme un plan con los apartados que debería incluir y qué contenido pondrías en cada uno.</p>
+</blockquote>
+<p>OpenCode te responderá con una estructura de apartados. Puedes pedirle cambios si quieres, por ejemplo:</p>
+<blockquote class="blockquote">
+<p>Añade un apartado sobre ejemplos cotidianos de la evolución.</p>
+</blockquote>
+</section>
+<section id="ejercicio-2-build-mode" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-2-build-mode">Ejercicio 2 — Build mode</h3>
+<blockquote class="blockquote">
+<p><strong>Modo:</strong> <img src="tab-key.svg" class="img-fluid" alt="Tab"> <code>Build</code> — pulsa Tab para estar en modo Build</p>
+</blockquote>
+<p>Ahora escribe:</p>
+<blockquote class="blockquote">
+<p>Perfecto. Ahora genera el documento completo en un archivo llamado darwin-evolucion.md. Lenguaje sencillo, tono divulgativo, ejemplos claros. Quiero que esté listo para imprimirlo y dárselo a la clase.</p>
+</blockquote>
+<p>OpenCode creará el archivo en tu carpeta. Puedes comprobarlo de dos formas:</p>
+<p><strong>Fuera de OpenCode</strong> — abre otra terminal y escribe:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> darwin-evolucion.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Sin salir de OpenCode</strong> — escribe en el chat:</p>
+<blockquote class="blockquote">
+<p><code>!cat darwin-evolucion.md</code></p>
+</blockquote>
+<p>El signo <code>!</code> le dice a OpenCode que ejecute ese comando en la terminal sin cerrar la sesión. Útil para comprobaciones rápidas.</p>
+</section>
+<section id="ejercicio-3-añadir-un-cuestionario" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-3-añadir-un-cuestionario">Ejercicio 3 — Añadir un cuestionario</h3>
+<p>Sin cerrar la sesión, escribe:</p>
+<blockquote class="blockquote">
+<p>Ahora añade al final del archivo un cuestionario de 5 preguntas tipo test sobre el contenido. Cada pregunta con 4 opciones. Incluye las respuestas correctas al final del todo.</p>
+</blockquote>
+<p>OpenCode <strong>editará el archivo existente</strong> para añadir el cuestionario, sin tener que empezar de cero.</p>
+</section>
+<section id="ejercicio-4-convertir-a-word-opcional" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-4-convertir-a-word-opcional">Ejercicio 4 — Convertir a Word (opcional)</h3>
+<blockquote class="blockquote">
+<p>¿Tienes Word y quieres un .docx? Pídeselo a OpenCode (necesita la librería python-docx, pero OpenCode la instalará automáticamente):</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Convierte darwin-evolucion.md a un archivo .docx usando python-docx.</p>
+</blockquote>
+<hr>
+</section>
+<section id="por-qué-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="por-qué-markdown">💡 ¿Por qué Markdown?</h3>
+<p>OpenCode trabaja de forma nativa con <strong>Markdown (.md)</strong>: es texto plano, ligero, se versiona bien con Git y herramientas como Quarto lo convierten a HTML, PDF o Word. Al usar <code>.md</code> evitas formatos binarios (.docx) que OpenCode no puede leer ni modificar directamente.</p>
+<blockquote class="blockquote">
+<p>💡 <strong>¿HTML mejor que DOC?</strong> Para visualizar el material generado, suele ser más rápido convertir el <code>.md</code> a HTML que a .docx. HTML se abre al instante en cualquier navegador, no requiere Word, y respeta fielmente el formato. Con Quarto es tan sencillo como <code>quarto render archivo.md</code>.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="resumen-del-paso" class="level2">
+<h2 class="anchored" data-anchor-id="resumen-del-paso">Resumen del paso</h2>
+<ul>
+<li>✅ OpenCode instalado y funcionando en Windows</li>
+<li>✅ Conoces la interfaz: chat, modos, comandos básicos</li>
+<li>✅ Sabes entrar, salir y cambiar entre Plan y Build</li>
+<li>✅ Has creado un documento completo con Plan + Build</li>
+<li>✅ Has ampliado el documento con un cuestionario</li>
+<li>✅ Entiendes por qué Markdown es el formato ideal con OpenCode</li>
+</ul>
+<p>En el próximo paso profundizaremos en la interfaz y en cómo referenciar archivos con <code>@</code>.</p>
+<p><em>Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026</em></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
