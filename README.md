@@ -1,59 +1,48 @@
-# OpenCode 101 — Curso básico para creadores de contenido
+# OpenCode 101 — Curso de documentación con inteligencia artificial
 
-Curso de formación paso a paso para aprender a usar 
-[OpenCode](https://opencode.ai) como asistente de inteligencia artificial
-en tareas de documentación, redacción e investigación.
+Curso práctico de **12 pasos** para aprender a usar
+[OpenCode](https://opencode.ai) como asistente de IA en tareas de
+documentación técnica, redacción de informes, material educativo e
+investigación. Sin necesidad de saber programar.
 
 ## ¿Para quién es este curso?
 
-Para **docentes, redactores técnicos y cualquier persona** que
-trabaje creando documentos en entornos empresariales o educativos: 
-manuales, guías, informes, FAQs, actas, plantillas.
+Dirigido a **docentes, formadores, redactores técnicos y cualquier
+profesional** que quiera usar inteligencia artificial para crear y
+mantener documentación: manuales, guías, informes, FAQs, actas,
+cuestionarios y plantillas.
 
-No necesitas saber programar.
+## Estructura del curso
 
-El curso está organizado en **12 pasos** (0 al 11) en tres bloques,
-con todos los fuentes en el directorio `contenidos/`.
+| Bloque | Pasos | Contenido |
+|--------|-------|-----------|
+| I — Fundamentos | 0 – 3 | Concepto, sistema de archivos, instalación, primeros diálogos |
+| II — El taller de documentos | 4 – 8 | Contenido externo, investigación web, reestructuración, traducción, tablas |
+| III — Productividad y cierre | 9 – 11 | Comandos personalizados, revisión asistida, entrega final |
 
-| Bloque | Pasos | Tema |
-|--------|-------|------|
-| I — Fundamentos | 0 a 3 | Concepto, sistema de archivos, instalación, primeros diálogos |
-| II — El taller de documentos | 4 a 8 | Contenido externo, investigación, reestructuración, traducción, tablas |
-| III — Productividad y cierre | 9 a 11 | Comandos, revisión, compartir |
+Incluye además una página de [ideas y ejemplos](contenidos/ideas101.html)
+para empresa, academia, deportes, hogar y aficiones.
 
-Además hay una página de [ideas y ejemplos](contenidos/ideas101.html) para
-empresa, academia, deportes, hogar y aficiones.
+## Cómo empezar
 
-## Cómo usar este curso
+**Opción recomendada** — abre `cursoIntroOpenCode/index.html` en tu
+navegador. Todo está listo para seguir los ejercicios con OpenCode
+abierto a su lado.
 
-### Opción A: desde la distribución (recomendado)
-
-La carpeta `cursoIntroOpenCode/` contiene todo listo para usar:
-abre `cursoIntroOpenCode/index.html` en tu navegador y sigue los
-ejercicios paso a paso con OpenCode abierto a su lado.
-
-### Opción B: desde los fuentes
-
-Los archivos `.qmd` están en `contenidos/`. Para generar los HTML:
+**Desde los fuentes** — los archivos `.qmd` (formato Quarto) están en
+`contenidos/`. Para regenerar los HTML:
 
 ```bash
 bash render-all.sh
 ```
 
-Abre `contenidos/index.html` en tu navegador.
-
 ## Requisitos
 
-- OpenCode instalado (se explica en el Paso 2)
-- Una cuenta gratuita de OpenCode Zen (viene activada por defecto)
-- Un navegador web para ver los HTML generados
-- Quarto (opcional, para regenerar los HTML)
-
-
-
-
+- OpenCode instalado — se explica en el Paso 2
+- Cuenta gratuita de OpenCode Zen (activada por defecto)
+- Navegador web para ver los HTML
+- Quarto (opcional, solo para modificar fuentes)
 
 ---
 
-*Curso OpenCode 101 · Idea original de JA Palazón*
-*Elaborado con OpenCode — Modelo deepseek-v4-flash-free · Mayo 2026*
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*
