@@ -10,11 +10,12 @@ rm -rf "$DISTRO"/*.qmd "$DISTRO"/*.html "$DISTRO"/*_files/ \
        "$DISTRO"/custom.css "$DISTRO"/captura-tui.png "$DISTRO"/tab-key.svg \
        "$DISTRO"/README.md "$DISTRO"/AGENTS.md "$DISTRO"/render-all.sh
 
-echo "==> Copiando fuentes desde raíz..."
+echo "==> Copiando fuentes desde contenidos/..."
 mkdir -p "$DISTRO"
-cp index.qmd ideas101.qmd custom.css captura-tui.png tab-key.svg \
-   README.md AGENTS.md render-all.sh "$DISTRO"/
-cp paso-*.qmd "$DISTRO"/
+cp contenidos/index.qmd contenidos/ideas101.qmd "$DISTRO"/
+cp contenidos/paso-*.qmd "$DISTRO"/
+cp contenidos/custom.css contenidos/captura-tui.png contenidos/tab-key.svg "$DISTRO"/
+cp README.md AGENTS.md render-all.sh "$DISTRO"/
 
 echo "==> Renderizando HTML en $DISTRO/..."
 cd "$DISTRO"

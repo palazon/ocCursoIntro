@@ -15,18 +15,18 @@ colaboración en equipo. El curso 102 está en un proyecto separado.
 
 ## Estructura del proyecto
 
-- `index.qmd` — visión general del curso básico
-- `paso-XX.qmd` — sesiones del curso básico
-- `custom.css` — hoja de estilos personalizada para la salida HTML
-- `ideas101.qmd` / `ideas101.html` — ideas de uso en empresa, academia, deportes, hogar y aficiones
-- `cursoIntroOpenCode/` — paquete redistribuible con ambos cursos
+- `contenidos/` — archivos fuente del curso
+  - `index.qmd` — visión general del curso básico
+  - `paso-XX.qmd` — sesiones del curso básico (00-11)
+  - `ideas101.qmd` / `ideas101.html` — ideas de uso
+  - `custom.css` — hoja de estilos personalizada
+  - `captura-tui.png`, `tab-key.svg` — recursos gráficos
+- `cursoIntroOpenCode/` — paquete redistribuible (generado con `bash build-distro.sh`)
 
 ## Generar HTML
 
-Para renderizar todos los archivos:
-
 ```
-quarto render
+bash render-all.sh
 ```
 
 ## Público objetivo
