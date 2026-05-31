@@ -23,6 +23,9 @@ cuestionarios y plantillas.
 Incluye además una página de [ideas y ejemplos](https://palazon.github.io/ocCursoIntro/contenidos/ideas101.html)
 para empresa, academia, deportes, hogar y aficiones.
 
+> **Curso siguiente:** [OpenCode 102 — Automatización y personalización](https://github.com/palazon/ocCursoAvanzado)  
+> 7 pasos para crear agentes a medida, skills reutilizables, Git, MCP, CLI, permisos y colaboración en equipo.
+
 ## Cómo empezar
 
 ### A. Online (sin instalar nada)
