@@ -12,7 +12,8 @@ manuales, guías, informes, FAQs, actas, plantillas.
 
 No necesitas saber programar.
 
-El curso está organizado en **12 pasos** (0 al 11) en tres bloques:
+El curso está organizado en **12 pasos** (0 al 11) en tres bloques,
+con todos los fuentes en el directorio `contenidos/`.
 
 | Bloque | Pasos | Tema |
 |--------|-------|------|
@@ -20,19 +21,26 @@ El curso está organizado en **12 pasos** (0 al 11) en tres bloques:
 | II — El taller de documentos | 4 a 8 | Contenido externo, investigación, reestructuración, traducción, tablas |
 | III — Productividad y cierre | 9 a 11 | Comandos, revisión, compartir |
 
-Además hay una página de [ideas y ejemplos](ideas101.html) para empresa,
-academia, deportes, hogar y aficiones.
+Además hay una página de [ideas y ejemplos](contenidos/ideas101.html) para
+empresa, academia, deportes, hogar y aficiones.
 
 ## Cómo usar este curso
 
-Si no tienes experiencia con GitHub, o quieres ir rápido, escarga el fichero
-[cursoIntroOpenCode.zip](https://github.com/palazon/ocCursoIntro/blob/main/cursoIntroOpenCode.zip).
-Descomprime el fichero en tu disco duro.
-Carga en tu navegador favorito el fichero `index.html`.
-Sigue los ejercicios paso a paso con OpenCode abierto a su lado.
+### Opción A: desde la distribución (recomendado)
 
-Si lo deseas, cuando tengas un poco de soltura usa
-OpenCode para manejarlo como un proyecto propio.
+La carpeta `cursoIntroOpenCode/` contiene todo listo para usar:
+abre `cursoIntroOpenCode/index.html` en tu navegador y sigue los
+ejercicios paso a paso con OpenCode abierto a su lado.
+
+### Opción B: desde los fuentes
+
+Los archivos `.qmd` están en `contenidos/`. Para generar los HTML:
+
+```bash
+bash render-all.sh
+```
+
+Abre `contenidos/index.html` en tu navegador.
 
 ## Requisitos
 
