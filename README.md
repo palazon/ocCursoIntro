@@ -49,9 +49,9 @@ Abre `contenidos/index.html` en tu navegador.
 - Un navegador web para ver los HTML generados
 - Quarto (opcional, para regenerar los HTML)
 
-\ 
 
-\ 
+
+
 
 ---
 
