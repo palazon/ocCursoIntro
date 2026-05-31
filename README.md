@@ -27,7 +27,7 @@ para empresa, academia, deportes, hogar y aficiones.
 
 ### A. Online (sin instalar nada)
 
-Abre <https://palazon.github.io/ocCursoIntro/> en tu navegador.
+Abre <https://palazon.github.io/ocCursoIntro/contenidos/> en tu navegador.
 
 ### B. Desde la distribución local (recomendado)
 
