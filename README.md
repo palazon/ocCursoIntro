@@ -20,7 +20,7 @@ cuestionarios y plantillas.
 | II — El taller de documentos | 4 – 8 | Contenido externo, investigación web, reestructuración, traducción, tablas |
 | III — Productividad y cierre | 9 – 11 | Comandos personalizados, revisión asistida, entrega final |
 
-Incluye además una página de [ideas y ejemplos](contenidos/ideas101.html)
+Incluye además una página de [ideas y ejemplos](https://palazon.github.io/ocCursoIntro/contenidos/contenidos/ideas101.html)
 para empresa, academia, deportes, hogar y aficiones.
 
 ## Cómo empezar
