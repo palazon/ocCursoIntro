@@ -11,6 +11,7 @@ rm -rf "$DISTRO"/*.qmd "$DISTRO"/*.html "$DISTRO"/*_files/ \
        "$DISTRO"/README.md "$DISTRO"/AGENTS.md "$DISTRO"/render-all.sh
 
 echo "==> Copiando fuentes desde raíz..."
+mkdir -p "$DISTRO"
 cp index.qmd ideas101.qmd custom.css captura-tui.png tab-key.svg \
    README.md AGENTS.md render-all.sh "$DISTRO"/
 cp paso-*.qmd "$DISTRO"/
