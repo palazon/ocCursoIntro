@@ -1,0 +1,23 @@
+project:
+  title: "OpenCode 101 — Curso básico para creadores de contenido"
+
+format:
+  html:
+    css: custom.css
+    toc: true
+    toc-location: right
+    toc-title: "Contenido"
+    include-after-body:
+      text: |
+        <script>
+        (function() {
+          if (location.pathname.includes('index.html')) return;
+          var toc = document.getElementById('TOC');
+          if (!toc) return;
+          var link = document.createElement('a');
+          link.href = 'index.html';
+          link.textContent = '\u2190 Volver al \u00edndice';
+          link.className = 'toc-back-btn';
+          toc.append(link);
+        })();
+        </script>
