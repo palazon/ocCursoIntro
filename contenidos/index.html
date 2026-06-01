@@ -778,6 +778,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
   </script>
 </div> <!-- /content -->
+<script>
+(function() {
+  if (location.pathname.includes('index.html')) return;
+  var toc = document.getElementById('TOC');
+  if (!toc) return;
+  var link = document.createElement('a');
+  link.href = 'index.html';
+  link.textContent = '\u2190 Volver al \u00edndice';
+  link.className = 'toc-back-btn';
+  toc.append(link);
+})();
+</script>
 
 
 
