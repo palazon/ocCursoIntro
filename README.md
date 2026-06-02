@@ -30,19 +30,22 @@ para empresa, academia, deportes, hogar y aficiones.
 
 ## Cómo empezar
 
-### A. Online (sin instalar nada)
+### A. Online (sin descargar nada)
 
-Abre <https://palazon.github.io/ocCursoIntro/contenidos/> en tu navegador.
+Solo necesitas un navegador. Abre
+<https://palazon.github.io/ocCursoIntro/contenidos/> y sigue el curso
+sin descargar ni instalar ningún fichero del curso.
 
 ### B. Desde la distribución local (recomendado)
 
-Abre `cursoIntroOpenCode/index.html` en tu navegador. Todo está listo
-para seguir los ejercicios con OpenCode abierto a su lado.
+Descarga `cursoIntroOpenCode/` (o clona el repositorio) y abre
+`cursoIntroOpenCode/index.html` en tu navegador. Todo está listo para
+seguir los ejercicios con OpenCode abierto a su lado.
 
-### C. Desde los fuentes
+### C. Desde los fuentes (con Quarto)
 
-Los archivos `.qmd` (formato Quarto) están en `contenidos/`. Para
-regenerar los HTML:
+Descarga o clona el repositorio. Los archivos `.qmd` (formato Quarto)
+están en `contenidos/`. Para regenerar los HTML:
 
 ```bash
 bash render-all.sh
