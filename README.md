@@ -12,6 +12,8 @@ profesional** que quiera usar inteligencia artificial para crear y
 mantener documentación: manuales, guías, informes, FAQs, actas,
 cuestionarios y plantillas.
 
+El curso es **autónomo**: puedes seguirlo a tu ritmo, sin instructor. Si en algún ejercicio te atascas, puedes pedir ayuda a cualquier chatbot (ChatGPT, Claude, Gemini, etc.) o al propio OpenCode una vez lo tengas instalado.
+
 ## Estructura del curso
 
 | Bloque | Pasos | Contenido |
