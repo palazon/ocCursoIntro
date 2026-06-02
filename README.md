@@ -38,14 +38,14 @@ sin descargar ni instalar ningún fichero del curso.
 
 ### B. Desde la distribución local (recomendado)
 
-Descarga `cursoIntroOpenCode/` (o clona el repositorio) y abre
+Descarga `cursoIntroOpenCode.zip`, descomprime y abre
 `cursoIntroOpenCode/index.html` en tu navegador. Todo está listo para
 seguir los ejercicios con OpenCode abierto a su lado.
 
-### C. Desde los fuentes (con Quarto)
+### C. Desde los fuentes (avanzado, para usuarios de Git)
 
-Descarga o clona el repositorio. Los archivos `.qmd` (formato Quarto)
-están en `contenidos/`. Para regenerar los HTML:
+Clona el repositorio. Los archivos `.qmd` (formato Quarto) están en
+`contenidos/`. Para regenerar los HTML:
 
 ```bash
 bash render-all.sh

@@ -25,6 +25,11 @@ for f in *.qmd; do
 done
 
 echo ""
+echo "==> Empaquetando $DISTRO.zip..."
+zip -r "$DISTRO.zip" "$DISTRO/"
+
+echo ""
 echo "========================================"
 echo "  Distro lista en $DISTRO/"
+echo "  ZIP creado: $DISTRO.zip"
 echo "========================================"
