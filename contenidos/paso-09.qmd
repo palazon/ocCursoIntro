@@ -33,12 +33,14 @@ Los comandos se definen en un archivo de texto dentro de la carpeta
 `.opencode/commands/` de tu proyecto. Cada comando es un archivo
 `.md` con una estructura muy sencilla.
 
-> 💡 La carpeta `.opencode/` es el **directorio de configuración
-> de OpenCode para este proyecto**. Es donde OpenCode guarda sus
-> ajustes (comandos, reglas, skills...), igual que otros programas
-> guardan preferencias en una carpeta de configuración. Cuando creas
-> comandos aquí, estás personalizando OpenCode para este proyecto,
-> no creando un documento normal.
+::: {.callout-note}
+La carpeta `.opencode/` es el **directorio de configuración de
+OpenCode para este proyecto**. Es donde OpenCode guarda sus ajustes
+(comandos, reglas, skills...), igual que otros programas guardan
+preferencias en una carpeta de configuración. Cuando creas comandos
+aquí, estás personalizando OpenCode para este proyecto, no creando
+un documento normal.
+:::
 
 No te preocupes por los detalles técnicos ahora. En este paso
 crearemos comandos útiles para documentación siguiendo una
