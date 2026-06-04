@@ -111,7 +111,7 @@ blockquote {
   margin: 1.5em 3em;
   padding: 1em 1.5em;
   background: var(--accent-bg);
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--accent-light);
   border-radius: 0 var(--radius) var(--radius) 0;
   font-size: 0.95rem;
 }
