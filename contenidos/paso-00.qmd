@@ -2,12 +2,6 @@
 title: "0. ¿Qué es OpenCode?"
 author: "JA Palazón Ferrando"
 date: "2026-05-30"
-format:
-  html:
-    css: custom.css
-    toc: true
-    toc-location: right
-    toc-title: "Contenido"
 ---
 
 ## Objetivo
@@ -33,9 +27,13 @@ A diferencia de ChatGPT o Gemini, OpenCode **trabaja directamente sobre tus
 archivos locales**. No tienes que copiar y pegar texto de un lado a otro:
 él abre, lee, modifica y guarda los documentos en tu propio ordenador.
 
-> 💡 **Idea clave:** OpenCode no es solo para programadores. Cualquier persona
-> que trabaje con textos y documentos puede usarlo como asistente de
-> redacción, revisión e investigación.
+::: {.callout-tip}
+## Idea clave
+
+OpenCode no es solo para programadores. Cualquier persona que trabaje
+con textos y documentos puede usarlo como asistente de redacción,
+revisión e investigación.
+:::
 
 ---
 
