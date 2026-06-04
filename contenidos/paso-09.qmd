@@ -56,17 +56,20 @@ Primero, crea la carpeta donde irán los comandos:
 mkdir -p .opencode/commands
 ```
 
-> 💡 **Alternativa:** también puedes pedirle a OpenCode que cree
-> el comando directamente. Por ejemplo, escribe en el chat:
->
-> > Crea un comando personalizado /faq que convierta cualquier
-> > documento en preguntas frecuentes. Instálalo en la carpeta de
-> > comandos de OpenCode.
->
-> OpenCode intentará escribir en `.opencode/commands/` y **te
-> pedirá permiso** la primera vez, ya que es el directorio de
-> configuración del proyecto. Confirma el permiso y OpenCode creará
-> el archivo por ti.
+::: {.callout-tip}
+## Alternativa
+
+También puedes pedirle a OpenCode que cree el comando directamente.
+Por ejemplo, escribe en el chat:
+
+> Crea un comando personalizado /faq que convierta cualquier
+> documento en preguntas frecuentes. Instálalo en la carpeta de
+> comandos de OpenCode.
+
+OpenCode intentará escribir en `.opencode/commands/` y **te pedirá
+permiso** la primera vez, ya que es el directorio de configuración
+del proyecto. Confirma el permiso y OpenCode creará el archivo por ti.
+:::
 
 ### Ejercicio 2 — Comando /faq
 
