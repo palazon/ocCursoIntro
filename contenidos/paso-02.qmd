@@ -36,8 +36,9 @@ wsl --install
 Esto instala WSL2 con una distribución Ubuntu por defecto. Una vez
 terminado, reinicia el equipo si se te pide.
 
-> Si quieres más detalles, Microsoft tiene una
-> [guía oficial de instalación de WSL](https://learn.microsoft.com/es-es/windows/wsl/install).
+::: {.callout-note}
+Si quieres más detalles, Microsoft tiene una [guía oficial de instalación de WSL](https://learn.microsoft.com/es-es/windows/wsl/install).
+:::
 
 ### 2. Abrir WSL y actualizar paquetes
 
