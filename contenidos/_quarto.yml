@@ -1,6 +1,11 @@
 project:
   title: "OpenCode 101 — Curso básico para creadores de contenido"
 
+lang: es
+
+language:
+  callout-tip-title: "Consejo"
+
 format:
   html:
     css: custom.css
