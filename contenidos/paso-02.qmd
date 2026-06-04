@@ -131,7 +131,7 @@ primero **Plan** para diseñar el contenido, luego **Build** para
 generar el archivo.
 
 ::: {.callout-warning}
-## ⚠️ Antes de empezar
+## Antes de empezar
 
 Mira la esquina inferior derecha de la pantalla. Allí pone **Build** o **Plan**. Usa ![Tab](tab-key.svg) para cambiar. Asegúrate de estar en el modo correcto antes de cada ejercicio.
 :::
