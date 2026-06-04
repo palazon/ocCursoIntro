@@ -130,9 +130,11 @@ Vas a crear tu primer documento usando los dos modos de OpenCode:
 primero **Plan** para diseñar el contenido, luego **Build** para
 generar el archivo.
 
-> ⚠️ **Antes de empezar:** mira la esquina inferior derecha de la
-> pantalla. Allí pone **Build** o **Plan**. Usa ![Tab](tab-key.svg) para
-> cambiar. Asegúrate de estar en el modo correcto antes de cada ejercicio.
+::: {.callout-note}
+## ⚠️ Antes de empezar
+
+Mira la esquina inferior derecha de la pantalla. Allí pone **Build** o **Plan**. Usa ![Tab](tab-key.svg) para cambiar. Asegúrate de estar en el modo correcto antes de cada ejercicio.
+:::
 
 ### Ejercicio 1 — Plan mode
 
