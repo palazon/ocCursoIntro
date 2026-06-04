@@ -232,11 +232,11 @@ hr {
   box-shadow: var(--shadow);
   padding: 0.2em 1.5em 0.2em 1.2em;
   margin: 1em 0;
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid #95d5b2;
 }
 
 div.callout-note.callout {
-  border-left-color: var(--accent);
+  border-left-color: #95d5b2;
   max-width: 75%;
   margin-left: auto;
   margin-right: 5%;
@@ -255,7 +255,7 @@ div.callout-note:not(.callout-titled) .callout-icon::before {
 }
 
 div.callout-warning.callout {
-  border-left-color: var(--accent);
+  border-left-color: #95d5b2;
   max-width: 75%;
   margin-left: auto;
   margin-right: 5%;
@@ -274,7 +274,7 @@ div.callout-warning:not(.callout-titled) .callout-icon::before {
 }
 
 div.callout-tip.callout {
-  border-left-color: var(--accent);
+  border-left-color: #95d5b2;
   max-width: 75%;
   margin-left: auto;
   margin-right: 5%;
