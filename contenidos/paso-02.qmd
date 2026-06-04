@@ -130,7 +130,7 @@ Vas a crear tu primer documento usando los dos modos de OpenCode:
 primero **Plan** para diseñar el contenido, luego **Build** para
 generar el archivo.
 
-::: {.callout-note}
+::: {.callout-warning}
 ## ⚠️ Antes de empezar
 
 Mira la esquina inferior derecha de la pantalla. Allí pone **Build** o **Plan**. Usa ![Tab](tab-key.svg) para cambiar. Asegúrate de estar en el modo correcto antes de cada ejercicio.
@@ -198,7 +198,7 @@ sin tener que empezar de cero.
 
 ---
 
-::: {.callout-note}
+::: {.callout-tip}
 ## ¿Por qué Markdown?
 
 OpenCode trabaja de forma nativa con **Markdown (.md)**: es texto
