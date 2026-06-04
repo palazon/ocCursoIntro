@@ -196,18 +196,23 @@ sin tener que empezar de cero.
 
 ---
 
-### 💡 ¿Por qué Markdown?
+::: {.callout-note}
+## ¿Por qué Markdown?
 
 OpenCode trabaja de forma nativa con **Markdown (.md)**: es texto
 plano, ligero, se versiona bien con Git y herramientas como Quarto lo
 convierten a HTML, PDF o Word. Al usar `.md` evitas formatos binarios
 (.docx) que OpenCode no puede leer ni modificar directamente.
+:::
 
-> 💡 **¿HTML mejor que DOC?** Para visualizar el material generado,
-> suele ser más rápido convertir el `.md` a HTML que a .docx. HTML
-> se abre al instante en cualquier navegador, no requiere Word, y
-> respeta fielmente el formato. Con Quarto es tan sencillo como
-> `quarto render archivo.md`.
+::: {.callout-note}
+## ¿HTML mejor que DOC?
+
+Para visualizar el material generado, suele ser más rápido convertir
+el `.md` a HTML que a .docx. HTML se abre al instante en cualquier
+navegador, no requiere Word, y respeta fielmente el formato. Con
+Quarto es tan sencillo como `quarto render archivo.md`.
+:::
 
 ---
 
