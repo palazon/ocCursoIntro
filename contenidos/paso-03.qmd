@@ -1,13 +1,5 @@
 ---
 title: "3. Primeros diálogos con OpenCode"
-author: "JA Palazón Ferrando"
-date: "2026-05-30"
-format:
-  html:
-    css: custom.css
-    toc: true
-    toc-location: right
-    toc-title: "Contenido"
 ---
 
 ## Objetivo

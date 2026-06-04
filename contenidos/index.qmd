@@ -1,13 +1,5 @@
 ---
 title: "OpenCode 101 — Curso básico para creadores de contenido"
-author: "JA Palazón Ferrando"
-date: "2026-05-30"
-format:
-  html:
-    css: custom.css
-    toc: true
-    toc-location: right
-    toc-title: "Contenido"
 ---
 
 ## ¿Por qué OpenCode para documentación?
