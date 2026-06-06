@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -96,7 +61,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ideas-y-ejemplos" id="toc-ideas-y-ejemplos" class="nav-link" data-scroll-target="#ideas-y-ejemplos">Ideas y ejemplos</a></li>
   <li><a href="#cómo-usar-este-curso" id="toc-cómo-usar-este-curso" class="nav-link" data-scroll-target="#cómo-usar-este-curso">Cómo usar este curso</a></li>
   <li><a href="#público-y-requisitos" id="toc-público-y-requisitos" class="nav-link" data-scroll-target="#público-y-requisitos">Público y requisitos</a></li>
-  <li><a href="#sobre-este-documento" id="toc-sobre-este-documento" class="nav-link" data-scroll-target="#sobre-este-documento">Sobre este documento</a></li>
   </ul>
 </nav>
 </div>
@@ -126,7 +90,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>OpenCode es un asistente de inteligencia artificial que trabaja directamente sobre tus archivos locales. Aunque nació como herramienta para desarrolladores, es igualmente útil para cualquier persona que trabaje con textos y documentos.</p>
 <p><strong>¿Qué hace OpenCode por ti?</strong></p>
 <ul>
-<li>Lee y escribe documentos Word, Markdown, PDFs y texto plano</li>
+<li>Lee y escribe documentos Word, Markdown, PDFs y texto plano, pero para trabaja usa estos últimos</li>
 <li>Mejora la redacción, el tono y la claridad de tus textos</li>
 <li>Traduce documentos manteniendo el formato original</li>
 <li>Busca información actualizada en internet</li>
@@ -269,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;"><a href="paso-03.html">Paso 3</a></td>
 </tr>
 <tr class="odd">
-<td>Referenciar archivos con @</td>
+<td>Referenciar archivos con <code>@</code></td>
 <td style="text-align: center;"><a href="paso-03.html">Pasos 3</a>, <a href="paso-04.html">4</a></td>
 </tr>
 <tr class="even">
@@ -318,20 +282,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ideas-y-ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-y-ejemplos">Ideas y ejemplos</h2>
-<p>Además de los pasos, hemos recopilado <a href="ideas101.html">ideas para usar OpenCode en distintos ámbitos</a>: empresa, academia y hogar. Cada idea incluye variantes y sugerencias de prompts para que puedas adaptarlas a tu situación.</p>
+<p>Además de los pasos, hemos recopilado <a href="ideas101.html"><em>ideas para usar OpenCode en distintos ámbitos</em></a>: empresa, academia y hogar. Cada idea incluye variantes y sugerencias de prompts para que puedas adaptarlas a tu situación.</p>
 <hr>
 </section>
 <section id="cómo-usar-este-curso" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-usar-este-curso">Cómo usar este curso</h2>
+<p>Estás en el índice del curso. Desde aquí puedes seguir los enlaces a cada paso.</p>
 <ol type="1">
-<li><p><strong>Abre un paso</strong> — Cada paso está en un archivo <code>.qmd</code>. Léelo tranquilamente.</p></li>
-<li><p><strong>Ejecuta los ejercicios</strong> — Ten OpenCode abierto en la misma carpeta del curso mientras lees. Cada ejercicio está diseñado para que lo hagas en ese momento.</p></li>
-<li><p><strong>Sigue el orden</strong> — Los pasos están ordenados de menor a mayor complejidad. Cada uno se apoya en lo aprendido anteriormente.</p></li>
-<li><p><strong>Acumula archivos</strong> — Los documentos que generes en un paso se reutilizan en pasos posteriores. No los borres.</p></li>
-<li><p><strong>Plan para pensar, Build para hacer</strong> — Usa Plan cuando quieras explorar ideas sin riesgo de modificar nada. Usa Build cuando quieras ejecutar cambios sobre tus archivos.</p></li>
+<li><strong>Sigue el orden</strong> — del 0 al 11. Cada paso se apoya en el anterior.</li>
+<li><strong>Ten OpenCode abierto</strong> en la carpeta del proyecto mientras lees.</li>
+<li><strong>Acumula archivos</strong> — los documentos se reutilizan entre pasos.</li>
+<li><strong>Plan para pensar, Build para hacer</strong> — explora sin riesgo en Plan, ejecuta cambios en Build.</li>
 </ol>
-<p>Para ver un paso en HTML:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render paso-00.qmd</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>El proyecto es una carpeta (o directorio)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Todo el curso se organiza en torno a <strong>proyectos</strong>. Un proyecto no es más que una carpeta (también llamada directorio) en tu ordenador donde irás creando y guardando todos los archivos. Piensa en ella como tu espacio de trabajo: OpenCode guardará ahí tus documentos, conversaciones y configuración.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Consejo</span>Para usuarios avanzados
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los archivos <code>.qmd</code> de la carpeta <code>contenidos/</code> son el formato fuente del curso. Puedes abrirlos con OpenCode, modificarlos y regenerar los HTML con Quarto si quieres personalizar el contenido.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="público-y-requisitos" class="level2">
@@ -344,19 +332,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Cualquier persona que trabaje con textos de forma habitual</li>
 </ul>
 <p><strong>No se necesita saber programar.</strong> Todo se hace mediante instrucciones en lenguaje natural.</p>
-<p><strong>Requisitos técnicos:</strong></p>
+<p><strong>Requisitos técnicos</strong></p>
 <ul>
 <li>OpenCode instalado (se explica en el <a href="paso-02.html">Paso 2</a>)</li>
 <li>Una cuenta gratuita en OpenCode Zen (viene activada por defecto)</li>
 <li>Un navegador web para ver los HTML generados</li>
 <li>Quarto (opcional, para regenerar los HTML si se desea)</li>
 </ul>
-<hr>
-</section>
-<section id="sobre-este-documento" class="level2">
-<h2 class="anchored" data-anchor-id="sobre-este-documento">Sobre este documento</h2>
-<p>Este <code>index.qmd</code> es la puerta de entrada al curso. Puedes generar su versión HTML con:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render index.qmd</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 <p><em>Curso OpenCode 101 · Idea original de JA Palazón</em> <em>Elaborado con OpenCode — Modelo deepseek-v4-flash-free · Mayo 2026</em></p>
 </section>

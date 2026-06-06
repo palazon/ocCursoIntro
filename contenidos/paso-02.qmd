@@ -29,6 +29,8 @@ Esto instala WSL2 con una distribución Ubuntu por defecto. Una vez
 terminado, reinicia el equipo si se te pide.
 
 ::: {.callout-note}
+## Más información
+
 Si quieres más detalles, Microsoft tiene una [guía oficial de instalación de WSL](https://learn.microsoft.com/es-es/windows/wsl/install).
 :::
 
@@ -89,6 +91,31 @@ y ejecuta:
 opencode
 ```
 
+::: {.callout-important}
+## La carpeta es tu proyecto
+
+OpenCode toma como proyecto la carpeta **desde donde lo ejecutas**.
+Todo el historial de conversaciones, la configuración y los archivos
+que crees se organizan dentro de esa carpeta. Por eso es clave
+navegar primero con `cd` antes de escribir `opencode`.
+:::
+
+::: {.callout-tip}
+## También puedes usar `opencode web`
+
+Si prefieres una interfaz gráfica en el navegador, ejecuta:
+
+```bash
+opencode web
+```
+
+Se abrirá OpenCode en tu navegador, apuntando al mismo proyecto.
+Pero en este curso usaremos la versión de terminal (`opencode` a secas):
+es la misma que usarás en entornos profesionales y te obliga a
+familiarizarte con la terminal, el explorador de archivos y los
+comandos básicos.
+:::
+
 Verás una pantalla dividida en dos áreas:
 
 ![Interfaz TUI de OpenCode](captura-tui.png)
@@ -106,12 +133,18 @@ Escribe `/help` para ver los comandos disponibles.
 
 ## Entrar, salir y continuar una sesión
 
-- **Entrar:** `opencode` desde la terminal
+- **Entrar:** `opencode` desde la terminal, **siempre dentro de la
+  carpeta de tu proyecto**. Si entras desde otra ubicación, OpenCode
+  tratará esa carpeta como un proyecto distinto y no verás el
+  historial de conversaciones anteriores.
 - **Salir:** escribe `/exit` o pulsa **Ctrl+C**
-- **Sesiones:** cada vez que abres OpenCode empiezas una sesión nueva.
-  Los archivos que crees se guardan en tu disco, pero el historial de
-  la conversación no se conserva entre sesiones. Si quieres guardar
-  una conversación, usa `/share` para compartirla.
+- **Sesiones:** OpenCode guarda el historial de cada conversación
+  dentro de tu proyecto (en la carpeta `.opencode/`). Por eso es
+  importante abrirlo siempre desde la misma carpeta: así puedes
+  retomar conversaciones anteriores y mantener toda la configuración
+  del proyecto.
+- **Ritual recomendado:** cada vez que quieras trabajar, abre la
+  terminal, navega a tu proyecto con `cd` y ejecuta `opencode`.
 
 Para este curso trabajaremos siempre en la misma carpeta del proyecto.
 
@@ -122,6 +155,20 @@ Para este curso trabajaremos siempre en la misma carpeta del proyecto.
 Vas a crear tu primer documento usando los dos modos de OpenCode:
 primero **Plan** para diseñar el contenido, luego **Build** para
 generar el archivo.
+
+::: {.callout-important}
+## ¿Ya estás en la carpeta correcta?
+
+Antes de empezar, confirma que abriste OpenCode desde la carpeta
+`curso-opencode` que creaste en el paso anterior. Para comprobarlo,
+escribe en el chat:
+
+> `!pwd`
+
+Debería mostrar algo como `/home/tu-usuario/curso-opencode`.
+Si no es así, sal con `/exit`, navega a la carpeta correcta y
+vuelve a ejecutar `opencode`.
+:::
 
 ::: {.callout-warning}
 ## Antes de empezar
@@ -216,6 +263,8 @@ Quarto es tan sencillo como `quarto render archivo.md`.
 - ✅ OpenCode instalado y funcionando en Windows
 - ✅ Conoces la interfaz: chat, modos, comandos básicos
 - ✅ Sabes entrar, salir y cambiar entre Plan y Build
+- ✅ Entiendes que OpenCode usa la carpeta actual como proyecto y
+  por qué es importante abrirlo siempre desde la misma carpeta
 - ✅ Has creado un documento completo con Plan + Build
 - ✅ Has ampliado el documento con un cuestionario
 - ✅ Entiendes por qué Markdown es el formato ideal con OpenCode

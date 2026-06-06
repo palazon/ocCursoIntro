@@ -62,7 +62,7 @@ cat trabajo-equipo.md
 Ahora vas a transformar ese mismo texto en tres versiones distintas.
 OpenCode editará el archivo cada vez.
 
-> @trabajo-equipo.md Ahora reescribe este texto en un tono formal,
+> \`@trabajo-equipo.md\` Ahora reescribe este texto en un tono formal,
 > como para un informe ejecutivo. Actualiza el archivo.
 
 Después de ver el resultado:
@@ -78,13 +78,13 @@ Y por último:
 
 Si tienes a mano un PDF, un correo o cualquier texto externo, 
 pégalo en el chat o (si está en la carpeta del proyecto) referéncialo
-con @ y pídele:
+con \`@\` y pídele:
 
-> @tu-documento.pdf Resúmelo en 3 ideas principales.
+> \`@tu-documento.pdf\` Resúmelo en 3 ideas principales.
 
 O bien:
 
-> @tu-documento.txt Extrae todas las fechas y nombres propios.
+> \`@tu-documento.txt\` Extrae todas las fechas y nombres propios.
 
 ---
 

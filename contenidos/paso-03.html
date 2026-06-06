@@ -88,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#plan-o-build-cuál-uso" id="toc-plan-o-build-cuál-uso" class="nav-link" data-scroll-target="#plan-o-build-cuál-uso">Plan o Build, ¿cuál uso?</a></li>
   <li><a href="#escribir-un-buen-prompt" id="toc-escribir-un-buen-prompt" class="nav-link" data-scroll-target="#escribir-un-buen-prompt">Escribir un buen prompt</a></li>
-  <li><a href="#referenciar-archivos-con" id="toc-referenciar-archivos-con" class="nav-link" data-scroll-target="#referenciar-archivos-con">Referenciar archivos con @</a></li>
+  <li><a href="#referenciar-archivos-con" id="toc-referenciar-archivos-con" class="nav-link" data-scroll-target="#referenciar-archivos-con">Referenciar archivos con <code>@</code></a></li>
   <li><a href="#manos-a-la-obra" id="toc-manos-a-la-obra" class="nav-link" data-scroll-target="#manos-a-la-obra">Manos a la obra</a>
   <ul class="collapse">
   <li><a href="#ejercicio-1-analizar-plan" id="toc-ejercicio-1-analizar-plan" class="nav-link" data-scroll-target="#ejercicio-1-analizar-plan">Ejercicio 1 — Analizar (Plan)</a></li>
@@ -172,11 +172,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="referenciar-archivos-con" class="level2">
-<h2 class="anchored" data-anchor-id="referenciar-archivos-con">Referenciar archivos con @</h2>
+<h2 class="anchored" data-anchor-id="referenciar-archivos-con">Referenciar archivos con <code>@</code></h2>
 <p>Puedes pedirle a OpenCode que lea cualquier archivo de tu proyecto anteponiendo <code>@</code> al nombre.</p>
 <p>Por ejemplo, para trabajar sobre el documento que creaste en el paso anterior:</p>
 <blockquote class="blockquote">
-<p><em><span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span> Léete este documento y dime qué te parece.</em></p>
+<p><em>`<span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span>` Léete este documento y dime qué te parece.</em></p>
 </blockquote>
 <p>OpenCode buscará el archivo, lo leerá y lo incorporará a la conversación. Puedes referenciar cualquier archivo <code>.md</code>, <code>.txt</code>, <code>.pdf</code> o incluso imágenes con texto.</p>
 <hr>
@@ -188,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="ejercicio-1-analizar-plan">Ejercicio 1 — Analizar (Plan)</h3>
 <p>Pulsa <img src="tab-key.svg" class="img-fluid" alt="Tab"> hasta que el indicador muestre <strong>Plan</strong>.</p>
 <blockquote class="blockquote">
-<p><span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span> Léete este documento y dime qué opinas. ¿El tono es adecuado para estudiantes de secundaria? ¿Qué mejorarías?</p>
+<p>`<span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span>` Léete este documento y dime qué opinas. ¿El tono es adecuado para estudiantes de secundaria? ¿Qué mejorarías?</p>
 </blockquote>
 <p>OpenCode leerá el archivo y te dará su opinión. Como estás en <strong>Plan</strong>, no modificará nada. Puedes pedir más análisis sin riesgo:</p>
 <blockquote class="blockquote">
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="ejercicio-4-transformar-el-documento">Ejercicio 4 — Transformar el documento</h3>
 <p>Sin salir de Build, prueba a pedir transformaciones sobre el mismo archivo. Cada vez que pidas algo, OpenCode modificará el documento.</p>
 <blockquote class="blockquote">
-<p><span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span> Ahora dime:</p>
+<p>`<span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span>` Ahora dime:</p>
 <ol type="1">
 <li>Haz un resumen ejecutivo de este documento en 3 párrafos</li>
 <li>Guarda el resumen en un archivo llamado resumen-darwin.md</li>
@@ -252,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>✅ Distingues cuándo usar Plan y cuándo usar Build</li>
 <li>✅ Escribes prompts claros con contexto y tono</li>
-<li>✅ Sabes referenciar archivos con @</li>
+<li>✅ Sabes referenciar archivos con `@`</li>
 <li>✅ Has analizado, mejorado, ampliado y transformado documentos</li>
 <li>✅ Entiendes el valor de Plan para explorar sin riesgos</li>
 </ul>

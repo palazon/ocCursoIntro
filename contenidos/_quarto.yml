@@ -4,7 +4,10 @@ project:
 lang: es
 
 language:
+  callout-note-title: "Nota"
   callout-tip-title: "Consejo"
+  callout-warning-title: "Aviso"
+  callout-important-title: "Importante"
 
 format:
   html:

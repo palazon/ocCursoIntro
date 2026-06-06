@@ -86,25 +86,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#ficheros-de-texto-plano-el-secreto-de-la-ia" id="toc-ficheros-de-texto-plano-el-secreto-de-la-ia" class="nav-link" data-scroll-target="#ficheros-de-texto-plano-el-secreto-de-la-ia">Ficheros de texto plano, el secreto de la IA</a></li>
   <li><a href="#archivo-directorio-terminal" id="toc-archivo-directorio-terminal" class="nav-link" data-scroll-target="#archivo-directorio-terminal">¿Archivo? ¿Directorio? ¿Terminal?</a></li>
   <li><a href="#recomendación-ten-un-explorador-de-archivos-abierto" id="toc-recomendación-ten-un-explorador-de-archivos-abierto" class="nav-link" data-scroll-target="#recomendación-ten-un-explorador-de-archivos-abierto">Recomendación: ten un explorador de archivos abierto</a></li>
   <li><a href="#comandos-básicos-que-usarás-a-menudo" id="toc-comandos-básicos-que-usarás-a-menudo" class="nav-link" data-scroll-target="#comandos-básicos-que-usarás-a-menudo">Comandos básicos que usarás a menudo</a>
   <ul class="collapse">
+  <li><a href="#cd-cambiar-de-directorio" id="toc-cd-cambiar-de-directorio" class="nav-link" data-scroll-target="#cd-cambiar-de-directorio"><code>cd</code> — Cambiar de directorio</a></li>
   <li><a href="#pwd-dónde-estoy" id="toc-pwd-dónde-estoy" class="nav-link" data-scroll-target="#pwd-dónde-estoy"><code>pwd</code> — ¿Dónde estoy?</a></li>
   <li><a href="#ls-qué-hay-aquí" id="toc-ls-qué-hay-aquí" class="nav-link" data-scroll-target="#ls-qué-hay-aquí"><code>ls</code> — ¿Qué hay aquí?</a></li>
-  <li><a href="#mkdir-crear-una-carpeta" id="toc-mkdir-crear-una-carpeta" class="nav-link" data-scroll-target="#mkdir-crear-una-carpeta"><code>mkdir</code> — Crear una carpeta</a></li>
+  <li><a href="#mkdir-crear-un-directorio" id="toc-mkdir-crear-un-directorio" class="nav-link" data-scroll-target="#mkdir-crear-un-directorio"><code>mkdir</code> — Crear un directorio</a></li>
   <li><a href="#cat-ver-el-contenido-de-un-archivo" id="toc-cat-ver-el-contenido-de-un-archivo" class="nav-link" data-scroll-target="#cat-ver-el-contenido-de-un-archivo"><code>cat</code> — Ver el contenido de un archivo</a></li>
   </ul></li>
-  <li><a href="#visualizar-documentos-html-vs-texto-plano" id="toc-visualizar-documentos-html-vs-texto-plano" class="nav-link" data-scroll-target="#visualizar-documentos-html-vs-texto-plano">Visualizar documentos: HTML vs texto plano</a>
-  <ul class="collapse">
-  <li><a href="#opción-recomendada-html-en-el-navegador" id="toc-opción-recomendada-html-en-el-navegador" class="nav-link" data-scroll-target="#opción-recomendada-html-en-el-navegador">Opción recomendada: HTML en el navegador</a></li>
-  <li><a href="#opción-rápida-texto-plano-en-el-navegador" id="toc-opción-rápida-texto-plano-en-el-navegador" class="nav-link" data-scroll-target="#opción-rápida-texto-plano-en-el-navegador">Opción rápida: texto plano en el navegador</a></li>
-  </ul></li>
+  <li><a href="#visualizar-documentos" id="toc-visualizar-documentos" class="nav-link" data-scroll-target="#visualizar-documentos">Visualizar documentos</a></li>
   <li><a href="#manos-a-la-obra" id="toc-manos-a-la-obra" class="nav-link" data-scroll-target="#manos-a-la-obra">Manos a la obra</a>
   <ul class="collapse">
-  <li><a href="#crear-la-carpeta-del-curso" id="toc-crear-la-carpeta-del-curso" class="nav-link" data-scroll-target="#crear-la-carpeta-del-curso">1. Crear la carpeta del curso</a></li>
+  <li><a href="#crear-el-directorio-del-curso" id="toc-crear-el-directorio-del-curso" class="nav-link" data-scroll-target="#crear-el-directorio-del-curso">1. Crear el directorio del curso</a></li>
   <li><a href="#comprobar-que-estás-dentro" id="toc-comprobar-que-estás-dentro" class="nav-link" data-scroll-target="#comprobar-que-estás-dentro">2. Comprobar que estás dentro</a></li>
-  <li><a href="#listar-el-contenido" id="toc-listar-el-contenido" class="nav-link" data-scroll-target="#listar-el-contenido">3. Listar el contenido</a></li>
+  <li><a href="#qué-hay-en-este-directorio" id="toc-qué-hay-en-este-directorio" class="nav-link" data-scroll-target="#qué-hay-en-este-directorio">3. ¿Qué hay en este directorio?</a></li>
   <li><a href="#abre-el-explorador-de-archivos" id="toc-abre-el-explorador-de-archivos" class="nav-link" data-scroll-target="#abre-el-explorador-de-archivos">4. Abre el explorador de archivos</a></li>
   </ul></li>
   <li><a href="#resumen-del-paso" id="toc-resumen-del-paso" class="nav-link" data-scroll-target="#resumen-del-paso">Resumen del paso</a></li>
@@ -134,53 +132,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Entender qué son los archivos y carpetas, conocer los comandos básicos para moverte por el sistema y saber cómo visualizar los documentos que vas a crear.</p>
+<p>Entender qué son los archivos y directorios, conocer los comandos básicos para moverte por el sistema y saber cómo visualizar los documentos que vas a crear.</p>
 <p>Duración estimada: <strong>15 minutos</strong></p>
-<hr>
+</section>
+<section id="ficheros-de-texto-plano-el-secreto-de-la-ia" class="level2">
+<h2 class="anchored" data-anchor-id="ficheros-de-texto-plano-el-secreto-de-la-ia">Ficheros de texto plano, el secreto de la IA</h2>
+<p>Los seres humanos necesitamos formatos de visualización de la información para aprovechar el funcionamiento de nuestro cerebro.</p>
+<p>Por contra la IA puede construir su conocimiento directamente con los datos y sus contextos. La información se extrae e introduce más fácilmente con ficheros que tienen formatos de texto plano; el formato líder es markdown, que tiene la ventaja de ser fácil de leer y editar por seres humanos.</p>
+<p>Para contextualizar nada mejor que organizar nuestra información en proyectos, directorios o carpetas.</p>
+<p>Así, tenemos información en ficheros, organizada en directorios y gestionable desde una terminal, que podemos compartir con un modelo de IA, una combinación ganadora.</p>
+<p>Evidentemente, si quieres sacar partido debes pagar un pequeño precio, aprender el uso de algunas cosas básicas.</p>
 </section>
 <section id="archivo-directorio-terminal" class="level2">
 <h2 class="anchored" data-anchor-id="archivo-directorio-terminal">¿Archivo? ¿Directorio? ¿Terminal?</h2>
-<p>Cuando trabajas con OpenCode, todo son <strong>archivos</strong> dentro de <strong>carpetas</strong> (también llamadas <em>directorios</em>).</p>
+<p>Cuando trabajas con OpenCode, todo son <strong>archivos</strong> dentro de <strong>directorios</strong> (también llamados carpetas).</p>
 <ul>
-<li>Un <strong>archivo</strong> es un documento individual: <code>informe.md</code>, <code>datos.csv</code>, <code>presentacion.qmd</code></li>
-<li>Un <strong>directorio</strong> (o carpeta) es un contenedor de archivos y otras carpetas</li>
-<li>La <strong>terminal</strong> es la ventana donde escribes comandos. OpenCode se abre dentro de una terminal</li>
+<li><p>Un <strong>archivo</strong> (o <em>fichero</em>) es un documento individual: <code>informe.md</code>, <code>datos.csv</code>, <code>presentacion.qmd</code>, también un <code>documento.odt</code>, o una <code>hoja-de-calculo.xls</code>, o una <code>presentación.pdf</code></p></li>
+<li><p>Un <strong>directorio</strong> (o carpeta) es un contenedor de archivos y otros directorios; también de subdirectorios con los que organizamos los archivos.</p></li>
+<li><p>La <strong>terminal</strong> es la ventana donde escribes comandos. Como veremos, OpenCode se abre dentro de una terminal, si bien hay otras opciones. Parecen feas y adustas, pero proporcionan potencia de trabajo y una vez te acostumbras no puedes prescindir de ellas.</p>
+<p>¿Qué terminal usar en cada sistema?</p>
+<ul>
+<li><p><strong>Windows</strong>: incluye <em>Símbolo del sistema</em> (CMD) y <em>PowerShell</em>, pero están muy limitados para el trabajo con IA. Por eso usaremos WSL.</p>
+<p>Tras instalar WSL (lo harás en el paso 2), abre <strong>Ubuntu</strong> desde el menú de inicio. Esa es tu terminal</p></li>
+<li><p><strong>macOS</strong>: <strong>Terminal</strong> (está en Aplicaciones &gt; Utilidades)</p></li>
+<li><p><strong>Linux</strong>: Cualquier terminal: GNOME Terminal, Konsole, xterm …</p></li>
+</ul></li>
 </ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 67%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Sistema</th>
-<th>¿Qué terminal usar?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Windows</strong></td>
-<td>Tras instalar WSL (lo harás en el paso 2), abre <strong>Ubuntu</strong> desde el menú de inicio. Esa es tu terminal</td>
-</tr>
-<tr class="even">
-<td><strong>macOS</strong></td>
-<td><strong>Terminal</strong> (está en Aplicaciones &gt; Utilidades)</td>
-</tr>
-<tr class="odd">
-<td><strong>Linux</strong></td>
-<td>Cualquier terminal: GNOME Terminal, Konsole, xterm…</td>
-</tr>
-</tbody>
-</table>
-<blockquote class="blockquote">
-<p>💡 Si estás en Windows, <strong>no te preocupes si no ves aún la terminal</strong>. En el paso 2 instalaremos WSL y tendrás una terminal Linux preparada para usar.</p>
-<p>Piensa en ello como el explorador de archivos de tu ordenador, pero manejado con texto en lugar de iconos.</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Consejo</span>Tu explorador de archivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si estás en Windows, <strong>no te preocupes si no ves aún la terminal</strong>. En el paso 2 instalaremos WSL y tendrás una terminal Linux preparada para usar.</p>
+<p>Piensa en las terminales como el explorador de archivos de tu ordenador,<br>
+pero manejado con texto en lugar de iconos.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="recomendación-ten-un-explorador-de-archivos-abierto" class="level2">
 <h2 class="anchored" data-anchor-id="recomendación-ten-un-explorador-de-archivos-abierto">Recomendación: ten un explorador de archivos abierto</h2>
-<p>Mientras haces el curso, es muy útil tener abierta una ventana del <strong>explorador de archivos</strong> de tu sistema apuntando a la carpeta de trabajo:</p>
+<p>Mientras haces el curso, es muy útil tener abierta una ventana del <strong>explorador de archivos</strong> de tu sistema apuntando al directorio de trabajo:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -199,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>Linux</strong></td>
-<td>Nautilus, Dolphin o similar</td>
+<td>Thunar, Nautilus, Dolphin o similar</td>
 </tr>
 <tr class="even">
 <td><strong>VS Code</strong></td>
@@ -212,75 +209,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="comandos-básicos-que-usarás-a-menudo" class="level2">
 <h2 class="anchored" data-anchor-id="comandos-básicos-que-usarás-a-menudo">Comandos básicos que usarás a menudo</h2>
-<p>Aquí tienes los comandos imprescindibles. Pruébalos en tu terminal.</p>
+<p>Aquí tienes los comandos imprescindibles. Pruébalos en tu terminal. Verás que puedes utilizarlos dentro de OpenCode.</p>
+<section id="cd-cambiar-de-directorio" class="level3">
+<h3 class="anchored" data-anchor-id="cd-cambiar-de-directorio"><code>cd</code> — Cambiar de directorio</h3>
+<p>Cambia al directorio que indiques:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nombre-de-mi-directorio</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Usa <code>cd ..</code> para subir al directorio padre.</p>
+</section>
 <section id="pwd-dónde-estoy" class="level3">
 <h3 class="anchored" data-anchor-id="pwd-dónde-estoy"><code>pwd</code> — ¿Dónde estoy?</h3>
-<p>Muestra la ruta de la carpeta en la que te encuentras:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Muestra la ruta del directorio en el que te encuentras:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Resultado: <code>/home/tu-usuario</code> o similar.</p>
 </section>
 <section id="ls-qué-hay-aquí" class="level3">
 <h3 class="anchored" data-anchor-id="ls-qué-hay-aquí"><code>ls</code> — ¿Qué hay aquí?</h3>
-<p>Lista los archivos y carpetas del directorio actual:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Lista los archivos en el directorio actual:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Añade <code>-l</code> para ver detalles (tamaño, fecha):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="mkdir-crear-una-carpeta" class="level3">
-<h3 class="anchored" data-anchor-id="mkdir-crear-una-carpeta"><code>mkdir</code> — Crear una carpeta</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> nombre-de-mi-carpeta</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="mkdir-crear-un-directorio" class="level3">
+<h3 class="anchored" data-anchor-id="mkdir-crear-un-directorio"><code>mkdir</code> — Crear un directorio</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> nombre-de-mi-carpeta</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cat-ver-el-contenido-de-un-archivo" class="level3">
 <h3 class="anchored" data-anchor-id="cat-ver-el-contenido-de-un-archivo"><code>cat</code> — Ver el contenido de un archivo</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> mi-archivo.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Muestra el contenido directamente en la terminal. Muy útil para echar un vistazo rápido a un archivo de texto.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> mi-archivo.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Muestra el contenido directamente en la terminal. Muy útil para echar un vistazo rápido a un archivo de texto. Hay alternativas como <code>less</code> para ficheros muy largos.</p>
 <hr>
 </section>
 </section>
-<section id="visualizar-documentos-html-vs-texto-plano" class="level2">
-<h2 class="anchored" data-anchor-id="visualizar-documentos-html-vs-texto-plano">Visualizar documentos: HTML vs texto plano</h2>
-<p>OpenCode trabaja con <strong>Markdown (.md)</strong>, que es texto plano. Para ver estos documentos tienes dos opciones:</p>
-<section id="opción-recomendada-html-en-el-navegador" class="level3">
-<h3 class="anchored" data-anchor-id="opción-recomendada-html-en-el-navegador">Opción recomendada: HTML en el navegador</h3>
-<p>Convierte el <code>.md</code> a HTML con Quarto y ábrelo en el navegador:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mi-documento.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Se genera <code>mi-documento.html</code>. Ábrelo con:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">explorer.exe</span> mi-documento.html        <span class="co"># Windows (WSL)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">open</span> mi-documento.html                 <span class="co"># macOS</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">xdg-open</span> mi-documento.html             <span class="co"># Linux</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>O simplemente arrastra el archivo <code>.html</code> a tu navegador.</p>
-<blockquote class="blockquote">
-<p>✅ <strong>Ventaja:</strong> el HTML se ve exactamente igual que el documento final, con formato, tablas, negritas, etc.</p>
-</blockquote>
-</section>
-<section id="opción-rápida-texto-plano-en-el-navegador" class="level3">
-<h3 class="anchored" data-anchor-id="opción-rápida-texto-plano-en-el-navegador">Opción rápida: texto plano en el navegador</h3>
-<p>Si solo quieres ver el contenido sin formato, también puedes arrastrar el <code>.md</code> directamente al navegador. Se verá como texto plano sin formato, pero te sirve para comprobar el contenido.</p>
+<section id="visualizar-documentos" class="level2">
+<h2 class="anchored" data-anchor-id="visualizar-documentos">Visualizar documentos</h2>
+<p>Para ver estos documentos puedes hacerlo de varias formas, de la más sencilla a la más avanzada:</p>
+<ol type="1">
+<li><p><strong>Abrir con el navegador de archivos</strong>: haz doble clic sobre el archivo <code>.md</code> o <code>.html</code> y se abrirá con la aplicación predeterminada de tu sistema.</p></li>
+<li><p><strong>Convertir a HTML con Quarto</strong>: aunque puedes ver los ficheros de markdown directamente para ver el documento con un formato más cómodo de leer (negritas, tablas, etc.) puedes convertirlo a html:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render mi-documento.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Se genera <code>mi-documento.html</code>, que puedes abrir arrastrándolo a tu navegador.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Consejo</span>HTML en el navegador
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El HTML se ve exactamente igual que el documento final, con formato, tablas, negritas, etc.</p>
+<p>Si te animas a usar la terminal, también puedes abrirlo con:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">explorer.exe</span> mi-documento.html        <span class="co"># Windows (WSL)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">open</span> mi-documento.html                 <span class="co"># macOS</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">xdg-open</span> mi-documento.html             <span class="co"># Linux</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 <hr>
-</section>
 </section>
 <section id="manos-a-la-obra" class="level2">
 <h2 class="anchored" data-anchor-id="manos-a-la-obra">Manos a la obra</h2>
-<section id="crear-la-carpeta-del-curso" class="level3">
-<h3 class="anchored" data-anchor-id="crear-la-carpeta-del-curso">1. Crear la carpeta del curso</h3>
-<p>Abre tu terminal y crea una carpeta para trabajar durante el curso:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> curso-opencode</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Entra en ella:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> curso-opencode</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Vamos a seguir el protocolo habitual para iniciar un proyecto empezando por crear el directorio, cambiar a nuevo directorio y verificar el directorio activo. Es importante que te familiarices con esto.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>Nombres adecuados para ficheros y directorios
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Usa solo letras minúsculas, números y guiones (<code>-</code>) en los nombres. Evita espacios, mayúsculas y caracteres especiales (acentos, ñ, etc.). Ejemplo: <code>curso-opencode</code> ✅ — <code>Curso OpenCode</code> ❌</p>
+</div>
+</div>
+<section id="crear-el-directorio-del-curso" class="level3">
+<h3 class="anchored" data-anchor-id="crear-el-directorio-del-curso">1. Crear el directorio del curso</h3>
+<p>Abre tu terminal y crea un directorio para trabajar durante el curso, usaremos el comando <em>make directory</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> curso-opencode</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Entra en él, con el comando <em>change directory</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> curso-opencode</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="comprobar-que-estás-dentro" class="level3">
 <h3 class="anchored" data-anchor-id="comprobar-que-estás-dentro">2. Comprobar que estás dentro</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Este comando hace: <em>print work directory</em>, mostrar el directorio de trabajo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Debería mostrar algo como <code>/home/tu-usuario/curso-opencode</code>.</p>
 </section>
-<section id="listar-el-contenido" class="level3">
-<h3 class="anchored" data-anchor-id="listar-el-contenido">3. Listar el contenido</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>De momento está vacía. En el próximo paso crearás tu primer documento aquí.</p>
+<section id="qué-hay-en-este-directorio" class="level3">
+<h3 class="anchored" data-anchor-id="qué-hay-en-este-directorio">3. ¿Qué hay en este directorio?</h3>
+<p>Para listar el contenido del directorio activo</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>De momento está vacío. En el próximo paso crearás tu primer documento aquí.</p>
 </section>
 <section id="abre-el-explorador-de-archivos" class="level3">
 <h3 class="anchored" data-anchor-id="abre-el-explorador-de-archivos">4. Abre el explorador de archivos</h3>
-<p>Abre tu explorador de archivos y navega hasta <code>curso-opencode</code>. Ahora está vacía. En los próximos pasos verás cómo aparecen archivos aquí a medida que trabajes con OpenCode.</p>
+<p>Abre tu explorador de archivos y navega hasta <code>curso-opencode</code>. Ahora está vacío. En los próximos pasos verás cómo aparecen archivos aquí a medida que trabajes con OpenCode.</p>
 <hr>
 </section>
 </section>
@@ -288,12 +313,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="resumen-del-paso">Resumen del paso</h2>
 <ul>
 <li>✅ Sabes qué son archivos y directorios</li>
-<li>✅ Conoces los comandos <code>pwd</code>, <code>ls</code>, <code>mkdir</code> y <code>cat</code></li>
-<li>✅ Tienes una carpeta de trabajo creada (<code>curso-opencode</code>)</li>
+<li>✅ Conoces los comandos <code>cd</code>, <code>pwd</code>, <code>ls</code>, y <code>mkdir</code></li>
+<li>✅ Tienes un directorio de trabajo creado (<code>curso-opencode</code>)</li>
 <li>✅ Sabes que puedes ver los <code>.md</code> como HTML en el navegador</li>
 <li>✅ Tienes el explorador de archivos abierto para seguir el curso</li>
 </ul>
-<p>En el próximo paso instalaremos OpenCode y crearemos tu primer documento.</p>
+<p>En el próximo paso instalaremos OpenCode, y lo abriremos usando este mismo directorio para empezar a trabajar.</p>
+<hr>
 <p><em>Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026</em></p>
 </section>
 

@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Nota
+<span class="screen-reader-only">Nota</span>Más información
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -211,6 +211,34 @@ Nota
 <h2 class="anchored" data-anchor-id="conocer-la-interfaz-tui">Conocer la interfaz (TUI)</h2>
 <p>Desde la terminal WSL, navega hasta la carpeta donde quieras trabajar y ejecuta:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>La carpeta es tu proyecto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>OpenCode toma como proyecto la carpeta <strong>desde donde lo ejecutas</strong>. Todo el historial de conversaciones, la configuración y los archivos que crees se organizan dentro de esa carpeta. Por eso es clave navegar primero con <code>cd</code> antes de escribir <code>opencode</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Consejo</span>También puedes usar <code>opencode web</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si prefieres una interfaz gráfica en el navegador, ejecuta:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> web</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Se abrirá OpenCode en tu navegador, apuntando al mismo proyecto. Pero en este curso usaremos la versión de terminal (<code>opencode</code> a secas): es la misma que usarás en entornos profesionales y te obliga a familiarizarte con la terminal, el explorador de archivos y los comandos básicos.</p>
+</div>
+</div>
 <p>Verás una pantalla dividida en dos áreas:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -230,9 +258,10 @@ Nota
 <section id="entrar-salir-y-continuar-una-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="entrar-salir-y-continuar-una-sesión">Entrar, salir y continuar una sesión</h2>
 <ul>
-<li><strong>Entrar:</strong> <code>opencode</code> desde la terminal</li>
+<li><strong>Entrar:</strong> <code>opencode</code> desde la terminal, <strong>siempre dentro de la carpeta de tu proyecto</strong>. Si entras desde otra ubicación, OpenCode tratará esa carpeta como un proyecto distinto y no verás el historial de conversaciones anteriores.</li>
 <li><strong>Salir:</strong> escribe <code>/exit</code> o pulsa <strong>Ctrl+C</strong></li>
-<li><strong>Sesiones:</strong> cada vez que abres OpenCode empiezas una sesión nueva. Los archivos que crees se guardan en tu disco, pero el historial de la conversación no se conserva entre sesiones. Si quieres guardar una conversación, usa <code>/share</code> para compartirla.</li>
+<li><strong>Sesiones:</strong> OpenCode guarda el historial de cada conversación dentro de tu proyecto (en la carpeta <code>.opencode/</code>). Por eso es importante abrirlo siempre desde la misma carpeta: así puedes retomar conversaciones anteriores y mantener toda la configuración del proyecto.</li>
+<li><strong>Ritual recomendado:</strong> cada vez que quieras trabajar, abre la terminal, navega a tu proyecto con <code>cd</code> y ejecuta <code>opencode</code>.</li>
 </ul>
 <p>Para este curso trabajaremos siempre en la misma carpeta del proyecto.</p>
 <hr>
@@ -240,13 +269,30 @@ Nota
 <section id="manos-a-la-obra" class="level2">
 <h2 class="anchored" data-anchor-id="manos-a-la-obra">Manos a la obra</h2>
 <p>Vas a crear tu primer documento usando los dos modos de OpenCode: primero <strong>Plan</strong> para diseñar el contenido, luego <strong>Build</strong> para generar el archivo.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>¿Ya estás en la carpeta correcta?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antes de empezar, confirma que abriste OpenCode desde la carpeta <code>curso-opencode</code> que creaste en el paso anterior. Para comprobarlo, escribe en el chat:</p>
+<blockquote class="blockquote">
+<p><code>!pwd</code></p>
+</blockquote>
+<p>Debería mostrar algo como <code>/home/tu-usuario/curso-opencode</code>. Si no es así, sal con <code>/exit</code>, navega a la carpeta correcta y vuelve a ejecutar <code>opencode</code>.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>Antes de empezar
+<span class="screen-reader-only">Aviso</span>Antes de empezar
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -278,7 +324,7 @@ Nota
 </blockquote>
 <p>OpenCode creará el archivo en tu carpeta. Puedes comprobarlo de dos formas:</p>
 <p><strong>Fuera de OpenCode</strong> — abre otra terminal y escribe:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> darwin-evolucion.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> darwin-evolucion.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Sin salir de OpenCode</strong> — escribe en el chat:</p>
 <blockquote class="blockquote">
 <p><code>!cat darwin-evolucion.md</code></p>
@@ -337,6 +383,7 @@ Nota
 <li>✅ OpenCode instalado y funcionando en Windows</li>
 <li>✅ Conoces la interfaz: chat, modos, comandos básicos</li>
 <li>✅ Sabes entrar, salir y cambiar entre Plan y Build</li>
+<li>✅ Entiendes que OpenCode usa la carpeta actual como proyecto y por qué es importante abrirlo siempre desde la misma carpeta</li>
 <li>✅ Has creado un documento completo con Plan + Build</li>
 <li>✅ Has ampliado el documento con un cuestionario</li>
 <li>✅ Entiendes por qué Markdown es el formato ideal con OpenCode</li>

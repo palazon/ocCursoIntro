@@ -29,7 +29,7 @@ formales que dan calidad profesional a tus documentos:
 
 **Build** ![Tab](tab-key.svg) `Build`.
 
-> @darwin-evolucion.md Crea una tabla comparativa con las
+> \`@darwin-evolucion.md\` Crea una tabla comparativa con las
 > diferencias principales entre la teoría de Darwin y otras
 > teorías evolutivas anteriores. Guárdala como
 > tabla-comparativa.md.
@@ -45,14 +45,14 @@ formales que dan calidad profesional a tus documentos:
 Los documentos profesionales suelen llevar una cabecera con
 metadatos: título, autor, fecha, versión, estado.
 
-> @darwin-evolucion.md Añade al principio del documento una
+> \`@darwin-evolucion.md\` Añade al principio del documento una
 > cabecera profesional con: título del documento, autor, fecha,
 > versión (v1.0) y estado (borrador). Déjame espacio para
 > actualizar la versión más adelante.
 
 ### Ejercicio 4 — Glosario
 
-> @darwin-evolucion.md Extrae todos los términos científicos del
+> \`@darwin-evolucion.md\` Extrae todos los términos científicos del
 > documento y crea un glosario con definiciones sencillas.
 > Guárdalo como glosario-darwin.md.
 
@@ -72,7 +72,7 @@ cada sección.
 ## Resumen del paso
 
 - ✅ Has creado tablas comparativas y checklists
-- ✅ Has generado un índice automático
+- ✅ Has añadido una cabecera profesional con metadatos
 - ✅ Has extraído un glosario de términos
 - ✅ Has creado una plantilla reutilizable para informes
 - ✅ Tienes recursos formales para dar calidad a tus documentos

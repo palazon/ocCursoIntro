@@ -51,9 +51,9 @@ Siguiendo en Plan:
 Pasa a **Build** ![Tab](tab-key.svg) `Build`.
 
 Ahora vas a complementar el documento sobre Darwin que creaste en
-el Paso 1 con información actual. Escribe:
+el paso 1 con información actual. Escribe:
 
-> @darwin-evolucion.md Busca en internet descubrimientos recientes
+> \`@darwin-evolucion.md\` Busca en internet descubrimientos recientes
 > sobre evolución que confirmen las ideas de Darwin. Añade una
 > sección al final del archivo con esa información.
 
@@ -64,7 +64,7 @@ OpenCode buscará datos actuales y los añadirá al archivo.
 Si tienes un informe o artículo con datos concretos, pásaselo a
 OpenCode para que verifique:
 
-> @mi-documento.md Los datos de este artículo, ¿siguen siendo
+> \`@mi-documento.md\` Los datos de este artículo, ¿siguen siendo
 > correctos hoy? Busca información actual para confirmarlos.
 
 ---

@@ -4,52 +4,91 @@ title: "1. El sistema de archivos y primeros comandos"
 
 ## Objetivo
 
-Entender qué son los archivos y carpetas, conocer los comandos
+Entender qué son los archivos y directorios, conocer los comandos
 básicos para moverte por el sistema y saber cómo visualizar los
 documentos que vas a crear.
 
 Duración estimada: **15 minutos**
 
----
+## Ficheros de texto plano, el secreto de la IA
+
+Los seres humanos necesitamos formatos de visualización
+de la información para aprovechar el funcionamiento de
+nuestro cerebro.
+
+Por contra la IA puede construir su conocimiento directamente
+con los datos y sus contextos.
+La información se extrae e introduce más fácilmente con 
+ficheros que tienen formatos de texto plano;
+el formato líder es markdown, que tiene la ventaja de
+ser fácil de leer y editar por seres humanos.
+
+Para contextualizar nada mejor que organizar nuestra
+información en proyectos, directorios o carpetas.
+
+Así, tenemos información en ficheros, organizada 
+en directorios y gestionable desde una terminal,
+que podemos compartir con un modelo de IA,
+una combinación ganadora.
+
+Evidentemente, si quieres sacar partido debes
+pagar un pequeño precio, aprender el uso de algunas cosas
+básicas.
+
 
 ## ¿Archivo? ¿Directorio? ¿Terminal?
 
 Cuando trabajas con OpenCode, todo son **archivos** dentro de
-**carpetas** (también llamadas *directorios*).
+**directorios** (también llamados carpetas).
 
-- Un **archivo** es un documento individual: `informe.md`,
-  `datos.csv`, `presentacion.qmd`
+- Un **archivo** (o *fichero*) es un documento individual: `informe.md`,
+  `datos.csv`, `presentacion.qmd`, también un `documento.odt`, o una `hoja-de-calculo.xls`, o una `presentación.pdf`
+
 - Un **directorio** (o carpeta) es un contenedor de archivos y
-  otras carpetas
-- La **terminal** es la ventana donde escribes comandos. OpenCode
-  se abre dentro de una terminal
+  otros directorios; también de subdirectorios con los que
+  organizamos los archivos.
+  
+- La **terminal** es la ventana donde escribes comandos. 
+  Como veremos, OpenCode se abre dentro de una terminal,
+  si bien hay otras opciones.
+  Parecen feas y adustas, pero proporcionan potencia
+  de trabajo y una vez te acostumbras no puedes
+  prescindir de ellas.
+  
+  ¿Qué terminal usar en cada sistema?
 
-| Sistema | ¿Qué terminal usar? |
-|---------|-------------------|
-| **Windows** | Tras instalar WSL (lo harás en el paso 2), abre **Ubuntu** desde el menú de inicio. Esa es tu terminal |
-| **macOS** | **Terminal** (está en Aplicaciones > Utilidades) |
-| **Linux** | Cualquier terminal: GNOME Terminal, Konsole, xterm… |
+  - **Windows**: incluye *Símbolo del sistema* (CMD) y *PowerShell*, pero están muy limitados para el trabajo con IA. Por eso usaremos WSL.
+  
+    Tras instalar WSL (lo harás en el paso 2), abre **Ubuntu** desde el menú de inicio. Esa es tu terminal
+  
+  - **macOS**: **Terminal** (está en Aplicaciones > Utilidades)
+  
+  - **Linux**: Cualquier terminal: GNOME Terminal, Konsole, xterm ...
 
-> 💡 Si estás en Windows, **no te preocupes si no ves aún la
-> terminal**. En el paso 2 instalaremos WSL y tendrás una terminal
-> Linux preparada para usar.
->
-> Piensa en ello como el explorador de archivos de tu ordenador,
-> pero manejado con texto en lugar de iconos.
+::: {.callout-tip}
+## Tu explorador de archivos
+
+Si estás en Windows, **no te preocupes si no ves aún la terminal**.
+En el paso 2 instalaremos WSL y tendrás una terminal Linux preparada
+para usar.
+
+Piensa en las terminales como el explorador de archivos de tu ordenador,	
+pero manejado con texto en lugar de iconos.
+:::
 
 ---
 
 ## Recomendación: ten un explorador de archivos abierto
 
 Mientras haces el curso, es muy útil tener abierta una ventana del
-**explorador de archivos** de tu sistema apuntando a la carpeta de
+**explorador de archivos** de tu sistema apuntando al directorio de
 trabajo:
 
 | Sistema | Explorador |
 |---------|-----------|
 | **Windows** | Explorador de archivos |
 | **macOS** | Finder |
-| **Linux** | Nautilus, Dolphin o similar |
+| **Linux** | Thunar, Nautilus, Dolphin o similar |
 | **VS Code** | El panel izquierdo (Explorador) |
 
 Así verás en tiempo real cómo OpenCode crea, modifica y organiza
@@ -60,10 +99,21 @@ los archivos según avanzas en los ejercicios.
 ## Comandos básicos que usarás a menudo
 
 Aquí tienes los comandos imprescindibles. Pruébalos en tu terminal.
+Verás que puedes utilizarlos dentro de OpenCode.
+
+### `cd` — Cambiar de directorio
+
+Cambia al directorio que indiques:
+
+```bash
+cd nombre-de-mi-directorio
+```
+
+Usa `cd ..` para subir al directorio padre.
 
 ### `pwd` — ¿Dónde estoy?
 
-Muestra la ruta de la carpeta en la que te encuentras:
+Muestra la ruta del directorio en el que te encuentras:
 
 ```bash
 pwd
@@ -72,7 +122,7 @@ Resultado: `/home/tu-usuario` o similar.
 
 ### `ls` — ¿Qué hay aquí?
 
-Lista los archivos y carpetas del directorio actual:
+Lista los archivos en el directorio actual:
 
 ```bash
 ls
@@ -84,7 +134,7 @@ Añade `-l` para ver detalles (tamaño, fecha):
 ls -l
 ```
 
-### `mkdir` — Crear una carpeta
+### `mkdir` — Crear un directorio
 
 ```bash
 mkdir nombre-de-mi-carpeta
@@ -98,55 +148,73 @@ cat mi-archivo.md
 
 Muestra el contenido directamente en la terminal. Muy útil para
 echar un vistazo rápido a un archivo de texto.
+Hay alternativas como `less` para ficheros muy largos.
 
 ---
 
-## Visualizar documentos: HTML vs texto plano
+## Visualizar documentos
 
-OpenCode trabaja con **Markdown (.md)**, que es texto plano.
-Para ver estos documentos tienes dos opciones:
+Para ver estos documentos puedes hacerlo de varias formas,
+de la más sencilla a la más avanzada:
 
-### Opción recomendada: HTML en el navegador
+1. **Abrir con el navegador de archivos**: haz doble clic sobre
+   el archivo `.md` o `.html` y se abrirá con la aplicación
+   predeterminada de tu sistema.
 
-Convierte el `.md` a HTML con Quarto y ábrelo en el navegador:
+2. **Convertir a HTML con Quarto**: aunque puedes ver los ficheros
+   de markdown directamente
+   para ver el documento con
+   un formato más cómodo de leer (negritas, tablas, etc.) puedes convertirlo
+   a html:
 
-```bash
-quarto render mi-documento.md
-```
+   ```bash
+   quarto render mi-documento.md
+   ```
 
-Se genera `mi-documento.html`. Ábrelo con:
+   Se genera `mi-documento.html`, que puedes abrir arrastrándolo
+   a tu navegador.
 
+::: {.callout-tip}
+## HTML en el navegador
+
+El HTML se ve exactamente igual que el documento final, con
+formato, tablas, negritas, etc.
+
+Si te animas a usar la terminal, también puedes abrirlo con:
 ```bash
 explorer.exe mi-documento.html        # Windows (WSL)
 open mi-documento.html                 # macOS
 xdg-open mi-documento.html             # Linux
 ```
-
-O simplemente arrastra el archivo `.html` a tu navegador.
-
-> ✅ **Ventaja:** el HTML se ve exactamente igual que el documento
-> final, con formato, tablas, negritas, etc.
-
-### Opción rápida: texto plano en el navegador
-
-Si solo quieres ver el contenido sin formato, también puedes
-arrastrar el `.md` directamente al navegador. Se verá como
-texto plano sin formato, pero te sirve para comprobar el
-contenido.
+:::
 
 ---
 
 ## Manos a la obra
 
-### 1. Crear la carpeta del curso
+Vamos a seguir el protocolo habitual para iniciar un proyecto
+empezando por crear el directorio, cambiar a nuevo directorio y
+verificar el directorio activo.
+Es importante que te familiarices con esto.
 
-Abre tu terminal y crea una carpeta para trabajar durante el curso:
+::: {.callout-warning}
+## Nombres adecuados para ficheros y directorios
+
+Usa solo letras minúsculas, números y guiones (`-`) en los nombres.
+Evita espacios, mayúsculas y caracteres especiales (acentos, ñ, etc.).
+Ejemplo: `curso-opencode` ✅  —  `Curso OpenCode` ❌
+:::
+
+### 1. Crear el directorio del curso
+
+Abre tu terminal y crea un directorio para trabajar durante el curso,
+usaremos el comando *make directory*:
 
 ```bash
 mkdir curso-opencode
 ```
 
-Entra en ella:
+Entra en él, con el comando *change directory*:
 
 ```bash
 cd curso-opencode
@@ -154,25 +222,29 @@ cd curso-opencode
 
 ### 2. Comprobar que estás dentro
 
+Este comando hace: *print work directory*, mostrar el directorio de trabajo.
+
 ```bash
 pwd
 ```
 
 Debería mostrar algo como `/home/tu-usuario/curso-opencode`.
 
-### 3. Listar el contenido
+### 3. ¿Qué hay en este directorio?
+
+Para listar el contenido del directorio activo
 
 ```bash
 ls -l
 ```
 
-De momento está vacía. En el próximo paso crearás tu primer
-documento aquí.
+De momento está vacío.
+En el próximo paso crearás tu primer documento aquí.
 
 ### 4. Abre el explorador de archivos
 
 Abre tu explorador de archivos y navega hasta `curso-opencode`.
-Ahora está vacía. En los próximos pasos verás cómo aparecen
+Ahora está vacío. En los próximos pasos verás cómo aparecen
 archivos aquí a medida que trabajes con OpenCode.
 
 ---
@@ -180,12 +252,14 @@ archivos aquí a medida que trabajes con OpenCode.
 ## Resumen del paso
 
 - ✅ Sabes qué son archivos y directorios
-- ✅ Conoces los comandos `pwd`, `ls`, `mkdir` y `cat`
-- ✅ Tienes una carpeta de trabajo creada (`curso-opencode`)
+- ✅ Conoces los comandos `cd`, `pwd`, `ls`, y `mkdir`
+- ✅ Tienes un directorio de trabajo creado (`curso-opencode`)
 - ✅ Sabes que puedes ver los `.md` como HTML en el navegador
 - ✅ Tienes el explorador de archivos abierto para seguir el curso
 
-En el próximo paso instalaremos OpenCode y crearemos tu primer
-documento.
+En el próximo paso instalaremos OpenCode, y lo abriremos usando
+este mismo directorio para empezar a trabajar.
+
+* * *
 
 *Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

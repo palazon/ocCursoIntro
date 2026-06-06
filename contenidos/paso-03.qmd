@@ -48,7 +48,7 @@ Cuanto más claro seas, mejor será el resultado.
 
 ---
 
-## Referenciar archivos con @
+## Referenciar archivos con `@`
 
 Puedes pedirle a OpenCode que lea cualquier archivo de tu proyecto
 anteponiendo `@` al nombre.
@@ -56,7 +56,7 @@ anteponiendo `@` al nombre.
 Por ejemplo, para trabajar sobre el documento que creaste en el paso
 anterior:
 
-> *@darwin-evolucion.md Léete este documento y dime qué te parece.*
+> *\`@darwin-evolucion.md\` Léete este documento y dime qué te parece.*
 
 OpenCode buscará el archivo, lo leerá y lo incorporará a la
 conversación. Puedes referenciar cualquier archivo `.md`, `.txt`,
@@ -73,7 +73,7 @@ Trabajaremos en la misma carpeta del proyecto, con el archivo
 
 Pulsa ![Tab](tab-key.svg) hasta que el indicador muestre **Plan**.
 
-> @darwin-evolucion.md Léete este documento y dime qué opinas.
+> \`@darwin-evolucion.md\` Léete este documento y dime qué opinas.
 > ¿El tono es adecuado para estudiantes de secundaria? ¿Qué
 > mejorarías?
 
@@ -120,7 +120,7 @@ Una vez conforme con el plan, pasa a Build:
 Sin salir de Build, prueba a pedir transformaciones sobre el mismo
 archivo. Cada vez que pidas algo, OpenCode modificará el documento.
 
-> @darwin-evolucion.md Ahora dime:
+> \`@darwin-evolucion.md\` Ahora dime:
 >
 > 1. Haz un resumen ejecutivo de este documento en 3 párrafos
 > 2. Guarda el resumen en un archivo llamado resumen-darwin.md
@@ -150,7 +150,7 @@ saber cuándo pensar y cuándo hacer.
 
 - ✅ Distingues cuándo usar Plan y cuándo usar Build
 - ✅ Escribes prompts claros con contexto y tono
-- ✅ Sabes referenciar archivos con @
+- ✅ Sabes referenciar archivos con \`@\`
 - ✅ Has analizado, mejorado, ampliado y transformado documentos
 - ✅ Entiendes el valor de Plan para explorar sin riesgos
 

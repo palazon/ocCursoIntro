@@ -11,7 +11,7 @@ persona que trabaje con textos y documentos.
 
 **¿Qué hace OpenCode por ti?**
 
-- Lee y escribe documentos Word, Markdown, PDFs y texto plano
+- Lee y escribe documentos Word, Markdown, PDFs y texto plano, pero para trabaja usa estos últimos
 - Mejora la redacción, el tono y la claridad de tus textos
 - Traduce documentos manteniendo el formato original
 - Busca información actualizada en internet
@@ -66,7 +66,7 @@ El curso tiene **12 pasos** (0 al 11) organizados en tres bloques:
 | Instalar y configurar OpenCode | [Paso 2](paso-02.html) |
 | Alternar entre Plan y Build | [Pasos 2](paso-02.html), [3](paso-03.html) |
 | Escribir prompts eficaces | [Paso 3](paso-03.html) |
-| Referenciar archivos con @ | [Pasos 3](paso-03.html), [4](paso-04.html) |
+| Referenciar archivos con `@` | [Pasos 3](paso-03.html), [4](paso-04.html) |
 | Trabajar con contenido externo | [Paso 4](paso-04.html) |
 | Investigar en internet | [Paso 5](paso-05.html) |
 | Dividir y fusionar documentos | [Paso 6](paso-06.html) |
@@ -83,7 +83,7 @@ El curso tiene **12 pasos** (0 al 11) organizados en tres bloques:
 ## Ideas y ejemplos
 
 Además de los pasos, hemos recopilado
-[ideas para usar OpenCode en distintos ámbitos](ideas101.html):
+[*ideas para usar OpenCode en distintos ámbitos*](ideas101.html):
 empresa, academia y hogar. Cada idea incluye variantes y sugerencias
 de prompts para que puedas adaptarlas a tu situación.
 
@@ -91,28 +91,33 @@ de prompts para que puedas adaptarlas a tu situación.
 
 ## Cómo usar este curso
 
-1. **Abre un paso** — Cada paso está en un archivo `.qmd`. Léelo
-   tranquilamente.
+Estás en el índice del curso. Desde aquí puedes seguir los enlaces
+a cada paso.
 
-2. **Ejecuta los ejercicios** — Ten OpenCode abierto en la misma
-   carpeta del curso mientras lees. Cada ejercicio está diseñado
-   para que lo hagas en ese momento.
+1. **Sigue el orden** — del 0 al 11. Cada paso se apoya en el anterior.
+2. **Ten OpenCode abierto** en la carpeta del proyecto mientras lees.
+3. **Acumula archivos** — los documentos se reutilizan entre pasos.
+4. **Plan para pensar, Build para hacer** — explora sin riesgo en
+   Plan, ejecuta cambios en Build.
 
-3. **Sigue el orden** — Los pasos están ordenados de menor a mayor
-   complejidad. Cada uno se apoya en lo aprendido anteriormente.
+::: {.callout-warning}
+## El proyecto es una carpeta (o directorio)
 
-4. **Acumula archivos** — Los documentos que generes en un paso se
-   reutilizan en pasos posteriores. No los borres.
+Todo el curso se organiza en torno a **proyectos**. Un proyecto no
+es más que una carpeta (también llamada directorio) en tu ordenador
+donde irás creando y guardando todos los archivos. Piensa en ella
+como tu espacio de trabajo: OpenCode guardará ahí tus documentos,
+conversaciones y configuración.
+:::
 
-5. **Plan para pensar, Build para hacer** — Usa Plan cuando quieras
-   explorar ideas sin riesgo de modificar nada. Usa Build cuando
-   quieras ejecutar cambios sobre tus archivos.
+::: {.callout-tip}
+## Para usuarios avanzados
 
-Para ver un paso en HTML:
+Los archivos `.qmd` de la carpeta `contenidos/` son el formato
+fuente del curso. Puedes abrirlos con OpenCode, modificarlos y
+regenerar los HTML con Quarto si quieres personalizar el contenido.
+:::
 
-```bash
-quarto render paso-00.qmd
-```
 
 ---
 
@@ -128,23 +133,12 @@ quarto render paso-00.qmd
 **No se necesita saber programar.** Todo se hace mediante
 instrucciones en lenguaje natural.
 
-**Requisitos técnicos:**
+**Requisitos técnicos**
 
 - OpenCode instalado (se explica en el [Paso 2](paso-02.html))
 - Una cuenta gratuita en OpenCode Zen (viene activada por defecto)
 - Un navegador web para ver los HTML generados
 - Quarto (opcional, para regenerar los HTML si se desea)
-
----
-
-## Sobre este documento
-
-Este `index.qmd` es la puerta de entrada al curso. Puedes
-generar su versión HTML con:
-
-```bash
-quarto render index.qmd
-```
 
 ---
 

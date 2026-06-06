@@ -30,7 +30,7 @@ te permite crear versiones sin tener que reescribir desde cero:
 
 **Build** ![Tab](tab-key.svg) `Build`.
 
-> @trabajo-equipo.md Traduce este documento al inglés. Mantén el
+> \`@trabajo-equipo.md\` Traduce este documento al inglés. Mantén el
 > mismo formato de títulos y párrafos. Guárdalo como
 > team-work-final.md.
 
@@ -38,7 +38,7 @@ te permite crear versiones sin tener que reescribir desde cero:
 
 Ahora vas a crear tres versiones del mismo documento sobre Darwin.
 
-> @darwin-evolucion.md Crea tres versiones de este documento:
+> \`@darwin-evolucion.md\` Crea tres versiones de este documento:
 >
 > 1. version-ejecutiva.md — Un resumen de un solo párrafo para
 >    un directivo que necesita lo esencial
@@ -49,7 +49,7 @@ Ahora vas a crear tres versiones del mismo documento sobre Darwin.
 
 ### Ejercicio 3 — Adaptar a una audiencia concreta
 
-> @trabajo-equipo.md Reescribe este texto como si se lo
+> \`@trabajo-equipo.md\` Reescribe este texto como si se lo
 > explicaras a un niño de 8 años. Usa ejemplos cotidianos
 > (el recreo, los deberes en grupo). Guárdalo como
 > equipo-infantil.md.

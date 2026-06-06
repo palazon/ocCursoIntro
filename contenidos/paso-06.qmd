@@ -35,9 +35,9 @@ Todo esto se hace desde Build, describiendo lo que quieres.
 
 Asegúrate de estar en **Build** ![Tab](tab-key.svg) `Build`.
 
-Vas a dividir el documento sobre Darwin que creaste en el Paso 1:
+Vas a dividir el documento sobre Darwin que creaste en el paso 1:
 
-> @darwin-evolucion.md Divide este documento en dos archivos:
+> \`@darwin-evolucion.md\` Divide este documento en dos archivos:
 > teoria.md con la parte teórica, y ejemplos.md con los ejemplos
 > y el cuestionario.
 
@@ -53,7 +53,7 @@ cat ejemplos.md
 
 ### Ejercicio 2 — Fusionar documentos
 
-Ahora fusiona los documentos sobre trabajo en equipo del Paso 3:
+Ahora fusiona los documentos sobre trabajo en equipo del paso 3:
 
 > Combina trabajo-equipo.md y team-work.md en un solo archivo
 > llamado equipo-bilingue.md. Primero la versión en español,
@@ -61,13 +61,13 @@ Ahora fusiona los documentos sobre trabajo en equipo del Paso 3:
 
 ### Ejercicio 3 — Reordenar contenido
 
-> @darwin-evolucion.md Reorganiza el documento: pon el cuestionario
+> \`@darwin-evolucion.md\` Reorganiza el documento: pon el cuestionario
 > al principio como autoevaluación inicial, y mueve los ejemplos
 > antes de la teoría.
 
 ### Ejercicio 4 — Cambiar de formato
 
-> @teoria.md Convierte este texto continuo en una lista de 5
+> \`@teoria.md\` Convierte este texto continuo en una lista de 5
 > preguntas frecuentes (FAQ) con sus respuestas. Guarda el
 > resultado como darwin-faq.md.
 

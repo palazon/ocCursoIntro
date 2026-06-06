@@ -33,7 +33,7 @@ modifique nada.
 
 **Plan** ![Tab](tab-key.svg) `Plan`.
 
-> @darwin-evolucion.md Haz una revisión completa de este
+> \`@darwin-evolucion.md\` Haz una revisión completa de este
 > documento. Señala:
 >
 > 1. Errores ortográficos o gramaticales
@@ -43,20 +43,20 @@ modifique nada.
 
 ### Ejercicio 2 — Detectar contradicciones
 
-> @darwin-evolucion.md Lee todo el documento con atención.
+> \`@darwin-evolucion.md\` Lee todo el documento con atención.
 > ¿Hay alguna contradicción entre lo que se dice en una
 > sección y lo que se dice en otra? Si la hay, señálala.
 
 ### Ejercicio 3 — Revisión de tono y audiencia
 
-> @trabajo-equipo.md ¿El tono de este documento es adecuado
+> \`@trabajo-equipo.md\` ¿El tono de este documento es adecuado
 > para un informe empresarial? Si no lo es, ¿qué cambiarías?
 
 ### Ejercicio 4 — Aplicar correcciones (Build)
 
 Pasa a **Build** ![Tab](tab-key.svg) `Build`.
 
-> @darwin-evolucion.md Aplica todas las correcciones que
+> \`@darwin-evolucion.md\` Aplica todas las correcciones que
 > sugeriste en tu revisión. Corrige errores, mejora la
 > claridad y reordena si es necesario.
 
@@ -65,7 +65,7 @@ revisión para confirmar que todo está correcto.
 
 ### Ejercicio 5 — Checklist de entrega (opcional)
 
-> @darwin-evolucion.md Dime si este documento cumple con
+> \`@darwin-evolucion.md\` Dime si este documento cumple con
 > estos requisitos para ser entregado:
 >
 > - Tiene un título claro

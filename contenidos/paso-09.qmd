@@ -34,6 +34,8 @@ Los comandos se definen en un archivo de texto dentro de la carpeta
 `.md` con una estructura muy sencilla.
 
 ::: {.callout-note}
+## Nota
+
 La carpeta `.opencode/` es el **directorio de configuración de
 OpenCode para este proyecto**. Es donde OpenCode guarda sus ajustes
 (comandos, reglas, skills...), igual que otros programas guardan

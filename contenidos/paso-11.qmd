@@ -80,7 +80,7 @@ recomiende una estructura de carpetas para organizarlos.
 
 Si tienes un documento que quieras entregar o publicar:
 
-> @mi-documento.md Prepara este documento para su entrega final:
+> \`@mi-documento.md\` Prepara este documento para su entrega final:
 > ponle un título profesional, asegúrate de que el formato es
 > correcto y añade una nota final con la fecha y el autor.
 

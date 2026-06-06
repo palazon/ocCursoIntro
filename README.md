@@ -1,4 +1,4 @@
-# OpenCode 101 — Curso de documentación con inteligencia artificial
+# OpenCode 101 — Curso básico para creadores de contenido
 
 Curso práctico de **12 pasos** para aprender a usar
 [OpenCode](https://opencode.ai) como asistente de IA en tareas de
@@ -16,21 +16,23 @@ El curso es **autónomo**: puedes seguirlo a tu ritmo, sin instructor. Si en alg
 
 ## Estructura del curso
 
+El curso se organiza en pasos, cada uno aborda un tema concreto, deben seguirse secuencialmente para llegar al mejor resultado.
+
 | Bloque | Pasos | Contenido |
 |--------|-------|-----------|
 | I — Fundamentos | 0 – 3 | Concepto, sistema de archivos, instalación, primeros diálogos |
 | II — El taller de documentos | 4 – 8 | Contenido externo, investigación web, reestructuración, traducción, tablas |
 | III — Productividad y cierre | 9 – 11 | Comandos personalizados, revisión asistida, entrega final |
 
-Incluye además una página de [ideas y ejemplos](https://palazon.github.io/ocCursoIntro/contenidos/ideas101.html)
+Incluye además una página de [**ideas y ejemplos**](https://palazon.github.io/ocCursoIntro/contenidos/ideas101.html)
 para empresa, academia, deportes, hogar y aficiones.
 
-> **Curso siguiente:** [OpenCode 102 — Automatización y personalización](https://github.com/palazon/ocCursoAvanzado)  
+> **Curso para avanzar:** [OpenCode 102 — Automatización y personalización](https://github.com/palazon/ocCursoAvanzado)
 > 7 pasos para crear agentes a medida, skills reutilizables, Git, MCP, CLI, permisos y colaboración en equipo.
 
 ## Cómo empezar
 
-### A. Online (sin descargar nada)
+### A. Online
 
 Solo necesitas un navegador. Abre
 <https://palazon.github.io/ocCursoIntro/contenidos/> y sigue el curso
@@ -38,7 +40,7 @@ sin descargar ni instalar ningún fichero del curso.
 
 ### B. Desde la distribución local (recomendado)
 
-Descarga `cursoIntroOpenCode.zip`, descomprime y abre
+Descarga [cursoIntroOpenCode.zip](cursoIntroOpenCode.zip), descomprime y abre
 `cursoIntroOpenCode/index.html` en tu navegador. Todo está listo para
 seguir los ejercicios con OpenCode abierto a su lado.
 
@@ -53,10 +55,24 @@ bash render-all.sh
 
 ## Requisitos
 
+Para seguir el curso necesitas:
+
 - OpenCode instalado — se explica en el Paso 2
 - Cuenta gratuita de OpenCode Zen (activada por defecto)
 - Navegador web para ver los HTML
-- Quarto (opcional, solo para modificar fuentes)
+
+Opcionalmente:
+
+No son necesarios y pueden instalarse posteriormente:
+
+- Quarto (solo cuando vayas a modificar fuentes)
+- `git` (solo si quieres clonar el repositorio)
+
+---
+
+## ¿Encontraste un error o tienes una sugerencia?
+
+Abre un [issue en GitHub](https://github.com/palazon/ocCursoIntro/issues).
 
 ---
 
