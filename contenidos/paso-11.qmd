@@ -29,7 +29,7 @@ OpenCode ofrece dos herramientas útiles:
 
 ### Ejercicio 1 — Compartir una sesión
 
-Desde OpenCode, en cualquier sesión escribe:
+Escribe en el chat de OpenCode:
 
 > /share
 
@@ -44,6 +44,8 @@ El enlace es útil para:
 - Guardar una referencia de una sesión importante
 
 ### Ejercicio 2 — Exportar una conversación
+
+Escribe en el chat de OpenCode:
 
 > /export
 
@@ -68,9 +70,11 @@ Verás archivos como:
 - Y otros que hayas ido generando
 
 Si quieres, puedes pedirle a OpenCode que los revise y te
-recomiende una estructura de carpetas para organizarlos.
+recomiende una estructura para organizarlos.
 
-**Plan** ![Tab](tab-key.svg) `Plan`.
+Cambia a **Plan** ![Tab](tab-key.svg) `Plan`.
+
+Escribe en el chat de OpenCode:
 
 > En mi carpeta de trabajo tengo varios archivos .md generados
 > durante un curso. ¿Cómo me recomiendas organizarlos en
@@ -78,9 +82,11 @@ recomiende una estructura de carpetas para organizarlos.
 
 ### Ejercicio 4 — Preparar un documento para entrega (opcional)
 
-Si tienes un documento que quieras entregar o publicar:
+Cambia a **Build** ![Tab](tab-key.svg) `Build`.
 
-> \`@mi-documento.md\` Prepara este documento para su entrega final:
+Escribe en el chat de OpenCode:
+
+> `@mi-documento.md` Prepara este documento para su entrega final:
 > ponle un título profesional, asegúrate de que el formato es
 > correcto y añade una nota final con la fecha y el autor.
 
@@ -107,5 +113,10 @@ Hasta aquí los 12 pasos del curso. Has aprendido a:
 
 OpenCode es una herramienta versátil. Cuanto más lo uses, más
 formas encontrarás de integrarlo en tu trabajo diario.
+
+Es momento de poner en marcha tus propias ideas.
+Puedes ver algunas en [este conjunto de ideas](ideas101.html).
+Disfruta aprendiendo con ejemplos sencillos y poco
+comprometidos antes de lanzarte a proyectos más ambiciosos.
 
 *Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

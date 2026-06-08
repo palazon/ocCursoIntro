@@ -4,8 +4,11 @@ title: "4. Trabajar con contenido externo"
 
 ## Objetivo
 
-Aprender a traer contenido de fuera del proyecto —texto copiado,
-imágenes, PDFs— y que OpenCode lo procese, mejore o transforme.
+Aprender a traer contenido de fuera del proyecto ---texto copiado,
+imágenes, PDFs--- y que OpenCode lo procese, mejore o transforme.
+
+Debes tener en cuenta que dependiendo del modelo de IA que utilices
+tendrás posibilidades distintas.
 
 Duración estimada: **20 minutos**
 
@@ -17,9 +20,12 @@ OpenCode acepta contenido de varias maneras:
 
 - **Pegar texto directamente** en el chat, como si fuera un mensaje
   normal. Sirve para analizar o reescribir fragmentos.
+
 - **Arrastrar una imagen** a la terminal. OpenCode lee el texto que
   contenga (capturas de pantalla, documentos escaneados).
+
 - **Referenciar un PDF** con `@` si está dentro de tu proyecto.
+
 - **Copiar y pegar** desde un Word, web o cualquier fuente.
 
 En este paso practicaremos la primera: pegar texto y pedir
@@ -29,8 +35,8 @@ transformaciones.
 
 ## Manos a la obra
 
-Trabajaremos siempre en la misma carpeta del proyecto, alternando
-Plan y Build según lo que necesites.
+Trabajaremos siempre en el mismo directorio del proyecto, alternando
+*Plan* y *Build* según lo que necesites.
 
 ### Ejercicio 1 — Mejorar redacción
 
@@ -62,7 +68,7 @@ cat trabajo-equipo.md
 Ahora vas a transformar ese mismo texto en tres versiones distintas.
 OpenCode editará el archivo cada vez.
 
-> \`@trabajo-equipo.md\` Ahora reescribe este texto en un tono formal,
+> `@trabajo-equipo.md` Ahora reescribe este texto en un tono formal,
 > como para un informe ejecutivo. Actualiza el archivo.
 
 Después de ver el resultado:
@@ -77,14 +83,26 @@ Y por último:
 ### Ejercicio 3 — Probar con un documento propio (opcional)
 
 Si tienes a mano un PDF, un correo o cualquier texto externo, 
-pégalo en el chat o (si está en la carpeta del proyecto) referéncialo
-con \`@\` y pídele:
+pégalo en el chat o (si está en el directorio del proyecto) referéncialo
+con `@` y pídele:
 
-> \`@tu-documento.pdf\` Resúmelo en 3 ideas principales.
+> `@tu-documento.pdf` Resúmelo en 3 ideas principales.
 
 O bien:
 
-> \`@tu-documento.txt\` Extrae todas las fechas y nombres propios.
+> `@tu-documento.txt` Extrae todas las fechas y nombres propios.
+
+Seguro que se te ocurren ideas para extraer información relevante
+de tu PDF, prueba a generar tablas o listas con información contenida
+en él.
+
+::: {.callout-note}
+## De PDF a Markdown
+
+OpenCode te sugerirá convertir el contenido a Markdown (`.md`)
+cuando trabajes con PDFs. Como ya hemos visto, Markdown es texto plano, ligero,
+y OpenCode puede leerlo y modificarlo sin perder información.
+:::
 
 ---
 

@@ -27,14 +27,20 @@ formales que dan calidad profesional a tus documentos:
 
 ### Ejercicio 1 — Tabla comparativa
 
-**Build** ![Tab](tab-key.svg) `Build`.
+Cambia a **Build** ![Tab](tab-key.svg) `Build`.
 
-> \`@darwin-evolucion.md\` Crea una tabla comparativa con las
+Escribe en el chat de OpenCode:
+
+> `@darwin-evolucion.md` Crea una tabla comparativa con las
 > diferencias principales entre la teoría de Darwin y otras
 > teorías evolutivas anteriores. Guárdala como
 > tabla-comparativa.md.
 
 ### Ejercicio 2 — Checklist
+
+Siguiendo en **Build**.
+
+Escribe en el chat de OpenCode:
 
 > Crea una lista de verificación para preparar una sesión de
 > formación sobre trabajo en equipo. Que tenga al menos 10
@@ -42,21 +48,30 @@ formales que dan calidad profesional a tus documentos:
 
 ### Ejercicio 3 — Cabecera profesional
 
-Los documentos profesionales suelen llevar una cabecera con
-metadatos: título, autor, fecha, versión, estado.
+Sigue en **Build**.
 
-> \`@darwin-evolucion.md\` Añade al principio del documento una
+Escribe en el chat de OpenCode:
+
+> `@darwin-evolucion.md` Añade al principio del documento una
 > cabecera profesional con: título del documento, autor, fecha,
 > versión (v1.0) y estado (borrador). Déjame espacio para
 > actualizar la versión más adelante.
 
 ### Ejercicio 4 — Glosario
 
-> \`@darwin-evolucion.md\` Extrae todos los términos científicos del
+Sigue en **Build**.
+
+Escribe en el chat de OpenCode:
+
+> `@darwin-evolucion.md` Extrae todos los términos científicos del
 > documento y crea un glosario con definiciones sencillas.
 > Guárdalo como glosario-darwin.md.
 
 ### Ejercicio 5 — Plantilla reutilizable
+
+Sigue en **Build**.
+
+Escribe en el chat de OpenCode:
 
 > Crea una plantilla para informes mensuales con las siguientes
 > secciones: Resumen ejecutivo, Objetivos del mes, Avances,

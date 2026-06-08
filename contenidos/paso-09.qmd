@@ -29,7 +29,7 @@ comando una vez y lo reutilizas.
 
 ## Cómo se crea
 
-Los comandos se definen en un archivo de texto dentro de la carpeta
+Los comandos se definen en un archivo de texto dentro del directorio
 `.opencode/commands/` de tu proyecto. Cada comando es un archivo
 `.md` con una estructura muy sencilla.
 
@@ -52,9 +52,9 @@ plantilla.
 
 ## Manos a la obra
 
-### Ejercicio 1 — Crear la carpeta de comandos
+### Ejercicio 1 — Crear el directorio de comandos
 
-Primero, crea la carpeta donde irán los comandos:
+Primero, crea el directorio donde irán los comandos:
 
 ```bash
 mkdir -p .opencode/commands
@@ -64,10 +64,10 @@ mkdir -p .opencode/commands
 ## Alternativa
 
 También puedes pedirle a OpenCode que cree el comando directamente.
-Por ejemplo, escribe en el chat:
+Por ejemplo, escribe en el chat de OpenCode:
 
 > Crea un comando personalizado /faq que convierta cualquier
-> documento en preguntas frecuentes. Instálalo en la carpeta de
+> documento en preguntas frecuentes. Instálalo en el directorio de
 > comandos de OpenCode.
 
 OpenCode intentará escribir en `.opencode/commands/` y **te pedirá
@@ -89,7 +89,8 @@ Convierte el documento $ARGUMENTS en una lista de preguntas frecuentes
 (FAQ) con sus respuestas. Usa un tono claro y directo.
 ```
 
-Ahora, desde OpenCode, prueba a escribir:
+Ahora prueba a escribir `/faq darwin-evolucion.md` en el chat. O bien,
+escribe en el chat de OpenCode:
 
 > /faq darwin-evolucion.md
 
@@ -115,7 +116,7 @@ Crea un documento con la siguiente estructura de informe:
 El tema del informe es: $ARGUMENTS
 ```
 
-Pruébalo con:
+Pruébalo escribiendo en el chat de OpenCode:
 
 > /plantilla Beneficios del reciclaje en la oficina
 
@@ -135,7 +136,7 @@ Revisa el documento $ARGUMENTS y dime:
 4. ¿Falta información importante?
 ```
 
-Pruébalo con:
+Pruébalo escribiendo en el chat de OpenCode:
 
 > /revisar darwin-evolucion.md
 

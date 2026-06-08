@@ -31,17 +31,23 @@ un resumen con los hallazgos.
 
 Cambia a **Plan** ![Tab](tab-key.svg) `Plan`.
 
+Escribe en el chat de OpenCode:
+
 > Busca información actual sobre los beneficios del teletrabajo y
 > resúmelo en 3 puntos principales.
 
 OpenCode buscará en internet y te dará un resumen. **Al estar en Plan,
 no se modifica ningún archivo.** Puedes pedir más detalles:
 
+Escribe en el chat de OpenCode:
+
 > ¿Qué fuentes has consultado? Dime las URLs.
 
 ### Ejercicio 2 — Comparar fuentes
 
-Siguiendo en Plan:
+Siguiendo en **Plan**.
+
+Escribe en el chat de OpenCode:
 
 > Busca 3 fuentes diferentes sobre los efectos del cambio climático
 > en la agricultura y dime en qué coinciden y en qué difieren.
@@ -51,9 +57,11 @@ Siguiendo en Plan:
 Pasa a **Build** ![Tab](tab-key.svg) `Build`.
 
 Ahora vas a complementar el documento sobre Darwin que creaste en
-el paso 1 con información actual. Escribe:
+el paso anterior con información actual.
 
-> \`@darwin-evolucion.md\` Busca en internet descubrimientos recientes
+Escribe en el chat de OpenCode:
+
+> `@darwin-evolucion.md` Busca en internet descubrimientos recientes
 > sobre evolución que confirmen las ideas de Darwin. Añade una
 > sección al final del archivo con esa información.
 
@@ -62,9 +70,11 @@ OpenCode buscará datos actuales y los añadirá al archivo.
 ### Ejercicio 4 — Verificar datos (opcional)
 
 Si tienes un informe o artículo con datos concretos, pásaselo a
-OpenCode para que verifique:
+OpenCode para que verifique.
 
-> \`@mi-documento.md\` Los datos de este artículo, ¿siguen siendo
+Escribe en el chat de OpenCode:
+
+> `@mi-documento.md` Los datos de este artículo, ¿siguen siendo
 > correctos hoy? Busca información actual para confirmarlos.
 
 ---

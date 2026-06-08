@@ -28,17 +28,21 @@ te permite crear versiones sin tener que reescribir desde cero:
 
 ### Ejercicio 1 — Traducir
 
-**Build** ![Tab](tab-key.svg) `Build`.
+Cambia a **Build** ![Tab](tab-key.svg) `Build`.
 
-> \`@trabajo-equipo.md\` Traduce este documento al inglés. Mantén el
+Escribe en el chat de OpenCode:
+
+> `@trabajo-equipo.md` Traduce este documento al inglés. Mantén el
 > mismo formato de títulos y párrafos. Guárdalo como
 > team-work-final.md.
 
 ### Ejercicio 2 — Tres tonos para un mismo texto
 
-Ahora vas a crear tres versiones del mismo documento sobre Darwin.
+Siguiendo en **Build**.
 
-> \`@darwin-evolucion.md\` Crea tres versiones de este documento:
+Escribe en el chat de OpenCode:
+
+> `@darwin-evolucion.md` Crea tres versiones de este documento:
 >
 > 1. version-ejecutiva.md — Un resumen de un solo párrafo para
 >    un directivo que necesita lo esencial
@@ -49,12 +53,18 @@ Ahora vas a crear tres versiones del mismo documento sobre Darwin.
 
 ### Ejercicio 3 — Adaptar a una audiencia concreta
 
-> \`@trabajo-equipo.md\` Reescribe este texto como si se lo
+Sigue en **Build**.
+
+Escribe en el chat de OpenCode:
+
+> `@trabajo-equipo.md` Reescribe este texto como si se lo
 > explicaras a un niño de 8 años. Usa ejemplos cotidianos
 > (el recreo, los deberes en grupo). Guárdalo como
 > equipo-infantil.md.
 
 Después de ver el resultado:
+
+Escribe en el chat de OpenCode:
 
 > Ahora traduce equipo-infantil.md al inglés.
 

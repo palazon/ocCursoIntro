@@ -42,7 +42,8 @@ Ejemplo de un prompt claro:
 
 > *Soy profesor de secundaria. Necesito un texto divulgativo sobre la
 > teoría de la evolución para alumnos de 12 años. Debe tener 3
-> secciones: qué es, cómo funciona, por qué es importante.*
+> secciones: qué es, cómo funciona, por qué es importante.
+> llama al fichero darwin-evolucion.md*
 
 Cuanto más claro seas, mejor será el resultado.
 
@@ -56,7 +57,7 @@ anteponiendo `@` al nombre.
 Por ejemplo, para trabajar sobre el documento que creaste en el paso
 anterior:
 
-> *\`@darwin-evolucion.md\` Léete este documento y dime qué te parece.*
+> *`@darwin-evolucion.md` Léete este documento y dime qué te parece.*
 
 OpenCode buscará el archivo, lo leerá y lo incorporará a la
 conversación. Puedes referenciar cualquier archivo `.md`, `.txt`,
@@ -66,27 +67,36 @@ conversación. Puedes referenciar cualquier archivo `.md`, `.txt`,
 
 ## Manos a la obra
 
-Trabajaremos en la misma carpeta del proyecto, con el archivo
+Trabajaremos en el mismo directorio del proyecto, con el archivo
 `darwin-evolucion.md` que generaste en el paso anterior.
 
-### Ejercicio 1 — Analizar (Plan)
+::: {.callout-note}
+## Retomar el trabajo
+
+Si has cerrado OpenCode y vuelves a empezar, recuerda hacerlo siempre
+con `opencode -c` desde el directorio del proyecto para recuperar la
+configuración y el historial de conversaciones.
+:::
+
+### Ejercicio 1 — Analizar (*Plan*)
 
 Pulsa ![Tab](tab-key.svg) hasta que el indicador muestre **Plan**.
 
-> \`@darwin-evolucion.md\` Léete este documento y dime qué opinas.
+> `@darwin-evolucion.md` Léete este documento y dime qué opinas.
 > ¿El tono es adecuado para estudiantes de secundaria? ¿Qué
 > mejorarías?
 
-OpenCode leerá el archivo y te dará su opinión. Como estás en **Plan**,
-no modificará nada. Puedes pedir más análisis sin riesgo:
+OpenCode leerá el archivo y te dará su opinión.
+Como estás en **Plan**, no modificará nada.
+Puedes pedir más análisis sin riesgo:
 
 > ¿Crees que falta algún concepto importante?
 
-### Ejercicio 2 — Mejorar (Build)
+### Ejercicio 2 — Mejorar (*Build*)
 
 Pulsa ![Tab](tab-key.svg) para cambiar a **Build**.
 
-> Aplica las mejoras que sugeriste. Actualiza darwin-evolucion.md
+> Aplica las mejoras que sugeriste. Actualiza `@darwin-evolucion.md`
 > con los cambios.
 
 OpenCode modificará el archivo. Puedes comprobar los cambios:
@@ -98,7 +108,7 @@ cat darwin-evolucion.md
 ### Ejercicio 3 — Pensar antes de hacer (Plan + Build)
 
 Ahora vas a añadir una sección nueva al documento. Primero la
-diseñas en Plan, luego la ejecutas en Build.
+diseñas en *Plan*, luego la ejecutas en *Build*.
 
 **Paso A — Plan:**
 
@@ -120,7 +130,7 @@ Una vez conforme con el plan, pasa a Build:
 Sin salir de Build, prueba a pedir transformaciones sobre el mismo
 archivo. Cada vez que pidas algo, OpenCode modificará el documento.
 
-> \`@darwin-evolucion.md\` Ahora dime:
+> `@darwin-evolucion.md` Ahora dime:
 >
 > 1. Haz un resumen ejecutivo de este documento en 3 párrafos
 > 2. Guarda el resumen en un archivo llamado resumen-darwin.md
@@ -131,7 +141,7 @@ Observa que con una sola instrucción has creado dos archivos nuevos.
 
 ---
 
-## Reflexión sobre Plan y Build
+## Reflexión sobre *Plan* y *Build*
 
 Después de estos ejercicios probablemente hayas notado:
 
@@ -150,11 +160,12 @@ saber cuándo pensar y cuándo hacer.
 
 - ✅ Distingues cuándo usar Plan y cuándo usar Build
 - ✅ Escribes prompts claros con contexto y tono
-- ✅ Sabes referenciar archivos con \`@\`
+- ✅ Sabes referenciar archivos con `@`
 - ✅ Has analizado, mejorado, ampliado y transformado documentos
 - ✅ Entiendes el valor de Plan para explorar sin riesgos
 
 En el próximo paso veremos cómo subir documentos externos (PDFs,
 imágenes) y trabajar con contenido que no está en tu proyecto.
+
 
 *Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

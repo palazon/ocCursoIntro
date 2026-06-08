@@ -90,7 +90,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#cómo-se-crea" id="toc-cómo-se-crea" class="nav-link" data-scroll-target="#cómo-se-crea">Cómo se crea</a></li>
   <li><a href="#manos-a-la-obra" id="toc-manos-a-la-obra" class="nav-link" data-scroll-target="#manos-a-la-obra">Manos a la obra</a>
   <ul class="collapse">
-  <li><a href="#ejercicio-1-crear-la-carpeta-de-comandos" id="toc-ejercicio-1-crear-la-carpeta-de-comandos" class="nav-link" data-scroll-target="#ejercicio-1-crear-la-carpeta-de-comandos">Ejercicio 1 — Crear la carpeta de comandos</a></li>
+  <li><a href="#ejercicio-1-crear-el-directorio-de-comandos" id="toc-ejercicio-1-crear-el-directorio-de-comandos" class="nav-link" data-scroll-target="#ejercicio-1-crear-el-directorio-de-comandos">Ejercicio 1 — Crear el directorio de comandos</a></li>
   <li><a href="#ejercicio-2-comando-faq" id="toc-ejercicio-2-comando-faq" class="nav-link" data-scroll-target="#ejercicio-2-comando-faq">Ejercicio 2 — Comando /faq</a></li>
   <li><a href="#ejercicio-3-comando-plantilla" id="toc-ejercicio-3-comando-plantilla" class="nav-link" data-scroll-target="#ejercicio-3-comando-plantilla">Ejercicio 3 — Comando /plantilla</a></li>
   <li><a href="#ejercicio-4-comando-revisar" id="toc-ejercicio-4-comando-revisar" class="nav-link" data-scroll-target="#ejercicio-4-comando-revisar">Ejercicio 4 — Comando /revisar</a></li>
@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="cómo-se-crea" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-se-crea">Cómo se crea</h2>
-<p>Los comandos se definen en un archivo de texto dentro de la carpeta <code>.opencode/commands/</code> de tu proyecto. Cada comando es un archivo <code>.md</code> con una estructura muy sencilla.</p>
+<p>Los comandos se definen en un archivo de texto dentro del directorio <code>.opencode/commands/</code> de tu proyecto. Cada comando es un archivo <code>.md</code> con una estructura muy sencilla.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -159,9 +159,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="manos-a-la-obra" class="level2">
 <h2 class="anchored" data-anchor-id="manos-a-la-obra">Manos a la obra</h2>
-<section id="ejercicio-1-crear-la-carpeta-de-comandos" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-1-crear-la-carpeta-de-comandos">Ejercicio 1 — Crear la carpeta de comandos</h3>
-<p>Primero, crea la carpeta donde irán los comandos:</p>
+<section id="ejercicio-1-crear-el-directorio-de-comandos" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-1-crear-el-directorio-de-comandos">Ejercicio 1 — Crear el directorio de comandos</h3>
+<p>Primero, crea el directorio donde irán los comandos:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> .opencode/commands</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -173,9 +173,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>También puedes pedirle a OpenCode que cree el comando directamente. Por ejemplo, escribe en el chat:</p>
+<p>También puedes pedirle a OpenCode que cree el comando directamente. Por ejemplo, escribe en el chat de OpenCode:</p>
 <blockquote class="blockquote">
-<p>Crea un comando personalizado /faq que convierta cualquier documento en preguntas frecuentes. Instálalo en la carpeta de comandos de OpenCode.</p>
+<p>Crea un comando personalizado /faq que convierta cualquier documento en preguntas frecuentes. Instálalo en el directorio de comandos de OpenCode.</p>
 </blockquote>
 <p>OpenCode intentará escribir en <code>.opencode/commands/</code> y <strong>te pedirá permiso</strong> la primera vez, ya que es el directorio de configuración del proyecto. Confirma el permiso y OpenCode creará el archivo por ti.</p>
 </div>
@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Convierte el documento $ARGUMENTS en una lista de preguntas frecuentes</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>(FAQ) con sus respuestas. Usa un tono claro y directo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Ahora, desde OpenCode, prueba a escribir:</p>
+<p>Ahora prueba a escribir <code>/faq darwin-evolucion.md</code> en el chat. O bien, escribe en el chat de OpenCode:</p>
 <blockquote class="blockquote">
 <p>/faq darwin-evolucion.md</p>
 </blockquote>
@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Próximos pasos</span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>El tema del informe es: $ARGUMENTS</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pruébalo con:</p>
+<p>Pruébalo escribiendo en el chat de OpenCode:</p>
 <blockquote class="blockquote">
 <p>/plantilla Beneficios del reciclaje en la oficina</p>
 </blockquote>
@@ -229,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>¿El tono es coherente en todo el texto?</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>¿Hay secciones que deberían reordenarse?</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>¿Falta información importante?</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pruébalo con:</p>
+<p>Pruébalo escribiendo en el chat de OpenCode:</p>
 <blockquote class="blockquote">
 <p>/revisar darwin-evolucion.md</p>
 </blockquote>

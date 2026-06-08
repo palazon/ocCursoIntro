@@ -91,12 +91,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#referenciar-archivos-con" id="toc-referenciar-archivos-con" class="nav-link" data-scroll-target="#referenciar-archivos-con">Referenciar archivos con <code>@</code></a></li>
   <li><a href="#manos-a-la-obra" id="toc-manos-a-la-obra" class="nav-link" data-scroll-target="#manos-a-la-obra">Manos a la obra</a>
   <ul class="collapse">
-  <li><a href="#ejercicio-1-analizar-plan" id="toc-ejercicio-1-analizar-plan" class="nav-link" data-scroll-target="#ejercicio-1-analizar-plan">Ejercicio 1 — Analizar (Plan)</a></li>
-  <li><a href="#ejercicio-2-mejorar-build" id="toc-ejercicio-2-mejorar-build" class="nav-link" data-scroll-target="#ejercicio-2-mejorar-build">Ejercicio 2 — Mejorar (Build)</a></li>
+  <li><a href="#ejercicio-1-analizar-plan" id="toc-ejercicio-1-analizar-plan" class="nav-link" data-scroll-target="#ejercicio-1-analizar-plan">Ejercicio 1 — Analizar (<em>Plan</em>)</a></li>
+  <li><a href="#ejercicio-2-mejorar-build" id="toc-ejercicio-2-mejorar-build" class="nav-link" data-scroll-target="#ejercicio-2-mejorar-build">Ejercicio 2 — Mejorar (<em>Build</em>)</a></li>
   <li><a href="#ejercicio-3-pensar-antes-de-hacer-plan-build" id="toc-ejercicio-3-pensar-antes-de-hacer-plan-build" class="nav-link" data-scroll-target="#ejercicio-3-pensar-antes-de-hacer-plan-build">Ejercicio 3 — Pensar antes de hacer (Plan + Build)</a></li>
   <li><a href="#ejercicio-4-transformar-el-documento" id="toc-ejercicio-4-transformar-el-documento" class="nav-link" data-scroll-target="#ejercicio-4-transformar-el-documento">Ejercicio 4 — Transformar el documento</a></li>
   </ul></li>
-  <li><a href="#reflexión-sobre-plan-y-build" id="toc-reflexión-sobre-plan-y-build" class="nav-link" data-scroll-target="#reflexión-sobre-plan-y-build">Reflexión sobre Plan y Build</a></li>
+  <li><a href="#reflexión-sobre-plan-y-build" id="toc-reflexión-sobre-plan-y-build" class="nav-link" data-scroll-target="#reflexión-sobre-plan-y-build">Reflexión sobre <em>Plan</em> y <em>Build</em></a></li>
   <li><a href="#resumen-del-paso" id="toc-resumen-del-paso" class="nav-link" data-scroll-target="#resumen-del-paso">Resumen del paso</a></li>
   </ul>
 </nav>
@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Ejemplo de un prompt claro:</p>
 <blockquote class="blockquote">
-<p><em>Soy profesor de secundaria. Necesito un texto divulgativo sobre la teoría de la evolución para alumnos de 12 años. Debe tener 3 secciones: qué es, cómo funciona, por qué es importante.</em></p>
+<p><em>Soy profesor de secundaria. Necesito un texto divulgativo sobre la teoría de la evolución para alumnos de 12 años. Debe tener 3 secciones: qué es, cómo funciona, por qué es importante. llama al fichero darwin-evolucion.md</em></p>
 </blockquote>
 <p>Cuanto más claro seas, mejor será el resultado.</p>
 <hr>
@@ -176,19 +176,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Puedes pedirle a OpenCode que lea cualquier archivo de tu proyecto anteponiendo <code>@</code> al nombre.</p>
 <p>Por ejemplo, para trabajar sobre el documento que creaste en el paso anterior:</p>
 <blockquote class="blockquote">
-<p><em>`<span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span>` Léete este documento y dime qué te parece.</em></p>
+<p><em><code>@darwin-evolucion.md</code> Léete este documento y dime qué te parece.</em></p>
 </blockquote>
 <p>OpenCode buscará el archivo, lo leerá y lo incorporará a la conversación. Puedes referenciar cualquier archivo <code>.md</code>, <code>.txt</code>, <code>.pdf</code> o incluso imágenes con texto.</p>
 <hr>
 </section>
 <section id="manos-a-la-obra" class="level2">
 <h2 class="anchored" data-anchor-id="manos-a-la-obra">Manos a la obra</h2>
-<p>Trabajaremos en la misma carpeta del proyecto, con el archivo <code>darwin-evolucion.md</code> que generaste en el paso anterior.</p>
+<p>Trabajaremos en el mismo directorio del proyecto, con el archivo <code>darwin-evolucion.md</code> que generaste en el paso anterior.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Retomar el trabajo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si has cerrado OpenCode y vuelves a empezar, recuerda hacerlo siempre con <code>opencode -c</code> desde el directorio del proyecto para recuperar la configuración y el historial de conversaciones.</p>
+</div>
+</div>
 <section id="ejercicio-1-analizar-plan" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-1-analizar-plan">Ejercicio 1 — Analizar (Plan)</h3>
+<h3 class="anchored" data-anchor-id="ejercicio-1-analizar-plan">Ejercicio 1 — Analizar (<em>Plan</em>)</h3>
 <p>Pulsa <img src="tab-key.svg" class="img-fluid" alt="Tab"> hasta que el indicador muestre <strong>Plan</strong>.</p>
 <blockquote class="blockquote">
-<p>`<span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span>` Léete este documento y dime qué opinas. ¿El tono es adecuado para estudiantes de secundaria? ¿Qué mejorarías?</p>
+<p><code>@darwin-evolucion.md</code> Léete este documento y dime qué opinas. ¿El tono es adecuado para estudiantes de secundaria? ¿Qué mejorarías?</p>
 </blockquote>
 <p>OpenCode leerá el archivo y te dará su opinión. Como estás en <strong>Plan</strong>, no modificará nada. Puedes pedir más análisis sin riesgo:</p>
 <blockquote class="blockquote">
@@ -196,17 +209,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 </section>
 <section id="ejercicio-2-mejorar-build" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-2-mejorar-build">Ejercicio 2 — Mejorar (Build)</h3>
+<h3 class="anchored" data-anchor-id="ejercicio-2-mejorar-build">Ejercicio 2 — Mejorar (<em>Build</em>)</h3>
 <p>Pulsa <img src="tab-key.svg" class="img-fluid" alt="Tab"> para cambiar a <strong>Build</strong>.</p>
 <blockquote class="blockquote">
-<p>Aplica las mejoras que sugeriste. Actualiza darwin-evolucion.md con los cambios.</p>
+<p>Aplica las mejoras que sugeriste. Actualiza <code>@darwin-evolucion.md</code> con los cambios.</p>
 </blockquote>
 <p>OpenCode modificará el archivo. Puedes comprobar los cambios:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> darwin-evolucion.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="ejercicio-3-pensar-antes-de-hacer-plan-build" class="level3">
 <h3 class="anchored" data-anchor-id="ejercicio-3-pensar-antes-de-hacer-plan-build">Ejercicio 3 — Pensar antes de hacer (Plan + Build)</h3>
-<p>Ahora vas a añadir una sección nueva al documento. Primero la diseñas en Plan, luego la ejecutas en Build.</p>
+<p>Ahora vas a añadir una sección nueva al documento. Primero la diseñas en <em>Plan</em>, luego la ejecutas en <em>Build</em>.</p>
 <p><strong>Paso A — Plan:</strong></p>
 <blockquote class="blockquote">
 <p>Se me ocurre añadir una sección sobre el contexto histórico de Darwin. ¿Dónde la pondrías y qué contenido incluirías?</p>
@@ -225,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="ejercicio-4-transformar-el-documento">Ejercicio 4 — Transformar el documento</h3>
 <p>Sin salir de Build, prueba a pedir transformaciones sobre el mismo archivo. Cada vez que pidas algo, OpenCode modificará el documento.</p>
 <blockquote class="blockquote">
-<p>`<span class="citation" data-cites="darwin-evolucion.md">@darwin-evolucion.md</span>` Ahora dime:</p>
+<p><code>@darwin-evolucion.md</code> Ahora dime:</p>
 <ol type="1">
 <li>Haz un resumen ejecutivo de este documento en 3 párrafos</li>
 <li>Guarda el resumen en un archivo llamado resumen-darwin.md</li>
@@ -237,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="reflexión-sobre-plan-y-build" class="level2">
-<h2 class="anchored" data-anchor-id="reflexión-sobre-plan-y-build">Reflexión sobre Plan y Build</h2>
+<h2 class="anchored" data-anchor-id="reflexión-sobre-plan-y-build">Reflexión sobre <em>Plan</em> y <em>Build</em></h2>
 <p>Después de estos ejercicios probablemente hayas notado:</p>
 <ul>
 <li>En <strong>Plan</strong> puedes pedir opiniones y análisis <strong>sin miedo</strong> a que se modifique nada. Es ideal para explorar ideas.</li>
@@ -252,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>✅ Distingues cuándo usar Plan y cuándo usar Build</li>
 <li>✅ Escribes prompts claros con contexto y tono</li>
-<li>✅ Sabes referenciar archivos con `@`</li>
+<li>✅ Sabes referenciar archivos con <code>@</code></li>
 <li>✅ Has analizado, mejorado, ampliado y transformado documentos</li>
 <li>✅ Entiendes el valor de Plan para explorar sin riesgos</li>
 </ul>

@@ -32,13 +32,13 @@ para empresa, academia, deportes, hogar y aficiones.
 
 ## Cómo empezar
 
-### A. Online
+### A. *On line* (recomendado)
 
 Solo necesitas un navegador. Abre
 <https://palazon.github.io/ocCursoIntro/contenidos/> y sigue el curso
 sin descargar ni instalar ningún fichero del curso.
 
-### B. Desde la distribución local (recomendado)
+### B. Desde la distribución local (para curiosos inquietos)
 
 Descarga [cursoIntroOpenCode.zip](cursoIntroOpenCode.zip), descomprime y abre
 `cursoIntroOpenCode/index.html` en tu navegador. Todo está listo para
