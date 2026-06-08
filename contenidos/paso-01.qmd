@@ -161,11 +161,9 @@ de la más sencilla a la más avanzada:
    el archivo `.md` o `.html` y se abrirá con la aplicación
    predeterminada de tu sistema.
 
-2. **Convertir a HTML con Quarto**: aunque puedes ver los ficheros
-   de markdown directamente
-   para ver el documento con
-   un formato más cómodo de leer (negritas, tablas, etc.) puedes convertirlo
-   a html:
+2. **Convertir a HTML con Quarto**: puedes ver los ficheros markdown
+   directamente. Para un formato más cómodo (negritas, tablas, etc.)
+   conviértelos a HTML:
 
    ```bash
    quarto render mi-documento.md

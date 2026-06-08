@@ -133,10 +133,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Instalar OpenCode, abrirlo por primera vez, conocer la interfaz básica y crear tu primer documento usando los modos Plan y Build.</p>
 <p>Duración estimada: <strong>30 minutos</strong></p>
 <hr>
+<p>Una vez instalado, OpenCode funciona exactamente igual en todos los sistemas. La instalación en Windows requiere un paso adicional porque <em>CMD</em> y <em>PowerShell</em> carecen de las características necesarias para trabajar cómodamente. En macOS y Linux la terminal ya viene preparada.</p>
 </section>
 <section id="instalación-en-windows" class="level2">
 <h2 class="anchored" data-anchor-id="instalación-en-windows">Instalación en Windows</h2>
-<p>El método recomendado para usar OpenCode en Windows es a través de <strong>WSL2</strong> (Windows Subsystem for Linux). WSL2 te permite ejecutar un entorno Linux dentro de Windows de forma fluida.</p>
+<p>El método para usar OpenCode en Windows es a través de <strong>WSL2</strong> (Windows Subsystem for Linux). WSL2 te permite ejecutar un entorno Linux dentro de Windows de forma fluida.</p>
 <section id="instalar-wsl2" class="level3">
 <h3 class="anchored" data-anchor-id="instalar-wsl2">1. Instalar WSL2</h3>
 <p>Abre <strong>PowerShell como administrador</strong> y ejecuta:</p>
@@ -159,6 +160,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="abrir-wsl-y-actualizar-paquetes" class="level3">
 <h3 class="anchored" data-anchor-id="abrir-wsl-y-actualizar-paquetes">2. Abrir WSL y actualizar paquetes</h3>
 <p>Abre “Ubuntu” desde el menú de inicio. Se abrirá una terminal Linux. La primera vez te pedirá crear un usuario y contraseña.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="terminalUsuario.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Terminal WSL</figcaption>
+</figure>
+</div>
 <p>Dentro de WSL, actualiza los paquetes:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade <span class="at">-y</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
@@ -178,11 +185,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="otros-sistemas" class="level2">
 <h2 class="anchored" data-anchor-id="otros-sistemas">Otros sistemas</h2>
+<p>En macOS y Linux la terminal ya viene preparada, así que la instalación es directa:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Sistema</th>
@@ -198,10 +202,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><strong>Linux</strong></td>
 <td><code>curl -fsSL https://opencode.ai/install \| bash</code></td>
 </tr>
-<tr class="odd">
-<td><strong>Windows (nativo)</strong></td>
-<td><code>npm install -g opencode-ai</code> o <code>choco install opencode</code></td>
-</tr>
 </tbody>
 </table>
 <p>Para más detalles, visita la <a href="https://opencode.ai/docs/#install">documentación oficial de instalación</a>.</p>
@@ -209,19 +209,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="conocer-la-interfaz-tui" class="level2">
 <h2 class="anchored" data-anchor-id="conocer-la-interfaz-tui">Conocer la interfaz (TUI)</h2>
-<p>Desde la terminal WSL, navega hasta la carpeta donde quieras trabajar y ejecuta:</p>
+<p>Una vez preparado el directorio del proyecto, tal como se ha descrito desde la terminal, navega hasta el directorio donde quieras trabajar y ejecuta:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="terminalUsuarioBasico.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Para abrir OpenCode desde la terminal</figcaption>
+</figure>
+</div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Fíjate que el sistema te indica que directorio está activo, ante la duda usa <code>pwd</code>.</p>
+<p>En sesiones posteriores debes añadir <code>-c</code> para <em>continuar</em> la sesión.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> <span class="at">-c</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>La carpeta es tu proyecto
+<span class="screen-reader-only">Importante</span>El directorio es tu proyecto
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>OpenCode toma como proyecto la carpeta <strong>desde donde lo ejecutas</strong>. Todo el historial de conversaciones, la configuración y los archivos que crees se organizan dentro de esa carpeta. Por eso es clave navegar primero con <code>cd</code> antes de escribir <code>opencode</code>.</p>
+<p>OpenCode toma como proyecto el directorio <strong>desde donde lo ejecutas</strong>. Todo el historial de conversaciones, la configuración y los archivos que crees se organizan dentro de ese directorio. Por eso es clave navegar primero con <code>cd</code> antes de escribir <code>opencode</code>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -235,14 +244,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>Si prefieres una interfaz gráfica en el navegador, ejecuta:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> web</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> web</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Se abrirá OpenCode en tu navegador, apuntando al mismo proyecto. Pero en este curso usaremos la versión de terminal (<code>opencode</code> a secas): es la misma que usarás en entornos profesionales y te obliga a familiarizarte con la terminal, el explorador de archivos y los comandos básicos.</p>
 </div>
 </div>
 <p>Verás una pantalla dividida en dos áreas:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="captura-tui.png" class="img-fluid figure-img"></p>
+<p><img src="captura-TUI.png" class="img-fluid figure-img" style="width:60.0%"></p>
 <figcaption>Interfaz TUI de OpenCode</figcaption>
 </figure>
 </div>
@@ -258,12 +267,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="entrar-salir-y-continuar-una-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="entrar-salir-y-continuar-una-sesión">Entrar, salir y continuar una sesión</h2>
 <ul>
-<li><strong>Entrar:</strong> <code>opencode</code> desde la terminal, <strong>siempre dentro de la carpeta de tu proyecto</strong>. Si entras desde otra ubicación, OpenCode tratará esa carpeta como un proyecto distinto y no verás el historial de conversaciones anteriores.</li>
+<li><strong>Entrar:</strong> <code>opencode</code> desde la terminal, <strong>siempre dentro del directorio de tu proyecto</strong>. Si entras desde otra ubicación, OpenCode tratará ese directorio como un proyecto distinto y no verás el historial de conversaciones anteriores.</li>
 <li><strong>Salir:</strong> escribe <code>/exit</code> o pulsa <strong>Ctrl+C</strong></li>
-<li><strong>Sesiones:</strong> OpenCode guarda el historial de cada conversación dentro de tu proyecto (en la carpeta <code>.opencode/</code>). Por eso es importante abrirlo siempre desde la misma carpeta: así puedes retomar conversaciones anteriores y mantener toda la configuración del proyecto.</li>
+<li><strong>Sesiones:</strong> OpenCode guarda el historial de cada conversación dentro de tu proyecto (en el directorio <code>.opencode/</code>). Por eso es importante abrirlo siempre desde el mismo directorio: así puedes retomar conversaciones anteriores y mantener toda la configuración del proyecto.</li>
 <li><strong>Ritual recomendado:</strong> cada vez que quieras trabajar, abre la terminal, navega a tu proyecto con <code>cd</code> y ejecuta <code>opencode</code>.</li>
 </ul>
-<p>Para este curso trabajaremos siempre en la misma carpeta del proyecto.</p>
+<p>Para este curso trabajaremos siempre en el mismo directorio del proyecto.</p>
 <hr>
 </section>
 <section id="manos-a-la-obra" class="level2">
@@ -275,15 +284,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>¿Ya estás en la carpeta correcta?
+<span class="screen-reader-only">Importante</span>¿Ya estás en el directorio correcto?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Antes de empezar, confirma que abriste OpenCode desde la carpeta <code>curso-opencode</code> que creaste en el paso anterior. Para comprobarlo, escribe en el chat:</p>
+<p>Antes de empezar, confirma que abriste OpenCode desde el directorio <code>curso-opencode</code> que creaste en el paso anterior. Para comprobarlo, escribe en el chat:</p>
 <blockquote class="blockquote">
 <p><code>!pwd</code></p>
 </blockquote>
-<p>Debería mostrar algo como <code>/home/tu-usuario/curso-opencode</code>. Si no es así, sal con <code>/exit</code>, navega a la carpeta correcta y vuelve a ejecutar <code>opencode</code>.</p>
+<p>Debería mostrar algo como <code>/home/tu-usuario/curso-opencode</code>. Si no es así, sal con <code>/exit</code>, navega al directorio correcto y vuelve a ejecutar <code>opencode</code>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -301,10 +310,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="ejercicio-1-plan-mode" class="level3">
 <h3 class="anchored" data-anchor-id="ejercicio-1-plan-mode">Ejercicio 1 — Plan mode</h3>
-<blockquote class="blockquote">
 <p><strong>Modo:</strong> <img src="tab-key.svg" class="img-fluid" alt="Tab"> <code>Plan</code> — pulsa Tab para estar en modo Plan</p>
-</blockquote>
-<p>Escribe lo siguiente en el chat:</p>
+<p>Escribe en el chat de OpenCode:</p>
 <blockquote class="blockquote">
 <p>Soy profesor de secundaria. Necesito crear un documento que explique los fundamentos de la teoría de la evolución de Darwin para estudiantes de 14-15 años. Hazme un plan con los apartados que debería incluir y qué contenido pondrías en cada uno.</p>
 </blockquote>
@@ -315,16 +322,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ejercicio-2-build-mode" class="level3">
 <h3 class="anchored" data-anchor-id="ejercicio-2-build-mode">Ejercicio 2 — Build mode</h3>
-<blockquote class="blockquote">
 <p><strong>Modo:</strong> <img src="tab-key.svg" class="img-fluid" alt="Tab"> <code>Build</code> — pulsa Tab para estar en modo Build</p>
-</blockquote>
-<p>Ahora escribe:</p>
+<p>Escribe ahora en el chat:</p>
 <blockquote class="blockquote">
 <p>Perfecto. Ahora genera el documento completo en un archivo llamado darwin-evolucion.md. Lenguaje sencillo, tono divulgativo, ejemplos claros. Quiero que esté listo para imprimirlo y dárselo a la clase.</p>
 </blockquote>
-<p>OpenCode creará el archivo en tu carpeta. Puedes comprobarlo de dos formas:</p>
+<p>OpenCode creará el archivo en tu directorio de trabajo. Puedes comprobarlo de dos formas:</p>
 <p><strong>Fuera de OpenCode</strong> — abre otra terminal y escribe:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> darwin-evolucion.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> darwin-evolucion.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Sin salir de OpenCode</strong> — escribe en el chat:</p>
 <blockquote class="blockquote">
 <p><code>!cat darwin-evolucion.md</code></p>
@@ -333,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ejercicio-3-añadir-un-cuestionario" class="level3">
 <h3 class="anchored" data-anchor-id="ejercicio-3-añadir-un-cuestionario">Ejercicio 3 — Añadir un cuestionario</h3>
-<p>Sin cerrar la sesión, escribe:</p>
+<p>Sin cerrar la sesión, escribe en el chat:</p>
 <blockquote class="blockquote">
 <p>Ahora añade al final del archivo un cuestionario de 5 preguntas tipo test sobre el contenido. Cada pregunta con 4 opciones. Incluye las respuestas correctas al final del todo.</p>
 </blockquote>
@@ -341,12 +346,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ejercicio-4-convertir-a-word-opcional" class="level3">
 <h3 class="anchored" data-anchor-id="ejercicio-4-convertir-a-word-opcional">Ejercicio 4 — Convertir a Word (opcional)</h3>
-<blockquote class="blockquote">
-<p>¿Tienes Word y quieres un .docx? Pídeselo a OpenCode (necesita la librería python-docx, pero OpenCode la instalará automáticamente):</p>
-</blockquote>
+<p>¿Tienes Word y quieres un .docx? Pídeselo a OpenCode:</p>
 <blockquote class="blockquote">
 <p>Convierte darwin-evolucion.md a un archivo .docx usando python-docx.</p>
 </blockquote>
+<p>OpenCode necesita la librería <code>python-docx</code>. La primera vez que la uses, la instalará automáticamente.</p>
 <hr>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -358,7 +362,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>OpenCode trabaja de forma nativa con <strong>Markdown (.md)</strong>: es texto plano, ligero, se versiona bien con Git y herramientas como Quarto lo convierten a HTML, PDF o Word. Al usar <code>.md</code> evitas formatos binarios (.docx) que OpenCode no puede leer ni modificar directamente.</p>
+<p>OpenCode trabaja de forma nativa con <strong>Markdown (.md)</strong>: es texto plano, ligero, y herramientas como Quarto lo convierten a HTML, PDF o Word. Al usar <code>.md</code> evitas formatos binarios (.docx) que OpenCode puede leer y modificar pero cuesta tiempo y <em>tokens</em>, importante cuando uses modelos de pago.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Consejo</span>Para usuarios de Git
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si ya conoces Git, el Markdown se versiona de forma natural: al ser texto plano, los cambios entre versiones se ven limpios y es fácil colaborar con otras personas.</p>
+<p>No olvides añadir los cambios y hacer <code>commit</code> después de salir de la sesión.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -380,10 +398,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="resumen-del-paso" class="level2">
 <h2 class="anchored" data-anchor-id="resumen-del-paso">Resumen del paso</h2>
 <ul>
-<li>✅ OpenCode instalado y funcionando en Windows</li>
+<li>✅ OpenCode instalado y funcionando</li>
 <li>✅ Conoces la interfaz: chat, modos, comandos básicos</li>
 <li>✅ Sabes entrar, salir y cambiar entre Plan y Build</li>
-<li>✅ Entiendes que OpenCode usa la carpeta actual como proyecto y por qué es importante abrirlo siempre desde la misma carpeta</li>
+<li>✅ Entiendes que OpenCode usa el directorio actual como proyecto y por qué es importante abrirlo siempre desde el mismo directorio</li>
 <li>✅ Has creado un documento completo con Plan + Build</li>
 <li>✅ Has ampliado el documento con un cuestionario</li>
 <li>✅ Entiendes por qué Markdown es el formato ideal con OpenCode</li>

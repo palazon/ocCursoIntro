@@ -11,11 +11,16 @@ Duración estimada: **30 minutos**
 
 ---
 
+Una vez instalado, OpenCode funciona exactamente igual en todos los
+sistemas. La instalación en Windows requiere un paso adicional porque
+*CMD* y *PowerShell* carecen de las características necesarias para
+trabajar cómodamente. En macOS y Linux la terminal ya viene preparada.
+
 ## Instalación en Windows
 
-El método recomendado para usar OpenCode en Windows es a través de
-**WSL2** (Windows Subsystem for Linux). WSL2 te permite ejecutar un
-entorno Linux dentro de Windows de forma fluida.
+El método para usar OpenCode en Windows es a través de **WSL2**
+(Windows Subsystem for Linux). WSL2 te permite ejecutar un entorno
+Linux dentro de Windows de forma fluida.
 
 ### 1. Instalar WSL2
 
@@ -38,6 +43,8 @@ Si quieres más detalles, Microsoft tiene una [guía oficial de instalación de 
 
 Abre "Ubuntu" desde el menú de inicio. Se abrirá una terminal Linux.
 La primera vez te pedirá crear un usuario y contraseña.
+
+![Terminal WSL](terminalUsuario.png){width=60%}
 
 Dentro de WSL, actualiza los paquetes:
 
@@ -71,11 +78,13 @@ Deberías ver un número de versión. Si es así, OpenCode está listo.
 
 ## Otros sistemas
 
+En macOS y Linux la terminal ya viene preparada, así que la
+instalación es directa:
+
 | Sistema | Comando |
 |---------|---------|
 | **macOS** | `brew install anomalyco/tap/opencode` |
 | **Linux** | `curl -fsSL https://opencode.ai/install \| bash` |
-| **Windows (nativo)** | `npm install -g opencode-ai` o `choco install opencode` |
 
 Para más detalles, visita la
 [documentación oficial de instalación](https://opencode.ai/docs/#install).
@@ -84,19 +93,30 @@ Para más detalles, visita la
 
 ## Conocer la interfaz (TUI)
 
-Desde la terminal WSL, navega hasta la carpeta donde quieras trabajar
-y ejecuta:
+Una vez preparado el directorio del proyecto,
+tal como se ha descrito desde la terminal,
+navega hasta el directorio donde quieras trabajar y ejecuta:
+
+![Para abrir OpenCode desde la terminal](terminalUsuarioBasico.png){width=60%}
 
 ```bash
 opencode
 ```
 
-::: {.callout-important}
-## La carpeta es tu proyecto
+Fíjate que el sistema te indica que directorio está activo, ante la duda usa `pwd`.
 
-OpenCode toma como proyecto la carpeta **desde donde lo ejecutas**.
+En sesiones posteriores debes añadir `-c` para *continuar* la sesión.
+
+```bash
+opencode -c
+```
+
+::: {.callout-important}
+## El directorio es tu proyecto
+
+OpenCode toma como proyecto el directorio **desde donde lo ejecutas**.
 Todo el historial de conversaciones, la configuración y los archivos
-que crees se organizan dentro de esa carpeta. Por eso es clave
+que crees se organizan dentro de ese directorio. Por eso es clave
 navegar primero con `cd` antes de escribir `opencode`.
 :::
 
@@ -118,7 +138,7 @@ comandos básicos.
 
 Verás una pantalla dividida en dos áreas:
 
-![Interfaz TUI de OpenCode](captura-tui.png)
+![Interfaz TUI de OpenCode](captura-TUI.png){width=60%}
 
 - **Área superior:** respuestas y acciones del asistente
 - **Área inferior (chat):** donde tú escribes los mensajes
@@ -133,20 +153,20 @@ Escribe `/help` para ver los comandos disponibles.
 
 ## Entrar, salir y continuar una sesión
 
-- **Entrar:** `opencode` desde la terminal, **siempre dentro de la
-  carpeta de tu proyecto**. Si entras desde otra ubicación, OpenCode
-  tratará esa carpeta como un proyecto distinto y no verás el
+- **Entrar:** `opencode` desde la terminal, **siempre dentro del
+  directorio de tu proyecto**. Si entras desde otra ubicación, OpenCode
+  tratará ese directorio como un proyecto distinto y no verás el
   historial de conversaciones anteriores.
 - **Salir:** escribe `/exit` o pulsa **Ctrl+C**
 - **Sesiones:** OpenCode guarda el historial de cada conversación
-  dentro de tu proyecto (en la carpeta `.opencode/`). Por eso es
-  importante abrirlo siempre desde la misma carpeta: así puedes
+  dentro de tu proyecto (en el directorio `.opencode/`). Por eso es
+  importante abrirlo siempre desde el mismo directorio: así puedes
   retomar conversaciones anteriores y mantener toda la configuración
   del proyecto.
 - **Ritual recomendado:** cada vez que quieras trabajar, abre la
   terminal, navega a tu proyecto con `cd` y ejecuta `opencode`.
 
-Para este curso trabajaremos siempre en la misma carpeta del proyecto.
+Para este curso trabajaremos siempre en el mismo directorio del proyecto.
 
 ---
 
@@ -157,16 +177,16 @@ primero **Plan** para diseñar el contenido, luego **Build** para
 generar el archivo.
 
 ::: {.callout-important}
-## ¿Ya estás en la carpeta correcta?
+## ¿Ya estás en el directorio correcto?
 
-Antes de empezar, confirma que abriste OpenCode desde la carpeta
+Antes de empezar, confirma que abriste OpenCode desde el directorio
 `curso-opencode` que creaste en el paso anterior. Para comprobarlo,
 escribe en el chat:
 
 > `!pwd`
 
 Debería mostrar algo como `/home/tu-usuario/curso-opencode`.
-Si no es así, sal con `/exit`, navega a la carpeta correcta y
+Si no es así, sal con `/exit`, navega al directorio correcto y
 vuelve a ejecutar `opencode`.
 :::
 
@@ -178,9 +198,9 @@ Mira la esquina inferior derecha de la pantalla. Allí pone **Build** o **Plan**
 
 ### Ejercicio 1 — Plan mode
 
-> **Modo:** ![Tab](tab-key.svg) `Plan` — pulsa Tab para estar en modo Plan
+**Modo:** ![Tab](tab-key.svg) `Plan` — pulsa Tab para estar en modo Plan
 
-Escribe lo siguiente en el chat:
+Escribe en el chat de OpenCode:
 
 > Soy profesor de secundaria. Necesito crear un documento que explique
 > los fundamentos de la teoría de la evolución de Darwin para
@@ -194,15 +214,15 @@ cambios si quieres, por ejemplo:
 
 ### Ejercicio 2 — Build mode
 
-> **Modo:** ![Tab](tab-key.svg) `Build` — pulsa Tab para estar en modo Build
+**Modo:** ![Tab](tab-key.svg) `Build` — pulsa Tab para estar en modo Build
 
-Ahora escribe:
+Escribe ahora en el chat:
 
 > Perfecto. Ahora genera el documento completo en un archivo llamado
 > darwin-evolucion.md. Lenguaje sencillo, tono divulgativo, ejemplos
 > claros. Quiero que esté listo para imprimirlo y dárselo a la clase.
 
-OpenCode creará el archivo en tu carpeta. Puedes comprobarlo de
+OpenCode creará el archivo en tu directorio de trabajo. Puedes comprobarlo de
 dos formas:
 
 **Fuera de OpenCode** — abre otra terminal y escribe:
@@ -220,7 +240,7 @@ terminal sin cerrar la sesión. Útil para comprobaciones rápidas.
 
 ### Ejercicio 3 — Añadir un cuestionario
 
-Sin cerrar la sesión, escribe:
+Sin cerrar la sesión, escribe en el chat:
 
 > Ahora añade al final del archivo un cuestionario de 5 preguntas tipo
 > test sobre el contenido. Cada pregunta con 4 opciones. Incluye las
@@ -231,10 +251,12 @@ sin tener que empezar de cero.
 
 ### Ejercicio 4 — Convertir a Word (opcional)
 
-> ¿Tienes Word y quieres un .docx? Pídeselo a OpenCode (necesita la
-> librería python-docx, pero OpenCode la instalará automáticamente):
+¿Tienes Word y quieres un .docx? Pídeselo a OpenCode:
 
 > Convierte darwin-evolucion.md a un archivo .docx usando python-docx.
+
+OpenCode necesita la librería `python-docx`. La primera vez que la uses,
+la instalará automáticamente.
 
 ---
 
@@ -242,9 +264,21 @@ sin tener que empezar de cero.
 ## ¿Por qué Markdown?
 
 OpenCode trabaja de forma nativa con **Markdown (.md)**: es texto
-plano, ligero, se versiona bien con Git y herramientas como Quarto lo
-convierten a HTML, PDF o Word. Al usar `.md` evitas formatos binarios
-(.docx) que OpenCode no puede leer ni modificar directamente.
+plano, ligero, y herramientas como Quarto lo convierten a HTML,
+PDF o Word. Al usar `.md` evitas formatos binarios (.docx) que
+OpenCode puede leer y modificar pero cuesta tiempo y *tokens*,
+importante cuando uses modelos de pago.
+:::
+
+::: {.callout-tip}
+## Para usuarios de Git
+
+Si ya conoces Git, el Markdown se versiona de forma natural:
+al ser texto plano, los cambios entre versiones se ven limpios
+y es fácil colaborar con otras personas.
+
+No olvides añadir los cambios y hacer `commit` después de
+salir de la sesión.
 :::
 
 ::: {.callout-note}
@@ -260,11 +294,11 @@ Quarto es tan sencillo como `quarto render archivo.md`.
 
 ## Resumen del paso
 
-- ✅ OpenCode instalado y funcionando en Windows
+- ✅ OpenCode instalado y funcionando
 - ✅ Conoces la interfaz: chat, modos, comandos básicos
 - ✅ Sabes entrar, salir y cambiar entre Plan y Build
-- ✅ Entiendes que OpenCode usa la carpeta actual como proyecto y
-  por qué es importante abrirlo siempre desde la misma carpeta
+- ✅ Entiendes que OpenCode usa el directorio actual como proyecto y
+  por qué es importante abrirlo siempre desde el mismo directorio
 - ✅ Has creado un documento completo con Plan + Build
 - ✅ Has ampliado el documento con un cuestionario
 - ✅ Entiendes por qué Markdown es el formato ideal con OpenCode
