@@ -2,9 +2,126 @@
 title: "Ideas para usar OpenCode en tu día a día"
 ---
 
-## Empresa
+Este documento reúne más de 50 ideas para usar OpenCode en tu día a día, organizadas por temas. Cada entrada está clasificada por dificultad (🟢 básica, 🟡 intermedia, 🔴 avanzada) e incluye variaciones y una sugerencia práctica.
 
-### Manual de onboarding
+Las ideas se agrupan en 11 secciones. Para el **día a día laboral**: [Documentación](#sec-documentacion), [Empresa](#sec-empresa), [Academia](#sec-academia). Para la **gestión del hogar**: [Hogar](#sec-hogar), [Alimentación](#sec-alimentacion), [Aficiones](#sec-aficiones). Para las **finanzas y compras**: [Compras y finanzas](#sec-compras). Para el **tiempo libre**: [Deportes](#sec-deportes). También hay secciones de [Planificación](#sec-planificacion), [Comandos](#sec-comandos), y [Sistema y mantenimiento](#sec-sistema).
+
+Navega por los enlaces o simplemente hojea las secciones para encontrar la idea que necesites.
+
+## Documentación {#sec-documentacion}
+
+Transformación progresiva de información bruta en documentos estructurados y listos para usar.
+
+### De la grabación al acta 🟢
+
+Tomas notas sueltas durante una reunión y OpenCode las convierte
+en un acta profesional:
+
+> He apuntado: "reunión 10 jun — Pedro retraso en servidores —
+> Laura presupuesto Q3 listo — acuerdo: reunión semanal los
+> lunes — pendiente: migrar datos antes del 30".
+> Genera un acta con: asistentes, acuerdos, pendientes y próxima
+> reunión.
+
+**Variación:** pídele que genere el acta en tono formal para
+enviar por correo, o en tono informal para el equipo interno.
+
+**Sugerencia:** crea un comando `/acta-reunion` para acelerar aún más el proceso.
+
+---
+
+### De la idea al esquema 🟢
+
+Describes un proyecto en pocas frases y OpenCode te devuelve
+un índice estructurado para empezar a escribir:
+
+> Necesito documentar el proceso de incorporación de nuevos
+> empleados. Dame un esquema del manual con las secciones que
+> debería incluir, ordenadas de forma lógica.
+
+Una vez conforme, pídele que desarrolle cada sección.
+
+**Variación:** pídele el esquema en formato tabla con tiempo
+estimado de redacción por sección.
+
+**Sugerencia:** una vez conforme con el esquema, pídele que desarrolle cada sección en *Build*.
+
+---
+
+### Del correo al documento formal 🟡
+
+¿Tienes un correo informal explicando un proceso? Conviértelo
+en un procedimiento documentado:
+
+> \`@correo-proceso.txt\` A partir de este correo informal, genera
+> un documento de procedimiento estándar con: objetivo, alcance,
+> responsables, pasos detallados y referencias. Guárdalo como
+> procedimiento-oficial.md.
+
+**Variación:** pídele una versión imprimible o
+una infografía textual con los pasos resumidos.
+
+**Sugerencia:** pídele también una versión resumida en una página para compartir con el equipo.
+
+---
+
+### De notas dispersas a wiki unificada 🟡
+
+Si tienes varios archivos sueltos con ideas, OpenCode los unifica
+en un documento coherente:
+
+> \`@nota-1.md\` \`@nota-2.md\` \`@nota-3.md\` Combina estos tres
+> archivos en un solo documento bien estructurado. Elimina
+> duplicados, ordena las ideas por tema y pon títulos a cada
+> sección. Guárdalo como \`wiki-unificada.md\`.
+
+**Variación:** pídele que añada un índice al principio y
+enlaces entre secciones relacionadas.
+
+**Sugerencia:** añade un índice al principio y enlaces entre secciones para navegar mejor.
+
+---
+
+### De técnico a divulgativo 🟡
+
+Tomas un documento técnico y pides una versión para principiantes:
+
+> \`@manual-tecnico.md\` Reescribe este manual como si se lo
+> explicaras a una persona que nunca ha usado el producto.
+> Elimina jerga técnica, usa ejemplos cotidianos y divide
+> la información en pasos muy claros. Guárdalo como
+> \`guia-principiantes.md\`.
+
+**Variación:** pídele también una versión "cheat sheet" de
+una sola página con lo esencial.
+
+**Sugerencia:** usa el formato cheat sheet para consultas rápidas durante el día a día.
+
+---
+
+### De transcripción a tutorial 🟡
+
+¿Grabaste un vídeo formativo? Pasa la transcripción y OpenCode
+la convierte en un tutorial escrito:
+
+> \`@transcripcion.txt\` A partir de esta transcripción de vídeo,
+> crea un tutorial paso a paso. Incluye: objetivo, materiales
+> necesarios, pasos numerados con explicaciones y un resumen
+> final. Guárdalo como \`tutorial-escrito.md\`.
+
+**Variación:** pídele que extraiga solo los pasos prácticos
+(como una lista de acciones) o que genere una versión FAQ con
+las dudas más frecuentes.
+
+**Sugerencia:** pídele que extraiga solo los pasos prácticos como lista de acciones rápida.
+
+---
+
+## Empresa {#sec-empresa}
+
+Gestión documental empresarial: manuales, actas, informes, FAQ y análisis de pliegos.
+
+### Manual de onboarding 🟢
 
 Cada empresa tiene su forma de integrar a nuevas personas. En lugar de
 empezar de cero, pídele a OpenCode un esquema:
@@ -20,9 +137,28 @@ añade secciones. Cuando tengas el plan, genera el documento.
 OpenCode con `@manual-anterior.pdf` y dile que lo actualice y
 modernice.
 
+**Sugerencia:** combinado con el comando `/revisar` del curso, un compañero puede verificar el manual antes de publicarlo.
+
 ---
 
-### FAQ interno
+### Revisión de pliegos y ofertas 🟡
+
+Cuando recibes un documento extenso (pliego, contrato, oferta), puedes
+pedirle a OpenCode que lo analice:
+
+> \`@pliego.pdf\` Extrae todos los requisitos obligatorios y clasifícalos
+> por área (técnica, legal, económica). Detecta ambigüedades.
+
+**Variación:** pídele una comparativa entre dos ofertas:
+
+> \`@oferta-A.pdf\` \`@oferta-B.pdf\` Compara ambas propuestas. ¿Cuál cubre
+> mejor los requisitos del pliego? ¿Qué diferencias clave hay?
+
+**Sugerencia:** usa primero *Plan* para definir los criterios de evaluación antes de comparar en *Build*.
+
+---
+
+### FAQ interno 🔴
 
 Los equipos suelen responder las mismas preguntas una y otra vez. Con
 el comando `/faq` que creaste en el curso, convertir cualquier documento
@@ -35,9 +171,11 @@ en preguntas frecuentes es cuestión de segundos:
 > \`@faq.md\` ¿Hay respuestas que hayan quedado obsoletas? Busca
 > información actual y sugiere cambios.
 
+**Sugerencia:** programa una revisión trimestral del FAQ con OpenCode para mantenerlo actualizado.
+
 ---
 
-### Informes semanales
+### Informes semanales 🔴
 
 Si tienes que enviar un informe cada semana, crea un comando
 `/informe-semanal` con la estructura que repites siempre. Luego
@@ -51,41 +189,35 @@ OpenCode te devuelve el informe completo con esa estructura.
 **Variación:** si además tienes una carpeta de notas diarias, puedes
 hacer que OpenCode las lea todas y genere el resumen semanal:
 
-> @notas/*.md A partir de estas notas, genera el informe semanal.
+> \`@notas/*.md\` A partir de estas notas, genera el informe semanal.
+
+**Sugerencia:** mantén una carpeta de notas diarias y OpenCode generará el resumen semanal automáticamente.
 
 ---
 
-### Revisión de pliegos y ofertas
+## Academia {#sec-academia}
 
-Cuando recibes un documento extenso (pliego, contrato, oferta), puedes
-pedirle a OpenCode que lo analice:
+Preparación de materiales educativos, exámenes e investigación académica con OpenCode.
 
-> \`@pliego.pdf\` Extrae todos los requisitos obligatorios y clasifícalos
-> por área (técnica, legal, económica). Detecta ambigüedades.
+### Cuestionarios y exámenes 🟢
 
-**Variación:** pídele una comparativa entre dos ofertas:
+A partir de cualquier contenido, OpenCode genera preguntas:
 
-> \`@oferta-A.pdf\` \`@oferta-B.pdf\` Compara ambas propuestas. ¿Cuál cubre
-> mejor los requisitos del pliego? ¿Qué diferencias clave hay?
+> \`@tema-biologia.md\` Crea 15 preguntas tipo test con 4 opciones cada
+> una. Incluye las respuestas correctas al final. Para 2º de ESO.
 
----
+**Variación:** pide distintos formatos:
 
-### Actas de reunión
+- Preguntas de desarrollo
+- Verdadero / falso
+- Ejercicios de emparejar conceptos
+- Preguntas para examen oral
 
-Tomas notas sueltas durante una reunión. Después se las pasas a
-OpenCode:
-
-> A partir de estas notas, genera un acta con: asistentes, acuerdos,
-> puntos pendientes y próximos pasos. Fecha: 15 de junio de 2026.
-
-**Variación:** si la reunión es recurrente, crea un comando
-`/acta-reunion` con ese formato y solo pasa las notas.
+**Sugerencia:** combina varios tipos de pregunta en un solo prompt para obtener exámenes variados.
 
 ---
 
-## Academia
-
-### Materiales didácticos
+### Materiales didácticos 🟡
 
 OpenCode es ideal para preparar contenido para clase. Puedes
 diseñar la estructura en Plan y generarlo en Build:
@@ -103,25 +235,11 @@ Una vez conforme, pasas a Build:
 > A partir de revolucion-industrial.md, crea un guion para una
 > presentación de 10 diapositivas. Guárdalo como presentacion.md.
 
----
-
-### Cuestionarios y exámenes
-
-A partir de cualquier contenido, OpenCode genera preguntas:
-
-> \`@tema-biologia.md\` Crea 15 preguntas tipo test con 4 opciones cada
-> una. Incluye las respuestas correctas al final. Para 2º de ESO.
-
-**Variación:** pide distintos formatos:
-
-- Preguntas de desarrollo
-- Verdadero / falso
-- Ejercicios de emparejar conceptos
-- Preguntas para examen oral
+**Sugerencia:** usa *Plan* para el diseño pedagógico y *Build* para la generación de contenidos.
 
 ---
 
-### Adaptar contenido a distintos niveles
+### Adaptar contenido a distintos niveles 🟡
 
 Un mismo tema puede tener versiones para primaria, secundaria o
 universidad:
@@ -133,9 +251,11 @@ universidad:
 
 **Variación:** pide también una versión en inglés del mismo contenido.
 
+**Sugerencia:** usa `@` para referenciar el original y pide todas las versiones en un solo prompt.
+
 ---
 
-### Trabajo de investigación
+### Trabajo de investigación 🟡
 
 OpenCode puede ayudarte en todas las fases de un trabajo académico:
 
@@ -149,9 +269,11 @@ OpenCode puede ayudarte en todas las fases de un trabajo académico:
 
 **Variación:** usa Plan para las fases 1-2 y Build para 3-5.
 
+**Sugerencia:** documenta cada fase en un archivo aparte para poder retomarlo con `@`.
+
 ---
 
-### Informes de laboratorio
+### Informes de laboratorio 🔴
 
 Con una plantilla `/informe-lab` que incluya las secciones
 (objetivo, método, resultados, conclusiones), solo tienes que
@@ -162,88 +284,15 @@ pasar los datos:
 
 OpenCode genera el informe completo con esa estructura.
 
----
-
-## Deportes
-
-### Plan de entrenamiento semanal
-
-Tanto si eres principiante como avanzado, OpenCode te diseña
-rutinas a medida:
-
-> Soy corredor principiante. Crea un plan de 8 semanas para
-> preparar 10 km, con 3 días de running y 2 de fuerza.
-
-**Variación:** pídele adaptaciones por lesión o condición:
-
-> Tengo una sobrecarga en el tendón de Aquiles. Ajusta el plan
-> para incluir más descanso y ejercicios de fortalecimiento.
+**Sugerencia:** diseña primero la plantilla del comando en *Plan* antes de crearlo en *Build*.
 
 ---
 
-### Registro de marcas
+## Hogar {#sec-hogar}
 
-Lleva un histórico de tus progresos:
+Organización del hogar: viajes, mudanzas, inventarios, bricolaje y currículum vitae.
 
-> Crea una tabla para registrar mis marcas personales en
-> running: distancia, tiempo, fecha, lugar, sensaciones (1-5).
-> Déjame ejemplos de cómo rellenarla.
-
-**Variación:** extiéndelo a natación o ciclismo:
-
-> Añade una hoja para natación: estilo, distancia, tiempo y
-> pulsaciones.
-
----
-
-### Calendario de temporada
-
-Para deportes de equipo o ligas organizadas:
-
-> Genera un calendario de liga para 8 equipos, ida y vuelta
-> (14 jornadas). Déjame espacio para anotar resultado de cada
-> partido. Guárdalo como calendario-liga.md.
-
-**Variación:** pídele una clasificación automatizada:
-
-> A partir del calendario, crea una tabla de clasificación que
-> calcule automáticamente puntos, goles a favor y en contra.
-
----
-
-### Prevención y estiramientos
-
-Una guía rápida para evitar lesiones:
-
-> Soy corredor y tengo molestias en la rodilla. Dame una
-> rutina diaria de estiramientos y fortalecimiento de 15
-> minutos.
-
-**Variación:** pídele una versión ilustrada (descripciones):
-
-> Describe cada ejercicio con claridad para que pueda seguirlo
-> sin vídeo: posición inicial, movimiento, respiración.
-
----
-
-## Hogar
-
-### Planificación de viajes
-
-OpenCode puede ser tu agente de viajes particular:
-
-> Planifica un viaje de 5 días a Roma para dos personas. Presupuesto:
-> 1500€. Incluye vuelos, alojamiento, museos y restaurantes.
-
-**Variación:** pídele una versión para viajar con niños, o con
-presupuesto ajustado, o centrada en museos y arte.
-
-> Ahora conviértelo en un itinerario día a día y guárdalo como
-> viaje-roma.md.
-
----
-
-### Diario de viaje
+### Diario de viaje 🟢
 
 A la vuelta, puedes convertir tus notas sueltas en un diario:
 
@@ -256,9 +305,11 @@ A la vuelta, puedes convertir tus notas sueltas en un diario:
 > Ahora haz una versión resumida de 3 párrafos para compartir
 > con la familia.
 
+**Sugerencia:** añade descripciones de fotos para cada lugar del diario.
+
 ---
 
-### Guía de frases básicas
+### Guía de frases básicas 🟢
 
 Para un viaje al extranjero, OpenCode te prepara un chuleta:
 
@@ -270,9 +321,11 @@ Para un viaje al extranjero, OpenCode te prepara un chuleta:
 
 > Añade una sección de frases para el médico y la farmacia.
 
+**Sugerencia:** pídele también la pronunciación aproximada en español.
+
 ---
 
-### Lista de embalaje
+### Lista de embalaje 🟢
 
 Nunca olvides nada con un checklist a medida:
 
@@ -284,43 +337,11 @@ Nunca olvides nada con un checklist a medida:
 
 > Ahora haz una versión para viaje de montaña en invierno.
 
----
-
-### Presupuesto detallado
-
-Antes de reservar, OpenCode te ayuda a calcular:
-
-> Presupuesto para 3 personas en París, 4 noches. Desglosa
-> en: vuelo, hotel, comidas, transporte local, entradas a
-> museos, imprevistos (10%).
-
-**Variación:** pídele una comparativa de opciones:
-
-> Compara este presupuesto con una versión económica:
-> albergue en lugar de hotel, comer de menú en lugar de
-> restaurante.
+**Sugerencia:** guarda las versiones para tener checklists reutilizables en futuros viajes.
 
 ---
 
-### Currículum y carta de presentación
-
-Partiendo de tus datos, OpenCode te ayuda a crear documentos
-profesionales:
-
-> Tengo 5 años de experiencia en marketing digital. He trabajado en
-> dos startups y una agencia. Dame una estructura de CV moderna.
-
-Después de ajustar, pide la carta:
-
-> A partir de mi CV, escribe una carta de presentación para una
-> oferta de responsable de marketing en una empresa tecnológica.
-
-**Variación:** pide adaptar el CV a un sector concreto, o traducirlo
-al inglés.
-
----
-
-### Inventario para el hogar
+### Inventario para el hogar 🟢
 
 Útil para seguros, mudanzas o simplemente para organizarse:
 
@@ -333,21 +354,11 @@ Puedes ir completándolo con OpenCode:
 > Añade una sección de electrónica con el portátil, la tablet y la
 > consola.
 
----
-
-### Recetario personal
-
-Parte de cero o desde recetas sueltas:
-
-> Soy alérgico a la lactosa. Crea un recetario con 10 recetas
-> fáciles para el día a día. Guárdalo como recetario-sin-lactosa.md.
-
-**Variación:** pídele que calcule la lista de la compra a partir
-de las recetas que hayas elegido para la semana.
+**Sugerencia:** útil para seguros — pídele que calcule el valor total estimado de tus pertenencias.
 
 ---
 
-### Checklist de mudanza
+### Checklist de mudanza 🟢
 
 Una mudanza tiene decenas de tareas. OpenCode las organiza por ti:
 
@@ -359,25 +370,11 @@ Una mudanza tiene decenas de tareas. OpenCode las organiza por ti:
 **Variación:** pídele una versión para mudanza internacional, o
 para mudanza con mascotas.
 
----
-
-### Presupuesto mensual
-
-OpenCode puede ayudarte a llevar las cuentas:
-
-> Crea una plantilla de presupuesto mensual con ingresos y gastos
-> fijos (alquiler, facturas, comida, ocio). Déjame espacio para
-> anotar el importe real cada mes y compararlo con lo previsto.
-
-**Variación:** pídele un análisis periódico:
-
-> \`@presupuesto.md\` He gastado 150€ más de lo previsto este mes en
-> ocio. ¿En qué otras categorías podría reducir gastos para
-> compensar?
+**Sugerencia:** pídele recordatorios con fechas concretas para cada tarea.
 
 ---
 
-### Bricolaje / Taller
+### Bricolaje / Taller 🟢
 
 Un taller bien organizado ahorra tiempo y dinero:
 
@@ -397,11 +394,113 @@ Un taller bien organizado ahorra tiempo y dinero:
 > Crea una ficha técnica para cada herramienta eléctrica con:
 > potencia, usos recomendados, consejos de seguridad.
 
+**Sugerencia:** pídele una guía paso a paso con medidas y materiales exactos para cada proyecto.
+
 ---
 
-## Aficiones
+### Planificación de viajes 🟡
 
-### Jardinería — calendario de siembra
+OpenCode puede ser tu agente de viajes particular:
+
+> Planifica un viaje de 5 días a Roma para dos personas. Presupuesto:
+> 1500€. Incluye vuelos, alojamiento, museos y restaurantes.
+
+**Variación:** pídele una versión para viajar con niños, o con
+presupuesto ajustado, o centrada en museos y arte.
+
+> Ahora conviértelo en un itinerario día a día y guárdalo como
+> viaje-roma.md.
+
+**Sugerencia:** usa *Plan* para definir el presupuesto y *Build* para generar el itinerario.
+
+---
+
+### Currículum y carta de presentación 🟡
+
+Partiendo de tus datos, OpenCode te ayuda a crear documentos
+profesionales:
+
+> Tengo 5 años de experiencia en marketing digital. He trabajado en
+> dos startups y una agencia. Dame una estructura de CV moderna.
+
+Después de ajustar, pide la carta:
+
+> A partir de mi CV, escribe una carta de presentación para una
+> oferta de responsable de marketing en una empresa tecnológica.
+
+**Variación:** pide adaptar el CV a un sector concreto, o traducirlo
+al inglés.
+
+**Sugerencia:** usa *Plan* para definir tu perfil antes de generar el CV en *Build*.
+
+---
+
+## Alimentación {#sec-alimentacion}
+
+Recetarios, planificación semanal de comidas y programación dietética personalizada.
+
+### Recetario personal 🟢
+
+OpenCode puede ayudarte a recopilar y organizar tus recetas
+preferidas en un documento estructurado:
+
+> Crea una guía con mis 10 platos favoritos. Para cada uno
+> incluye: nombre, ingredientes, tiempo de preparación, nivel
+> de dificultad y un consejo personal. Guárdala como
+> mis-platos-favoritos.md.
+
+Luego puedes ampliarla por categorías: primeros, segundos,
+postres, o por tipo de cocina.
+
+**Variación:** pídele que añada fotos descriptivas (texto
+alternativo), que calcule el coste aproximado por ración o
+que genere la lista de la compra a partir de las recetas
+que hayas elegido para la semana.
+
+**Sugerencia:** amplíala por categorías o por tipo de cocina para tener un recetario completo.
+
+---
+
+### Cocina — plan semanal de comidas 🟢
+
+Ahorra tiempo planificando la semana:
+
+> Planifica 7 comidas para esta semana aprovechando estos
+> ingredientes: pollo, verduras de temporada, arroz, lentejas,
+> huevos. Dame también la lista de la compra.
+
+**Variación:** pídele un menú adaptado a dietas:
+
+> Ahora hazlo versión apta para celíacos.
+
+**Sugerencia:** pídele un menú semanal que aproveche ingredientes comunes para ahorrar en la compra.
+
+---
+
+### Programación dietética personalizada 🟡
+
+A partir de tus platos favoritos y necesidades nutricionales,
+OpenCode te genera un plan semanal equilibrado:
+
+> \`@mis-platos-favoritos.md\` A partir de mis recetas, crea una
+> programación semanal de comidas equilibrada. Incluye desayuno,
+> comida y cena para 7 días. Asegúrate de variar los grupos de
+> alimentos y evitar repetir el mismo plato dos días seguidos.
+> Añade la lista de la compra al final.
+
+**Variación:** pídele adaptaciones para objetivos concretos:
+pérdida de peso, ganancia muscular, dieta baja en hidratos,
+o menú semanal para toda la familia.
+
+**Sugerencia:** usa `@` para enlazar con tu recetario y generar la lista de la compra automáticamente cada semana.
+
+---
+
+## Aficiones {#sec-aficiones}
+
+Ideas para hobbies y actividades personales: jardinería, fotografía, lectura, juegos de mesa y mascotas.
+
+### Jardinería — calendario de siembra 🟢
 
 Si tienes un huerto o jardín, OpenCode te ayuda a planificar:
 
@@ -415,9 +514,11 @@ Si tienes un huerto o jardín, OpenCode te ayuda a planificar:
 > incluya: riego, sol, plagas comunes y asociación con otros
 > cultivos.
 
+**Sugerencia:** pídele que te recuerde cuándo regar cada planta según la estación del año.
+
 ---
 
-### Fotografía — chuleta de configuración
+### Fotografía — chuleta de configuración 🟢
 
 Una guía rápida para no perderse con los modos de la cámara:
 
@@ -429,9 +530,11 @@ Una guía rápida para no perderse con los modos de la cámara:
 
 > Ahora adáptala para una Sony A6400.
 
+**Sugerencia:** pídele una chuleta imprimible para llevar en la mochila de la cámara.
+
 ---
 
-### Lectura — registro de libros
+### Lectura — registro de libros 🟢
 
 Llevar un registro de lecturas es fácil con OpenCode:
 
@@ -443,23 +546,197 @@ Llevar un registro de lecturas es fácil con OpenCode:
 > \`@lecturas.md\` ¿Cuántos libros leí este año? ¿Qué género leo
 > más? ¿Cuál fue mi mejor puntuación?
 
----
-
-### Cocina — plan semanal de comidas
-
-Ahorra tiempo planificando la semana:
-
-> Planifica 7 comidas para esta semana aprovechando estos
-> ingredientes: pollo, verduras de temporada, arroz, lentejas,
-> huevos. Dame también la lista de la compra.
-
-**Variación:** pídele un menú adaptado a dietas:
-
-> Ahora hazlo versión apta para celíacos.
+**Sugerencia:** pídele recomendaciones de lectura basadas en tus libros mejor valorados.
 
 ---
 
-### Running — plan de entrenamiento avanzado
+### Juegos de mesa — registro de partidas 🟢
+
+Si juegas con asiduidad, llevar la cuenta es fácil:
+
+> Crea una tabla para registrar partidas de juegos de mesa:
+> juego, fecha, jugadores, ganador, duración, notas.
+
+**Variación:** pídele un ranking:
+
+> \`@partidas.md\` ¿Quién ha ganado más partidas este mes? ¿Qué
+> juego jugamos más veces?
+
+**Sugerencia:** pídele estadísticas periódicas para saber quién domina cada juego.
+
+---
+
+### Mascotas — guía de cuidados 🟢
+
+Una ficha completa para tu mascota:
+
+> Crea una ficha de cuidados para mi perro: raza, edad, peso,
+> vacunas, alimentación, paseos, veterinario, emergencias.
+
+**Variación:** pídele un historial veterinario:
+
+> \`@ficha-perro.md\` Añade una sección para registrar visitas al
+> veterinario con fecha, motivo y tratamiento.
+
+**Sugerencia:** pídele un calendario de vacunas y próximas visitas al veterinario.
+
+---
+
+## Compras y finanzas {#sec-compras}
+
+Análisis de productos, comparación de ofertas y control de presupuestos personales.
+
+### Análisis de productos 🟢
+
+Cuando dudes entre varios productos, pídele a OpenCode una
+comparativa con las características que realmente importan:
+
+> Voy a comprar un portátil para desarrollo. Compara estos modelos:
+>
+> - Modelo A: i7, 16 GB RAM, 512 GB SSD, 950 €
+> - Modelo B: i5, 32 GB RAM, 1 TB SSD, 1100 €
+> - Modelo C: Ryzen 7, 16 GB RAM, 512 GB SSD, 850 €
+>
+> Crea una tabla comparativa con las características relevantes
+> para programación y dime cuál ofrece mejor relación calidad-precio.
+
+**Variación:** pídele un análisis según tu uso concreto
+(edición de vídeo, gaming, ofimática) o que incluya opiniones
+de fuentes especializadas. Usa el enlace a la página del proyecto.
+
+**Sugerencia:** incluye siempre tu caso de uso concreto para que la comparativa sea relevante.
+
+---
+
+### Presupuesto detallado 🟢
+
+Antes de reservar, OpenCode te ayuda a calcular:
+
+> Presupuesto para 3 personas en París, 4 noches. Desglosa
+> en: vuelo, hotel, comidas, transporte local, entradas a
+> museos, imprevistos (10%).
+
+**Variación:** pídele una comparativa de opciones:
+
+> Compara este presupuesto con una versión económica:
+> albergue en lugar de hotel, comer de menú en lugar de
+> restaurante.
+
+**Sugerencia:** pídele que incluya siempre un 10 % de imprevistos en el total.
+
+---
+
+### Comparación de ofertas económicas 🟡
+
+Si tienes varios presupuestos de distintos proveedores, OpenCode
+los analiza por ti:
+
+> \`@presupuesto-A.pdf\` \`@presupuesto-B.pdf\` \`@presupuesto-C.pdf\`
+> Compara estas tres ofertas. Dime:
+> 1. Cuál es más barata en precio total
+> 2. Cuál incluye más servicios
+> 3. Diferencias en plazos de entrega y condiciones de pago
+> 4. Cuál recomendarías y por qué
+
+**Variación:** si los presupuestos están en texto, pégalos
+directamente en el chat. Pídele también un resumen ejecutivo
+para presentar a tu equipo.
+
+**Sugerencia:** guarda el análisis como plantilla para reutilizarla en futuras comparaciones.
+
+---
+
+### Presupuesto mensual 🟡
+
+OpenCode puede ayudarte a llevar las cuentas:
+
+> Crea una plantilla de presupuesto mensual con ingresos y gastos
+> fijos (alquiler, facturas, comida, ocio). Déjame espacio para
+> anotar el importe real cada mes y compararlo con lo previsto.
+
+**Variación:** pídele un análisis periódico:
+
+> \`@presupuesto.md\` He gastado 150€ más de lo previsto este mes en
+> ocio. ¿En qué otras categorías podría reducir gastos para
+> compensar?
+
+**Sugerencia:** usa `@` para comparar meses anteriores y detectar desviaciones a tiempo.
+
+---
+
+## Deportes {#sec-deportes}
+
+Planes de entrenamiento, registro de marcas, calendarios de temporada y prevención de lesiones.
+
+### Plan de entrenamiento semanal 🟢
+
+Tanto si eres principiante como avanzado, OpenCode te diseña
+rutinas a medida:
+
+> Soy corredor principiante. Crea un plan de 8 semanas para
+> preparar 10 km, con 3 días de running y 2 de fuerza.
+
+**Variación:** pídele adaptaciones por lesión o condición:
+
+> Tengo una sobrecarga en el tendón de Aquiles. Ajusta el plan
+> para incluir más descanso y ejercicios de fortalecimiento.
+
+**Sugerencia:** pide variaciones semanales para no aburrirte con la misma rutina.
+
+---
+
+### Registro de marcas 🟢
+
+Lleva un histórico de tus progresos:
+
+> Crea una tabla para registrar mis marcas personales en
+> running: distancia, tiempo, fecha, lugar, sensaciones (1-5).
+> Déjame ejemplos de cómo rellenarla.
+
+**Variación:** extiéndelo a natación o ciclismo:
+
+> Añade una hoja para natación: estilo, distancia, tiempo y
+> pulsaciones.
+
+**Sugerencia:** pídele a OpenCode que analice tu progreso cada mes.
+
+---
+
+### Calendario de temporada 🟢
+
+Para deportes de equipo o ligas organizadas:
+
+> Genera un calendario de liga para 8 equipos, ida y vuelta
+> (14 jornadas). Déjame espacio para anotar resultado de cada
+> partido. Guárdalo como calendario-liga.md.
+
+**Variación:** pídele una clasificación automatizada:
+
+> A partir del calendario, crea una tabla de clasificación que
+> calcule automáticamente puntos, goles a favor y en contra.
+
+**Sugerencia:** usa el calendario para seguir la clasificación actualizada cada jornada.
+
+---
+
+### Prevención y estiramientos 🟢
+
+Una guía rápida para evitar lesiones:
+
+> Soy corredor y tengo molestias en la rodilla. Dame una
+> rutina diaria de estiramientos y fortalecimiento de 15
+> minutos.
+
+**Variación:** pídele una versión ilustrada (descripciones):
+
+> Describe cada ejercicio con claridad para que pueda seguirlo
+> sin vídeo: posición inicial, movimiento, respiración.
+
+**Sugerencia:** pídele una rutina diaria de 10 minutos para hacer en casa sin material.
+
+---
+
+### Running — plan de entrenamiento avanzado 🟢
 
 Además del plan para principiantes, puedes pedir progresión:
 
@@ -472,33 +749,194 @@ Además del plan para principiantes, puedes pedir progresión:
 > Plan específico para preparar una media maratón en 3 meses.
 > Mi marca actual en 10 km es 55 minutos.
 
----
-
-### Juegos de mesa — registro de partidas
-
-Si juegas con asiduidad, llevar la cuenta es fácil:
-
-> Crea una tabla para registrar partidas de juegos de mesa:
-> juego, fecha, jugadores, ganador, duración, notas.
-
-**Variación:** pídele un ranking:
-
-> \`@partidas.md\` ¿Quién ha ganado más partidas este mes? ¿Qué
-> juego jugamos más veces?
+**Sugerencia:** pídele que ajuste el plan según tu evolución cada mes.
 
 ---
 
-### Mascotas — guía de cuidados
+## Planificación {#sec-planificacion}
 
-Una ficha completa para tu mascota:
+Generación de calendarios ICS y planes de proyecto multi-paso.
 
-> Crea una ficha de cuidados para mi perro: raza, edad, peso,
-> vacunas, alimentación, paseos, veterinario, emergencias.
+### Programar actividades y generar ICS 🟡
 
-**Variación:** pídele un historial veterinario:
+OpenCode puede generar un archivo de calendario (`.ics`) que puedes
+importar en Google Calendar, Outlook o cualquier aplicación de
+calendario. Solo tienes que describir las actividades:
 
-> \`@ficha-perro.md\` Añade una sección para registrar visitas al
-> veterinario con fecha, motivo y tratamiento.
+> Soy profesor y necesito un calendario con las siguientes actividades:
+>
+> - Examen parcial: 15 de octubre, 10:00-12:00
+> - Entrega de prácticas: cada viernes hasta el 30 de noviembre
+> - Tutorías: lunes y miércoles de 16:00 a 18:00
+>
+> Genera un archivo .ics con todos estos eventos. Guárdalo como
+> calendario-curso.ics.
+
+**Variación:** pídele eventos recurrentes (clases semanales,
+reuniones mensuales) o importa fechas desde una lista en Markdown.
+
+**Sugerencia:** usa *Plan* para definir las actividades y *Build* para generar el archivo .ics.
+
+---
+
+### Proyectos de varios pasos 🟡
+
+Para proyectos grandes, OpenCode puede dividirlos en hitos y tareas,
+generando un plan ejecutable paso a paso:
+
+> Necesito organizar la mudanza de oficina. Tengo 3 meses por
+> delante. Dame un plan con hitos mensuales, tareas semanales y
+> responsables para cada una. Guárdalo como \`plan-mudanza-oficina.md\`.
+
+El resultado es un documento con fechas, dependencias y checklists
+que puedes ir marcando a medida que avanzas.
+
+**Variación:** pídele un diagrama de Gantt en tabla Markdown o
+una estimación de tiempos para cada fase del proyecto.
+
+**Sugerencia:** divide el proyecto en hitos mensuales y usa `@` para referenciar el plan en cada fase.
+
+---
+
+## Comandos {#sec-comandos}
+
+Comandos personalizados para automatizar tareas recurrentes de documentación.
+
+### /minuta 🔴
+
+Genera un acta de reunión con estructura fija:
+
+```markdown
+---
+description: Genera un acta a partir de notas de reunión
+---
+
+A partir de estas notas de reunión, genera un acta con:
+asistentes, orden del día, acuerdos, puntos pendientes
+y fecha de próxima reunión. Usa tono formal.
+
+$ARGUMENTS
+```
+
+**Variación:** combínalo con `@` para enriquecer el acta con
+documentos de referencia.
+
+**Sugerencia:** define una descripción clara para que OpenCode entienda bien el contexto del acta.
+
+---
+
+### /liberar 🔴
+
+Prepara la nota de release de una versión:
+
+```markdown
+---
+description: Prepara la nota de release de una nueva versión
+---
+
+Con los cambios de la versión `$ARGUMENTS`, genera una
+nota de release con: resumen, novedades, mejoras,
+correcciones y agradecimientos.
+```
+
+**Variación:** pídele que enumere los cambios respecto a la versión
+anterior automáticamente.
+
+**Sugerencia:** combínalo con `@changelog.md` para generar la nota de release automáticamente.
+
+---
+
+## Sistema y mantenimiento {#sec-sistema}
+
+Diagnóstico de errores, copias de seguridad, inventario del sistema y mantenimiento del ordenador.
+
+### Plan de copias de seguridad 🟢
+
+> Necesito un plan de backups para mi portátil personal. Dame una
+> checklist con: qué carpetas copiar (Documentos, Fotos, Configuración),
+> dónde guardarlas (disco externo, nube) y cada cuánto hacer cada
+> copia. Guárdalo como plan-backups.md.
+
+**Variación:** pídele una versión para un equipo con datos críticos
+de empresa o para un servidor.
+
+**Sugerencia:** programa recordatorios periódicos para no olvidar las copias.
+
+---
+
+### Documentación del sistema 🟢
+
+> Crea un inventario de mi equipo con: hardware (procesador, RAM,
+> discos, gráfica), software instalado (SO, programas clave con
+> versiones), licencias y configuraciones destacadas. Déjame espacio
+> para anotar cambios. Guárdalo como inventario-sistema.md.
+
+**Variación:** pídele que calcule el valor de reposición del hardware
+para el seguro o que genere una tabla comparativa con las
+especificaciones técnicas.
+
+**Sugerencia:** mantenlo actualizado; te será muy útil para reparaciones o al vender el equipo.
+
+---
+
+### Calendario de mantenimiento 🟢
+
+> Crea un plan de mantenimiento periódico para mi ordenador: limpiar
+> archivos temporales, actualizar SO y drivers, revisar salud del
+> disco, revisar suscripciones y limpiar el polvo interior. Indica
+> frecuencia (semanal, mensual, trimestral). Guárdalo como
+> mantenimiento-pc.md.
+
+**Variación:** pídele que añada una columna de "última vez" para
+saber cuándo hiciste cada tarea.
+
+**Sugerencia:** pídele recordatorios trimestrales para cada tarea de mantenimiento.
+
+---
+
+### Checklist post-formateo 🟢
+
+> Acabo de formatear el ordenador e instalar el sistema desde cero.
+> Dame una checklist ordenada de todo lo que tengo que hacer después:
+> instalar drivers, programas esenciales, restaurar datos desde backup,
+> configurar cuentas, personalizar el sistema. Guárdalo como
+> post-formateo.md.
+
+**Variación:** pídele versiones específicas para Windows, Linux o
+macOS.
+
+**Sugerencia:** guarda la checklist para reutilizarla y mejorarla en futuros formateos.
+
+---
+
+### Diagnóstico de errores 🟡
+
+Cuando tu sistema da un error inesperado, puedes copiar el mensaje
+y pedirle a OpenCode que lo analice:
+
+> He visto este error al arrancar el programa: \`Fallo al cargar
+> librería libXYZ.so\`. ¿Qué puede estar causándolo? Dame causas
+> ordenadas por probabilidad y pasos para solucionar cada una.
+
+**Variación:** pídele un informe con recomendaciones para evitar
+que el error se repita o que compare el error con otros conocidos.
+
+**Sugerencia:** incluye el sistema operativo, la versión del software y qué estabas haciendo cuando ocurrió el error.
+
+---
+
+### Seguridad básica 🟡
+
+> \`@inventario-sistema.md\` A partir del inventario de mi sistema,
+> revísame la configuración de seguridad: ¿qué servicios innecesarios
+> podrían estar activos? ¿faltan actualizaciones críticas? ¿qué puertos
+> o servicios suponen un riesgo? Dame una lista de acciones
+> prioritarias.
+
+**Variación:** pídele una guía de buenas prácticas de seguridad
+adaptada a tu perfil (uso doméstico, teletrabajo, servidor).
+
+**Sugerencia:** repite esta revisión cada trimestre para mantener el sistema protegido.
 
 ---
 

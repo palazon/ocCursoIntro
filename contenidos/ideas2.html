@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Más ideas para usar OpenCode en tu día a día</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="ideas2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ideas2_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="ideas2_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="ideas2_files/libs/quarto-html/popper.min.js"></script>
+<script src="ideas2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ideas2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ideas2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ideas2_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ideas2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ideas2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ideas2_files/libs/bootstrap/bootstrap-ba13d4a16a61746bd6fb80a772d4709f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#documentación-para-novatos" id="toc-documentación-para-novatos" class="nav-link active" data-scroll-target="#documentación-para-novatos">Documentación para novatos</a>
+  <ul class="collapse">
+  <li><a href="#de-la-grabación-al-acta" id="toc-de-la-grabación-al-acta" class="nav-link" data-scroll-target="#de-la-grabación-al-acta">De la grabación al acta 🟢</a></li>
+  <li><a href="#de-la-idea-al-esquema" id="toc-de-la-idea-al-esquema" class="nav-link" data-scroll-target="#de-la-idea-al-esquema">De la idea al esquema 🟢</a></li>
+  <li><a href="#del-correo-al-documento-formal" id="toc-del-correo-al-documento-formal" class="nav-link" data-scroll-target="#del-correo-al-documento-formal">Del correo al documento formal 🟡</a></li>
+  <li><a href="#de-notas-dispersas-a-wiki-unificada" id="toc-de-notas-dispersas-a-wiki-unificada" class="nav-link" data-scroll-target="#de-notas-dispersas-a-wiki-unificada">De notas dispersas a wiki unificada 🟡</a></li>
+  <li><a href="#de-técnico-a-divulgativo" id="toc-de-técnico-a-divulgativo" class="nav-link" data-scroll-target="#de-técnico-a-divulgativo">De técnico a divulgativo 🟡</a></li>
+  <li><a href="#de-transcripción-a-tutorial" id="toc-de-transcripción-a-tutorial" class="nav-link" data-scroll-target="#de-transcripción-a-tutorial">De transcripción a tutorial 🟡</a></li>
+  </ul></li>
+  <li><a href="#planificación-y-calendarios" id="toc-planificación-y-calendarios" class="nav-link" data-scroll-target="#planificación-y-calendarios">Planificación y calendarios</a>
+  <ul class="collapse">
+  <li><a href="#programar-actividades-y-generar-ics" id="toc-programar-actividades-y-generar-ics" class="nav-link" data-scroll-target="#programar-actividades-y-generar-ics">Programar actividades y generar ICS 🟡</a></li>
+  <li><a href="#proyectos-de-varios-pasos" id="toc-proyectos-de-varios-pasos" class="nav-link" data-scroll-target="#proyectos-de-varios-pasos">Proyectos de varios pasos 🟡</a></li>
+  </ul></li>
+  <li><a href="#compras-y-finanzas" id="toc-compras-y-finanzas" class="nav-link" data-scroll-target="#compras-y-finanzas">Compras y finanzas</a>
+  <ul class="collapse">
+  <li><a href="#análisis-de-productos" id="toc-análisis-de-productos" class="nav-link" data-scroll-target="#análisis-de-productos">Análisis de productos 🟢</a></li>
+  <li><a href="#comparación-de-ofertas-económicas" id="toc-comparación-de-ofertas-económicas" class="nav-link" data-scroll-target="#comparación-de-ofertas-económicas">Comparación de ofertas económicas 🟡</a></li>
+  </ul></li>
+  <li><a href="#alimentación" id="toc-alimentación" class="nav-link" data-scroll-target="#alimentación">Alimentación</a>
+  <ul class="collapse">
+  <li><a href="#guía-de-platos-favoritos" id="toc-guía-de-platos-favoritos" class="nav-link" data-scroll-target="#guía-de-platos-favoritos">Guía de platos favoritos 🟢</a></li>
+  <li><a href="#programación-dietética-personalizada" id="toc-programación-dietética-personalizada" class="nav-link" data-scroll-target="#programación-dietética-personalizada">Programación dietética personalizada 🟡</a></li>
+  </ul></li>
+  <li><a href="#sistema-y-mantenimiento" id="toc-sistema-y-mantenimiento" class="nav-link" data-scroll-target="#sistema-y-mantenimiento">Sistema y mantenimiento</a>
+  <ul class="collapse">
+  <li><a href="#diagnóstico-de-errores" id="toc-diagnóstico-de-errores" class="nav-link" data-scroll-target="#diagnóstico-de-errores">Diagnóstico de errores 🟡</a></li>
+  <li><a href="#plan-de-copias-de-seguridad" id="toc-plan-de-copias-de-seguridad" class="nav-link" data-scroll-target="#plan-de-copias-de-seguridad">Plan de copias de seguridad 🟢</a></li>
+  <li><a href="#documentación-del-sistema" id="toc-documentación-del-sistema" class="nav-link" data-scroll-target="#documentación-del-sistema">Documentación del sistema 🟢</a></li>
+  <li><a href="#calendario-de-mantenimiento" id="toc-calendario-de-mantenimiento" class="nav-link" data-scroll-target="#calendario-de-mantenimiento">Calendario de mantenimiento 🟢</a></li>
+  <li><a href="#checklist-post-formateo" id="toc-checklist-post-formateo" class="nav-link" data-scroll-target="#checklist-post-formateo">Checklist post-formateo 🟢</a></li>
+  <li><a href="#seguridad-básica" id="toc-seguridad-básica" class="nav-link" data-scroll-target="#seguridad-básica">Seguridad básica 🟡</a></li>
+  </ul></li>
+  <li><a href="#comandos-para-documentación" id="toc-comandos-para-documentación" class="nav-link" data-scroll-target="#comandos-para-documentación">Comandos para documentación</a>
+  <ul class="collapse">
+  <li><a href="#minuta" id="toc-minuta" class="nav-link" data-scroll-target="#minuta">/minuta 🔴</a></li>
+  <li><a href="#liberar" id="toc-liberar" class="nav-link" data-scroll-target="#liberar">/liberar 🔴</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Más ideas para usar OpenCode en tu día a día</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="documentación-para-novatos" class="level2">
+<h2 class="anchored" data-anchor-id="documentación-para-novatos">Documentación para novatos</h2>
+<p>OpenCode destaca especialmente en tareas de documentación. Aquí tienes ejemplos progresivos para quien empieza:</p>
+<section id="de-la-grabación-al-acta" class="level3">
+<h3 class="anchored" data-anchor-id="de-la-grabación-al-acta">De la grabación al acta 🟢</h3>
+<p>Tomas notas sueltas durante una reunión y OpenCode las convierte en un acta profesional:</p>
+<blockquote class="blockquote">
+<p>He apuntado: “reunión 10 jun — Pedro retraso en servidores — Laura presupuesto Q3 listo — acuerdo: reunión semanal los lunes — pendiente: migrar datos antes del 30”. Genera un acta con: asistentes, acuerdos, pendientes y próxima reunión.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que genere el acta en tono formal para enviar por correo, o en tono informal para el equipo interno.</p>
+<p><strong>Sugerencia:</strong> crea un comando <code>/acta-reunion</code> para acelerar aún más el proceso.</p>
+<hr>
+</section>
+<section id="de-la-idea-al-esquema" class="level3">
+<h3 class="anchored" data-anchor-id="de-la-idea-al-esquema">De la idea al esquema 🟢</h3>
+<p>Describes un proyecto en pocas frases y OpenCode te devuelve un índice estructurado para empezar a escribir:</p>
+<blockquote class="blockquote">
+<p>Necesito documentar el proceso de incorporación de nuevos empleados. Dame un esquema del manual con las secciones que debería incluir, ordenadas de forma lógica.</p>
+</blockquote>
+<p>Una vez conforme, pídele que desarrolle cada sección.</p>
+<p><strong>Variación:</strong> pídele el esquema en formato tabla con tiempo estimado de redacción por sección.</p>
+<p><strong>Sugerencia:</strong> una vez conforme con el esquema, pídele que desarrolle cada sección en <em>Build</em>.</p>
+<hr>
+</section>
+<section id="del-correo-al-documento-formal" class="level3">
+<h3 class="anchored" data-anchor-id="del-correo-al-documento-formal">Del correo al documento formal 🟡</h3>
+<p>¿Tienes un correo informal explicando un proceso? Conviértelo en un procedimiento documentado:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="correo-proceso.txt">@correo-proceso.txt</span>` A partir de este correo informal, genera un documento de procedimiento estándar con: objetivo, alcance, responsables, pasos detallados y referencias. Guárdalo como procedimiento-oficial.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión imprimible o una infografía textual con los pasos resumidos.</p>
+<p><strong>Sugerencia:</strong> pídele también una versión resumida en una página para compartir con el equipo.</p>
+<hr>
+</section>
+<section id="de-notas-dispersas-a-wiki-unificada" class="level3">
+<h3 class="anchored" data-anchor-id="de-notas-dispersas-a-wiki-unificada">De notas dispersas a wiki unificada 🟡</h3>
+<p>Si tienes varios archivos sueltos con ideas, OpenCode los unifica en un documento coherente:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="nota-1.md">@nota-1.md</span>` `<span class="citation" data-cites="nota-2.md">@nota-2.md</span>` `<span class="citation" data-cites="nota-3.md">@nota-3.md</span>` Combina estos tres archivos en un solo documento bien estructurado. Elimina duplicados, ordena las ideas por tema y pon títulos a cada sección. Guárdalo como `wiki-unificada.md`.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que añada un índice al principio y enlaces entre secciones relacionadas.</p>
+<p><strong>Sugerencia:</strong> añade un índice al principio y enlaces entre secciones para navegar mejor.</p>
+<hr>
+</section>
+<section id="de-técnico-a-divulgativo" class="level3">
+<h3 class="anchored" data-anchor-id="de-técnico-a-divulgativo">De técnico a divulgativo 🟡</h3>
+<p>Tomas un documento técnico y pides una versión para principiantes:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="manual-tecnico.md">@manual-tecnico.md</span>` Reescribe este manual como si se lo explicaras a una persona que nunca ha usado el producto. Elimina jerga técnica, usa ejemplos cotidianos y divide la información en pasos muy claros. Guárdalo como `guia-principiantes.md`.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele también una versión “cheat sheet” de una sola página con lo esencial.</p>
+<p><strong>Sugerencia:</strong> pídele también una “cheat sheet” de una página con lo esencial para consulta rápida.</p>
+<hr>
+</section>
+<section id="de-transcripción-a-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="de-transcripción-a-tutorial">De transcripción a tutorial 🟡</h3>
+<p>¿Grabaste un vídeo formativo? Pasa la transcripción y OpenCode la convierte en un tutorial escrito:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="transcripcion.txt">@transcripcion.txt</span>` A partir de esta transcripción de vídeo, crea un tutorial paso a paso. Incluye: objetivo, materiales necesarios, pasos numerados con explicaciones y un resumen final. Guárdalo como `tutorial-escrito.md`.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que extraiga solo los pasos prácticos (como una lista de acciones) o que genere una versión FAQ con las dudas más frecuentes.</p>
+<p><strong>Sugerencia:</strong> pídele que extraiga solo los pasos prácticos como lista de acciones rápida.</p>
+<hr>
+</section>
+</section>
+<section id="planificación-y-calendarios" class="level2">
+<h2 class="anchored" data-anchor-id="planificación-y-calendarios">Planificación y calendarios</h2>
+<section id="programar-actividades-y-generar-ics" class="level3">
+<h3 class="anchored" data-anchor-id="programar-actividades-y-generar-ics">Programar actividades y generar ICS 🟡</h3>
+<p>OpenCode puede generar un archivo de calendario (<code>.ics</code>) que puedes importar en Google Calendar, Outlook o cualquier aplicación de calendario. Solo tienes que describir las actividades:</p>
+<blockquote class="blockquote">
+<p>Soy profesor y necesito un calendario con las siguientes actividades:</p>
+<ul>
+<li>Examen parcial: 15 de octubre, 10:00-12:00</li>
+<li>Entrega de prácticas: cada viernes hasta el 30 de noviembre</li>
+<li>Tutorías: lunes y miércoles de 16:00 a 18:00</li>
+</ul>
+<p>Genera un archivo .ics con todos estos eventos. Guárdalo como calendario-curso.ics.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele eventos recurrentes (clases semanales, reuniones mensuales) o importa fechas desde una lista en Markdown.</p>
+<p><strong>Sugerencia:</strong> usa <em>Plan</em> para definir las actividades y <em>Build</em> para generar el archivo .ics.</p>
+<hr>
+</section>
+<section id="proyectos-de-varios-pasos" class="level3">
+<h3 class="anchored" data-anchor-id="proyectos-de-varios-pasos">Proyectos de varios pasos 🟡</h3>
+<p>Para proyectos grandes, OpenCode puede dividirlos en hitos y tareas, generando un plan ejecutable paso a paso:</p>
+<blockquote class="blockquote">
+<p>Necesito organizar la mudanza de oficina. Tengo 3 meses por delante. Dame un plan con hitos mensuales, tareas semanales y responsables para cada una. Guárdalo como `plan-mudanza-oficina.md`.</p>
+</blockquote>
+<p>El resultado es un documento con fechas, dependencias y checklists que puedes ir marcando a medida que avanzas.</p>
+<p><strong>Variación:</strong> pídele un diagrama de Gantt en tabla Markdown o una estimación de tiempos para cada fase del proyecto.</p>
+<p><strong>Sugerencia:</strong> divide el proyecto en hitos mensuales y usa <code>@</code> para referenciar el plan en cada fase.</p>
+<hr>
+</section>
+</section>
+<section id="compras-y-finanzas" class="level2">
+<h2 class="anchored" data-anchor-id="compras-y-finanzas">Compras y finanzas</h2>
+<section id="análisis-de-productos" class="level3">
+<h3 class="anchored" data-anchor-id="análisis-de-productos">Análisis de productos 🟢</h3>
+<p>Cuando dudes entre varios productos, pídele a OpenCode una comparativa con las características que realmente importan:</p>
+<blockquote class="blockquote">
+<p>Voy a comprar un portátil para desarrollo. Compara estos modelos:</p>
+<ul>
+<li>Modelo A: i7, 16 GB RAM, 512 GB SSD, 950 €</li>
+<li>Modelo B: i5, 32 GB RAM, 1 TB SSD, 1100 €</li>
+<li>Modelo C: Ryzen 7, 16 GB RAM, 512 GB SSD, 850 €</li>
+</ul>
+<p>Crea una tabla comparativa con las características relevantes para programación y dime cuál ofrece mejor relación calidad-precio.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un análisis según tu uso concreto (edición de vídeo, gaming, ofimática) o que incluya opiniones de fuentes especializadas. Usa el enlace a la página del proyecto.</p>
+<p><strong>Sugerencia:</strong> incluye siempre tu caso de uso concreto para que la comparativa sea relevante.</p>
+<hr>
+</section>
+<section id="comparación-de-ofertas-económicas" class="level3">
+<h3 class="anchored" data-anchor-id="comparación-de-ofertas-económicas">Comparación de ofertas económicas 🟡</h3>
+<p>Si tienes varios presupuestos de distintos proveedores, OpenCode los analiza por ti:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="presupuesto-A.pdf">@presupuesto-A.pdf</span>` `<span class="citation" data-cites="presupuesto-B.pdf">@presupuesto-B.pdf</span>` `<span class="citation" data-cites="presupuesto-C.pdf">@presupuesto-C.pdf</span>` Compara estas tres ofertas. Dime: 1. Cuál es más barata en precio total 2. Cuál incluye más servicios 3. Diferencias en plazos de entrega y condiciones de pago 4. Cuál recomendarías y por qué</p>
+</blockquote>
+<p><strong>Variación:</strong> si los presupuestos están en texto, pégalos directamente en el chat. Pídele también un resumen ejecutivo para presentar a tu equipo.</p>
+<p><strong>Sugerencia:</strong> pídele también un resumen ejecutivo para presentar a tu equipo.</p>
+<hr>
+</section>
+</section>
+<section id="alimentación" class="level2">
+<h2 class="anchored" data-anchor-id="alimentación">Alimentación</h2>
+<section id="guía-de-platos-favoritos" class="level3">
+<h3 class="anchored" data-anchor-id="guía-de-platos-favoritos">Guía de platos favoritos 🟢</h3>
+<p>OpenCode puede ayudarte a recopilar y organizar tus recetas preferidas en un documento estructurado:</p>
+<blockquote class="blockquote">
+<p>Crea una guía con mis 10 platos favoritos. Para cada uno incluye: nombre, ingredientes, tiempo de preparación, nivel de dificultad y un consejo personal. Guárdala como `mis-platos-favoritos.md`.</p>
+</blockquote>
+<p>Luego puedes ampliarla por categorías: primeros, segundos, postres, o por tipo de cocina.</p>
+<p><strong>Variación:</strong> pídele que añada fotos descriptivas (texto alternativo) o que calcule el coste aproximado por ración o el aporte calórico, …</p>
+<p><strong>Sugerencia:</strong> amplíala por categorías o por tipo de cocina para tener un recetario completo.</p>
+<hr>
+</section>
+<section id="programación-dietética-personalizada" class="level3">
+<h3 class="anchored" data-anchor-id="programación-dietética-personalizada">Programación dietética personalizada 🟡</h3>
+<p>A partir de tus platos favoritos y necesidades nutricionales, OpenCode te genera un plan semanal equilibrado:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="mis-platos-favoritos.md">@mis-platos-favoritos.md</span>` A partir de mis recetas, crea una programación semanal de comidas equilibrada. Incluye desayuno, comida y cena para 7 días. Asegúrate de variar los grupos de alimentos y evitar repetir el mismo plato dos días seguidos. Añade la lista de la compra al final.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele adaptaciones para objetivos concretos: pérdida de peso, ganancia muscular, dieta baja en hidratos, o menú semanal para toda la familia.</p>
+<p><strong>Sugerencia:</strong> usa <code>@</code> para enlazar con tu recetario y generar la lista de la compra automáticamente cada semana.</p>
+<hr>
+</section>
+</section>
+<section id="sistema-y-mantenimiento" class="level2">
+<h2 class="anchored" data-anchor-id="sistema-y-mantenimiento">Sistema y mantenimiento</h2>
+<section id="diagnóstico-de-errores" class="level3">
+<h3 class="anchored" data-anchor-id="diagnóstico-de-errores">Diagnóstico de errores 🟡</h3>
+<p>Cuando tu sistema da un error inesperado, puedes copiar el mensaje y pedirle a OpenCode que lo analice:</p>
+<blockquote class="blockquote">
+<p>He visto este error al arrancar el programa: `Fallo al cargar librería libXYZ.so`. ¿Qué puede estar causándolo? Dame causas ordenadas por probabilidad y pasos para solucionar cada una.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un informe con recomendaciones para evitar que el error se repita o que compare el error con otros conocidos.</p>
+<p><strong>Sugerencia:</strong> incluye el sistema operativo, la versión del software y qué estabas haciendo cuando ocurrió el error.</p>
+<hr>
+</section>
+<section id="plan-de-copias-de-seguridad" class="level3">
+<h3 class="anchored" data-anchor-id="plan-de-copias-de-seguridad">Plan de copias de seguridad 🟢</h3>
+<blockquote class="blockquote">
+<p>Necesito un plan de backups para mi portátil personal. Dame una checklist con: qué carpetas copiar (Documentos, Fotos, Configuración), dónde guardarlas (disco externo, nube) y cada cuánto hacer cada copia. Guárdalo como plan-backups.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión para un equipo con datos críticos de empresa o para un servidor.</p>
+<p><strong>Sugerencia:</strong> programa recordatorios periódicos para no olvidar las copias.</p>
+<hr>
+</section>
+<section id="documentación-del-sistema" class="level3">
+<h3 class="anchored" data-anchor-id="documentación-del-sistema">Documentación del sistema 🟢</h3>
+<blockquote class="blockquote">
+<p>Crea un inventario de mi equipo con: hardware (procesador, RAM, discos, gráfica), software instalado (SO, programas clave con versiones), licencias y configuraciones destacadas. Déjame espacio para anotar cambios. Guárdalo como inventario-sistema.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que calcule el valor de reposición del hardware para el seguro o que genere una tabla comparativa con las especificaciones técnicas.</p>
+<p><strong>Sugerencia:</strong> mantenlo actualizado; te será muy útil para reparaciones o al vender el equipo.</p>
+<hr>
+</section>
+<section id="calendario-de-mantenimiento" class="level3">
+<h3 class="anchored" data-anchor-id="calendario-de-mantenimiento">Calendario de mantenimiento 🟢</h3>
+<blockquote class="blockquote">
+<p>Crea un plan de mantenimiento periódico para mi ordenador: limpiar archivos temporales, actualizar SO y drivers, revisar salud del disco, revisar suscripciones y limpiar el polvo interior. Indica frecuencia (semanal, mensual, trimestral). Guárdalo como mantenimiento-pc.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que añada una columna de “última vez” para saber cuándo hiciste cada tarea.</p>
+<p><strong>Sugerencia:</strong> pídele recordatorios trimestrales para cada tarea de mantenimiento.</p>
+<hr>
+</section>
+<section id="checklist-post-formateo" class="level3">
+<h3 class="anchored" data-anchor-id="checklist-post-formateo">Checklist post-formateo 🟢</h3>
+<blockquote class="blockquote">
+<p>Acabo de formatear el ordenador e instalar el sistema desde cero. Dame una checklist ordenada de todo lo que tengo que hacer después: instalar drivers, programas esenciales, restaurar datos desde backup, configurar cuentas, personalizar el sistema. Guárdalo como post-formateo.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele versiones específicas para Windows, Linux o macOS.</p>
+<p><strong>Sugerencia:</strong> guarda la checklist para reutilizarla y mejorarla en futuros formateos.</p>
+<hr>
+</section>
+<section id="seguridad-básica" class="level3">
+<h3 class="anchored" data-anchor-id="seguridad-básica">Seguridad básica 🟡</h3>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="inventario-sistema.md">@inventario-sistema.md</span>` A partir del inventario de mi sistema, revísame la configuración de seguridad: ¿qué servicios innecesarios podrían estar activos? ¿faltan actualizaciones críticas? ¿qué puertos o servicios suponen un riesgo? Dame una lista de acciones prioritarias.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una guía de buenas prácticas de seguridad adaptada a tu perfil (uso doméstico, teletrabajo, servidor).</p>
+<p><strong>Sugerencia:</strong> repite esta revisión cada trimestre para mantener el sistema protegido.</p>
+<hr>
+</section>
+</section>
+<section id="comandos-para-documentación" class="level2">
+<h2 class="anchored" data-anchor-id="comandos-para-documentación">Comandos para documentación</h2>
+<p>Crea comandos personalizados para tareas recurrentes.</p>
+<section id="minuta" class="level3">
+<h3 class="anchored" data-anchor-id="minuta">/minuta 🔴</h3>
+<p>Genera un acta de reunión con estructura fija:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Genera un acta a partir de notas de reunión</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>A partir de estas notas de reunión, genera un acta con:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>asistentes, orden del día, acuerdos, puntos pendientes</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>y fecha de próxima reunión. Usa tono formal.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>$ARGUMENTS</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Variación:</strong> combínalo con <code>@</code> para enriquecer el acta con documentos de referencia.</p>
+<p><strong>Sugerencia:</strong> define una descripción clara para que OpenCode entienda bien el contexto del acta.</p>
+<hr>
+</section>
+<section id="liberar" class="level3">
+<h3 class="anchored" data-anchor-id="liberar">/liberar 🔴</h3>
+<p>Prepara la nota de release de una versión:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Prepara la nota de release de una nueva versión</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Con los cambios de la versión <span class="in">`$ARGUMENTS`</span>, genera una</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>nota de release con: resumen, novedades, mejoras,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>correcciones y agradecimientos.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Variación:</strong> pídele que enumere los cambios respecto a la versión anterior automáticamente.</p>
+<p><strong>Sugerencia:</strong> combínalo con <code>@changelog.md</code> para generar la nota de release automáticamente.</p>
+<hr>
+<p><em>Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026</em></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>
+(function() {
+  if (location.pathname.includes('index.html')) return;
+  var toc = document.getElementById('TOC');
+  if (!toc) return;
+  var link = document.createElement('a');
+  link.href = 'index.html';
+  link.textContent = '\u2190 Volver al \u00edndice';
+  link.className = 'toc-back-btn';
+  toc.append(link);
+})();
+</script>
+
+
+
+
+</body></html>
