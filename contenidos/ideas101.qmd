@@ -940,4 +940,24 @@ adaptada a tu perfil (uso doméstico, teletrabajo, servidor).
 
 ---
 
+### Comparar modelos gratuitos disponibles en OpenCode 🟡
+
+OpenCode incluye modelos gratuitos y también permite usar otros
+proveedores. Pide a OpenCode que te ayude a explorar las opciones:
+
+> Quiero ver qué modelos gratuitos puedo usar con OpenCode en
+> este momento. Compara las opciones disponibles: características,
+> limitaciones y casos de uso recomendados. Dame una tabla.
+
+**Variación:** pide que filtre por idioma o por tipo de tarea:
+
+> De esos modelos, ¿cuáles funcionan mejor en español para
+> redacción y documentación?
+
+**Sugerencia:** la lista de modelos disponibles cambia con
+frecuencia. Pide a OpenCode que consulte la información más
+actualizada antes de decidir.
+
+---
+
 *Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

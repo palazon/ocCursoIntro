@@ -1,0 +1,227 @@
+---
+title: "FAQ — Preguntas frecuentes del curso OpenCode 101"
+---
+
+## Sobre OpenCode
+
+### ¿Qué es OpenCode?
+
+OpenCode es un asistente de inteligencia artificial que trabaja contigo en tu ordenador. Lee, escribe y edita documentos, busca información en internet y responde preguntas sobre el contenido que le muestras.
+
+📖 [Paso 0 — ¿Qué es OpenCode?](paso-00.html)
+
+### ¿En qué se diferencia de ChatGPT o Gemini?
+
+OpenCode trabaja directamente sobre tus archivos locales, en tu propio ordenador. No tienes que copiar y pegar texto: él abre, modifica y guarda los documentos en tu disco. ChatGPT y Gemini funcionan en la nube y requieren subir los archivos manualmente.
+
+📖 [Paso 0 — ¿Qué es OpenCode?](paso-00.html)
+
+### ¿Necesito saber programar?
+
+No. Todo se hace mediante instrucciones en lenguaje natural. El curso está diseñado para docentes, redactores y cualquier persona que trabaje con textos.
+
+📖 [Paso 0 — ¿Qué es OpenCode?](paso-00.html)
+
+### ¿Qué formatos de archivo puede manejar?
+
+OpenCode trabaja de forma nativa con Markdown (.md) y también puede leer PDFs, imágenes con texto, documentos Word (.docx) y texto plano (.txt). El formato recomendado para trabajar es Markdown por su ligereza y compatibilidad.
+
+📖 [Paso 2 — Primeros minutos](paso-02.html)
+
+---
+
+## Instalación
+
+### ¿Cómo instalo OpenCode en Windows?
+
+En Windows se usa a través de WSL2 (Windows Subsystem for Linux). Primero instalas WSL2 desde PowerShell, luego abres Ubuntu y ejecutas `curl -fsSL https://opencode.ai/install | bash`.
+
+📖 [Paso 2 — Instalación en Windows](paso-02.html)
+
+### ¿Qué es WSL y por qué lo necesito en Windows?
+
+WSL es un subsistema que permite ejecutar un entorno Linux dentro de Windows. OpenCode necesita una terminal completa, y CMD o PowerShell no ofrecen todas las capacidades necesarias. WSL soluciona esto de forma fluida.
+
+📖 [Paso 2 — Instalación en Windows](paso-02.html)
+
+### ¿Cómo verifico que OpenCode se instaló correctamente?
+
+Ejecuta `opencode --version` en la terminal. Si ves un número de versión, la instalación fue correcta.
+
+📖 [Paso 2 — Verificar instalación](paso-02.html)
+
+### ¿Puedo usar OpenCode en macOS o Linux?
+
+Sí. En macOS se instala con `brew install anomalyco/tap/opencode`. En Linux con el mismo comando que en WSL: `curl -fsSL https://opencode.ai/install | bash`.
+
+📖 [Paso 2 — Otros sistemas](paso-02.html)
+
+---
+
+## Uso básico
+
+### ¿Cuál es la diferencia entre Plan y Build?
+
+**Plan** sirve para pensar, diseñar, analizar y opinar sin modificar ningún archivo. **Build** sirve para ejecutar, crear y modificar documentos. En Plan exploras sin riesgo, en Build actúas.
+
+📖 [Paso 3 — Plan o Build, ¿cuál uso?](paso-03.html)
+
+### ¿Cómo abro OpenCode?
+
+Navega hasta el directorio de tu proyecto con `cd` y ejecuta `opencode`. Para abrir una interfaz gráfica en el navegador, usa `opencode web`.
+
+📖 [Paso 2 — Conocer la interfaz](paso-02.html)
+
+### ¿Cómo continúo una sesión anterior?
+
+Abre OpenCode con `opencode -c` (la opción `-c` significa "continuar") desde el mismo directorio del proyecto. El historial se guarda automáticamente en la carpeta `.opencode/`.
+
+📖 [Paso 2 — Entrar, salir y continuar](paso-02.html)
+
+### ¿Cómo salgo de OpenCode?
+
+Escribe `/exit` o pulsa **Ctrl+C** en la terminal.
+
+📖 [Paso 2 — Entrar, salir y continuar](paso-02.html)
+
+### ¿Cómo ejecuto comandos del sistema desde OpenCode?
+
+Usa el prefijo `!` antes del comando. Por ejemplo, `!cat darwin-evolucion.md` para ver el contenido de un archivo sin salir de OpenCode.
+
+📖 [Paso 3 — Ejercicio en Build](paso-02.html)
+
+---
+
+## Archivos y proyectos
+
+### ¿Qué es un proyecto en OpenCode?
+
+Un proyecto es simplemente el directorio desde el que abres OpenCode. Todos los archivos que crees, el historial de conversaciones y la configuración se organizan dentro de ese directorio.
+
+📖 [Paso 2 — El directorio es tu proyecto](paso-02.html)
+
+### ¿Qué es un archivo .md?
+
+.md es la extensión de Markdown, un formato de texto plano ligero que OpenCode usa de forma nativa. Se puede convertir a HTML, PDF o Word con herramientas como Quarto. Al ser texto plano, se versiona fácilmente con Git.
+
+📖 [Paso 1 — Ficheros de texto plano](paso-01.html)
+
+### ¿Cómo convierto un .md a HTML?
+
+Usa Quarto: `quarto render archivo.md`. Se genera `archivo.html`, que puedes abrir en cualquier navegador. También puedes abrir el .md directamente desde el explorador de archivos.
+
+📖 [Paso 1 — Visualizar documentos](paso-01.html)
+
+### ¿Dónde guarda OpenCode mis archivos?
+
+OpenCode guarda los archivos en el directorio del proyecto (el mismo desde el que lo abres). La configuración y el historial de conversaciones se guardan en la subcarpeta `.opencode/`.
+
+📖 [Paso 2 — El directorio es tu proyecto](paso-02.html)
+
+### ¿Qué es la carpeta .opencode?
+
+Es el directorio de configuración de OpenCode para el proyecto. OpenCode guarda ahí sus ajustes: comandos personalizados, reglas de proyecto, skills y el historial de conversaciones.
+
+📖 [Paso 9 — Cómo se crea un comando](paso-09.html)
+
+---
+
+## Prompts y comandos
+
+### ¿Cómo escribo un buen prompt?
+
+Sé específico: da contexto (quién eres, para qué necesitas el documento), define el tono (formal, divulgativo, técnico) y pide un formato concreto (párrafos, lista, tabla, secciones). Cuanto más claro seas, mejor será el resultado.
+
+📖 [Paso 3 — Escribir un buen prompt](paso-03.html)
+
+### ¿Cómo referencio archivos con @?
+
+Antepón `@` al nombre del archivo. Por ejemplo: `@darwin-evolucion.md` Léete este documento y dime qué te parece. OpenCode buscará el archivo en el proyecto, lo leerá y lo incorporará a la conversación.
+
+📖 [Paso 3 — Referenciar archivos con @](paso-03.html)
+
+### ¿Qué son los comandos personalizados?
+
+Son atajos que creas para tareas repetitivas. En lugar de escribir toda la instrucción cada vez, escribes `/nombre-del-comando` y OpenCode ejecuta la tarea. Por ejemplo, `/faq documento.md` convierte un documento en preguntas frecuentes.
+
+📖 [Paso 9 — ¿Qué es un comando personalizado?](paso-09.html)
+
+### ¿Cómo creo un comando personalizado?
+
+Crea un archivo `.md` dentro de la carpeta `.opencode/commands/` con una descripción y las instrucciones. El nombre del archivo (sin extensión) será el nombre del comando. También puedes pedirle a OpenCode que lo cree por ti.
+
+📖 [Paso 9 — Crear comandos](paso-09.html)
+
+### ¿Cómo uso el comando /faq?
+
+Una vez creado el comando `/faq`, escríbelo en el chat seguido del documento: `/faq darwin-evolucion.md`. OpenCode ejecutará la instrucción que definiste en el comando.
+
+📖 [Paso 9 — Comando /faq](paso-09.html)
+
+---
+
+## Solución de problemas
+
+### OpenCode no arranca, ¿qué hago?
+
+Verifica que está instalado con `opencode --version`. Si no funciona, revisa la instalación. Asegúrate de estar en el directorio correcto del proyecto y de haber abierto OpenCode desde la terminal adecuada (WSL en Windows, Terminal en macOS/Linux).
+
+### Obtengo "permission denied", ¿por qué?
+
+OpenCode pide permiso la primera vez que intenta escribir en la carpeta de configuración (`.opencode/commands/`). Confirma el permiso y continuará. Es una medida de seguridad para proteger la configuración del proyecto.
+
+📖 [Paso 9 — Alternativa](paso-09.html)
+
+### ¿Cómo sé en qué modo estoy (Plan o Build)?
+
+Mira la esquina inferior derecha de la pantalla allí pone **Build** o **Plan**. Pulsa la tecla Tab para alternar entre ellos.
+
+📖 [Paso 2 — Conocer la interfaz](paso-02.html)
+
+### ¿Qué hago si OpenCode no encuentra un archivo?
+
+Verifica que el archivo existe en el directorio del proyecto con `!ls`. Asegúrate de escribir bien el nombre, incluyendo la extensión, y de anteponer `@` al referenciarlo.
+
+📖 [Paso 3 — Referenciar archivos con @](paso-03.html)
+
+### ¿Cómo cambio de directorio dentro de OpenCode?
+
+Usa `!cd` seguido de la ruta: `!cd nombre-del-directorio`. También puedes cerrar la sesión, navegar al directorio deseado y volver a ejecutar `opencode`.
+
+---
+
+## El curso
+
+### ¿Necesito seguir los pasos en orden?
+
+Sí, se recomienda seguir los pasos del 0 al 11. Cada paso se apoya en el anterior y los archivos que creas en un paso se reutilizan en los siguientes.
+
+📖 [Index del curso](index.html)
+
+### ¿Qué diferencia hay entre los pasos y las ideas?
+
+Los pasos son lecciones guiadas que enseñan una capacidad concreta de OpenCode. Las ideas son ejemplos prácticos de uso en distintos ámbitos (empresa, academia, hogar) que puedes adaptar a tu situación.
+
+📖 [Ideas para usar OpenCode](ideas101.html)
+
+### ¿Cuánto dura el curso completo?
+
+Cada paso tiene una duración estimada de 10 a 30 minutos. El curso completo son unas 3-4 horas, dependiendo del ritmo de cada persona.
+
+📖 [Index del curso](index.html)
+
+### ¿Qué es el mapa de capacidades?
+
+Es una tabla en el índice del curso que muestra qué capacidad se aprende en cada paso. Te permite localizar rápidamente dónde se trata un tema concreto: comandos, traducción, revisión, etc.
+
+📖 [Index — Mapa de capacidades](index.html)
+
+### ¿Puedo saltarme algún paso?
+
+Si ya tienes experiencia con OpenCode puedes saltarte pasos, pero revisa el mapa de capacidades para asegurarte de no perderte algún tema importante. El curso está diseñado para que cada paso sirva de base al siguiente.
+
+📖 [Index — Estructura del curso](index.html)
+
+---
+
+*Curso OpenCode 101 · Preguntas frecuentes · Junio 2026*

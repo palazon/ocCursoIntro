@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Ideas para usar OpenCode en tu día a día</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="ideas101_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ideas101_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="ideas101_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="ideas101_files/libs/quarto-html/popper.min.js"></script>
+<script src="ideas101_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ideas101_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ideas101_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ideas101_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ideas101_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ideas101_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ideas101_files/libs/bootstrap/bootstrap-ba13d4a16a61746bd6fb80a772d4709f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#sec-documentacion" id="toc-sec-documentacion" class="nav-link active" data-scroll-target="#sec-documentacion">Documentación</a>
+  <ul class="collapse">
+  <li><a href="#de-la-grabación-al-acta" id="toc-de-la-grabación-al-acta" class="nav-link" data-scroll-target="#de-la-grabación-al-acta">De la grabación al acta 🟢</a></li>
+  <li><a href="#de-la-idea-al-esquema" id="toc-de-la-idea-al-esquema" class="nav-link" data-scroll-target="#de-la-idea-al-esquema">De la idea al esquema 🟢</a></li>
+  <li><a href="#del-correo-al-documento-formal" id="toc-del-correo-al-documento-formal" class="nav-link" data-scroll-target="#del-correo-al-documento-formal">Del correo al documento formal 🟡</a></li>
+  <li><a href="#de-notas-dispersas-a-wiki-unificada" id="toc-de-notas-dispersas-a-wiki-unificada" class="nav-link" data-scroll-target="#de-notas-dispersas-a-wiki-unificada">De notas dispersas a wiki unificada 🟡</a></li>
+  <li><a href="#de-técnico-a-divulgativo" id="toc-de-técnico-a-divulgativo" class="nav-link" data-scroll-target="#de-técnico-a-divulgativo">De técnico a divulgativo 🟡</a></li>
+  <li><a href="#de-transcripción-a-tutorial" id="toc-de-transcripción-a-tutorial" class="nav-link" data-scroll-target="#de-transcripción-a-tutorial">De transcripción a tutorial 🟡</a></li>
+  </ul></li>
+  <li><a href="#sec-empresa" id="toc-sec-empresa" class="nav-link" data-scroll-target="#sec-empresa">Empresa</a>
+  <ul class="collapse">
+  <li><a href="#manual-de-onboarding" id="toc-manual-de-onboarding" class="nav-link" data-scroll-target="#manual-de-onboarding">Manual de onboarding 🟢</a></li>
+  <li><a href="#revisión-de-pliegos-y-ofertas" id="toc-revisión-de-pliegos-y-ofertas" class="nav-link" data-scroll-target="#revisión-de-pliegos-y-ofertas">Revisión de pliegos y ofertas 🟡</a></li>
+  <li><a href="#faq-interno" id="toc-faq-interno" class="nav-link" data-scroll-target="#faq-interno">FAQ interno 🔴</a></li>
+  <li><a href="#informes-semanales" id="toc-informes-semanales" class="nav-link" data-scroll-target="#informes-semanales">Informes semanales 🔴</a></li>
+  </ul></li>
+  <li><a href="#sec-academia" id="toc-sec-academia" class="nav-link" data-scroll-target="#sec-academia">Academia</a>
+  <ul class="collapse">
+  <li><a href="#cuestionarios-y-exámenes" id="toc-cuestionarios-y-exámenes" class="nav-link" data-scroll-target="#cuestionarios-y-exámenes">Cuestionarios y exámenes 🟢</a></li>
+  <li><a href="#materiales-didácticos" id="toc-materiales-didácticos" class="nav-link" data-scroll-target="#materiales-didácticos">Materiales didácticos 🟡</a></li>
+  <li><a href="#adaptar-contenido-a-distintos-niveles" id="toc-adaptar-contenido-a-distintos-niveles" class="nav-link" data-scroll-target="#adaptar-contenido-a-distintos-niveles">Adaptar contenido a distintos niveles 🟡</a></li>
+  <li><a href="#trabajo-de-investigación" id="toc-trabajo-de-investigación" class="nav-link" data-scroll-target="#trabajo-de-investigación">Trabajo de investigación 🟡</a></li>
+  <li><a href="#informes-de-laboratorio" id="toc-informes-de-laboratorio" class="nav-link" data-scroll-target="#informes-de-laboratorio">Informes de laboratorio 🔴</a></li>
+  </ul></li>
+  <li><a href="#sec-hogar" id="toc-sec-hogar" class="nav-link" data-scroll-target="#sec-hogar">Hogar</a>
+  <ul class="collapse">
+  <li><a href="#diario-de-viaje" id="toc-diario-de-viaje" class="nav-link" data-scroll-target="#diario-de-viaje">Diario de viaje 🟢</a></li>
+  <li><a href="#guía-de-frases-básicas" id="toc-guía-de-frases-básicas" class="nav-link" data-scroll-target="#guía-de-frases-básicas">Guía de frases básicas 🟢</a></li>
+  <li><a href="#lista-de-embalaje" id="toc-lista-de-embalaje" class="nav-link" data-scroll-target="#lista-de-embalaje">Lista de embalaje 🟢</a></li>
+  <li><a href="#inventario-para-el-hogar" id="toc-inventario-para-el-hogar" class="nav-link" data-scroll-target="#inventario-para-el-hogar">Inventario para el hogar 🟢</a></li>
+  <li><a href="#checklist-de-mudanza" id="toc-checklist-de-mudanza" class="nav-link" data-scroll-target="#checklist-de-mudanza">Checklist de mudanza 🟢</a></li>
+  <li><a href="#bricolaje-taller" id="toc-bricolaje-taller" class="nav-link" data-scroll-target="#bricolaje-taller">Bricolaje / Taller 🟢</a></li>
+  <li><a href="#planificación-de-viajes" id="toc-planificación-de-viajes" class="nav-link" data-scroll-target="#planificación-de-viajes">Planificación de viajes 🟡</a></li>
+  <li><a href="#currículum-y-carta-de-presentación" id="toc-currículum-y-carta-de-presentación" class="nav-link" data-scroll-target="#currículum-y-carta-de-presentación">Currículum y carta de presentación 🟡</a></li>
+  </ul></li>
+  <li><a href="#sec-alimentacion" id="toc-sec-alimentacion" class="nav-link" data-scroll-target="#sec-alimentacion">Alimentación</a>
+  <ul class="collapse">
+  <li><a href="#recetario-personal" id="toc-recetario-personal" class="nav-link" data-scroll-target="#recetario-personal">Recetario personal 🟢</a></li>
+  <li><a href="#cocina-plan-semanal-de-comidas" id="toc-cocina-plan-semanal-de-comidas" class="nav-link" data-scroll-target="#cocina-plan-semanal-de-comidas">Cocina — plan semanal de comidas 🟢</a></li>
+  <li><a href="#programación-dietética-personalizada" id="toc-programación-dietética-personalizada" class="nav-link" data-scroll-target="#programación-dietética-personalizada">Programación dietética personalizada 🟡</a></li>
+  </ul></li>
+  <li><a href="#sec-aficiones" id="toc-sec-aficiones" class="nav-link" data-scroll-target="#sec-aficiones">Aficiones</a>
+  <ul class="collapse">
+  <li><a href="#jardinería-calendario-de-siembra" id="toc-jardinería-calendario-de-siembra" class="nav-link" data-scroll-target="#jardinería-calendario-de-siembra">Jardinería — calendario de siembra 🟢</a></li>
+  <li><a href="#fotografía-chuleta-de-configuración" id="toc-fotografía-chuleta-de-configuración" class="nav-link" data-scroll-target="#fotografía-chuleta-de-configuración">Fotografía — chuleta de configuración 🟢</a></li>
+  <li><a href="#lectura-registro-de-libros" id="toc-lectura-registro-de-libros" class="nav-link" data-scroll-target="#lectura-registro-de-libros">Lectura — registro de libros 🟢</a></li>
+  <li><a href="#juegos-de-mesa-registro-de-partidas" id="toc-juegos-de-mesa-registro-de-partidas" class="nav-link" data-scroll-target="#juegos-de-mesa-registro-de-partidas">Juegos de mesa — registro de partidas 🟢</a></li>
+  <li><a href="#mascotas-guía-de-cuidados" id="toc-mascotas-guía-de-cuidados" class="nav-link" data-scroll-target="#mascotas-guía-de-cuidados">Mascotas — guía de cuidados 🟢</a></li>
+  </ul></li>
+  <li><a href="#sec-compras" id="toc-sec-compras" class="nav-link" data-scroll-target="#sec-compras">Compras y finanzas</a>
+  <ul class="collapse">
+  <li><a href="#análisis-de-productos" id="toc-análisis-de-productos" class="nav-link" data-scroll-target="#análisis-de-productos">Análisis de productos 🟢</a></li>
+  <li><a href="#presupuesto-detallado" id="toc-presupuesto-detallado" class="nav-link" data-scroll-target="#presupuesto-detallado">Presupuesto detallado 🟢</a></li>
+  <li><a href="#comparación-de-ofertas-económicas" id="toc-comparación-de-ofertas-económicas" class="nav-link" data-scroll-target="#comparación-de-ofertas-económicas">Comparación de ofertas económicas 🟡</a></li>
+  <li><a href="#presupuesto-mensual" id="toc-presupuesto-mensual" class="nav-link" data-scroll-target="#presupuesto-mensual">Presupuesto mensual 🟡</a></li>
+  </ul></li>
+  <li><a href="#sec-deportes" id="toc-sec-deportes" class="nav-link" data-scroll-target="#sec-deportes">Deportes</a>
+  <ul class="collapse">
+  <li><a href="#plan-de-entrenamiento-semanal" id="toc-plan-de-entrenamiento-semanal" class="nav-link" data-scroll-target="#plan-de-entrenamiento-semanal">Plan de entrenamiento semanal 🟢</a></li>
+  <li><a href="#registro-de-marcas" id="toc-registro-de-marcas" class="nav-link" data-scroll-target="#registro-de-marcas">Registro de marcas 🟢</a></li>
+  <li><a href="#calendario-de-temporada" id="toc-calendario-de-temporada" class="nav-link" data-scroll-target="#calendario-de-temporada">Calendario de temporada 🟢</a></li>
+  <li><a href="#prevención-y-estiramientos" id="toc-prevención-y-estiramientos" class="nav-link" data-scroll-target="#prevención-y-estiramientos">Prevención y estiramientos 🟢</a></li>
+  <li><a href="#running-plan-de-entrenamiento-avanzado" id="toc-running-plan-de-entrenamiento-avanzado" class="nav-link" data-scroll-target="#running-plan-de-entrenamiento-avanzado">Running — plan de entrenamiento avanzado 🟢</a></li>
+  </ul></li>
+  <li><a href="#sec-planificacion" id="toc-sec-planificacion" class="nav-link" data-scroll-target="#sec-planificacion">Planificación</a>
+  <ul class="collapse">
+  <li><a href="#programar-actividades-y-generar-ics" id="toc-programar-actividades-y-generar-ics" class="nav-link" data-scroll-target="#programar-actividades-y-generar-ics">Programar actividades y generar ICS 🟡</a></li>
+  <li><a href="#proyectos-de-varios-pasos" id="toc-proyectos-de-varios-pasos" class="nav-link" data-scroll-target="#proyectos-de-varios-pasos">Proyectos de varios pasos 🟡</a></li>
+  </ul></li>
+  <li><a href="#sec-comandos" id="toc-sec-comandos" class="nav-link" data-scroll-target="#sec-comandos">Comandos</a>
+  <ul class="collapse">
+  <li><a href="#minuta" id="toc-minuta" class="nav-link" data-scroll-target="#minuta">/minuta 🔴</a></li>
+  <li><a href="#liberar" id="toc-liberar" class="nav-link" data-scroll-target="#liberar">/liberar 🔴</a></li>
+  </ul></li>
+  <li><a href="#sec-sistema" id="toc-sec-sistema" class="nav-link" data-scroll-target="#sec-sistema">Sistema y mantenimiento</a>
+  <ul class="collapse">
+  <li><a href="#plan-de-copias-de-seguridad" id="toc-plan-de-copias-de-seguridad" class="nav-link" data-scroll-target="#plan-de-copias-de-seguridad">Plan de copias de seguridad 🟢</a></li>
+  <li><a href="#documentación-del-sistema" id="toc-documentación-del-sistema" class="nav-link" data-scroll-target="#documentación-del-sistema">Documentación del sistema 🟢</a></li>
+  <li><a href="#calendario-de-mantenimiento" id="toc-calendario-de-mantenimiento" class="nav-link" data-scroll-target="#calendario-de-mantenimiento">Calendario de mantenimiento 🟢</a></li>
+  <li><a href="#checklist-post-formateo" id="toc-checklist-post-formateo" class="nav-link" data-scroll-target="#checklist-post-formateo">Checklist post-formateo 🟢</a></li>
+  <li><a href="#diagnóstico-de-errores" id="toc-diagnóstico-de-errores" class="nav-link" data-scroll-target="#diagnóstico-de-errores">Diagnóstico de errores 🟡</a></li>
+  <li><a href="#seguridad-básica" id="toc-seguridad-básica" class="nav-link" data-scroll-target="#seguridad-básica">Seguridad básica 🟡</a></li>
+  <li><a href="#comparar-modelos-gratuitos-disponibles-en-opencode" id="toc-comparar-modelos-gratuitos-disponibles-en-opencode" class="nav-link" data-scroll-target="#comparar-modelos-gratuitos-disponibles-en-opencode">Comparar modelos gratuitos disponibles en OpenCode 🟡</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ideas para usar OpenCode en tu día a día</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este documento reúne más de 50 ideas para usar OpenCode en tu día a día, organizadas por temas. Cada entrada está clasificada por dificultad (🟢 básica, 🟡 intermedia, 🔴 avanzada) e incluye variaciones y una sugerencia práctica.</p>
+<p>Las ideas se agrupan en 11 secciones. Para el <strong>día a día laboral</strong>: <a href="#sec-documentacion">Documentación</a>, <a href="#sec-empresa">Empresa</a>, <a href="#sec-academia">Academia</a>. Para la <strong>gestión del hogar</strong>: <a href="#sec-hogar">Hogar</a>, <a href="#sec-alimentacion">Alimentación</a>, <a href="#sec-aficiones">Aficiones</a>. Para las <strong>finanzas y compras</strong>: <a href="#sec-compras">Compras y finanzas</a>. Para el <strong>tiempo libre</strong>: <a href="#sec-deportes">Deportes</a>. También hay secciones de <a href="#sec-planificacion">Planificación</a>, <a href="#sec-comandos">Comandos</a>, y <a href="#sec-sistema">Sistema y mantenimiento</a>.</p>
+<p>Navega por los enlaces o simplemente hojea las secciones para encontrar la idea que necesites.</p>
+<section id="sec-documentacion" class="level2">
+<h2 class="anchored" data-anchor-id="sec-documentacion">Documentación</h2>
+<p>Transformación progresiva de información bruta en documentos estructurados y listos para usar.</p>
+<section id="de-la-grabación-al-acta" class="level3">
+<h3 class="anchored" data-anchor-id="de-la-grabación-al-acta">De la grabación al acta 🟢</h3>
+<p>Tomas notas sueltas durante una reunión y OpenCode las convierte en un acta profesional:</p>
+<blockquote class="blockquote">
+<p>He apuntado: “reunión 10 jun — Pedro retraso en servidores — Laura presupuesto Q3 listo — acuerdo: reunión semanal los lunes — pendiente: migrar datos antes del 30”. Genera un acta con: asistentes, acuerdos, pendientes y próxima reunión.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que genere el acta en tono formal para enviar por correo, o en tono informal para el equipo interno.</p>
+<p><strong>Sugerencia:</strong> crea un comando <code>/acta-reunion</code> para acelerar aún más el proceso.</p>
+<hr>
+</section>
+<section id="de-la-idea-al-esquema" class="level3">
+<h3 class="anchored" data-anchor-id="de-la-idea-al-esquema">De la idea al esquema 🟢</h3>
+<p>Describes un proyecto en pocas frases y OpenCode te devuelve un índice estructurado para empezar a escribir:</p>
+<blockquote class="blockquote">
+<p>Necesito documentar el proceso de incorporación de nuevos empleados. Dame un esquema del manual con las secciones que debería incluir, ordenadas de forma lógica.</p>
+</blockquote>
+<p>Una vez conforme, pídele que desarrolle cada sección.</p>
+<p><strong>Variación:</strong> pídele el esquema en formato tabla con tiempo estimado de redacción por sección.</p>
+<p><strong>Sugerencia:</strong> una vez conforme con el esquema, pídele que desarrolle cada sección en <em>Build</em>.</p>
+<hr>
+</section>
+<section id="del-correo-al-documento-formal" class="level3">
+<h3 class="anchored" data-anchor-id="del-correo-al-documento-formal">Del correo al documento formal 🟡</h3>
+<p>¿Tienes un correo informal explicando un proceso? Conviértelo en un procedimiento documentado:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="correo-proceso.txt">@correo-proceso.txt</span>` A partir de este correo informal, genera un documento de procedimiento estándar con: objetivo, alcance, responsables, pasos detallados y referencias. Guárdalo como procedimiento-oficial.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión imprimible o una infografía textual con los pasos resumidos.</p>
+<p><strong>Sugerencia:</strong> pídele también una versión resumida en una página para compartir con el equipo.</p>
+<hr>
+</section>
+<section id="de-notas-dispersas-a-wiki-unificada" class="level3">
+<h3 class="anchored" data-anchor-id="de-notas-dispersas-a-wiki-unificada">De notas dispersas a wiki unificada 🟡</h3>
+<p>Si tienes varios archivos sueltos con ideas, OpenCode los unifica en un documento coherente:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="nota-1.md">@nota-1.md</span>` `<span class="citation" data-cites="nota-2.md">@nota-2.md</span>` `<span class="citation" data-cites="nota-3.md">@nota-3.md</span>` Combina estos tres archivos en un solo documento bien estructurado. Elimina duplicados, ordena las ideas por tema y pon títulos a cada sección. Guárdalo como `wiki-unificada.md`.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que añada un índice al principio y enlaces entre secciones relacionadas.</p>
+<p><strong>Sugerencia:</strong> añade un índice al principio y enlaces entre secciones para navegar mejor.</p>
+<hr>
+</section>
+<section id="de-técnico-a-divulgativo" class="level3">
+<h3 class="anchored" data-anchor-id="de-técnico-a-divulgativo">De técnico a divulgativo 🟡</h3>
+<p>Tomas un documento técnico y pides una versión para principiantes:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="manual-tecnico.md">@manual-tecnico.md</span>` Reescribe este manual como si se lo explicaras a una persona que nunca ha usado el producto. Elimina jerga técnica, usa ejemplos cotidianos y divide la información en pasos muy claros. Guárdalo como `guia-principiantes.md`.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele también una versión “cheat sheet” de una sola página con lo esencial.</p>
+<p><strong>Sugerencia:</strong> usa el formato cheat sheet para consultas rápidas durante el día a día.</p>
+<hr>
+</section>
+<section id="de-transcripción-a-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="de-transcripción-a-tutorial">De transcripción a tutorial 🟡</h3>
+<p>¿Grabaste un vídeo formativo? Pasa la transcripción y OpenCode la convierte en un tutorial escrito:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="transcripcion.txt">@transcripcion.txt</span>` A partir de esta transcripción de vídeo, crea un tutorial paso a paso. Incluye: objetivo, materiales necesarios, pasos numerados con explicaciones y un resumen final. Guárdalo como `tutorial-escrito.md`.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que extraiga solo los pasos prácticos (como una lista de acciones) o que genere una versión FAQ con las dudas más frecuentes.</p>
+<p><strong>Sugerencia:</strong> pídele que extraiga solo los pasos prácticos como lista de acciones rápida.</p>
+<hr>
+</section>
+</section>
+<section id="sec-empresa" class="level2">
+<h2 class="anchored" data-anchor-id="sec-empresa">Empresa</h2>
+<p>Gestión documental empresarial: manuales, actas, informes, FAQ y análisis de pliegos.</p>
+<section id="manual-de-onboarding" class="level3">
+<h3 class="anchored" data-anchor-id="manual-de-onboarding">Manual de onboarding 🟢</h3>
+<p>Cada empresa tiene su forma de integrar a nuevas personas. En lugar de empezar de cero, pídele a OpenCode un esquema:</p>
+<blockquote class="blockquote">
+<p>Soy responsable de onboarding. Dame una estructura de manual para nuevos empleados que incluya: valores de la empresa, herramientas, contactos clave y un checklist de primera semana.</p>
+</blockquote>
+<p>A partir de ahí puedes iterar: pide ejemplos, ajusta el tono, añade secciones. Cuando tengas el plan, genera el documento.</p>
+<p><strong>Variación:</strong> si ya tienes un manual anterior en PDF, pásaselo a OpenCode con <code>@manual-anterior.pdf</code> y dile que lo actualice y modernice.</p>
+<p><strong>Sugerencia:</strong> combinado con el comando <code>/revisar</code> del curso, un compañero puede verificar el manual antes de publicarlo.</p>
+<hr>
+</section>
+<section id="revisión-de-pliegos-y-ofertas" class="level3">
+<h3 class="anchored" data-anchor-id="revisión-de-pliegos-y-ofertas">Revisión de pliegos y ofertas 🟡</h3>
+<p>Cuando recibes un documento extenso (pliego, contrato, oferta), puedes pedirle a OpenCode que lo analice:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="pliego.pdf">@pliego.pdf</span>` Extrae todos los requisitos obligatorios y clasifícalos por área (técnica, legal, económica). Detecta ambigüedades.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una comparativa entre dos ofertas:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="oferta-A.pdf">@oferta-A.pdf</span>` `<span class="citation" data-cites="oferta-B.pdf">@oferta-B.pdf</span>` Compara ambas propuestas. ¿Cuál cubre mejor los requisitos del pliego? ¿Qué diferencias clave hay?</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> usa primero <em>Plan</em> para definir los criterios de evaluación antes de comparar en <em>Build</em>.</p>
+<hr>
+</section>
+<section id="faq-interno" class="level3">
+<h3 class="anchored" data-anchor-id="faq-interno">FAQ interno 🔴</h3>
+<p>Los equipos suelen responder las mismas preguntas una y otra vez. Con el comando <code>/faq</code> que creaste en el curso, convertir cualquier documento en preguntas frecuentes es cuestión de segundos:</p>
+<blockquote class="blockquote">
+<p>/faq manual-producto.md</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele a OpenCode que repase el FAQ cada trimestre:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="faq.md">@faq.md</span>` ¿Hay respuestas que hayan quedado obsoletas? Busca información actual y sugiere cambios.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> programa una revisión trimestral del FAQ con OpenCode para mantenerlo actualizado.</p>
+<hr>
+</section>
+<section id="informes-semanales" class="level3">
+<h3 class="anchored" data-anchor-id="informes-semanales">Informes semanales 🔴</h3>
+<p>Si tienes que enviar un informe cada semana, crea un comando <code>/informe-semanal</code> con la estructura que repites siempre. Luego solo tienes que pasarle las notas:</p>
+<blockquote class="blockquote">
+<p>/informe-semanal Esta semana terminamos la migración de servidores, empezamos las pruebas de carga y detectamos un bug en login.</p>
+</blockquote>
+<p>OpenCode te devuelve el informe completo con esa estructura.</p>
+<p><strong>Variación:</strong> si además tienes una carpeta de notas diarias, puedes hacer que OpenCode las lea todas y genere el resumen semanal:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="notas">@notas</span>/*.md` A partir de estas notas, genera el informe semanal.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> mantén una carpeta de notas diarias y OpenCode generará el resumen semanal automáticamente.</p>
+<hr>
+</section>
+</section>
+<section id="sec-academia" class="level2">
+<h2 class="anchored" data-anchor-id="sec-academia">Academia</h2>
+<p>Preparación de materiales educativos, exámenes e investigación académica con OpenCode.</p>
+<section id="cuestionarios-y-exámenes" class="level3">
+<h3 class="anchored" data-anchor-id="cuestionarios-y-exámenes">Cuestionarios y exámenes 🟢</h3>
+<p>A partir de cualquier contenido, OpenCode genera preguntas:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="tema-biologia.md">@tema-biologia.md</span>` Crea 15 preguntas tipo test con 4 opciones cada una. Incluye las respuestas correctas al final. Para 2º de ESO.</p>
+</blockquote>
+<p><strong>Variación:</strong> pide distintos formatos:</p>
+<ul>
+<li>Preguntas de desarrollo</li>
+<li>Verdadero / falso</li>
+<li>Ejercicios de emparejar conceptos</li>
+<li>Preguntas para examen oral</li>
+</ul>
+<p><strong>Sugerencia:</strong> combina varios tipos de pregunta en un solo prompt para obtener exámenes variados.</p>
+<hr>
+</section>
+<section id="materiales-didácticos" class="level3">
+<h3 class="anchored" data-anchor-id="materiales-didácticos">Materiales didácticos 🟡</h3>
+<p>OpenCode es ideal para preparar contenido para clase. Puedes diseñar la estructura en Plan y generarlo en Build:</p>
+<blockquote class="blockquote">
+<p>Plan: Soy profesor de historia. Necesito una unidad didáctica sobre la Revolución Industrial para 4º de ESO. Dame un esquema con objetivos, contenidos, actividades y evaluación.</p>
+</blockquote>
+<p>Una vez conforme, pasas a Build:</p>
+<blockquote class="blockquote">
+<p>Construye la unidad completa y guárdala como revolucion-industrial.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> genera también la presentación:</p>
+<blockquote class="blockquote">
+<p>A partir de revolucion-industrial.md, crea un guion para una presentación de 10 diapositivas. Guárdalo como presentacion.md.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> usa <em>Plan</em> para el diseño pedagógico y <em>Build</em> para la generación de contenidos.</p>
+<hr>
+</section>
+<section id="adaptar-contenido-a-distintos-niveles" class="level3">
+<h3 class="anchored" data-anchor-id="adaptar-contenido-a-distintos-niveles">Adaptar contenido a distintos niveles 🟡</h3>
+<p>Un mismo tema puede tener versiones para primaria, secundaria o universidad:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="texto-original.md">@texto-original.md</span>` Crea tres versiones: 1. Para niños de 10 años (lenguaje sencillo, ejemplos cotidianos) 2. Para adolescentes (tono divulgativo, sin perder rigor) 3. Para universitarios (vocabulario técnico, referencias)</p>
+</blockquote>
+<p><strong>Variación:</strong> pide también una versión en inglés del mismo contenido.</p>
+<p><strong>Sugerencia:</strong> usa <code>@</code> para referenciar el original y pide todas las versiones en un solo prompt.</p>
+<hr>
+</section>
+<section id="trabajo-de-investigación" class="level3">
+<h3 class="anchored" data-anchor-id="trabajo-de-investigación">Trabajo de investigación 🟡</h3>
+<p>OpenCode puede ayudarte en todas las fases de un trabajo académico:</p>
+<ol type="1">
+<li><strong>Lluvia de ideas:</strong> “Dame 5 posibles temas para un TFG sobre inteligencia artificial en educación”</li>
+<li><strong>Plan de trabajo:</strong> “Ayúdame a estructurar el índice y el cronograma”</li>
+<li><strong>Búsqueda de fuentes:</strong> “Busca estudios recientes sobre este tema”</li>
+<li><strong>Redacción:</strong> “Escribe la introducción siguiendo este esquema”</li>
+<li><strong>Revisión:</strong> “`<span class="citation" data-cites="borrador.md">@borrador.md</span>` Revisa la coherencia y corrige errores”</li>
+</ol>
+<p><strong>Variación:</strong> usa Plan para las fases 1-2 y Build para 3-5.</p>
+<p><strong>Sugerencia:</strong> documenta cada fase en un archivo aparte para poder retomarlo con <code>@</code>.</p>
+<hr>
+</section>
+<section id="informes-de-laboratorio" class="level3">
+<h3 class="anchored" data-anchor-id="informes-de-laboratorio">Informes de laboratorio 🔴</h3>
+<p>Con una plantilla <code>/informe-lab</code> que incluya las secciones (objetivo, método, resultados, conclusiones), solo tienes que pasar los datos:</p>
+<blockquote class="blockquote">
+<p>/informe-lab Experimento: fermentación de levaduras. Temperatura: 25°C. Resultados: producción de CO₂ constante durante 48 horas.</p>
+</blockquote>
+<p>OpenCode genera el informe completo con esa estructura.</p>
+<p><strong>Sugerencia:</strong> diseña primero la plantilla del comando en <em>Plan</em> antes de crearlo en <em>Build</em>.</p>
+<hr>
+</section>
+</section>
+<section id="sec-hogar" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hogar">Hogar</h2>
+<p>Organización del hogar: viajes, mudanzas, inventarios, bricolaje y currículum vitae.</p>
+<section id="diario-de-viaje" class="level3">
+<h3 class="anchored" data-anchor-id="diario-de-viaje">Diario de viaje 🟢</h3>
+<p>A la vuelta, puedes convertir tus notas sueltas en un diario:</p>
+<blockquote class="blockquote">
+<p>He vuelto de Japón. A partir de estas notas sueltas, crea un diario de viaje organizado por días. Incluye lugares, comidas, anécdotas y fotos recomendadas.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un resumen para compartir:</p>
+<blockquote class="blockquote">
+<p>Ahora haz una versión resumida de 3 párrafos para compartir con la familia.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> añade descripciones de fotos para cada lugar del diario.</p>
+<hr>
+</section>
+<section id="guía-de-frases-básicas" class="level3">
+<h3 class="anchored" data-anchor-id="guía-de-frases-básicas">Guía de frases básicas 🟢</h3>
+<p>Para un viaje al extranjero, OpenCode te prepara un chuleta:</p>
+<blockquote class="blockquote">
+<p>Guárdame en frases-util-japones.md una lista de frases básicas para viajar: saludar, pedir ayuda, pedir la cuenta, gracias, emergencias. Incluye pronunciación aproximada.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele frases para una situación concreta:</p>
+<blockquote class="blockquote">
+<p>Añade una sección de frases para el médico y la farmacia.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele también la pronunciación aproximada en español.</p>
+<hr>
+</section>
+<section id="lista-de-embalaje" class="level3">
+<h3 class="anchored" data-anchor-id="lista-de-embalaje">Lista de embalaje 🟢</h3>
+<p>Nunca olvides nada con un checklist a medida:</p>
+<blockquote class="blockquote">
+<p>Crea un checklist de equipaje para viaje de 7 días a la playa, clima cálido. Incluye: documentación, ropa, aseo, medicinas, electrónica, extras.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele versiones por tipo de viaje:</p>
+<blockquote class="blockquote">
+<p>Ahora haz una versión para viaje de montaña en invierno.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> guarda las versiones para tener checklists reutilizables en futuros viajes.</p>
+<hr>
+</section>
+<section id="inventario-para-el-hogar" class="level3">
+<h3 class="anchored" data-anchor-id="inventario-para-el-hogar">Inventario para el hogar 🟢</h3>
+<p>Útil para seguros, mudanzas o simplemente para organizarse:</p>
+<blockquote class="blockquote">
+<p>Crea una tabla con mis pertenencias por habitación: salón, cocina, dormitorio, baño. Déjame espacio para añadir valor estimado y número de serie.</p>
+</blockquote>
+<p>Puedes ir completándolo con OpenCode:</p>
+<blockquote class="blockquote">
+<p>Añade una sección de electrónica con el portátil, la tablet y la consola.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> útil para seguros — pídele que calcule el valor total estimado de tus pertenencias.</p>
+<hr>
+</section>
+<section id="checklist-de-mudanza" class="level3">
+<h3 class="anchored" data-anchor-id="checklist-de-mudanza">Checklist de mudanza 🟢</h3>
+<p>Una mudanza tiene decenas de tareas. OpenCode las organiza por ti:</p>
+<blockquote class="blockquote">
+<p>Genera un checklist de mudanza ordenado por semanas: desde 4 semanas antes hasta el día de la mudanza. Incluye tareas como cambiar la dirección, contratar transporte, embalar por habitaciones.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión para mudanza internacional, o para mudanza con mascotas.</p>
+<p><strong>Sugerencia:</strong> pídele recordatorios con fechas concretas para cada tarea.</p>
+<hr>
+</section>
+<section id="bricolaje-taller" class="level3">
+<h3 class="anchored" data-anchor-id="bricolaje-taller">Bricolaje / Taller 🟢</h3>
+<p>Un taller bien organizado ahorra tiempo y dinero:</p>
+<blockquote class="blockquote">
+<p>Crea una tabla con mis herramientas de taller: nombre, ubicación, estado, fecha de compra y próximas revisiones.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una guía para un proyecto concreto:</p>
+<blockquote class="blockquote">
+<p>Quiero construir una estantería de madera de 1,5 m. Dame la lista de materiales, herramientas necesarias y los pasos ordenados.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Plan de mantenimiento trimestral para: cortacésped, motosierra, taladro, lijadora. Incluye limpieza, revisión de cables y lubricación.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Crea una ficha técnica para cada herramienta eléctrica con: potencia, usos recomendados, consejos de seguridad.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele una guía paso a paso con medidas y materiales exactos para cada proyecto.</p>
+<hr>
+</section>
+<section id="planificación-de-viajes" class="level3">
+<h3 class="anchored" data-anchor-id="planificación-de-viajes">Planificación de viajes 🟡</h3>
+<p>OpenCode puede ser tu agente de viajes particular:</p>
+<blockquote class="blockquote">
+<p>Planifica un viaje de 5 días a Roma para dos personas. Presupuesto: 1500€. Incluye vuelos, alojamiento, museos y restaurantes.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión para viajar con niños, o con presupuesto ajustado, o centrada en museos y arte.</p>
+<blockquote class="blockquote">
+<p>Ahora conviértelo en un itinerario día a día y guárdalo como viaje-roma.md.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> usa <em>Plan</em> para definir el presupuesto y <em>Build</em> para generar el itinerario.</p>
+<hr>
+</section>
+<section id="currículum-y-carta-de-presentación" class="level3">
+<h3 class="anchored" data-anchor-id="currículum-y-carta-de-presentación">Currículum y carta de presentación 🟡</h3>
+<p>Partiendo de tus datos, OpenCode te ayuda a crear documentos profesionales:</p>
+<blockquote class="blockquote">
+<p>Tengo 5 años de experiencia en marketing digital. He trabajado en dos startups y una agencia. Dame una estructura de CV moderna.</p>
+</blockquote>
+<p>Después de ajustar, pide la carta:</p>
+<blockquote class="blockquote">
+<p>A partir de mi CV, escribe una carta de presentación para una oferta de responsable de marketing en una empresa tecnológica.</p>
+</blockquote>
+<p><strong>Variación:</strong> pide adaptar el CV a un sector concreto, o traducirlo al inglés.</p>
+<p><strong>Sugerencia:</strong> usa <em>Plan</em> para definir tu perfil antes de generar el CV en <em>Build</em>.</p>
+<hr>
+</section>
+</section>
+<section id="sec-alimentacion" class="level2">
+<h2 class="anchored" data-anchor-id="sec-alimentacion">Alimentación</h2>
+<p>Recetarios, planificación semanal de comidas y programación dietética personalizada.</p>
+<section id="recetario-personal" class="level3">
+<h3 class="anchored" data-anchor-id="recetario-personal">Recetario personal 🟢</h3>
+<p>OpenCode puede ayudarte a recopilar y organizar tus recetas preferidas en un documento estructurado:</p>
+<blockquote class="blockquote">
+<p>Crea una guía con mis 10 platos favoritos. Para cada uno incluye: nombre, ingredientes, tiempo de preparación, nivel de dificultad y un consejo personal. Guárdala como mis-platos-favoritos.md.</p>
+</blockquote>
+<p>Luego puedes ampliarla por categorías: primeros, segundos, postres, o por tipo de cocina.</p>
+<p><strong>Variación:</strong> pídele que añada fotos descriptivas (texto alternativo), que calcule el coste aproximado por ración o que genere la lista de la compra a partir de las recetas que hayas elegido para la semana.</p>
+<p><strong>Sugerencia:</strong> amplíala por categorías o por tipo de cocina para tener un recetario completo.</p>
+<hr>
+</section>
+<section id="cocina-plan-semanal-de-comidas" class="level3">
+<h3 class="anchored" data-anchor-id="cocina-plan-semanal-de-comidas">Cocina — plan semanal de comidas 🟢</h3>
+<p>Ahorra tiempo planificando la semana:</p>
+<blockquote class="blockquote">
+<p>Planifica 7 comidas para esta semana aprovechando estos ingredientes: pollo, verduras de temporada, arroz, lentejas, huevos. Dame también la lista de la compra.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un menú adaptado a dietas:</p>
+<blockquote class="blockquote">
+<p>Ahora hazlo versión apta para celíacos.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele un menú semanal que aproveche ingredientes comunes para ahorrar en la compra.</p>
+<hr>
+</section>
+<section id="programación-dietética-personalizada" class="level3">
+<h3 class="anchored" data-anchor-id="programación-dietética-personalizada">Programación dietética personalizada 🟡</h3>
+<p>A partir de tus platos favoritos y necesidades nutricionales, OpenCode te genera un plan semanal equilibrado:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="mis-platos-favoritos.md">@mis-platos-favoritos.md</span>` A partir de mis recetas, crea una programación semanal de comidas equilibrada. Incluye desayuno, comida y cena para 7 días. Asegúrate de variar los grupos de alimentos y evitar repetir el mismo plato dos días seguidos. Añade la lista de la compra al final.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele adaptaciones para objetivos concretos: pérdida de peso, ganancia muscular, dieta baja en hidratos, o menú semanal para toda la familia.</p>
+<p><strong>Sugerencia:</strong> usa <code>@</code> para enlazar con tu recetario y generar la lista de la compra automáticamente cada semana.</p>
+<hr>
+</section>
+</section>
+<section id="sec-aficiones" class="level2">
+<h2 class="anchored" data-anchor-id="sec-aficiones">Aficiones</h2>
+<p>Ideas para hobbies y actividades personales: jardinería, fotografía, lectura, juegos de mesa y mascotas.</p>
+<section id="jardinería-calendario-de-siembra" class="level3">
+<h3 class="anchored" data-anchor-id="jardinería-calendario-de-siembra">Jardinería — calendario de siembra 🟢</h3>
+<p>Si tienes un huerto o jardín, OpenCode te ayuda a planificar:</p>
+<blockquote class="blockquote">
+<p>Crea un calendario de siembra para huerto urbano en clima mediterráneo: qué plantar cada mes, cuándo recolectar y cuidados básicos.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una ficha para cada cultivo:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="calendario-siembra.md">@calendario-siembra.md</span>` Añade una ficha para el tomate que incluya: riego, sol, plagas comunes y asociación con otros cultivos.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele que te recuerde cuándo regar cada planta según la estación del año.</p>
+<hr>
+</section>
+<section id="fotografía-chuleta-de-configuración" class="level3">
+<h3 class="anchored" data-anchor-id="fotografía-chuleta-de-configuración">Fotografía — chuleta de configuración 🟢</h3>
+<p>Una guía rápida para no perderse con los modos de la cámara:</p>
+<blockquote class="blockquote">
+<p>Crea una guía de configuración rápida para cámara réflex: modos para retrato, paisaje, deporte, nocturna y macro. Incluye apertura, velocidad ISO y un truco por modo.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión para tu modelo concreto:</p>
+<blockquote class="blockquote">
+<p>Ahora adáptala para una Sony A6400.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele una chuleta imprimible para llevar en la mochila de la cámara.</p>
+<hr>
+</section>
+<section id="lectura-registro-de-libros" class="level3">
+<h3 class="anchored" data-anchor-id="lectura-registro-de-libros">Lectura — registro de libros 🟢</h3>
+<p>Llevar un registro de lecturas es fácil con OpenCode:</p>
+<blockquote class="blockquote">
+<p>Crea una tabla para registrar mis lecturas: título, autor, género, fecha inicio, fecha fin, puntuación y reseña breve.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele estadísticas:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="lecturas.md">@lecturas.md</span>` ¿Cuántos libros leí este año? ¿Qué género leo más? ¿Cuál fue mi mejor puntuación?</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele recomendaciones de lectura basadas en tus libros mejor valorados.</p>
+<hr>
+</section>
+<section id="juegos-de-mesa-registro-de-partidas" class="level3">
+<h3 class="anchored" data-anchor-id="juegos-de-mesa-registro-de-partidas">Juegos de mesa — registro de partidas 🟢</h3>
+<p>Si juegas con asiduidad, llevar la cuenta es fácil:</p>
+<blockquote class="blockquote">
+<p>Crea una tabla para registrar partidas de juegos de mesa: juego, fecha, jugadores, ganador, duración, notas.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un ranking:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="partidas.md">@partidas.md</span>` ¿Quién ha ganado más partidas este mes? ¿Qué juego jugamos más veces?</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele estadísticas periódicas para saber quién domina cada juego.</p>
+<hr>
+</section>
+<section id="mascotas-guía-de-cuidados" class="level3">
+<h3 class="anchored" data-anchor-id="mascotas-guía-de-cuidados">Mascotas — guía de cuidados 🟢</h3>
+<p>Una ficha completa para tu mascota:</p>
+<blockquote class="blockquote">
+<p>Crea una ficha de cuidados para mi perro: raza, edad, peso, vacunas, alimentación, paseos, veterinario, emergencias.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un historial veterinario:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="ficha-perro.md">@ficha-perro.md</span>` Añade una sección para registrar visitas al veterinario con fecha, motivo y tratamiento.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele un calendario de vacunas y próximas visitas al veterinario.</p>
+<hr>
+</section>
+</section>
+<section id="sec-compras" class="level2">
+<h2 class="anchored" data-anchor-id="sec-compras">Compras y finanzas</h2>
+<p>Análisis de productos, comparación de ofertas y control de presupuestos personales.</p>
+<section id="análisis-de-productos" class="level3">
+<h3 class="anchored" data-anchor-id="análisis-de-productos">Análisis de productos 🟢</h3>
+<p>Cuando dudes entre varios productos, pídele a OpenCode una comparativa con las características que realmente importan:</p>
+<blockquote class="blockquote">
+<p>Voy a comprar un portátil para desarrollo. Compara estos modelos:</p>
+<ul>
+<li>Modelo A: i7, 16 GB RAM, 512 GB SSD, 950 €</li>
+<li>Modelo B: i5, 32 GB RAM, 1 TB SSD, 1100 €</li>
+<li>Modelo C: Ryzen 7, 16 GB RAM, 512 GB SSD, 850 €</li>
+</ul>
+<p>Crea una tabla comparativa con las características relevantes para programación y dime cuál ofrece mejor relación calidad-precio.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un análisis según tu uso concreto (edición de vídeo, gaming, ofimática) o que incluya opiniones de fuentes especializadas. Usa el enlace a la página del proyecto.</p>
+<p><strong>Sugerencia:</strong> incluye siempre tu caso de uso concreto para que la comparativa sea relevante.</p>
+<hr>
+</section>
+<section id="presupuesto-detallado" class="level3">
+<h3 class="anchored" data-anchor-id="presupuesto-detallado">Presupuesto detallado 🟢</h3>
+<p>Antes de reservar, OpenCode te ayuda a calcular:</p>
+<blockquote class="blockquote">
+<p>Presupuesto para 3 personas en París, 4 noches. Desglosa en: vuelo, hotel, comidas, transporte local, entradas a museos, imprevistos (10%).</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una comparativa de opciones:</p>
+<blockquote class="blockquote">
+<p>Compara este presupuesto con una versión económica: albergue en lugar de hotel, comer de menú en lugar de restaurante.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele que incluya siempre un 10 % de imprevistos en el total.</p>
+<hr>
+</section>
+<section id="comparación-de-ofertas-económicas" class="level3">
+<h3 class="anchored" data-anchor-id="comparación-de-ofertas-económicas">Comparación de ofertas económicas 🟡</h3>
+<p>Si tienes varios presupuestos de distintos proveedores, OpenCode los analiza por ti:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="presupuesto-A.pdf">@presupuesto-A.pdf</span>` `<span class="citation" data-cites="presupuesto-B.pdf">@presupuesto-B.pdf</span>` `<span class="citation" data-cites="presupuesto-C.pdf">@presupuesto-C.pdf</span>` Compara estas tres ofertas. Dime: 1. Cuál es más barata en precio total 2. Cuál incluye más servicios 3. Diferencias en plazos de entrega y condiciones de pago 4. Cuál recomendarías y por qué</p>
+</blockquote>
+<p><strong>Variación:</strong> si los presupuestos están en texto, pégalos directamente en el chat. Pídele también un resumen ejecutivo para presentar a tu equipo.</p>
+<p><strong>Sugerencia:</strong> guarda el análisis como plantilla para reutilizarla en futuras comparaciones.</p>
+<hr>
+</section>
+<section id="presupuesto-mensual" class="level3">
+<h3 class="anchored" data-anchor-id="presupuesto-mensual">Presupuesto mensual 🟡</h3>
+<p>OpenCode puede ayudarte a llevar las cuentas:</p>
+<blockquote class="blockquote">
+<p>Crea una plantilla de presupuesto mensual con ingresos y gastos fijos (alquiler, facturas, comida, ocio). Déjame espacio para anotar el importe real cada mes y compararlo con lo previsto.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un análisis periódico:</p>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="presupuesto.md">@presupuesto.md</span>` He gastado 150€ más de lo previsto este mes en ocio. ¿En qué otras categorías podría reducir gastos para compensar?</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> usa <code>@</code> para comparar meses anteriores y detectar desviaciones a tiempo.</p>
+<hr>
+</section>
+</section>
+<section id="sec-deportes" class="level2">
+<h2 class="anchored" data-anchor-id="sec-deportes">Deportes</h2>
+<p>Planes de entrenamiento, registro de marcas, calendarios de temporada y prevención de lesiones.</p>
+<section id="plan-de-entrenamiento-semanal" class="level3">
+<h3 class="anchored" data-anchor-id="plan-de-entrenamiento-semanal">Plan de entrenamiento semanal 🟢</h3>
+<p>Tanto si eres principiante como avanzado, OpenCode te diseña rutinas a medida:</p>
+<blockquote class="blockquote">
+<p>Soy corredor principiante. Crea un plan de 8 semanas para preparar 10 km, con 3 días de running y 2 de fuerza.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele adaptaciones por lesión o condición:</p>
+<blockquote class="blockquote">
+<p>Tengo una sobrecarga en el tendón de Aquiles. Ajusta el plan para incluir más descanso y ejercicios de fortalecimiento.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pide variaciones semanales para no aburrirte con la misma rutina.</p>
+<hr>
+</section>
+<section id="registro-de-marcas" class="level3">
+<h3 class="anchored" data-anchor-id="registro-de-marcas">Registro de marcas 🟢</h3>
+<p>Lleva un histórico de tus progresos:</p>
+<blockquote class="blockquote">
+<p>Crea una tabla para registrar mis marcas personales en running: distancia, tiempo, fecha, lugar, sensaciones (1-5). Déjame ejemplos de cómo rellenarla.</p>
+</blockquote>
+<p><strong>Variación:</strong> extiéndelo a natación o ciclismo:</p>
+<blockquote class="blockquote">
+<p>Añade una hoja para natación: estilo, distancia, tiempo y pulsaciones.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele a OpenCode que analice tu progreso cada mes.</p>
+<hr>
+</section>
+<section id="calendario-de-temporada" class="level3">
+<h3 class="anchored" data-anchor-id="calendario-de-temporada">Calendario de temporada 🟢</h3>
+<p>Para deportes de equipo o ligas organizadas:</p>
+<blockquote class="blockquote">
+<p>Genera un calendario de liga para 8 equipos, ida y vuelta (14 jornadas). Déjame espacio para anotar resultado de cada partido. Guárdalo como calendario-liga.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una clasificación automatizada:</p>
+<blockquote class="blockquote">
+<p>A partir del calendario, crea una tabla de clasificación que calcule automáticamente puntos, goles a favor y en contra.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> usa el calendario para seguir la clasificación actualizada cada jornada.</p>
+<hr>
+</section>
+<section id="prevención-y-estiramientos" class="level3">
+<h3 class="anchored" data-anchor-id="prevención-y-estiramientos">Prevención y estiramientos 🟢</h3>
+<p>Una guía rápida para evitar lesiones:</p>
+<blockquote class="blockquote">
+<p>Soy corredor y tengo molestias en la rodilla. Dame una rutina diaria de estiramientos y fortalecimiento de 15 minutos.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión ilustrada (descripciones):</p>
+<blockquote class="blockquote">
+<p>Describe cada ejercicio con claridad para que pueda seguirlo sin vídeo: posición inicial, movimiento, respiración.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele una rutina diaria de 10 minutos para hacer en casa sin material.</p>
+<hr>
+</section>
+<section id="running-plan-de-entrenamiento-avanzado" class="level3">
+<h3 class="anchored" data-anchor-id="running-plan-de-entrenamiento-avanzado">Running — plan de entrenamiento avanzado 🟢</h3>
+<p>Además del plan para principiantes, puedes pedir progresión:</p>
+<blockquote class="blockquote">
+<p>Plan de 12 semanas para pasar de correr 20 km semanales a 40 km, con tirada larga los domingos, series los miércoles y descanso activo los viernes.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un plan específico para una carrera:</p>
+<blockquote class="blockquote">
+<p>Plan específico para preparar una media maratón en 3 meses. Mi marca actual en 10 km es 55 minutos.</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> pídele que ajuste el plan según tu evolución cada mes.</p>
+<hr>
+</section>
+</section>
+<section id="sec-planificacion" class="level2">
+<h2 class="anchored" data-anchor-id="sec-planificacion">Planificación</h2>
+<p>Generación de calendarios ICS y planes de proyecto multi-paso.</p>
+<section id="programar-actividades-y-generar-ics" class="level3">
+<h3 class="anchored" data-anchor-id="programar-actividades-y-generar-ics">Programar actividades y generar ICS 🟡</h3>
+<p>OpenCode puede generar un archivo de calendario (<code>.ics</code>) que puedes importar en Google Calendar, Outlook o cualquier aplicación de calendario. Solo tienes que describir las actividades:</p>
+<blockquote class="blockquote">
+<p>Soy profesor y necesito un calendario con las siguientes actividades:</p>
+<ul>
+<li>Examen parcial: 15 de octubre, 10:00-12:00</li>
+<li>Entrega de prácticas: cada viernes hasta el 30 de noviembre</li>
+<li>Tutorías: lunes y miércoles de 16:00 a 18:00</li>
+</ul>
+<p>Genera un archivo .ics con todos estos eventos. Guárdalo como calendario-curso.ics.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele eventos recurrentes (clases semanales, reuniones mensuales) o importa fechas desde una lista en Markdown.</p>
+<p><strong>Sugerencia:</strong> usa <em>Plan</em> para definir las actividades y <em>Build</em> para generar el archivo .ics.</p>
+<hr>
+</section>
+<section id="proyectos-de-varios-pasos" class="level3">
+<h3 class="anchored" data-anchor-id="proyectos-de-varios-pasos">Proyectos de varios pasos 🟡</h3>
+<p>Para proyectos grandes, OpenCode puede dividirlos en hitos y tareas, generando un plan ejecutable paso a paso:</p>
+<blockquote class="blockquote">
+<p>Necesito organizar la mudanza de oficina. Tengo 3 meses por delante. Dame un plan con hitos mensuales, tareas semanales y responsables para cada una. Guárdalo como `plan-mudanza-oficina.md`.</p>
+</blockquote>
+<p>El resultado es un documento con fechas, dependencias y checklists que puedes ir marcando a medida que avanzas.</p>
+<p><strong>Variación:</strong> pídele un diagrama de Gantt en tabla Markdown o una estimación de tiempos para cada fase del proyecto.</p>
+<p><strong>Sugerencia:</strong> divide el proyecto en hitos mensuales y usa <code>@</code> para referenciar el plan en cada fase.</p>
+<hr>
+</section>
+</section>
+<section id="sec-comandos" class="level2">
+<h2 class="anchored" data-anchor-id="sec-comandos">Comandos</h2>
+<p>Comandos personalizados para automatizar tareas recurrentes de documentación.</p>
+<section id="minuta" class="level3">
+<h3 class="anchored" data-anchor-id="minuta">/minuta 🔴</h3>
+<p>Genera un acta de reunión con estructura fija:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Genera un acta a partir de notas de reunión</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>A partir de estas notas de reunión, genera un acta con:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>asistentes, orden del día, acuerdos, puntos pendientes</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>y fecha de próxima reunión. Usa tono formal.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>$ARGUMENTS</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Variación:</strong> combínalo con <code>@</code> para enriquecer el acta con documentos de referencia.</p>
+<p><strong>Sugerencia:</strong> define una descripción clara para que OpenCode entienda bien el contexto del acta.</p>
+<hr>
+</section>
+<section id="liberar" class="level3">
+<h3 class="anchored" data-anchor-id="liberar">/liberar 🔴</h3>
+<p>Prepara la nota de release de una versión:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Prepara la nota de release de una nueva versión</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Con los cambios de la versión <span class="in">`$ARGUMENTS`</span>, genera una</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>nota de release con: resumen, novedades, mejoras,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>correcciones y agradecimientos.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Variación:</strong> pídele que enumere los cambios respecto a la versión anterior automáticamente.</p>
+<p><strong>Sugerencia:</strong> combínalo con <code>@changelog.md</code> para generar la nota de release automáticamente.</p>
+<hr>
+</section>
+</section>
+<section id="sec-sistema" class="level2">
+<h2 class="anchored" data-anchor-id="sec-sistema">Sistema y mantenimiento</h2>
+<p>Diagnóstico de errores, copias de seguridad, inventario del sistema y mantenimiento del ordenador.</p>
+<section id="plan-de-copias-de-seguridad" class="level3">
+<h3 class="anchored" data-anchor-id="plan-de-copias-de-seguridad">Plan de copias de seguridad 🟢</h3>
+<blockquote class="blockquote">
+<p>Necesito un plan de backups para mi portátil personal. Dame una checklist con: qué carpetas copiar (Documentos, Fotos, Configuración), dónde guardarlas (disco externo, nube) y cada cuánto hacer cada copia. Guárdalo como plan-backups.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una versión para un equipo con datos críticos de empresa o para un servidor.</p>
+<p><strong>Sugerencia:</strong> programa recordatorios periódicos para no olvidar las copias.</p>
+<hr>
+</section>
+<section id="documentación-del-sistema" class="level3">
+<h3 class="anchored" data-anchor-id="documentación-del-sistema">Documentación del sistema 🟢</h3>
+<blockquote class="blockquote">
+<p>Crea un inventario de mi equipo con: hardware (procesador, RAM, discos, gráfica), software instalado (SO, programas clave con versiones), licencias y configuraciones destacadas. Déjame espacio para anotar cambios. Guárdalo como inventario-sistema.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que calcule el valor de reposición del hardware para el seguro o que genere una tabla comparativa con las especificaciones técnicas.</p>
+<p><strong>Sugerencia:</strong> mantenlo actualizado; te será muy útil para reparaciones o al vender el equipo.</p>
+<hr>
+</section>
+<section id="calendario-de-mantenimiento" class="level3">
+<h3 class="anchored" data-anchor-id="calendario-de-mantenimiento">Calendario de mantenimiento 🟢</h3>
+<blockquote class="blockquote">
+<p>Crea un plan de mantenimiento periódico para mi ordenador: limpiar archivos temporales, actualizar SO y drivers, revisar salud del disco, revisar suscripciones y limpiar el polvo interior. Indica frecuencia (semanal, mensual, trimestral). Guárdalo como mantenimiento-pc.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que añada una columna de “última vez” para saber cuándo hiciste cada tarea.</p>
+<p><strong>Sugerencia:</strong> pídele recordatorios trimestrales para cada tarea de mantenimiento.</p>
+<hr>
+</section>
+<section id="checklist-post-formateo" class="level3">
+<h3 class="anchored" data-anchor-id="checklist-post-formateo">Checklist post-formateo 🟢</h3>
+<blockquote class="blockquote">
+<p>Acabo de formatear el ordenador e instalar el sistema desde cero. Dame una checklist ordenada de todo lo que tengo que hacer después: instalar drivers, programas esenciales, restaurar datos desde backup, configurar cuentas, personalizar el sistema. Guárdalo como post-formateo.md.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele versiones específicas para Windows, Linux o macOS.</p>
+<p><strong>Sugerencia:</strong> guarda la checklist para reutilizarla y mejorarla en futuros formateos.</p>
+<hr>
+</section>
+<section id="diagnóstico-de-errores" class="level3">
+<h3 class="anchored" data-anchor-id="diagnóstico-de-errores">Diagnóstico de errores 🟡</h3>
+<p>Cuando tu sistema da un error inesperado, puedes copiar el mensaje y pedirle a OpenCode que lo analice:</p>
+<blockquote class="blockquote">
+<p>He visto este error al arrancar el programa: `Fallo al cargar librería libXYZ.so`. ¿Qué puede estar causándolo? Dame causas ordenadas por probabilidad y pasos para solucionar cada una.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele un informe con recomendaciones para evitar que el error se repita o que compare el error con otros conocidos.</p>
+<p><strong>Sugerencia:</strong> incluye el sistema operativo, la versión del software y qué estabas haciendo cuando ocurrió el error.</p>
+<hr>
+</section>
+<section id="seguridad-básica" class="level3">
+<h3 class="anchored" data-anchor-id="seguridad-básica">Seguridad básica 🟡</h3>
+<blockquote class="blockquote">
+<p>`<span class="citation" data-cites="inventario-sistema.md">@inventario-sistema.md</span>` A partir del inventario de mi sistema, revísame la configuración de seguridad: ¿qué servicios innecesarios podrían estar activos? ¿faltan actualizaciones críticas? ¿qué puertos o servicios suponen un riesgo? Dame una lista de acciones prioritarias.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele una guía de buenas prácticas de seguridad adaptada a tu perfil (uso doméstico, teletrabajo, servidor).</p>
+<p><strong>Sugerencia:</strong> repite esta revisión cada trimestre para mantener el sistema protegido.</p>
+<hr>
+</section>
+<section id="comparar-modelos-gratuitos-disponibles-en-opencode" class="level3">
+<h3 class="anchored" data-anchor-id="comparar-modelos-gratuitos-disponibles-en-opencode">Comparar modelos gratuitos disponibles en OpenCode 🟡</h3>
+<p>OpenCode incluye modelos gratuitos y también permite usar otros proveedores. Pide a OpenCode que te ayude a explorar las opciones:</p>
+<blockquote class="blockquote">
+<p>Quiero ver qué modelos gratuitos puedo usar con OpenCode en este momento. Compara las opciones disponibles: características, limitaciones y casos de uso recomendados. Dame una tabla.</p>
+</blockquote>
+<p><strong>Variación:</strong> pide que filtre por idioma o por tipo de tarea:</p>
+<blockquote class="blockquote">
+<p>De esos modelos, ¿cuáles funcionan mejor en español para redacción y documentación?</p>
+</blockquote>
+<p><strong>Sugerencia:</strong> la lista de modelos disponibles cambia con frecuencia. Pide a OpenCode que consulte la información más actualizada antes de decidir.</p>
+<hr>
+<p><em>Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026</em></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>
+(function() {
+  if (location.pathname.includes('index.html')) return;
+  var toc = document.getElementById('TOC');
+  if (!toc) return;
+  var link = document.createElement('a');
+  link.href = 'index.html';
+  link.textContent = '\u2190 Volver al \u00edndice';
+  link.className = 'toc-back-btn';
+  toc.append(link);
+})();
+</script>
+
+
+
+
+</body></html>

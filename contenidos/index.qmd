@@ -89,6 +89,14 @@ de prompts para que puedas adaptarlas a tu situación.
 
 ---
 
+## Preguntas frecuentes
+
+Si te surge una duda durante el curso, consulta las
+[*preguntas frecuentes*](faq.html): instalación, modos, comandos,
+archivos y solución de problemas.
+
+---
+
 ## Cómo usar este curso
 
 Estás en el índice del curso. Desde aquí puedes seguir los enlaces

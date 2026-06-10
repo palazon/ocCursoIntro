@@ -25,7 +25,9 @@ El curso se organiza en pasos, cada uno aborda un tema concreto, deben seguirse 
 | III — Productividad y cierre | 9 – 11 | Comandos personalizados, revisión asistida, entrega final |
 
 Incluye además una página de [**ideas y ejemplos**](https://palazon.github.io/ocCursoIntro/contenidos/ideas101.html)
-para empresa, academia, deportes, hogar y aficiones.
+para empresa, academia, deportes, hogar y aficiones, y unas
+[**preguntas frecuentes**](https://palazon.github.io/ocCursoIntro/contenidos/faq.html)
+para resolver dudas habituales.
 
 > **Curso para avanzar:** [OpenCode 102 — Automatización y personalización](https://github.com/palazon/ocCursoAvanzado)
 > 7 pasos para crear agentes a medida, skills reutilizables, Git, MCP, CLI, permisos y colaboración en equipo.

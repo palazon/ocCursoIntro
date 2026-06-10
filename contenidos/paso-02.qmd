@@ -136,6 +136,19 @@ familiarizarte con la terminal, el explorador de archivos y los
 comandos básicos.
 :::
 
+::: {.callout-tip}
+## ¿Qué modelo usa OpenCode?
+
+OpenCode funciona con un modelo de inteligencia artificial. Piensa
+en el modelo como el "cerebro" que procesa tus instrucciones. Hay
+modelos gratuitos (como el que usa OpenCode por defecto) y modelos
+de pago con más capacidad.
+
+En este curso usaremos el modelo gratuito incluido. Si necesitas
+más potencia en el futuro, puedes configurar otros modelos en la
+configuración de OpenCode.
+:::
+
 Verás una pantalla dividida en dos áreas:
 
 ![Interfaz TUI de OpenCode](captura-TUI.png){width=60%}

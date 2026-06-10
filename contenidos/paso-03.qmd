@@ -78,6 +78,16 @@ con `opencode -c` desde el directorio del proyecto para recuperar la
 configuración y el historial de conversaciones.
 :::
 
+::: {.callout-warning}
+## ¿OpenCode no recuerda tu trabajo?
+
+- Sin `opencode -c`, se abre una sesión nueva sin historial: no
+  verás conversaciones anteriores ni la configuración del proyecto.
+- Si abres desde otro directorio, OpenCode tratará ese como un
+  proyecto distinto y no encontrarás los archivos que creaste.
+- Siempre ejecuta `opencode -c` desde el directorio de tu proyecto.
+:::
+
 ### Ejercicio 1 — Analizar (*Plan*)
 
 Pulsa ![Tab](tab-key.svg) hasta que el indicador muestre **Plan**.
