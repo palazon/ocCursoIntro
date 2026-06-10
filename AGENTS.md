@@ -18,9 +18,10 @@ colaboración en equipo. El curso 102 está en un proyecto separado.
 - `contenidos/` — archivos fuente del curso
   - `index.qmd` — visión general del curso básico
   - `paso-XX.qmd` — sesiones del curso básico (00-11)
-  - `ideas101.qmd` / `ideas101.html` — ideas de uso
+  - `ideas101.qmd` / `ideas101.html` — ideas de uso (52 entradas en 11 secciones)
+  - `faq.qmd` / `faq.html` — preguntas frecuentes (34 preguntas en 7 secciones)
   - `custom.css` — hoja de estilos personalizada
-  - `captura-tui.png`, `tab-key.svg` — recursos gráficos
+  - `captura-TUI.png`, `tab-key.svg`, `terminalUsuario.png`, `terminalUsuarioBasico.png` — recursos gráficos
 - `cursoIntroOpenCode/` — paquete redistribuible (generado con `bash build-distro.sh`)
 
 ## Generar HTML
@@ -43,10 +44,10 @@ manuales, guías, informes, FAQs, plantillas.
 - Numeración de pasos: "0.", "1.", "2." (sin la palabra "Paso")
 - Cursivas para énfasis visual, negritas solo para énfasis semántico
 
-## Sesión actual (2026-06-08)
+## Sesión actual (2026-06-10)
 
 ### Hecho
-- **ideas101.qmd**: Añadidos badges de nivel (🟢🟡🔴) tras cada título `###` (32 entradas: 20 🟢, 6 🟡, 4 🔴); añadido `**Sugerencia:**` antes de cada `---` separador; fichero de 505 → 569 líneas; renderizado a HTML
-- **ideas2.qmd**: Reescritura completa — reordenación temática (Documentación→Planificación→Compras→Alimentación→Sistema→Comandos); badges de nivel en 21 entradas (13 🟢, 6 🟡, 2 🔴); sugerencias en cada entrada; sección nueva "Sistema y mantenimiento" con 6 entradas (diagnóstico errores, backups, inventario, mantenimiento, post-formateo, seguridad); comandos `/minuta` y `/liberar` movidos a sección propia; corregida "versión en PDF" → "versión imprimible"; 255 → ~370 líneas; renderizado
-- **fusionideas.qmd**: Creado nuevo documento fusionando ideas101.qmd (32 entradas) + ideas2.qmd (20 entradas, una fusionada) → 51 entradas en 10 secciones ordenadas alfabéticamente (Academia, Aficiones, Alimentación, Comandos, Compras y finanzas, Deportes, Documentación, Empresa, Hogar, Planificación, Sistema y mantenimiento); índice alfabético inicial con referencias cruzadas a secciones; entradas ordenadas por dificultad 🟢→🟡→🔴 dentro de cada sección (29 🟢, 17 🟡, 5 🔴); secciones con intro breve; renderizado
-
+- **ideas101.qmd**: Fusionadas ideas101.qmd + ideas2.qmd → 52 entradas en 11 secciones ordenadas (Documentación, Empresa, Academia, Hogar, Alimentación, Aficiones, Compras, Deportes, Planificación, Comandos, Sistema y mantenimiento); badges de nivel (🟢🟡🔴); `**Sugerencia:**` antes de cada separador; entrada "Comparar modelos gratuitos disponibles en OpenCode" sin nombres concretos de modelos; ~964 líneas; renderizado
+- **faq.qmd**: 34 preguntas frecuentes en 7 secciones (Uso general, Archivos y proyectos, Plan vs Build, Modelos de IA, Permisos, Comandos, Personalización); enlazado desde `index.qmd` y `README.md`; renderizado
+- **paso-02.qmd**: Añadido callout-tip "¿Qué modelo usa OpenCode?" al final de la sección de modelos
+- **paso-03.qmd**: Añadido callout-warning sobre consecuencias de no usar `opencode -c` o el directorio equivocado
