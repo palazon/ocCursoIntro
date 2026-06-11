@@ -1,0 +1,447 @@
+---
+title: "Estilo QMD — Guía de convenciones para el curso OpenCode 101"
+---
+
+Este documento recopila todas las convenciones de formato utilizadas
+en los archivos `.qmd` del curso. Úsalo como referencia al crear o
+modificar contenido.
+
+---
+
+## Archivos del curso
+
+| Archivo | Tipo | Descripción |
+|---------|------|-------------|
+| `paso-00.qmd` a `paso-11.qmd` | Pasos | Lecciones del curso (12 pasos) |
+| `index.qmd` | Índice | Página de inicio y tabla de contenidos |
+| `ideas101.qmd` | Catálogo | 52 ideas de uso organizadas por secciones |
+| `faq.qmd` | FAQ | 34 preguntas frecuentes en 7 secciones |
+
+---
+
+## Estructura de un archivo paso
+
+Cada archivo `paso-NN.qmd` sigue esta plantilla:
+
+```markdown
+---
+title: "N. Título del paso"
+---
+
+## Objetivo
+
+Descripción breve de lo que se aprenderá.
+
+Duración estimada: **XX minutos**
+
+---
+
+## Nombre de la sección
+
+Explicación del tema.
+
+---
+
+## Manos a la obra
+
+### Ejercicio 1 — Título del ejercicio
+
+Instrucciones.
+
+Escribe en el chat de OpenCode:
+
+> Prompt de ejemplo
+
+---
+
+## Resumen del paso
+
+- ✅ Logro 1
+- ✅ Logro 2
+- ✅ Logro 3
+
+Transición al siguiente paso.
+
+---
+
+## Para profundizar (opcional)
+
+- [Enlace](url)
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*
+```
+
+---
+
+## Front Matter
+
+Solo se incluyen campos mínimos:
+
+```yaml
+---
+title: "N. Título del paso"
+---
+```
+
+- Opcionalmente `author` y `date` (solo en `paso-00.qmd`)
+
+- Sin configuración de renderizado (se controla en `_quarto.yml`)
+
+- Los `---` delimitan el front matter al inicio del archivo
+
+---
+
+## Encabezados
+
+| Nivel | Uso | Ejemplo |
+|-------|-----|---------|
+| `##` | Secciones principales | `## Objetivo`, `## Manos a la obra`, `## Resumen del paso` |
+| `###` | Ejercicios y subsecciones | `### Ejercicio 1 — Primera búsqueda` |
+| `####` | No se usa | — |
+| `#` | No se usa en el cuerpo | — |
+
+---
+
+## Secciones fijas de los pasos
+
+Los pasos incluyen estas secciones en orden:
+
+1. `## Objetivo` — con duración estimada en negrita
+
+2. Secciones explicativas temáticas (varias, con `---` entre ellas)
+
+3. `## Manos a la obra` — con ejercicios numerados
+
+4. `## Resumen del paso` — con viñetas `✅`
+
+5. Transición al siguiente paso (excepto paso 11)
+
+6. Firma final
+
+---
+
+## Callouts (cajas destacadas)
+
+Tres tipos de callouts con syntax de fenced divs:
+
+### Nota informativa
+
+```markdown
+::: {.callout-note}
+## Título de la nota
+
+Contenido informativo que amplía o contextualiza.
+:::
+```
+
+### Consejo o sugerencia
+
+```markdown
+::: {.callout-tip}
+## Título del consejo
+
+Sugerencia práctica, alternativa o tip.
+:::
+```
+
+### Advertencia
+
+```markdown
+::: {.callout-warning}
+## Título de la advertencia
+
+Algo importante a tener en cuenta o error común.
+:::
+```
+
+### Títulos habituales de callouts
+
+- *Cambia esto* — correcciones de estilo
+
+- *¿Por qué?* — justificación de decisiones
+
+- *Sugerencia para novatos* — consejos para principiantes
+
+- *Sugerencia para expertos* — ideas para usuarios avanzados
+
+- *Idea original* — atribución de la idea
+
+- *Consejo didáctico* — orientación pedagógica
+
+- *Revisa tu progreso* — verificación de avance
+
+---
+
+## Énfasis y formato de texto
+
+| Elemento | Formato | Ejemplo |
+|----------|---------|---------|
+| Modos de OpenCode | *Cursiva* | *Plan*, *Build* |
+| Nombres de archivos informales | *Cursiva* | *mi-documento.md* |
+| Duración estimada | **Negrita** | **20 minutos** |
+| Comandos de terminal | **Negrita** | `opencode --version` |
+| Teclas | **Negrita** | **Tab**, **Ctrl+C** |
+| Nombres de archivo formales | **Negrita** | `darwin-evolucion.md` |
+| Archivos de comando | Backticks + @ | `` `@archivo.md` `` |
+
+---
+
+## Prompts de ejemplo
+
+Los prompts que el usuario escribe en el chat se muestran con sangría
+de bloque (`>`):
+
+```markdown
+> Busca información actual sobre los beneficios del teletrabajo y
+> resúmelo en 3 puntos principales.
+```
+
+Referencia a archivos dentro de prompts:
+
+```markdown
+> `@darwin-evolucion.md` Reescribe este documento con un tono más
+> formal.
+```
+
+Referencia a múltiples archivos:
+
+```markdown
+> `@nota-1.md` `@nota-2.md` Combina estos dos archivos.
+```
+
+---
+
+## Bloques de código
+
+### Comandos de terminal
+
+````
+```bash
+opencode --version
+quarto render archivo.qmd
+ls *.md
+```
+````
+
+### Contenido de archivos de comando
+
+````
+```markdown
+Nombre: /revisar
+Descripción: Revisa un documento en busca de errores.
+```
+````
+
+---
+
+## Listas
+
+### Listas simples con guion
+
+```markdown
+- Elemento 1
+
+- Elemento 2
+
+- Elemento 3
+```
+
+### Listas numeradas en ejercicios
+
+```markdown
+1. Primer paso
+
+2. Segundo paso
+
+3. Tercer paso
+```
+
+### Viñetas de resumen
+
+```markdown
+- ✅ Logro alcanzado
+
+- ✅ Otro logro
+```
+
+### Badges de dificultad (solo en ideas101.qmd)
+
+```markdown
+### Título de la idea 🟢
+### Título de la idea 🟡
+### Título de la idea 🔴
+```
+
+---
+
+## Tablas
+
+### Tabla estándar
+
+```markdown
+| Columna 1 | Columna 2 | Columna 3 |
+|-----------|-----------|-----------|
+| Valor 1   | Valor 2   | Valor 3   |
+```
+
+### Tabla con alineación
+
+```markdown
+| Capacidad | Dónde se aprende |
+|-----------|:----------:|
+| Navegar   | [Paso 1](paso-01.html) |
+```
+
+---
+
+## Imágenes
+
+Referencia inline con texto alternativo:
+
+```markdown
+![Tab](tab-key.svg)
+```
+
+```markdown
+![Captura de la terminal](terminalUsuario.png)
+```
+
+---
+
+## Enlaces
+
+### Enlaces internos
+
+```markdown
+[texto descriptivo](archivo.html)
+```
+
+### Enlaces externos
+
+```markdown
+[texto descriptivo](https://ejemplo.com)
+```
+
+### Anclas con IDs (solo en ideas101.qmd)
+
+```markdown
+## Nombre de la sección {#sec-alias}
+```
+
+---
+
+## Separadores
+
+Línea horizontal (`---`) para separar:
+
+- Secciones dentro de un paso
+- Entradas en ideas101.qmd
+- Secciones en faq.qmd
+- Bloques temáticos en index.qmd
+
+---
+
+## Firma final
+
+### Pasos (paso-00 a paso-11)
+
+```markdown
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*
+```
+
+### ideas101.qmd
+
+```markdown
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*
+```
+
+### faq.qmd
+
+```markdown
+*Curso OpenCode 101 · Preguntas frecuentes · Junio 2026*
+```
+
+### index.qmd
+
+```markdown
+*Curso OpenCode 101 · Idea original de JA Palazón*
+*Elaborado con OpenCode — Modelo deepseek-v4-flash-free · Mayo 2026*
+```
+
+---
+
+## Convenciones de ideas101.qmd
+
+Estructura de cada entrada:
+
+```markdown
+## Sección {#sec-alias}
+
+Descripción breve de la sección.
+
+### Título de la idea 🟢
+
+Descripción de la idea.
+
+> Prompt de ejemplo
+
+**Variación:** descripción de una variante.
+
+**Sugerencia:** consejo práctico.
+
+---
+
+```
+
+- Cada entrada termina con `---`
+- Badges: 🟢 básica, 🟡 intermedia, 🔴 avanzada
+- `**Variación:**` y `**Sugerencia:**` son patrones fijos
+- Los prompts usan backticks con `@` para referenciar archivos
+
+---
+
+## Convenciones de faq.qmd
+
+Estructura de cada sección:
+
+```markdown
+## Nombre de la sección
+
+### Pregunta formulada
+
+Respuesta breve y directa.
+
+📖 [Paso N — Referencia](paso-NN.html)
+
+```
+
+- `📖` precede a cada enlace de referencia
+- Las secciones se separan con `---`
+- Las preguntas empiezan con `###`
+- Las respuestas son párrafos directos (sin callouts)
+
+---
+
+## Convenciones de index.qmd
+
+- Tablas con enlaces a pasos
+- Callouts para advertencias y tips
+- Estructura en bloques (I, II, III)
+- Mapa de capacidades como tabla
+- Firma con modelo utilizado
+
+---
+
+## Errores comunes a evitar
+
+- No usar `#` (h1) en el cuerpo del documento
+- No usar `####` (h4)
+- No usar syntax inline `::: {.callout-note}` (usar fenced divs multilínea)
+- No incluir `author` o `date` en archivos que no sean pasos
+- No olvidar los `---` entre secciones
+- No usar negrita para modos (*Plan*, *Build* van en cursiva)
+- No usar `<br>` para saltos de línea (usar párrafos separados)
+
+---
+
+*Curso OpenCode 101 · Guía de estilo QMD · Junio 2026*

@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Estilo QMD — Guía de convenciones para el curso OpenCode 101</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="estiloQmd_files/libs/clipboard/clipboard.min.js"></script>
+<script src="estiloQmd_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="estiloQmd_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="estiloQmd_files/libs/quarto-html/popper.min.js"></script>
+<script src="estiloQmd_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="estiloQmd_files/libs/quarto-html/anchor.min.js"></script>
+<link href="estiloQmd_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="estiloQmd_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="estiloQmd_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="estiloQmd_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="estiloQmd_files/libs/bootstrap/bootstrap-ba13d4a16a61746bd6fb80a772d4709f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#archivos-del-curso" id="toc-archivos-del-curso" class="nav-link active" data-scroll-target="#archivos-del-curso">Archivos del curso</a></li>
+  <li><a href="#estructura-de-un-archivo-paso" id="toc-estructura-de-un-archivo-paso" class="nav-link" data-scroll-target="#estructura-de-un-archivo-paso">Estructura de un archivo paso</a></li>
+  <li><a href="#front-matter" id="toc-front-matter" class="nav-link" data-scroll-target="#front-matter">Front Matter</a></li>
+  <li><a href="#encabezados" id="toc-encabezados" class="nav-link" data-scroll-target="#encabezados">Encabezados</a></li>
+  <li><a href="#secciones-fijas-de-los-pasos" id="toc-secciones-fijas-de-los-pasos" class="nav-link" data-scroll-target="#secciones-fijas-de-los-pasos">Secciones fijas de los pasos</a></li>
+  <li><a href="#callouts-cajas-destacadas" id="toc-callouts-cajas-destacadas" class="nav-link" data-scroll-target="#callouts-cajas-destacadas">Callouts (cajas destacadas)</a>
+  <ul class="collapse">
+  <li><a href="#nota-informativa" id="toc-nota-informativa" class="nav-link" data-scroll-target="#nota-informativa">Nota informativa</a></li>
+  <li><a href="#consejo-o-sugerencia" id="toc-consejo-o-sugerencia" class="nav-link" data-scroll-target="#consejo-o-sugerencia">Consejo o sugerencia</a></li>
+  <li><a href="#advertencia" id="toc-advertencia" class="nav-link" data-scroll-target="#advertencia">Advertencia</a></li>
+  <li><a href="#títulos-habituales-de-callouts" id="toc-títulos-habituales-de-callouts" class="nav-link" data-scroll-target="#títulos-habituales-de-callouts">Títulos habituales de callouts</a></li>
+  </ul></li>
+  <li><a href="#énfasis-y-formato-de-texto" id="toc-énfasis-y-formato-de-texto" class="nav-link" data-scroll-target="#énfasis-y-formato-de-texto">Énfasis y formato de texto</a></li>
+  <li><a href="#prompts-de-ejemplo" id="toc-prompts-de-ejemplo" class="nav-link" data-scroll-target="#prompts-de-ejemplo">Prompts de ejemplo</a></li>
+  <li><a href="#bloques-de-código" id="toc-bloques-de-código" class="nav-link" data-scroll-target="#bloques-de-código">Bloques de código</a>
+  <ul class="collapse">
+  <li><a href="#comandos-de-terminal" id="toc-comandos-de-terminal" class="nav-link" data-scroll-target="#comandos-de-terminal">Comandos de terminal</a></li>
+  <li><a href="#contenido-de-archivos-de-comando" id="toc-contenido-de-archivos-de-comando" class="nav-link" data-scroll-target="#contenido-de-archivos-de-comando">Contenido de archivos de comando</a></li>
+  </ul></li>
+  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas">Listas</a>
+  <ul class="collapse">
+  <li><a href="#listas-simples-con-guion" id="toc-listas-simples-con-guion" class="nav-link" data-scroll-target="#listas-simples-con-guion">Listas simples con guion</a></li>
+  <li><a href="#listas-numeradas-en-ejercicios" id="toc-listas-numeradas-en-ejercicios" class="nav-link" data-scroll-target="#listas-numeradas-en-ejercicios">Listas numeradas en ejercicios</a></li>
+  <li><a href="#viñetas-de-resumen" id="toc-viñetas-de-resumen" class="nav-link" data-scroll-target="#viñetas-de-resumen">Viñetas de resumen</a></li>
+  <li><a href="#badges-de-dificultad-solo-en-ideas101.qmd" id="toc-badges-de-dificultad-solo-en-ideas101.qmd" class="nav-link" data-scroll-target="#badges-de-dificultad-solo-en-ideas101.qmd">Badges de dificultad (solo en ideas101.qmd)</a></li>
+  </ul></li>
+  <li><a href="#tablas" id="toc-tablas" class="nav-link" data-scroll-target="#tablas">Tablas</a>
+  <ul class="collapse">
+  <li><a href="#tabla-estándar" id="toc-tabla-estándar" class="nav-link" data-scroll-target="#tabla-estándar">Tabla estándar</a></li>
+  <li><a href="#tabla-con-alineación" id="toc-tabla-con-alineación" class="nav-link" data-scroll-target="#tabla-con-alineación">Tabla con alineación</a></li>
+  </ul></li>
+  <li><a href="#imágenes" id="toc-imágenes" class="nav-link" data-scroll-target="#imágenes">Imágenes</a></li>
+  <li><a href="#enlaces" id="toc-enlaces" class="nav-link" data-scroll-target="#enlaces">Enlaces</a>
+  <ul class="collapse">
+  <li><a href="#enlaces-internos" id="toc-enlaces-internos" class="nav-link" data-scroll-target="#enlaces-internos">Enlaces internos</a></li>
+  <li><a href="#enlaces-externos" id="toc-enlaces-externos" class="nav-link" data-scroll-target="#enlaces-externos">Enlaces externos</a></li>
+  <li><a href="#anclas-con-ids-solo-en-ideas101.qmd" id="toc-anclas-con-ids-solo-en-ideas101.qmd" class="nav-link" data-scroll-target="#anclas-con-ids-solo-en-ideas101.qmd">Anclas con IDs (solo en ideas101.qmd)</a></li>
+  </ul></li>
+  <li><a href="#separadores" id="toc-separadores" class="nav-link" data-scroll-target="#separadores">Separadores</a></li>
+  <li><a href="#firma-final" id="toc-firma-final" class="nav-link" data-scroll-target="#firma-final">Firma final</a>
+  <ul class="collapse">
+  <li><a href="#pasos-paso-00-a-paso-11" id="toc-pasos-paso-00-a-paso-11" class="nav-link" data-scroll-target="#pasos-paso-00-a-paso-11">Pasos (paso-00 a paso-11)</a></li>
+  <li><a href="#ideas101.qmd" id="toc-ideas101.qmd" class="nav-link" data-scroll-target="#ideas101.qmd">ideas101.qmd</a></li>
+  <li><a href="#faq.qmd" id="toc-faq.qmd" class="nav-link" data-scroll-target="#faq.qmd">faq.qmd</a></li>
+  <li><a href="#index.qmd" id="toc-index.qmd" class="nav-link" data-scroll-target="#index.qmd">index.qmd</a></li>
+  </ul></li>
+  <li><a href="#convenciones-de-ideas101.qmd" id="toc-convenciones-de-ideas101.qmd" class="nav-link" data-scroll-target="#convenciones-de-ideas101.qmd">Convenciones de ideas101.qmd</a></li>
+  <li><a href="#convenciones-de-faq.qmd" id="toc-convenciones-de-faq.qmd" class="nav-link" data-scroll-target="#convenciones-de-faq.qmd">Convenciones de faq.qmd</a></li>
+  <li><a href="#convenciones-de-index.qmd" id="toc-convenciones-de-index.qmd" class="nav-link" data-scroll-target="#convenciones-de-index.qmd">Convenciones de index.qmd</a></li>
+  <li><a href="#errores-comunes-a-evitar" id="toc-errores-comunes-a-evitar" class="nav-link" data-scroll-target="#errores-comunes-a-evitar">Errores comunes a evitar</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Estilo QMD — Guía de convenciones para el curso OpenCode 101</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este documento recopila todas las convenciones de formato utilizadas en los archivos <code>.qmd</code> del curso. Úsalo como referencia al crear o modificar contenido.</p>
+<hr>
+<section id="archivos-del-curso" class="level2">
+<h2 class="anchored" data-anchor-id="archivos-del-curso">Archivos del curso</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 21%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>paso-00.qmd</code> a <code>paso-11.qmd</code></td>
+<td>Pasos</td>
+<td>Lecciones del curso (12 pasos)</td>
+</tr>
+<tr class="even">
+<td><code>index.qmd</code></td>
+<td>Índice</td>
+<td>Página de inicio y tabla de contenidos</td>
+</tr>
+<tr class="odd">
+<td><code>ideas101.qmd</code></td>
+<td>Catálogo</td>
+<td>52 ideas de uso organizadas por secciones</td>
+</tr>
+<tr class="even">
+<td><code>faq.qmd</code></td>
+<td>FAQ</td>
+<td>34 preguntas frecuentes en 7 secciones</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="estructura-de-un-archivo-paso" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-de-un-archivo-paso">Estructura de un archivo paso</h2>
+<p>Cada archivo <code>paso-NN.qmd</code> sigue esta plantilla:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "N. Título del paso"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivo</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Descripción breve de lo que se aprenderá.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Duración estimada: **XX minutos**</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Nombre de la sección</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Explicación del tema.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Manos a la obra</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ejercicio 1 — Título del ejercicio</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Instrucciones.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Escribe en el chat de OpenCode:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Prompt de ejemplo</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resumen del paso</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Logro 1</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Logro 2</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Logro 3</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Transición al siguiente paso.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Para profundizar (opcional)</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Enlace</span><span class="co">](url)</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="front-matter" class="level2">
+<h2 class="anchored" data-anchor-id="front-matter">Front Matter</h2>
+<p>Solo se incluyen campos mínimos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"N. Título del paso"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Opcionalmente <code>author</code> y <code>date</code> (solo en <code>paso-00.qmd</code>)</li>
+<li>Sin configuración de renderizado (se controla en <code>_quarto.yml</code>)</li>
+<li>Los <code>---</code> delimitan el front matter al inicio del archivo</li>
+</ul>
+<hr>
+</section>
+<section id="encabezados" class="level2">
+<h2 class="anchored" data-anchor-id="encabezados">Encabezados</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 23%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Uso</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>##</code></td>
+<td>Secciones principales</td>
+<td><code>## Objetivo</code>, <code>## Manos a la obra</code>, <code>## Resumen del paso</code></td>
+</tr>
+<tr class="even">
+<td><code>###</code></td>
+<td>Ejercicios y subsecciones</td>
+<td><code>### Ejercicio 1 — Primera búsqueda</code></td>
+</tr>
+<tr class="odd">
+<td><code>####</code></td>
+<td>No se usa</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>#</code></td>
+<td>No se usa en el cuerpo</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="secciones-fijas-de-los-pasos" class="level2">
+<h2 class="anchored" data-anchor-id="secciones-fijas-de-los-pasos">Secciones fijas de los pasos</h2>
+<p>Los pasos incluyen estas secciones en orden:</p>
+<ol type="1">
+<li><code>## Objetivo</code> — con duración estimada en negrita</li>
+<li>Secciones explicativas temáticas (varias, con <code>---</code> entre ellas)</li>
+<li><code>## Manos a la obra</code> — con ejercicios numerados</li>
+<li><code>## Resumen del paso</code> — con viñetas <code>✅</code></li>
+<li>Transición al siguiente paso (excepto paso 11)</li>
+<li>Firma final</li>
+</ol>
+<hr>
+</section>
+<section id="callouts-cajas-destacadas" class="level2">
+<h2 class="anchored" data-anchor-id="callouts-cajas-destacadas">Callouts (cajas destacadas)</h2>
+<p>Tres tipos de callouts con syntax de fenced divs:</p>
+<section id="nota-informativa" class="level3">
+<h3 class="anchored" data-anchor-id="nota-informativa">Nota informativa</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Título de la nota</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Contenido informativo que amplía o contextualiza.</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="consejo-o-sugerencia" class="level3">
+<h3 class="anchored" data-anchor-id="consejo-o-sugerencia">Consejo o sugerencia</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Título del consejo</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Sugerencia práctica, alternativa o tip.</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="advertencia" class="level3">
+<h3 class="anchored" data-anchor-id="advertencia">Advertencia</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Título de la advertencia</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Algo importante a tener en cuenta o error común.</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="títulos-habituales-de-callouts" class="level3">
+<h3 class="anchored" data-anchor-id="títulos-habituales-de-callouts">Títulos habituales de callouts</h3>
+<ul>
+<li><em>Cambia esto</em> — correcciones de estilo</li>
+<li><em>¿Por qué?</em> — justificación de decisiones</li>
+<li><em>Sugerencia para novatos</em> — consejos para principiantes</li>
+<li><em>Sugerencia para expertos</em> — ideas para usuarios avanzados</li>
+<li><em>Idea original</em> — atribución de la idea</li>
+<li><em>Consejo didáctico</em> — orientación pedagógica</li>
+<li><em>Revisa tu progreso</em> — verificación de avance</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="énfasis-y-formato-de-texto" class="level2">
+<h2 class="anchored" data-anchor-id="énfasis-y-formato-de-texto">Énfasis y formato de texto</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>Formato</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modos de OpenCode</td>
+<td><em>Cursiva</em></td>
+<td><em>Plan</em>, <em>Build</em></td>
+</tr>
+<tr class="even">
+<td>Nombres de archivos informales</td>
+<td><em>Cursiva</em></td>
+<td><em>mi-documento.md</em></td>
+</tr>
+<tr class="odd">
+<td>Duración estimada</td>
+<td><strong>Negrita</strong></td>
+<td><strong>20 minutos</strong></td>
+</tr>
+<tr class="even">
+<td>Comandos de terminal</td>
+<td><strong>Negrita</strong></td>
+<td><code>opencode --version</code></td>
+</tr>
+<tr class="odd">
+<td>Teclas</td>
+<td><strong>Negrita</strong></td>
+<td><strong>Tab</strong>, <strong>Ctrl+C</strong></td>
+</tr>
+<tr class="even">
+<td>Nombres de archivo formales</td>
+<td><strong>Negrita</strong></td>
+<td><code>darwin-evolucion.md</code></td>
+</tr>
+<tr class="odd">
+<td>Archivos de comando</td>
+<td>Backticks + @</td>
+<td><code>`@archivo.md`</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="prompts-de-ejemplo" class="level2">
+<h2 class="anchored" data-anchor-id="prompts-de-ejemplo">Prompts de ejemplo</h2>
+<p>Los prompts que el usuario escribe en el chat se muestran con sangría de bloque (<code>&gt;</code>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Busca información actual sobre los beneficios del teletrabajo y</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; resúmelo en 3 puntos principales.</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Referencia a archivos dentro de prompts:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="in">`@darwin-evolucion.md`</span><span class="at"> Reescribe este documento con un tono más</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; formal.</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Referencia a múltiples archivos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="in">`@nota-1.md`</span><span class="at"> </span><span class="in">`@nota-2.md`</span><span class="at"> Combina estos dos archivos.</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="bloques-de-código" class="level2">
+<h2 class="anchored" data-anchor-id="bloques-de-código">Bloques de código</h2>
+<section id="comandos-de-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-terminal">Comandos de terminal</h3>
+<pre><code>```bash
+opencode --version
+quarto render archivo.qmd
+ls *.md
+```</code></pre>
+</section>
+<section id="contenido-de-archivos-de-comando" class="level3">
+<h3 class="anchored" data-anchor-id="contenido-de-archivos-de-comando">Contenido de archivos de comando</h3>
+<pre><code>```markdown
+Nombre: /revisar
+Descripción: Revisa un documento en busca de errores.
+```</code></pre>
+<hr>
+</section>
+</section>
+<section id="listas" class="level2">
+<h2 class="anchored" data-anchor-id="listas">Listas</h2>
+<section id="listas-simples-con-guion" class="level3">
+<h3 class="anchored" data-anchor-id="listas-simples-con-guion">Listas simples con guion</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Elemento 1</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Elemento 2</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Elemento 3</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="listas-numeradas-en-ejercicios" class="level3">
+<h3 class="anchored" data-anchor-id="listas-numeradas-en-ejercicios">Listas numeradas en ejercicios</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer paso</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Segundo paso</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Tercer paso</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="viñetas-de-resumen" class="level3">
+<h3 class="anchored" data-anchor-id="viñetas-de-resumen">Viñetas de resumen</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Logro alcanzado</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Otro logro</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="badges-de-dificultad-solo-en-ideas101.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="badges-de-dificultad-solo-en-ideas101.qmd">Badges de dificultad (solo en ideas101.qmd)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Título de la idea 🟢</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Título de la idea 🟡</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Título de la idea 🔴</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="tablas" class="level2">
+<h2 class="anchored" data-anchor-id="tablas">Tablas</h2>
+<section id="tabla-estándar" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-estándar">Tabla estándar</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Columna 1 <span class="pp">|</span> Columna 2 <span class="pp">|</span> Columna 3 <span class="pp">|</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|-----------|-----------|-----------|</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Valor 1   <span class="pp">|</span> Valor 2   <span class="pp">|</span> Valor 3   <span class="pp">|</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="tabla-con-alineación" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-con-alineación">Tabla con alineación</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capacidad <span class="pp">|</span> Dónde se aprende <span class="pp">|</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|-----------|:----------:|</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Navegar   <span class="pp">|</span> <span class="co">[</span><span class="ot">Paso 1</span><span class="co">](paso-01.html)</span> <span class="pp">|</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="imágenes" class="level2">
+<h2 class="anchored" data-anchor-id="imágenes">Imágenes</h2>
+<p>Referencia inline con texto alternativo:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Tab](tab-key.svg)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Captura de la terminal](terminalUsuario.png)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="enlaces" class="level2">
+<h2 class="anchored" data-anchor-id="enlaces">Enlaces</h2>
+<section id="enlaces-internos" class="level3">
+<h3 class="anchored" data-anchor-id="enlaces-internos">Enlaces internos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">texto descriptivo</span><span class="co">](archivo.html)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="enlaces-externos" class="level3">
+<h3 class="anchored" data-anchor-id="enlaces-externos">Enlaces externos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">texto descriptivo</span><span class="co">](https://ejemplo.com)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="anclas-con-ids-solo-en-ideas101.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="anclas-con-ids-solo-en-ideas101.qmd">Anclas con IDs (solo en ideas101.qmd)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Nombre de la sección {#sec-alias}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="separadores" class="level2">
+<h2 class="anchored" data-anchor-id="separadores">Separadores</h2>
+<p>Línea horizontal (<code>---</code>) para separar:</p>
+<ul>
+<li>Secciones dentro de un paso</li>
+<li>Entradas en ideas101.qmd</li>
+<li>Secciones en faq.qmd</li>
+<li>Bloques temáticos en index.qmd</li>
+</ul>
+<hr>
+</section>
+<section id="firma-final" class="level2">
+<h2 class="anchored" data-anchor-id="firma-final">Firma final</h2>
+<section id="pasos-paso-00-a-paso-11" class="level3">
+<h3 class="anchored" data-anchor-id="pasos-paso-00-a-paso-11">Pasos (paso-00 a paso-11)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="ideas101.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="ideas101.qmd">ideas101.qmd</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="faq.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="faq.qmd">faq.qmd</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>*Curso OpenCode 101 · Preguntas frecuentes · Junio 2026*</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="index.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="index.qmd">index.qmd</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>*Curso OpenCode 101 · Idea original de JA Palazón*</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>*Elaborado con OpenCode — Modelo deepseek-v4-flash-free · Mayo 2026*</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="convenciones-de-ideas101.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="convenciones-de-ideas101.qmd">Convenciones de ideas101.qmd</h2>
+<p>Estructura de cada entrada:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sección {#sec-alias}</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>Descripción breve de la sección.</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Título de la idea 🟢</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>Descripción de la idea.</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Prompt de ejemplo</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>**Variación:** descripción de una variante.</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>**Sugerencia:** consejo práctico.</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Cada entrada termina con <code>---</code></li>
+<li>Badges: 🟢 básica, 🟡 intermedia, 🔴 avanzada</li>
+<li><code>**Variación:**</code> y <code>**Sugerencia:**</code> son patrones fijos</li>
+<li>Los prompts usan backticks con <code>@</code> para referenciar archivos</li>
+</ul>
+<hr>
+</section>
+<section id="convenciones-de-faq.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="convenciones-de-faq.qmd">Convenciones de faq.qmd</h2>
+<p>Estructura de cada sección:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Nombre de la sección</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pregunta formulada</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>Respuesta breve y directa.</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>📖 <span class="co">[</span><span class="ot">Paso N — Referencia</span><span class="co">](paso-NN.html)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>📖</code> precede a cada enlace de referencia</li>
+<li>Las secciones se separan con <code>---</code></li>
+<li>Las preguntas empiezan con <code>###</code></li>
+<li>Las respuestas son párrafos directos (sin callouts)</li>
+</ul>
+<hr>
+</section>
+<section id="convenciones-de-index.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="convenciones-de-index.qmd">Convenciones de index.qmd</h2>
+<ul>
+<li>Tablas con enlaces a pasos</li>
+<li>Callouts para advertencias y tips</li>
+<li>Estructura en bloques (I, II, III)</li>
+<li>Mapa de capacidades como tabla</li>
+<li>Firma con modelo utilizado</li>
+</ul>
+<hr>
+</section>
+<section id="errores-comunes-a-evitar" class="level2">
+<h2 class="anchored" data-anchor-id="errores-comunes-a-evitar">Errores comunes a evitar</h2>
+<ul>
+<li>No usar <code>#</code> (h1) en el cuerpo del documento</li>
+<li>No usar <code>####</code> (h4)</li>
+<li>No usar syntax inline <code>::: {.callout-note}</code> (usar fenced divs multilínea)</li>
+<li>No incluir <code>author</code> o <code>date</code> en archivos que no sean pasos</li>
+<li>No olvidar los <code>---</code> entre secciones</li>
+<li>No usar negrita para modos (<em>Plan</em>, <em>Build</em> van en cursiva)</li>
+<li>No usar <code>&lt;br&gt;</code> para saltos de línea (usar párrafos separados)</li>
+</ul>
+<hr>
+<p><em>Curso OpenCode 101 · Guía de estilo QMD · Junio 2026</em></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>
+(function() {
+  if (location.pathname.includes('index.html')) return;
+  var toc = document.getElementById('TOC');
+  if (!toc) return;
+  var link = document.createElement('a');
+  link.href = 'index.html';
+  link.textContent = '\u2190 Volver al \u00edndice';
+  link.className = 'toc-back-btn';
+  toc.append(link);
+})();
+</script>
+
+
+
+
+</body></html>
