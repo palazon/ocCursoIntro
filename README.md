@@ -24,9 +24,9 @@ El curso se organiza en pasos, cada uno aborda un tema concreto, deben seguirse 
 | II — El taller de documentos | 4 – 8 | Contenido externo, investigación web, reestructuración, traducción, tablas |
 | III — Productividad y cierre | 9 – 11 | Comandos personalizados, revisión asistida, entrega final |
 
-Incluye además una página de [**ideas y ejemplos**](https://palazon.github.io/ocCursoIntro/contenidos/ideas101.html)
+Incluye además una página de [**ideas y ejemplos**](https://palazon.github.io/ocCursoIntro/ideas101.html)
 para empresa, academia, deportes, hogar y aficiones, y unas
-[**preguntas frecuentes**](https://palazon.github.io/ocCursoIntro/contenidos/faq.html)
+[**preguntas frecuentes**](https://palazon.github.io/ocCursoIntro/faq.html)
 para resolver dudas habituales.
 
 > **Curso para avanzar:** [OpenCode 102 — Automatización y personalización](https://github.com/palazon/ocCursoAvanzado)
@@ -37,7 +37,7 @@ para resolver dudas habituales.
 ### A. *On line* (recomendado)
 
 Solo necesitas un navegador. Abre
-<https://palazon.github.io/ocCursoIntro/contenidos/> y sigue el curso
+<https://palazon.github.io/ocCursoIntro/index.html> y sigue el curso
 sin descargar ni instalar ningún fichero del curso.
 
 ### B. Desde la distribución local (para curiosos inquietos)
