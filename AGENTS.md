@@ -18,7 +18,7 @@ colaboración en equipo. El curso 102 está en un proyecto separado.
 - `contenidos/` — archivos fuente del curso
   - `index.qmd` — visión general del curso básico
   - `paso-XX.qmd` — sesiones del curso básico (00-11)
-  - `ideas101.qmd` / `ideas101.html` — ideas de uso (52 entradas en 11 secciones)
+  - `ideas101.qmd` / `ideas101.html` — ideas de uso (53 entradas en 11 secciones)
   - `faq.qmd` / `faq.html` — preguntas frecuentes (34 preguntas en 7 secciones)
   - `custom.css` — hoja de estilos personalizada
   - `captura-TUI.png`, `tab-key.svg`, `terminalUsuario.png`, `terminalUsuarioBasico.png` — recursos gráficos
@@ -47,7 +47,7 @@ manuales, guías, informes, FAQs, plantillas.
 ## Sesión actual (2026-06-10)
 
 ### Hecho
-- **ideas101.qmd**: Fusionadas ideas101.qmd + ideas2.qmd → 52 entradas en 11 secciones ordenadas (Documentación, Empresa, Academia, Hogar, Alimentación, Aficiones, Compras, Deportes, Planificación, Comandos, Sistema y mantenimiento); badges de nivel (🟢🟡🔴); `**Sugerencia:**` antes de cada separador; entrada "Comparar modelos gratuitos disponibles en OpenCode" sin nombres concretos de modelos; ~964 líneas; renderizado
+- **ideas101.qmd**: Fusionadas ideas101.qmd + ideas2.qmd → 53 entradas en 11 secciones ordenadas (Documentación, Empresa, Academia, Hogar, Alimentación, Aficiones, Compras, Deportes, Planificación, Comandos, Sistema y mantenimiento); badges de nivel (🟢🟡🔴); `**Sugerencia:**` antes de cada separador; entrada "Comparar modelos gratuitos disponibles en OpenCode" sin nombres concretos de modelos; ~993 líneas; renderizado
 - **faq.qmd**: 34 preguntas frecuentes en 7 secciones (Uso general, Archivos y proyectos, Plan vs Build, Modelos de IA, Permisos, Comandos, Personalización); enlazado desde `index.qmd` y `README.md`; renderizado
 - **paso-02.qmd**: Añadido callout-tip "¿Qué modelo usa OpenCode?" al final de la sección de modelos
 - **paso-03.qmd**: Añadido callout-warning sobre consecuencias de no usar `opencode -c` o el directorio equivocado

@@ -117,6 +117,36 @@ las dudas más frecuentes.
 
 ---
 
+### Chuleta Markdown + extensiones Quarto 🟡
+
+Dos chuletas de referencia rápida: una con la sintaxis Markdown
+básica y otra con las extensiones propias de Quarto.
+
+> Crea una chuleta Markdown con los elementos básicos en formato
+> tabla: elemento, sintaxis, ejemplo y resultado visual.
+> Organízala por categorías. Guárdala como chuleta-markdown.md.
+
+> Ahora genera la misma chuleta en HTML. Guárdala como
+> chuleta-markdown.html.
+
+> Crea otra chuleta con las extensiones que Quarto añade al
+> Markdown: referencias cruzadas, diagramas Mermaid, bloques de
+> código, referencias bibliográficas, divisores con `::: ` y
+> anclajes `{#sec-alias}`. Explica cada una con un ejemplo breve.
+> Guárdala como chuleta-quarto.md.
+
+> Ahora genera la chuleta Quarto en HTML y PDF. Guárdalos como
+> chuleta-quarto.html y chuleta-quarto.pdf.
+
+**Variación:** pídele que fusione ambas chuletas en un solo
+documento Markdown y genere el HTML combinado.
+
+**Sugerencia:** conserva los .md como fuente editable. Si
+actualizas el contenido, solo tienes que pedir que regenere
+el HTML y PDF.
+
+---
+
 ## Empresa {#sec-empresa}
 
 Gestión documental empresarial: manuales, actas, informes, FAQ y análisis de pliegos.

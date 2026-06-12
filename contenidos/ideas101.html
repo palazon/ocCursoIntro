@@ -93,6 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#de-notas-dispersas-a-wiki-unificada" id="toc-de-notas-dispersas-a-wiki-unificada" class="nav-link" data-scroll-target="#de-notas-dispersas-a-wiki-unificada">De notas dispersas a wiki unificada 🟡</a></li>
   <li><a href="#de-técnico-a-divulgativo" id="toc-de-técnico-a-divulgativo" class="nav-link" data-scroll-target="#de-técnico-a-divulgativo">De técnico a divulgativo 🟡</a></li>
   <li><a href="#de-transcripción-a-tutorial" id="toc-de-transcripción-a-tutorial" class="nav-link" data-scroll-target="#de-transcripción-a-tutorial">De transcripción a tutorial 🟡</a></li>
+  <li><a href="#chuleta-markdown-extensiones-quarto" id="toc-chuleta-markdown-extensiones-quarto" class="nav-link" data-scroll-target="#chuleta-markdown-extensiones-quarto">Chuleta Markdown + extensiones Quarto 🟡</a></li>
   </ul></li>
   <li><a href="#sec-empresa" id="toc-sec-empresa" class="nav-link" data-scroll-target="#sec-empresa">Empresa</a>
   <ul class="collapse">
@@ -258,6 +259,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p><strong>Variación:</strong> pídele que extraiga solo los pasos prácticos (como una lista de acciones) o que genere una versión FAQ con las dudas más frecuentes.</p>
 <p><strong>Sugerencia:</strong> pídele que extraiga solo los pasos prácticos como lista de acciones rápida.</p>
+<hr>
+</section>
+<section id="chuleta-markdown-extensiones-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="chuleta-markdown-extensiones-quarto">Chuleta Markdown + extensiones Quarto 🟡</h3>
+<p>Dos chuletas de referencia rápida: una con la sintaxis Markdown básica y otra con las extensiones propias de Quarto.</p>
+<blockquote class="blockquote">
+<p>Crea una chuleta Markdown con los elementos básicos en formato tabla: elemento, sintaxis, ejemplo y resultado visual. Organízala por categorías. Guárdala como chuleta-markdown.md.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Ahora genera la misma chuleta en HTML. Guárdala como chuleta-markdown.html.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Crea otra chuleta con las extensiones que Quarto añade al Markdown: referencias cruzadas, diagramas Mermaid, bloques de código, referencias bibliográficas, divisores con <code>:::</code> y anclajes <code>{#sec-alias}</code>. Explica cada una con un ejemplo breve. Guárdala como chuleta-quarto.md.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Ahora genera la chuleta Quarto en HTML y PDF. Guárdalos como chuleta-quarto.html y chuleta-quarto.pdf.</p>
+</blockquote>
+<p><strong>Variación:</strong> pídele que fusione ambas chuletas en un solo documento Markdown y genere el HTML combinado.</p>
+<p><strong>Sugerencia:</strong> conserva los .md como fuente editable. Si actualizas el contenido, solo tienes que pedir que regenere el HTML y PDF.</p>
 <hr>
 </section>
 </section>
@@ -1278,11 +1298,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   if (location.pathname.includes('index.html')) return;
   var toc = document.getElementById('TOC');
   if (!toc) return;
-  var link = document.createElement('a');
-  link.href = 'index.html';
-  link.textContent = '\u2190 Volver al \u00edndice';
-  link.className = 'toc-back-btn';
-  toc.append(link);
+
+  var pages = [
+    'paso-00.html', 'paso-01.html', 'paso-02.html', 'paso-03.html',
+    'paso-04.html', 'paso-05.html', 'paso-06.html', 'paso-07.html',
+    'paso-08.html', 'paso-09.html', 'paso-10.html', 'paso-11.html',
+    'ideas101.html', 'faq.html'
+  ];
+  var labels = [
+    'Paso 0', 'Paso 1', 'Paso 2', 'Paso 3',
+    'Paso 4', 'Paso 5', 'Paso 6', 'Paso 7',
+    'Paso 8', 'Paso 9', 'Paso 10', 'Paso 11',
+    'Ideas y ejemplos', 'Preguntas frecuentes'
+  ];
+
+  var current = window.location.pathname.split('/').pop();
+  var idx = pages.indexOf(current);
+
+  if (idx > 0) {
+    var prev = document.createElement('a');
+    prev.href = pages[idx - 1];
+    prev.textContent = '\u2190 ' + labels[idx - 1];
+    prev.className = 'toc-back-btn';
+    toc.append(prev);
+  }
+
+  if (idx >= 0 && idx < pages.length - 1) {
+    var next = document.createElement('a');
+    next.href = pages[idx + 1];
+    next.textContent = labels[idx + 1] + ' \u2192';
+    next.className = 'toc-back-btn';
+    toc.append(next);
+  }
+
+  var back = document.createElement('a');
+  back.href = 'index.html';
+  back.textContent = '\u2190 Volver al \u00edndice';
+  back.className = 'toc-back-btn';
+  toc.append(back);
 })();
 </script>
 

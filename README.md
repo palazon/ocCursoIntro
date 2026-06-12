@@ -37,7 +37,7 @@ para resolver dudas habituales.
 ### A. *On line* (recomendado)
 
 Solo necesitas un navegador. Abre
-<https://palazon.github.io/ocCursoIntro/index.html> y sigue el curso
+[**este enlace**](https://palazon.github.io/ocCursoIntro/index.html) y sigue el curso
 sin descargar ni instalar ningún fichero del curso.
 
 ### B. Desde la distribución local (para curiosos inquietos)

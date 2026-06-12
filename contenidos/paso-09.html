@@ -692,11 +692,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   if (location.pathname.includes('index.html')) return;
   var toc = document.getElementById('TOC');
   if (!toc) return;
-  var link = document.createElement('a');
-  link.href = 'index.html';
-  link.textContent = '\u2190 Volver al \u00edndice';
-  link.className = 'toc-back-btn';
-  toc.append(link);
+
+  var pages = [
+    'paso-00.html', 'paso-01.html', 'paso-02.html', 'paso-03.html',
+    'paso-04.html', 'paso-05.html', 'paso-06.html', 'paso-07.html',
+    'paso-08.html', 'paso-09.html', 'paso-10.html', 'paso-11.html',
+    'ideas101.html', 'faq.html'
+  ];
+  var labels = [
+    'Paso 0', 'Paso 1', 'Paso 2', 'Paso 3',
+    'Paso 4', 'Paso 5', 'Paso 6', 'Paso 7',
+    'Paso 8', 'Paso 9', 'Paso 10', 'Paso 11',
+    'Ideas y ejemplos', 'Preguntas frecuentes'
+  ];
+
+  var current = window.location.pathname.split('/').pop();
+  var idx = pages.indexOf(current);
+
+  if (idx > 0) {
+    var prev = document.createElement('a');
+    prev.href = pages[idx - 1];
+    prev.textContent = '\u2190 ' + labels[idx - 1];
+    prev.className = 'toc-back-btn';
+    toc.append(prev);
+  }
+
+  if (idx >= 0 && idx < pages.length - 1) {
+    var next = document.createElement('a');
+    next.href = pages[idx + 1];
+    next.textContent = labels[idx + 1] + ' \u2192';
+    next.className = 'toc-back-btn';
+    toc.append(next);
+  }
+
+  var back = document.createElement('a');
+  back.href = 'index.html';
+  back.textContent = '\u2190 Volver al \u00edndice';
+  back.className = 'toc-back-btn';
+  toc.append(back);
 })();
 </script>
 

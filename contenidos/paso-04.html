@@ -90,7 +90,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#manos-a-la-obra" id="toc-manos-a-la-obra" class="nav-link" data-scroll-target="#manos-a-la-obra">Manos a la obra</a>
   <ul class="collapse">
   <li><a href="#ejercicio-1-mejorar-redacción" id="toc-ejercicio-1-mejorar-redacción" class="nav-link" data-scroll-target="#ejercicio-1-mejorar-redacción">Ejercicio 1 — Mejorar redacción</a></li>
-  <li><a href="#ejercicio-2-cambiar-el-tono" id="toc-ejercicio-2-cambiar-el-tono" class="nav-link" data-scroll-target="#ejercicio-2-cambiar-el-tono">Ejercicio 2 — Cambiar el tono</a></li>
+  <li><a href="#ejercicio-2-tres-versiones-del-mismo-texto" id="toc-ejercicio-2-tres-versiones-del-mismo-texto" class="nav-link" data-scroll-target="#ejercicio-2-tres-versiones-del-mismo-texto">Ejercicio 2 — Tres versiones del mismo texto</a></li>
   <li><a href="#ejercicio-3-probar-con-un-documento-propio-opcional" id="toc-ejercicio-3-probar-con-un-documento-propio-opcional" class="nav-link" data-scroll-target="#ejercicio-3-probar-con-un-documento-propio-opcional">Ejercicio 3 — Probar con un documento propio (opcional)</a></li>
   </ul></li>
   <li><a href="#resumen-del-paso" id="toc-resumen-del-paso" class="nav-link" data-scroll-target="#resumen-del-paso">Resumen del paso</a></li>
@@ -157,19 +157,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Puedes comprobarlo con:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> trabajo-equipo.md</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="ejercicio-2-cambiar-el-tono" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-2-cambiar-el-tono">Ejercicio 2 — Cambiar el tono</h3>
-<p>Ahora vas a transformar ese mismo texto en tres versiones distintas. OpenCode editará el archivo cada vez.</p>
+<section id="ejercicio-2-tres-versiones-del-mismo-texto" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-2-tres-versiones-del-mismo-texto">Ejercicio 2 — Tres versiones del mismo texto</h3>
+<p>Ahora vas a transformar ese mismo texto en tres versiones distintas.</p>
 <blockquote class="blockquote">
-<p><code>@trabajo-equipo.md</code> Ahora reescribe este texto en un tono formal, como para un informe ejecutivo. Actualiza el archivo.</p>
+<p><code>@trabajo-equipo.md</code> Reescribe este texto en un tono formal, como para un informe ejecutivo. Actualiza el archivo.</p>
 </blockquote>
 <p>Después de ver el resultado:</p>
 <blockquote class="blockquote">
-<p>Ahora reescribe el mismo texto para niños de 10 años.</p>
+<p><code>@trabajo-equipo.md</code> Reescribe el mismo texto para niños de 10 años. Guárdalo como trabajo-equipo-infantil.md.</p>
 </blockquote>
 <p>Y por último:</p>
 <blockquote class="blockquote">
-<p>Traduce la versión infantil al inglés y guárdala como team-work.md.</p>
+<p><code>@trabajo-equipo.md</code> Traduce este documento al inglés. Mantén el mismo formato. Guárdalo como team-work.md.</p>
 </blockquote>
 </section>
 <section id="ejercicio-3-probar-con-un-documento-propio-opcional" class="level3">
@@ -620,11 +620,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   if (location.pathname.includes('index.html')) return;
   var toc = document.getElementById('TOC');
   if (!toc) return;
-  var link = document.createElement('a');
-  link.href = 'index.html';
-  link.textContent = '\u2190 Volver al \u00edndice';
-  link.className = 'toc-back-btn';
-  toc.append(link);
+
+  var pages = [
+    'paso-00.html', 'paso-01.html', 'paso-02.html', 'paso-03.html',
+    'paso-04.html', 'paso-05.html', 'paso-06.html', 'paso-07.html',
+    'paso-08.html', 'paso-09.html', 'paso-10.html', 'paso-11.html',
+    'ideas101.html', 'faq.html'
+  ];
+  var labels = [
+    'Paso 0', 'Paso 1', 'Paso 2', 'Paso 3',
+    'Paso 4', 'Paso 5', 'Paso 6', 'Paso 7',
+    'Paso 8', 'Paso 9', 'Paso 10', 'Paso 11',
+    'Ideas y ejemplos', 'Preguntas frecuentes'
+  ];
+
+  var current = window.location.pathname.split('/').pop();
+  var idx = pages.indexOf(current);
+
+  if (idx > 0) {
+    var prev = document.createElement('a');
+    prev.href = pages[idx - 1];
+    prev.textContent = '\u2190 ' + labels[idx - 1];
+    prev.className = 'toc-back-btn';
+    toc.append(prev);
+  }
+
+  if (idx >= 0 && idx < pages.length - 1) {
+    var next = document.createElement('a');
+    next.href = pages[idx + 1];
+    next.textContent = labels[idx + 1] + ' \u2192';
+    next.className = 'toc-back-btn';
+    toc.append(next);
+  }
+
+  var back = document.createElement('a');
+  back.href = 'index.html';
+  back.textContent = '\u2190 Volver al \u00edndice';
+  back.className = 'toc-back-btn';
+  toc.append(back);
 })();
 </script>
 

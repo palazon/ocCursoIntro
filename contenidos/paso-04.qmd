@@ -63,22 +63,22 @@ Puedes comprobarlo con:
 cat trabajo-equipo.md
 ```
 
-### Ejercicio 2 — Cambiar el tono
+### Ejercicio 2 — Tres versiones del mismo texto
 
 Ahora vas a transformar ese mismo texto en tres versiones distintas.
-OpenCode editará el archivo cada vez.
 
-> `@trabajo-equipo.md` Ahora reescribe este texto en un tono formal,
+> `@trabajo-equipo.md` Reescribe este texto en un tono formal,
 > como para un informe ejecutivo. Actualiza el archivo.
 
 Después de ver el resultado:
 
-> Ahora reescribe el mismo texto para niños de 10 años.
+> `@trabajo-equipo.md` Reescribe el mismo texto para niños de 10
+> años. Guárdalo como trabajo-equipo-infantil.md.
 
 Y por último:
 
-> Traduce la versión infantil al inglés y guárdala como
-> team-work.md.
+> `@trabajo-equipo.md` Traduce este documento al inglés. Mantén el
+> mismo formato. Guárdalo como team-work.md.
 
 ### Ejercicio 3 — Probar con un documento propio (opcional)
 

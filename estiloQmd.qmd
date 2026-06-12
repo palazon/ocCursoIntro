@@ -14,7 +14,7 @@ modificar contenido.
 |---------|------|-------------|
 | `paso-00.qmd` a `paso-11.qmd` | Pasos | Lecciones del curso (12 pasos) |
 | `index.qmd` | Índice | Página de inicio y tabla de contenidos |
-| `ideas101.qmd` | Catálogo | 52 ideas de uso organizadas por secciones |
+| `ideas101.qmd` | Catálogo | 53 ideas de uso organizadas por secciones |
 | `faq.qmd` | FAQ | 34 preguntas frecuentes en 7 secciones |
 
 ---

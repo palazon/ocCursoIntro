@@ -22,7 +22,7 @@
 | `paso-10.qmd` | — | Paso |
 | `paso-11.qmd` | 122 | Paso |
 | `index.qmd` | 164 | Índice |
-| `ideas101.qmd` | 963 | Catálogo |
+| `ideas101.qmd` | 993 | Catálogo |
 | `faq.qmd` | 227 | FAQ |
 
 **Total:** 15 archivos `.qmd`
@@ -125,7 +125,7 @@ Títulos fijos: *Cambia esto*, *¿Por qué?*, *Sugerencia para novatos*, *Sugere
 - Badges de dificultad: 🟢 🟡 🔴
 - Patrones fijos: `**Variación:**` y `**Sugerencia:**`
 - Separadores `---` entre cada entrada
-- 52 entradas en 11 secciones
+- 53 entradas en 11 secciones
 
 ### faq.qmd
 
