@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://palazon.github.io/ocCursoIntro/presentacionCursoOC101.html">
-    <img src="contenidos/captura-TUI.png" alt="OpenCode 101 — Curso básico para creadores de contenido" width="700">
+    <img src="contenidos/captura-presentacion.png" alt="OpenCode 101 — Curso básico para creadores de contenido" width="350">
   </a>
 </p>
 
