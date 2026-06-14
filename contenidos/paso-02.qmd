@@ -299,6 +299,15 @@ importante cuando uses modelos de pago.
 :::
 
 ::: {.callout-tip}
+## ¿Quieres saber más sobre Markdown?
+
+Si quieres profundizar en Markdown, Pandoc y Quarto, consulta esta
+breve introducción: *Markdown, Pandoc y Quarto*
+([HTML](https://palazon.github.io/ocCursoIntro/markdown-pandoc-quarto.html) |
+[PDF](https://palazon.github.io/ocCursoIntro/markdown-pandoc-quarto.pdf)).
+:::
+
+::: {.callout-tip}
 ## Para usuarios de Git
 
 Si ya conoces Git, el Markdown se versiona de forma natural:

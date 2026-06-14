@@ -11,6 +11,11 @@ Curso práctico de **12 pasos** para aprender a usar
 documentación técnica, redacción de informes, material educativo e
 investigación. Sin necesidad de saber programar.
 
+Si quieres una descripción breve pero con más detalles puedes
+consultar el *resumen del curso*
+([HTML](https://palazon.github.io/ocCursoIntro/oc101.html) |
+[PDF](https://palazon.github.io/ocCursoIntro/oc101.pdf)).
+
 ## ¿Para quién es este curso?
 
 Dirigido a **docentes, formadores, redactores técnicos y cualquier
