@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://palazon.github.io/ocCursoIntro/presentacionCursoOC101.html">
-    <img src="https://img.shields.io/badge/🎬_Ver_Presentación-OpenCode_101_—_Curso_básico_para_creadores_de_contenido-2d6a4f?style=for-the-badge&labelColor=1b4332" alt="Ver presentación">
+    <img src="contenidos/captura-TUI.png" alt="OpenCode 101 — Curso básico para creadores de contenido" width="700">
   </a>
 </p>
 
