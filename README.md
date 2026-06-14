@@ -84,4 +84,11 @@ Abre un [issue en GitHub](https://github.com/palazon/ocCursoIntro/issues).
 
 ---
 
+## Agradecimientos
+
+A **jesusda**, por presentarme OpenCode.  
+A **Pedro**, mi hermano, por su constante retroalimentación sobre el curso.
+
+---
+
 *Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*
