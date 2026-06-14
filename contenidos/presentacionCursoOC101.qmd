@@ -38,7 +38,7 @@ format:
 
 ## La solución
 
-**Lenguaje natural.**
+**Lenguaje natural**
 
 Describes lo que quieres y OpenCode lo hace. Sin sintaxis, sin etiquetas, sin comandos raros.
 
