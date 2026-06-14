@@ -1,5 +1,6 @@
 ---
-title: "OpenCode 101 — Los fundamentos. Guía divulgativa completa"
+title: "OpenCode 101 — Los fundamentos"
+subtitle:  "Una guía divulgativa"
 author: "JA Palazón Ferrando"
 date: last-modified
 lang: es
