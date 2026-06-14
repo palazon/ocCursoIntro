@@ -7,14 +7,21 @@ DISTRO="cursoIntroOpenCode"
 
 echo "==> Limpiando directorio $DISTRO..."
 rm -rf "$DISTRO"/*.qmd "$DISTRO"/*.html "$DISTRO"/*_files/ \
-       "$DISTRO"/custom.css "$DISTRO"/captura-tui.png "$DISTRO"/tab-key.svg \
-       "$DISTRO"/README.md "$DISTRO"/AGENTS.md "$DISTRO"/render-all.sh
+       "$DISTRO"/*.pdf "$DISTRO"/*.png "$DISTRO"/*.svg \
+       "$DISTRO"/custom.css \
+       "$DISTRO"/README.md "$DISTRO"/AGENTS.md "$DISTRO"/render-all.sh "$DISTRO"/.gitignore
 
 echo "==> Copiando fuentes desde contenidos/..."
 mkdir -p "$DISTRO"
-cp contenidos/index.qmd contenidos/ideas101.qmd "$DISTRO"/
+cp contenidos/index.qmd contenidos/ideas101.qmd contenidos/faq.qmd \
+   contenidos/oc101.qmd contenidos/markdown-pandoc-quarto.qmd \
+   contenidos/presentacionCursoOC101.qmd "$DISTRO"/
 cp contenidos/paso-*.qmd "$DISTRO"/
-cp contenidos/custom.css contenidos/captura-tui.png contenidos/tab-key.svg "$DISTRO"/
+cp contenidos/custom.css "$DISTRO"/
+cp contenidos/captura-TUI.png contenidos/tab-key.svg \
+   contenidos/captura-presentacion.png \
+   contenidos/terminalUsuario.png contenidos/terminalUsuarioBasico.png "$DISTRO"/
+cp contenidos/oc101.pdf contenidos/markdown-pandoc-quarto.pdf "$DISTRO"/
 cp README.md AGENTS.md render-all.sh "$DISTRO"/
 
 echo "==> Renderizando HTML en $DISTRO/..."

@@ -3,6 +3,7 @@
 cd contenidos
 quarto render index.qmd
 quarto render ideas101.qmd
+quarto render faq.qmd
 for f in paso-*.qmd; do
   quarto render "$f"
 done

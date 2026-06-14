@@ -88,7 +88,7 @@ Escribe `/exit` o pulsa **Ctrl+C** en la terminal.
 
 Usa el prefijo `!` antes del comando. Por ejemplo, `!cat darwin-evolucion.md` para ver el contenido de un archivo sin salir de OpenCode.
 
-📖 [Paso 3 — Ejercicio en Build](paso-02.html)
+📖 [Paso 2 — Ejercicio en Build](paso-02.html)
 
 ---
 

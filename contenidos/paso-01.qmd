@@ -258,6 +258,6 @@ archivos aquí a medida que trabajes con OpenCode.
 En el próximo paso instalaremos OpenCode, y lo abriremos usando
 este mismo directorio para empezar a trabajar.
 
-* * *
+---
 
 *Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*

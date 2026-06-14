@@ -202,7 +202,7 @@ Con esto completas los 12 pasos del curso. Has aprendido a:
 
 - Compartir sesiones, exportar conversaciones y organizar archivos
 
-El [curso completo](https://palazon.github.io/ocCursoIntro/index.html) incluye además una [página de ideas y ejemplos](https://palazon.github.io/ocCursoIntro/ideas.html) para empresa, academia, deportes, hogar y aficiones, así como preguntas frecuentes para resolver dudas habituales.
+El [curso completo](https://palazon.github.io/ocCursoIntro/index.html) incluye además una [página de ideas y ejemplos](https://palazon.github.io/ocCursoIntro/ideas101.html) para empresa, academia, deportes, hogar y aficiones, así como preguntas frecuentes para resolver dudas habituales.
 
 Ahora es momento de poner en marcha tus propias ideas. Empieza con proyectos pequeños y poco comprometidos antes de lanzarte a proyectos más ambiciosos. Los fundamentos están aquí para sostenerte cuando algo no funcione.
 
