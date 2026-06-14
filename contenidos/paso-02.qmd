@@ -16,6 +16,21 @@ sistemas. La instalación en Windows requiere un paso adicional porque
 *CMD* y *PowerShell* carecen de las características necesarias para
 trabajar cómodamente. En macOS y Linux la terminal ya viene preparada.
 
+::: {.callout-note}
+## ¿Te asustan lo siguientes pasos?
+
+Existe una **interfaz gráfica (GUI)** de OpenCode que se instala
+sin requerimientos previos. Si te dan miedo los siguientes pasos
+o no sabes si te vale la pena hacerlos, puedes instalarla desde
+<https://opencode.ai/downloads> eligiendo la versión **Desktop**.
+
+Sobre esta interfaz no hablaremos en el resto del curso, pero es
+equivalente a la propuesta a continuación.
+
+Si te gusta OpenCode, ve por el buen camino y sigue la instalación
+como se muestra a continuación.
+:::
+
 ## Instalación en Windows
 
 El método para usar OpenCode en Windows es a través de **WSL2**
