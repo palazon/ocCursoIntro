@@ -1,0 +1,217 @@
+---
+title: "Markdown, Pandoc y Quarto"
+subtitle: "Un viaje al texto plano"
+author: "JA Palazón Ferrando"
+date: today
+lang: es
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 2
+    toc-title: "Contenido"
+    code-fold: true
+    highlight-style: github
+    link-color: "#1a3a5c"
+    embed-resources: true
+    include-in-header:
+      - text: |
+          <style>
+          .callout {
+            margin-left: 15% !important;
+            margin-right: 5% !important;
+            font-size: 90% !important;
+          }
+          </style>
+  pdf:
+    papersize: a4
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    toc: true
+    toc-depth: 2
+    fontsize: 11pt
+    number-sections: true
+    linestretch: 1.0
+    page-numbers: true
+    tbl-cap-location: top
+    highlight-style: github
+    linkcolor: azuloscuro
+    header-includes:
+      - \usepackage{changepage}
+      - \BeforeBeginEnvironment{tcolorbox}{\begin{adjustwidth}{0.15\linewidth}{0.05\linewidth}\small}
+      - \AfterEndEnvironment{tcolorbox}{\end{adjustwidth}}
+      - \definecolor{azuloscuro}{HTML}{1a3a5c}
+      - \RedeclareSectionCommand[beforeskip=-0.5ex,afterskip=0.5ex]{section}
+      - \RedeclareSectionCommand[beforeskip=-0.5ex,afterskip=0.5ex]{subsection}
+      - \setkomafont{section}{\normalfont\bfseries\large}
+      - \setkomafont{subsection}{\normalfont\bfseries\normalsize}
+---
+
+## Markdown: el lenguaje que entienden humanos y máquinas
+
+### ¿Qué es Markdown?
+
+Markdown es una forma de escribir textos usando solo caracteres del teclado. No necesitas botones de negrita, menús de formato ni programas especiales. Escribes como siempre, pero con algunas marcas mínimas que le dicen al ordenador qué es cada cosa.
+
+Por ejemplo, rodeas una palabra con dos asteriscos `**así**` y el ordenador entiende que va en **negrita**. Pones una almohadilla `#` al inicio de una línea y entiende que es un **título**. Escribes un guion `-` y entiende que empieza una **lista**.
+
+No hay etiquetas complicadas ni códigos crípticos. Las marcas se parecen a las que ya usas cuando escribes un correo o un mensaje. Por eso Markdown es el idioma común entre humanos y máquinas.
+
+### Ventajas del texto plano
+
+Un archivo Markdown es texto plano. Esto significa que:
+
+- **No se corrompe**: un archivo `.docx` o `.pdf` puede dañarse si el programa que lo creó no está disponible. Un `.md` se abre en cualquier editor de texto, ahora y dentro de veinte años.
+
+- **Ocupa muy poco**: un informe de diez páginas en Markdown pesa unos pocos kilobytes. El mismo documento en Word puede pesar cien veces más.
+
+- **Es universal**: lo entienden todos los programas, todos los sistemas operativos, todas las plataformas.
+
+- **Se versiona bien**: al ser texto plano, programas como Git pueden rastrear cada cambio línea por línea.
+
+### La sintaxis básica en una mirada
+
+Con solo unas pocas marcas puedes escribir cualquier documento:
+
+- `#` para títulos principales, `##` para subtítulos, `###` para secciones más pequeñas
+
+- `**negrita**` y `*cursiva*` para dar énfasis
+
+- `[texto visible](enlace)` para poner enlaces
+
+- `-` para listas con viñetas, `1.` para listas numeradas
+
+- `` `código` `` para citar comandos o palabras técnicas
+
+- `![descripción](ruta-de-la-imagen)` para incluir imágenes
+
+::: {.callout-tip}
+## Con esto basta
+
+Con estas marcas escribes cualquier artículo, informe, guía o libro. Todo el resto es adorno. El 90 % de los documentos profesionales se escriben solo con estas reglas.
+:::
+
+Al usar OpenCode, del marcado se encarga él: tú le dices "pon un título aquí" y él aplica la sintaxis por ti. Pero a poco que uses Quarto te acostumbrarás, porque el número de marcas necesarias es muy reducido —las que has visto arriba son prácticamente todas.
+
+### El flujo de trabajo
+
+Escribes una vez en Markdown. Ese archivo es tu fuente original. Luego puedes transformarlo a cualquier otro formato: HTML para web, PDF para impresión, EPUB para libros electrónicos, DOCX para intercambio con usuarios de Word.
+
+No tienes que maquetar tres veces. Maquetas una y dejas que las herramientas hagan el resto.
+
+## Pandoc: el traductor universal
+
+### ¿Qué es Pandoc?
+
+Pandoc es un programa que convierte documentos de un formato a otro. Si Markdown es la materia prima, Pandoc es el traductor que la convierte en el producto final que necesitas.
+
+Pero Pandoc no solo entiende Markdown. Lee y escribe múltiples sistemas de escritura: Markdown (en varias variantes), reStructuredText, AsciiDoc, LaTeX, HTML, Textile, Org-mode y muchos más. Puedes pedirle que convierta entre cualesquiera de ellos, y lo hace con total naturalidad.
+
+Esta capacidad de interconvertir entre sistemas de marcado es uno de sus talentos más valiosos. Un documento escrito en AsciiDoc puede convertirse a Markdown sin perder estructura. Un archivo HTML puede transformarse a texto plano formateado. Pandoc tiende puentes entre mundos que antes no se hablaban entre sí.
+
+::: {.callout-note}
+## Libre y a tu alcance
+
+Pandoc es software libre (licencia GPL). Si no lo tienes instalado, solo tienes que pedírselo a OpenCode: "Instala Pandoc en mi sistema" o "¿Tengo Pandoc disponible?". OpenCode lo descarga y lo configura por ti.
+:::
+
+### La magia del AST
+
+Para entender cómo lo hace, imagina que Pandoc, al leer un documento, lo descompone en piezas elementales: "esto es un título", "esto es un párrafo", "esto es una lista", "esto es un enlace". Guarda todas esas piezas en una estructura intermedia que se llama **AST** (árbol sintáctico abstracto).
+
+Luego, cuando va a escribir el documento de salida, solo tiene que mirar cada pieza y preguntarse: "¿cómo se escribe un título en HTML?" o "¿cómo se escribe un enlace en LaTeX?".
+
+Por eso puede interconvertir entre formatos tan distintos. No necesita saber cómo convertir directamente de AsciiDoc a EPUB. Solo necesita saber leer AsciiDoc a AST y escribir AST a EPUB. Esa separación en dos pasos es lo que le da su potencia universal.
+
+### Cómo usarlo desde OpenCode
+
+No necesitas recordar comandos técnicos ni banderas de terminal. En OpenCode le dices en lenguaje natural lo que quieres:
+
+- "Convierte este Markdown a PDF"
+
+- "Pásame este documento a formato Word"
+
+- "Traduce este HTML a Markdown"
+
+- "Conviérteme esta página web a texto plano con formato"
+
+OpenCode llama a Pandoc por debajo y te devuelve el resultado. Tú solo explicas qué necesitas.
+
+::: {.callout-note}
+## Un traductor, no un editor
+
+Pandoc transforma formatos, pero no ejecuta código ni entiende proyectos completos. Trabaja archivo a archivo. Para eso necesitamos la siguiente herramienta.
+:::
+
+## Quarto: la fábrica de documentos profesionales
+
+### ¿Qué es Quarto?
+
+Quarto es un sistema de publicación construido sobre Pandoc. Si Pandoc es el traductor, Quarto es el taller donde se diseñan, maquetan y producen documentos completos.
+
+Quarto hace todo lo que hace Pandoc, pero añade capas enteras de funcionalidad:
+
+- **Ejecuta código**: puedes escribir bloques de código en R, Python o Julia, y Quarto los ejecuta, incrusta los resultados (gráficos, tablas, números) directamente en el documento. Es como tener un asistente de cálculo dentro del texto.
+
+- **Entiende proyectos completos**: no trabaja con un archivo suelto, sino con colecciones enteras. Puedes crear un sitio web, un libro con varios capítulos, una presentación o un informe con múltiples secciones, todo desde un mismo proyecto.
+
+- **Se configura con YAML**: el frontal del documento (el bloque de metadatos entre `---`) define el aspecto, el formato, el estilo y el comportamiento. Sin tocar una línea de código de maquetación.
+
+- **Añade elementos profesionales**: referencias cruzadas entre secciones, citas bibliográficas, notas destacadas (callouts), ecuaciones matemáticas, figuras con etiquetas, tablas con títulos.
+
+::: {.callout-note}
+## Libre y a tu alcance
+
+Quarto también es software libre (licencia MIT). Puedes pedirle a OpenCode que lo instale con un mensaje como "Necesito Quarto para este proyecto, instálalo" o "¿Quarto está disponible?". OpenCode lo instala sin que tengas que tocar la terminal.
+:::
+
+### Cómo usarlo desde OpenCode
+
+Igual que con Pandoc, no necesitas saber la sintaxis de Quarto. Se lo pides a OpenCode en lenguaje natural:
+
+- "Crea un sitio web con estos tres capítulos"
+
+- "Añade una nota destacada aquí, como las de color azul"
+
+- "Pon una referencia a la figura anterior"
+
+- "Convierte este proyecto a PDF con portada"
+
+OpenCode escribe el YAML, estructura los archivos, aplica el formato y llama a Quarto para que genere el resultado.
+
+### Pandoc vs Quarto: diferencias conceptuales
+
+| Pandoc | Quarto |
+|--------|--------|
+| Herramienta de conversión | Sistema de publicación |
+| Convierte archivos uno a uno | Gestiona proyectos enteros |
+| No entiende código incrustado | Ejecuta R, Python, Julia |
+| Se controla por *prompts* de conversión | Se controla por *prompts* de creación |
+| No tiene sistema de referencias cruzadas | Referencias cruzadas, citas, callouts |
+| Sin configuración unificada | Configuración centralizada en YAML |
+| Es el motor que Quarto usa por debajo | Es la capa que añade inteligencia al motor |
+
+## Cierre
+
+Markdown te da la materia prima: un formato universal, ligero y eterno. Pandoc te da el traductor: convierte esa materia prima a cualquier formato de salida, e interconvierte entre sistemas de marcado distintos. Quarto te da el taller: construye proyectos completos, ejecuta código, añade referencias y produce documentos profesionales.
+
+Los tres forman una cadena. Escribes en Markdown, conviertes con Pandoc, publicas con Quarto. Y todo se lo pides a OpenCode en lenguaje natural, sin aprender ni un solo comando técnico.
+
+## Referencias
+
+- [OpenCode](https://opencode.ai) — Asistente de IA que trabaja sobre archivos locales. Descarga, documentación y guías de uso.
+
+- [Quarto](https://quarto.org) — Sistema de publicación científico-técnico basado en Pandoc. Ideal para crear documentos, sitios web, libros y presentaciones desde un solo flujo de trabajo.
+
+- [Pandoc](https://pandoc.org) — El traductor universal de documentos. Convierte entre decenas de formatos de marcado y procesamiento de textos.
+
+- [Guía de Markdown](https://www.markdownguide.org) — Referencia completa de la sintaxis Markdown, con ejemplos para todos los niveles.
+
+- [Markdown](https://daringfireball.net/projects/markdown/) — Página original del creador de Markdown, John Gruber, donde se explica la filosofía del formato.
+
+- [Markdown.es](https://markdown.es) — Guía de Markdown en castellano con sintaxis, ejemplos y recursos.
+
+- [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/) — Hoja de referencia rápida con todas las marcas de Markdown en una sola página.
