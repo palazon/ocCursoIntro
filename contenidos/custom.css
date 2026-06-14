@@ -434,3 +434,23 @@ kbd {
   text-decoration: none;
   border-color: var(--accent);
 }
+
+.toc-next-btn {
+  display: block;
+  margin: 0.4em 0.8em 0.2em;
+  padding: 0.4em 0.7em;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  text-align: right;
+}
+.toc-next-btn:hover {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-color: var(--accent);
+}

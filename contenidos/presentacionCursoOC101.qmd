@@ -1,0 +1,101 @@
+---
+title: "OpenCode 101 — Curso básico para creadores de contenido"
+subtitle: "Crea documentación con inteligencia artificial — sin saber programar"
+author: "JA Palazón"
+lang: es
+format:
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    controls: true
+    progress: true
+    hash: true
+    self-contained: true
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --r-main-font-size: 24px;
+          --r-main-font: 'Segoe UI', system-ui, sans-serif;
+          --r-heading-font: 'Segoe UI', system-ui, sans-serif;
+          --r-heading1-size: 1.8em;
+          --r-heading2-size: 1.8em;
+          --r-heading3-size: 0.85em;
+          --r-link-color: #2d6a4f;
+          --r-link-color-dark: #1b4332;
+          --r-link-color-hover: #52b788;
+          --r-main-color: #1a1a2e;
+          --r-heading-color: #2d6a4f;
+          --r-background-color: #f7f4f0;
+        }
+        .reveal .controls { color: #2d6a4f !important; }
+        .reveal .progress { color: #2d6a4f !important; }
+        .reveal .smaller { font-size: 0.72em; }
+        .reveal h2 { margin-bottom: 0.8em; }
+        </style>
+---
+
+## La solución
+
+**Lenguaje natural.**
+
+Describes lo que quieres y OpenCode lo hace. Sin sintaxis, sin etiquetas, sin comandos raros.
+
+Escribes, traduces, reestructuras, mantienes ... **todo hablando en castellano.**
+
+> *Si sabes lo que quieres y cómo lo quieres: pídelo a OpenCode.*
+
+Y ese mismo lenguaje natural sirve para el software que genera tu documentación ... y el de todo tu equipo :-)
+
+[OpenCode](https://opencode.ai)
+
+---
+
+## El curso
+
+12 pasos en 3 bloques:
+
+::: {.smaller}
+:::: {.columns}
+
+::: {.column width="33%"}
+### Fundamentos
+¿Qué es OpenCode  
+Instalación y archivos  
+Primeros diálogos  
+Plan vs Build
+:::
+
+::: {.column width="33%"}
+### Taller de documentos
+Contenido externo  
+Investigación web  
+Reestructuración  
+Traducción y tablas
+:::
+
+::: {.column width="33%"}
+### Productividad
+Comandos a medida  
+Revisión asistida  
+Entrega y exportación
+:::
+
+::::
+:::
+
+Al final sabrás crear, mantener y entregar documentación profesional sin escribir una línea de código
+
+---
+
+## ¿Te animas?
+
+- **Sin saber programar**
+- Para docentes, redactores, formadores, cualquier profesional
+- A tu ritmo, sin instructor
+- Gratuito
+
+[Abrir curso](https://palazon.github.io/ocCursoIntro/index.html) · [OpenCode](https://opencode.ai)
+
+*Curso OpenCode 101 · Idea original de JA Palazón · Mayo 2026*
