@@ -157,6 +157,18 @@ Algunas ideas para comandos que puedes crearte:
 | `/glosario` | Extraer términos y crear definiciones |
 | `/check` | Verificar que un documento tiene todas las secciones necesarias |
 
+::: {.callout-tip}
+## Consejo: no te preocupes por el número de comandos
+
+Los comandos personalizados aparecen **junto con los comandos
+originales del sistema** de OpenCode. Un truco para distinguirlos
+es poner siempre un prefijo a los tuyos, o agruparlos por familias
+(por ejemplo, `/doc-resumir`, `/doc-revisar`, `/doc-traducir`).
+
+En realidad no vas a necesitar muchos. Dos o tres bien pensados
+suelen ser suficientes para la mayoría de tareas.
+:::
+
 ---
 
 ## Resumen del paso
