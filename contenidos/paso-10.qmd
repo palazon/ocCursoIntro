@@ -105,6 +105,18 @@ Este flujo es muy útil y lo usarás a menudo:
 3. Pasa a **Build** y aplica las que te parezcan bien
 4. Vuelve a **Plan** para una segunda vuelta si hace falta
 
+::: {.callout-tip}
+## También puedes editar directamente
+
+Siempre existe la opción de abrir el documento en un **editor de
+texto** y hacer correcciones manualmente: corregir una palabra,
+reformular una frase o añadir un comentario con `TODO` para
+indicar lo que hace falta en un lugar concreto del documento.
+
+No todo tiene que pasar por el chat. El editor es una herramienta
+poderosa para cambios puntuales.
+:::
+
 ---
 
 ## Resumen del paso
