@@ -30,10 +30,11 @@ OpenCode modifica los archivos cuando se lo pides, pero tú también
 puedes abrir cualquier `.md` en un editor y editarlo directamente.
 Algunas opciones gratuitas:
 
+- **Bloc de notas** — viene preinstalado en cualquier sistema
+- **Notepad++** — sencillo en Windows
 - **VS Code** — explorador integrado, resaltado de sintaxis, vistas previas
 - **Sublime Text** — ligero y rápido
-- **Notepad++** — sencillo en Windows
-- **Bloc de notas** — viene preinstalado en cualquier sistema
+- ... hay muchos, elige el que más se adapte a tus gustos.
 
 No necesitas instalar nada especial: un `.md` es texto plano, se abre
 y se guarda como cualquier otro documento.
