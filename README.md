@@ -54,7 +54,7 @@ sin descargar ni instalar ningún fichero del curso.
 ### B. Desde la distribución local (para curiosos inquietos)
 
 Descarga [cursoIntroOpenCode.zip](cursoIntroOpenCode.zip), descomprime y abre
-`cursoIntroOpenCode/index.html` en tu navegador. Todo está listo para
+`IntroOpenCode/index.html` en tu navegador. Todo está listo para
 seguir los ejercicios con OpenCode abierto a su lado.
 
 ### C. Desde los fuentes (avanzado, para usuarios de Git)

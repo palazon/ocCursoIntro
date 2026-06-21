@@ -1,18 +1,17 @@
 #!/bin/bash
-# Build distribution package in cursoIntroOpenCode/ from root sources
+# Build distribution package cursoIntroOpenCode.zip
 # Run from project root: bash build-distro.sh
 set -e
 
-DISTRO="cursoIntroOpenCode"
+PROJECT_DIR="$(pwd)"
+DISTRO="/tmp/opencode/IntroOpenCode"
+ZIP_NAME="cursoIntroOpenCode.zip"
 
-echo "==> Limpiando directorio $DISTRO..."
-rm -rf "$DISTRO"/*.qmd "$DISTRO"/*.html "$DISTRO"/*_files/ \
-       "$DISTRO"/*.pdf "$DISTRO"/*.png "$DISTRO"/*.svg \
-       "$DISTRO"/custom.css \
-       "$DISTRO"/README.md "$DISTRO"/AGENTS.md "$DISTRO"/render-all.sh "$DISTRO"/.gitignore
+echo "==> Limpiando directorio temporal..."
+rm -rf "$DISTRO"
+mkdir -p "$DISTRO"
 
 echo "==> Copiando fuentes desde contenidos/..."
-mkdir -p "$DISTRO"
 cp contenidos/index.qmd contenidos/ideas101.qmd contenidos/faq.qmd \
    contenidos/oc101.qmd contenidos/markdown-pandoc-quarto.qmd \
    contenidos/presentacionCursoOC101.qmd "$DISTRO"/
@@ -22,7 +21,40 @@ cp contenidos/captura-TUI.png contenidos/tab-key.svg \
    contenidos/captura-presentacion.png \
    contenidos/terminalUsuario.png contenidos/terminalUsuarioBasico.png "$DISTRO"/
 cp contenidos/oc101.pdf contenidos/markdown-pandoc-quarto.pdf "$DISTRO"/
-cp README.md AGENTS.md render-all.sh "$DISTRO"/
+
+echo "==> Generando README.md para la distribución..."
+cat > "$DISTRO/README.md" << 'READEOF'
+# OpenCode 101 — Curso básico para creadores de contenido
+
+Curso práctico de **12 pasos** para aprender a usar OpenCode como
+asistente de IA en tareas de documentación técnica, redacción de
+informes, material educativo e investigación.
+
+## Cómo usar este curso
+
+1. Asegúrate de tener [OpenCode](https://opencode.ai) instalado
+2. Abre `index.html` en tu navegador para ver el curso
+3. Sigue los pasos secuencialmente
+
+Para más información visita
+<https://palazon.github.io/ocCursoIntro/>.
+
+---
+
+*Curso OpenCode 101 · JA Palazón · Mayo 2026*
+READEOF
+
+echo "==> Generando render-all.sh para la distribución..."
+cat > "$DISTRO/render-all.sh" << 'SHEOF'
+#!/bin/bash
+# Render all course files to HTML
+quarto render *.qmd
+echo "Todos los HTML generados en $(pwd)"
+SHEOF
+chmod +x "$DISTRO/render-all.sh"
+
+echo "==> Copiando _quarto.yml para el renderizado..."
+cp contenidos/_quarto.yml "$DISTRO"/
 
 echo "==> Renderizando HTML en $DISTRO/..."
 cd "$DISTRO"
@@ -32,11 +64,22 @@ for f in *.qmd; do
 done
 
 echo ""
-echo "==> Empaquetando $DISTRO.zip..."
-zip -r "../$DISTRO.zip" .
+echo "==> Eliminando _quarto.yml y caché de Quarto..."
+rm "$DISTRO/_quarto.yml"
+rm -rf "$DISTRO/.quarto"
+
+echo "==> Empaquetando $ZIP_NAME..."
+cd /tmp/opencode
+rm -f "$PROJECT_DIR/$ZIP_NAME"
+zip -r "$PROJECT_DIR/$ZIP_NAME" IntroOpenCode/
+
+echo ""
+echo "==> Limpiando..."
+rm -rf "$DISTRO"
 
 echo ""
 echo "========================================"
-echo "  Distro lista en $DISTRO/"
-echo "  ZIP creado: ../$DISTRO.zip"
+echo "  ZIP creado: $PROJECT_DIR/$ZIP_NAME"
+echo "  Extrae con: unzip $ZIP_NAME -d destino/"
+echo "  Abre:       IntroOpenCode/index.html"
 echo "========================================"

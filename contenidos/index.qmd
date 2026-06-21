@@ -121,8 +121,8 @@ conversaciones y configuración.
 ::: {.callout-tip}
 ## Para usuarios avanzados
 
-Los archivos `.qmd` de la carpeta `contenidos/` son el formato
-fuente del curso. Puedes abrirlos con OpenCode, modificarlos y
+Los archivos `.qmd` son el formato fuente del curso. Puedes
+abrirlos con OpenCode, modificarlos y
 regenerar los HTML con Quarto si quieres personalizar el contenido.
 :::
 
