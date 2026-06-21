@@ -23,6 +23,22 @@ ficheros que tienen formatos de texto plano;
 el formato líder es markdown, que tiene la ventaja de
 ser fácil de leer y editar por seres humanos.
 
+::: {.callout-tip}
+## Opción manual: el editor de texto
+
+OpenCode modifica los archivos cuando se lo pides, pero tú también
+puedes abrir cualquier `.md` en un editor y editarlo directamente.
+Algunas opciones gratuitas:
+
+- **VS Code** — explorador integrado, resaltado de sintaxis, vistas previas
+- **Sublime Text** — ligero y rápido
+- **Notepad++** — sencillo en Windows
+- **Bloc de notas** — viene preinstalado en cualquier sistema
+
+No necesitas instalar nada especial: un `.md` es texto plano, se abre
+y se guarda como cualquier otro documento.
+:::
+
 Para contextualizar nada mejor que organizar nuestra
 información en proyectos, directorios o carpetas.
 
