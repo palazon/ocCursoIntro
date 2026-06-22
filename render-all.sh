@@ -3,6 +3,9 @@
 quarto render index.qmd
 quarto render ideas101.qmd
 quarto render faq.qmd
+quarto render oc101.qmd
+quarto render markdown-pandoc-quarto.qmd
+quarto render presentacionCursoOC101.qmd
 for f in paso-*.qmd; do
   quarto render "$f"
 done

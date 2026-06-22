@@ -1,7 +1,7 @@
 # Informe de ajuste al estilo QMD — Curso OpenCode 101
 
 **Fecha:** Junio 2026  
-**Objetivo:** Documentar las convenciones de formato detectadas en los archivos `.qmd` del curso y consolidarlas en una guía de estilo (`estiloQmd.qmd`).
+**Objetivo:** Documentar las convenciones de formato detectadas en los archivos `.qmd` del curso y consolidarlas en una guía de estilo (`contenidos/tmp/estiloQmd.qmd`).
 
 ---
 
@@ -148,16 +148,12 @@ Títulos fijos: *Cambia esto*, *¿Por qué?*, *Sugerencia para novatos*, *Sugere
 
 | Archivo | Descripción |
 |---------|-------------|
-| `estiloQmd.qmd` | Guía de estilo completa (16 secciones) |
-| `estiloQmd.html` | HTML renderizado de la guía |
+| `contenidos/tmp/estiloQmd.qmd` | Guía de estilo completa (16 secciones) |
+| `contenidos/tmp/estiloQmd.html` | HTML renderizado de la guía |
 | `ajustado-estilo.md` | Este informe |
 
 ---
 
-## Cambios en index.qmd
-
-- Nueva sección `## Guía de estilo` con enlace a `estiloQmd.html`
-- Callout "Para usuarios avanzados" actualizado con referencia a la guía
 
 ---
 

@@ -166,6 +166,8 @@ Una vez creado el comando `/faq`, escríbelo en el chat seguido del documento: `
 
 Verifica que está instalado con `opencode --version`. Si no funciona, revisa la instalación. Asegúrate de estar en el directorio correcto del proyecto y de haber abierto OpenCode desde la terminal adecuada (WSL en Windows, Terminal en macOS/Linux).
 
+📖 [Paso 2 — Primeros minutos con OpenCode](paso-02.html)
+
 ### Obtengo "permission denied", ¿por qué?
 
 OpenCode pide permiso la primera vez que intenta escribir en la carpeta de configuración (`.opencode/commands/`). Confirma el permiso y continuará. Es una medida de seguridad para proteger la configuración del proyecto.
@@ -187,6 +189,8 @@ Verifica que el archivo existe en el directorio del proyecto con `!ls`. Asegúra
 ### ¿Cómo cambio de directorio dentro de OpenCode?
 
 Usa `!cd` seguido de la ruta: `!cd nombre-del-directorio`. También puedes cerrar la sesión, navegar al directorio deseado y volver a ejecutar `opencode`.
+
+📖 [Paso 1 — El sistema de archivos](paso-01.html)
 
 ---
 

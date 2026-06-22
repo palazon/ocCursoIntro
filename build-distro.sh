@@ -13,14 +13,13 @@ mkdir -p "$DISTRO"
 
 echo "==> Copiando fuentes desde contenidos/..."
 cp contenidos/index.qmd contenidos/ideas101.qmd contenidos/faq.qmd \
-   contenidos/oc101.qmd contenidos/markdown-pandoc-quarto.qmd \
-   contenidos/presentacionCursoOC101.qmd "$DISTRO"/
+   contenidos/markdown-pandoc-quarto.qmd "$DISTRO"/
 cp contenidos/paso-*.qmd "$DISTRO"/
 cp contenidos/custom.css "$DISTRO"/
 cp contenidos/captura-TUI.png contenidos/tab-key.svg \
    contenidos/captura-presentacion.png \
    contenidos/terminalUsuario.png contenidos/terminalUsuarioBasico.png "$DISTRO"/
-cp contenidos/oc101.pdf contenidos/markdown-pandoc-quarto.pdf "$DISTRO"/
+cp contenidos/markdown-pandoc-quarto.pdf "$DISTRO"/
 
 echo "==> Generando README.md para la distribución..."
 cat > "$DISTRO/README.md" << 'READEOF'
